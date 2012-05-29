@@ -80,8 +80,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1c2c3b1cc446883c79f2820b2618bb25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a1c2c3b1cc446883c79f2820b2618bb25"></a><br/></td></tr>
 <tr class="memitem:a6b287d3d7d48cac0950418a33205255e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1profiler.html#a6b287d3d7d48cac0950418a33205255e">tic_cpu</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:a6b287d3d7d48cac0950418a33205255e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a CPU timer.  <a href="#a6b287d3d7d48cac0950418a33205255e"></a><br/></td></tr>
-<tr class="memitem:a11e6a21090e77d0f3db1e29baefb566d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1profiler.html#a11e6a21090e77d0f3db1e29baefb566d">tic_gpu</a> (const std::string &amp;name)</td></tr>
-<tr class="memdesc:a11e6a21090e77d0f3db1e29baefb566d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueues a marker into each of the provided queues.  <a href="#a11e6a21090e77d0f3db1e29baefb566d"></a><br/></td></tr>
+<tr class="memitem:a489e82323e1d9c0fe021e591b0a983b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1profiler.html#a489e82323e1d9c0fe021e591b0a983b9">tic_cl</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a489e82323e1d9c0fe021e591b0a983b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueues a marker into each of the provided queues.  <a href="#a489e82323e1d9c0fe021e591b0a983b9"></a><br/></td></tr>
 <tr class="memitem:a05e8dc06939d4b775d5676eab885c464"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1profiler.html#a05e8dc06939d4b775d5676eab885c464">toc</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:a05e8dc06939d4b775d5676eab885c464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns time since last tic.  <a href="#a05e8dc06939d4b775d5676eab885c464"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="friends"></a>
@@ -129,6 +129,32 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a489e82323e1d9c0fe021e591b0a983b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classvex_1_1profiler.html#a489e82323e1d9c0fe021e591b0a983b9">vex::profiler::tic_cl</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Enqueues a marker into each of the provided queues. </p>
+<p>Also pushes named interval to the top of the profiler hierarchy. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>name of the measured interval. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a6b287d3d7d48cac0950418a33205255e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -145,32 +171,6 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 <div class="memdoc">
 
 <p>Starts a CPU timer. </p>
-<p>Also pushes named interval to the top of the profiler hierarchy. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>name of the measured interval. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a11e6a21090e77d0f3db1e29baefb566d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classvex_1_1profiler.html#a11e6a21090e77d0f3db1e29baefb566d">vex::profiler::tic_gpu</a> </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Enqueues a marker into each of the provided queues. </p>
 <p>Also pushes named interval to the top of the profiler hierarchy. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
