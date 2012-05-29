@@ -135,7 +135,7 @@ template&lt;typename real &gt; </div>
 <p>Constructs GPU representation of the matrix. Input matrix is in CSR format. GPU matrix utilizes ELL format and is split equally across all compute devices. When there are more than one device, secondary queue can be used to perform transfer of ghost values across GPU boundaries in parallel with computation kernel. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">queue</td><td>vector of primary queues. Each queue represents one compute device. </td></tr>
+    <tr><td class="paramname">queue</td><td>vector of queues. Each queue represents one compute device. </td></tr>
     <tr><td class="paramname">n</td><td>number of rows in the matrix. </td></tr>
     <tr><td class="paramname">row</td><td>row index into col and val vectors. </td></tr>
     <tr><td class="paramname">col</td><td>column numbers of nonzero elements of the matrix. </td></tr>

@@ -131,14 +131,18 @@ RightFilter, FilterOr &gt;&#160;</td><td class="memTemplItemRight" valign="botto
 template&lt;class Flt &gt; </td></tr>
 <tr class="memitem:a78f584ca4e3eae2ac1414e56e92287ee"><td class="memTemplItemLeft" align="right" valign="top">NegateFilter&lt; Flt &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#a78f584ca4e3eae2ac1414e56e92287ee">vex::Filter::operator!</a> (const Flt &amp;flt)</td></tr>
 <tr class="memdesc:a78f584ca4e3eae2ac1414e56e92287ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Negate a filter. <br/></td></tr>
-<tr class="memitem:a4a107126f2bb5e31b9718a599f5ab891"><td class="memTemplParams" colspan="2">template&lt;class DevFilter  = Filter::All&gt; </td></tr>
-<tr class="memitem:a4a107126f2bb5e31b9718a599f5ab891"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; cl::Device &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a4a107126f2bb5e31b9718a599f5ab891">vex::device_list</a> (DevFilter filter=Filter::All(), bool verbose=false)</td></tr>
-<tr class="memdesc:a4a107126f2bb5e31b9718a599f5ab891"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select devices by given criteria.  <a href="#a4a107126f2bb5e31b9718a599f5ab891"></a><br/></td></tr>
-<tr class="memitem:acd44b741fc6f324012945f19942fcc74"><td class="memTemplParams" colspan="2">template&lt;class DevFilter  = Filter::All&gt; </td></tr>
-<tr class="memitem:acd44b741fc6f324012945f19942fcc74"><td class="memTemplItemLeft" align="right" valign="top">std::pair&lt; std::vector<br class="typebreak"/>
+<tr class="memitem:a91041b9b4ad749b9d4ef7de0a29b16e4"><td class="memTemplParams" colspan="2">template&lt;class DevFilter  = Filter::All&gt; </td></tr>
+<tr class="memitem:a91041b9b4ad749b9d4ef7de0a29b16e4"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; cl::Device &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a91041b9b4ad749b9d4ef7de0a29b16e4">vex::device_list</a> (DevFilter filter=Filter::All())</td></tr>
+<tr class="memdesc:a91041b9b4ad749b9d4ef7de0a29b16e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select devices by given criteria.  <a href="#a91041b9b4ad749b9d4ef7de0a29b16e4"></a><br/></td></tr>
+<tr class="memitem:ad5a7fdbec637a7a896600280b175912a"><td class="memTemplParams" colspan="2">template&lt;class DevFilter  = Filter::All&gt; </td></tr>
+<tr class="memitem:ad5a7fdbec637a7a896600280b175912a"><td class="memTemplItemLeft" align="right" valign="top">std::pair&lt; std::vector<br class="typebreak"/>
 &lt; cl::Context &gt;, std::vector<br class="typebreak"/>
-&lt; cl::CommandQueue &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#acd44b741fc6f324012945f19942fcc74">vex::queue_list</a> (DevFilter filter=Filter::All(), bool verbose=false)</td></tr>
-<tr class="memdesc:acd44b741fc6f324012945f19942fcc74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create command queues on devices by given criteria.  <a href="#acd44b741fc6f324012945f19942fcc74"></a><br/></td></tr>
+&lt; cl::CommandQueue &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a">vex::queue_list</a> (DevFilter filter=Filter::All(), cl_command_queue_properties properties=0)</td></tr>
+<tr class="memdesc:ad5a7fdbec637a7a896600280b175912a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create command queues on devices by given criteria.  <a href="#ad5a7fdbec637a7a896600280b175912a"></a><br/></td></tr>
+<tr class="memitem:aa535cb5230606de566781b74eed6d450"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa535cb5230606de566781b74eed6d450"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>vex::operator&lt;&lt;</b> (std::ostream &amp;os, const std::vector&lt; cl::Device &gt; &amp;device)</td></tr>
+<tr class="memitem:a656d3a9620fbc306004c367aa8497989"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a656d3a9620fbc306004c367aa8497989"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>vex::operator&lt;&lt;</b> (std::ostream &amp;os, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>OpenCL device enumeration. </p>

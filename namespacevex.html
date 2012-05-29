@@ -91,14 +91,18 @@ Enumerations</h2></td></tr>
 <tr class="memdesc:a3230efd5c4554f00d13b5c8b594a854c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Possible kinds of reduction. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4a107126f2bb5e31b9718a599f5ab891"><td class="memTemplParams" colspan="2">template&lt;class DevFilter  = Filter::All&gt; </td></tr>
-<tr class="memitem:a4a107126f2bb5e31b9718a599f5ab891"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; cl::Device &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a4a107126f2bb5e31b9718a599f5ab891">device_list</a> (DevFilter filter=<a class="el" href="structvex_1_1Filter_1_1All.html">Filter::All</a>(), bool verbose=false)</td></tr>
-<tr class="memdesc:a4a107126f2bb5e31b9718a599f5ab891"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select devices by given criteria.  <a href="#a4a107126f2bb5e31b9718a599f5ab891"></a><br/></td></tr>
-<tr class="memitem:acd44b741fc6f324012945f19942fcc74"><td class="memTemplParams" colspan="2">template&lt;class DevFilter  = Filter::All&gt; </td></tr>
-<tr class="memitem:acd44b741fc6f324012945f19942fcc74"><td class="memTemplItemLeft" align="right" valign="top">std::pair&lt; std::vector<br class="typebreak"/>
+<tr class="memitem:a91041b9b4ad749b9d4ef7de0a29b16e4"><td class="memTemplParams" colspan="2">template&lt;class DevFilter  = Filter::All&gt; </td></tr>
+<tr class="memitem:a91041b9b4ad749b9d4ef7de0a29b16e4"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; cl::Device &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a91041b9b4ad749b9d4ef7de0a29b16e4">device_list</a> (DevFilter filter=<a class="el" href="structvex_1_1Filter_1_1All.html">Filter::All</a>())</td></tr>
+<tr class="memdesc:a91041b9b4ad749b9d4ef7de0a29b16e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select devices by given criteria.  <a href="#a91041b9b4ad749b9d4ef7de0a29b16e4"></a><br/></td></tr>
+<tr class="memitem:ad5a7fdbec637a7a896600280b175912a"><td class="memTemplParams" colspan="2">template&lt;class DevFilter  = Filter::All&gt; </td></tr>
+<tr class="memitem:ad5a7fdbec637a7a896600280b175912a"><td class="memTemplItemLeft" align="right" valign="top">std::pair&lt; std::vector<br class="typebreak"/>
 &lt; cl::Context &gt;, std::vector<br class="typebreak"/>
-&lt; cl::CommandQueue &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#acd44b741fc6f324012945f19942fcc74">queue_list</a> (DevFilter filter=<a class="el" href="structvex_1_1Filter_1_1All.html">Filter::All</a>(), bool verbose=false)</td></tr>
-<tr class="memdesc:acd44b741fc6f324012945f19942fcc74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create command queues on devices by given criteria.  <a href="#acd44b741fc6f324012945f19942fcc74"></a><br/></td></tr>
+&lt; cl::CommandQueue &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a">queue_list</a> (DevFilter filter=<a class="el" href="structvex_1_1Filter_1_1All.html">Filter::All</a>(), cl_command_queue_properties properties=0)</td></tr>
+<tr class="memdesc:ad5a7fdbec637a7a896600280b175912a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create command queues on devices by given criteria.  <a href="#ad5a7fdbec637a7a896600280b175912a"></a><br/></td></tr>
+<tr class="memitem:aa535cb5230606de566781b74eed6d450"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa535cb5230606de566781b74eed6d450"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, const std::vector&lt; cl::Device &gt; &amp;device)</td></tr>
+<tr class="memitem:a656d3a9620fbc306004c367aa8497989"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a656d3a9620fbc306004c367aa8497989"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
 <tr class="memitem:ad6a208feaf1e127a3dbcbbabc54b79b2"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad6a208feaf1e127a3dbcbbabc54b79b2"></a>
 template&lt;typename real &gt; </td></tr>
 <tr class="memitem:ad6a208feaf1e127a3dbcbbabc54b79b2"><td class="memTemplItemLeft" align="right" valign="top">real&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ad6a208feaf1e127a3dbcbbabc54b79b2">sum</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x)</td></tr>
@@ -277,28 +281,18 @@ template&lt;class InputIterator , class OutputIterator &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a4a107126f2bb5e31b9718a599f5ab891"></a>
+<a class="anchor" id="a91041b9b4ad749b9d4ef7de0a29b16e4"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class DevFilter  = Filter::All&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;cl::Device&gt; <a class="el" href="namespacevex.html#a4a107126f2bb5e31b9718a599f5ab891">vex::device_list</a> </td>
+          <td class="memname">std::vector&lt;cl::Device&gt; <a class="el" href="namespacevex.html#a91041b9b4ad749b9d4ef7de0a29b16e4">vex::device_list</a> </td>
           <td>(</td>
           <td class="paramtype">DevFilter&#160;</td>
-          <td class="paramname"><em>filter</em> = <code>Filter::All()</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>filter</em> = <code>Filter::All()</code></td><td>)</td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>verbose</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div>
@@ -308,26 +302,25 @@ template&lt;class DevFilter  = Filter::All&gt; </div>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">filter</td><td>Device filter functor. Functors may be combined with logical operators. </td></tr>
-    <tr><td class="paramname">verbose</td><td>If set, outputs list of selected devices to stdout. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns:</dt><dd>list of devices satisfying the provided filter.</dd></dl>
 <p>This example selects any GPU which supports double precision arithmetic: </p>
-<div class="fragment"><pre class="fragment"> <span class="keyword">auto</span> devices = <a class="code" href="namespacevex.html#a4a107126f2bb5e31b9718a599f5ab891" title="Select devices by given criteria.">device_list</a>(
+<div class="fragment"><pre class="fragment"> <span class="keyword">auto</span> devices = <a class="code" href="namespacevex.html#a91041b9b4ad749b9d4ef7de0a29b16e4" title="Select devices by given criteria.">device_list</a>(
             Filter::Type(CL_DEVICE_TYPE_GPU) &amp;&amp; Filter::DoublePrecision()
             );
 </pre></div> 
 </div>
 </div>
-<a class="anchor" id="acd44b741fc6f324012945f19942fcc74"></a>
+<a class="anchor" id="ad5a7fdbec637a7a896600280b175912a"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class DevFilter  = Filter::All&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt;std::vector&lt;cl::Context&gt;, std::vector&lt;cl::CommandQueue&gt; &gt; <a class="el" href="namespacevex.html#acd44b741fc6f324012945f19942fcc74">vex::queue_list</a> </td>
+          <td class="memname">std::pair&lt;std::vector&lt;cl::Context&gt;, std::vector&lt;cl::CommandQueue&gt; &gt; <a class="el" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a">vex::queue_list</a> </td>
           <td>(</td>
           <td class="paramtype">DevFilter&#160;</td>
           <td class="paramname"><em>filter</em> = <code>Filter::All()</code>, </td>
@@ -335,8 +328,8 @@ template&lt;class DevFilter  = Filter::All&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>verbose</em> = <code>false</code>&#160;</td>
+          <td class="paramtype">cl_command_queue_properties&#160;</td>
+          <td class="paramname"><em>properties</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -351,12 +344,11 @@ template&lt;class DevFilter  = Filter::All&gt; </div>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">filter</td><td>Device filter functor. Functors may be combined with logical operators. </td></tr>
-    <tr><td class="paramname">verbose</td><td>If set, output list of selected devices to stdout. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns:</dt><dd>list of queues accociated with selected devices. </dd></dl>
-<dl class="section see"><dt>See also:</dt><dd><a class="el" href="namespacevex.html#a4a107126f2bb5e31b9718a599f5ab891" title="Select devices by given criteria.">device_list</a> </dd></dl>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="namespacevex.html#a91041b9b4ad749b9d4ef7de0a29b16e4" title="Select devices by given criteria.">device_list</a> </dd></dl>
 
 </div>
 </div>

@@ -59,18 +59,16 @@ Selection of compute devices</h2>
 <span class="preprocessor">#include &lt;<a class="code" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL.">vexcl/vexcl.hpp</a>&gt;</span>
 <span class="keyword">using namespace </span>vex;
 <span class="keywordtype">int</span> main() {
-    <span class="keyword">auto</span> device = <a class="code" href="namespacevex.html#a4a107126f2bb5e31b9718a599f5ab891" title="Select devices by given criteria.">device_list</a>(
+    <span class="keyword">auto</span> device = <a class="code" href="namespacevex.html#a91041b9b4ad749b9d4ef7de0a29b16e4" title="Select devices by given criteria.">device_list</a>(
         <a class="code" href="structvex_1_1Filter_1_1Name.html" title="Selects devices whose names match given value.">Filter::Name</a>(<span class="stringliteral">&quot;Radeon&quot;</span>) &amp;&amp; <a class="code" href="structvex_1_1Filter_1_1DoublePrecision.html" title="Selects devices supporting double precision.">Filter::DoublePrecision</a>()
         );
-    std::cout &lt;&lt; device.size() &lt;&lt; <span class="stringliteral">&quot; GPUs found:&quot;</span> &lt;&lt; std::endl;
-    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;d : device)
-        std::cout &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; d.getInfo&lt;CL_DEVICE_NAME&gt;() &lt;&lt; std::endl;
+    std::cout &lt;&lt; device &lt;&lt; std::endl;
 }
-</pre></div><p>Often you want not just device list, but initialized OpenCL context with command queue on each available device. This may be achieved with <a class="el" href="namespacevex.html#acd44b741fc6f324012945f19942fcc74" title="Create command queues on devices by given criteria.">queue_list()</a> function: </p>
+</pre></div><p>Often you want not just device list, but initialized OpenCL context with command queue on each available device. This may be achieved with <a class="el" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a" title="Create command queues on devices by given criteria.">queue_list()</a> function: </p>
 <div class="fragment"><pre class="fragment">cl::Context context;
 std::vector&lt;cl::CommandQueue&gt; queue;
 <span class="comment">// Select no more than 2 NVIDIA GPUs:</span>
-std::tie(context, queue) = <a class="code" href="namespacevex.html#acd44b741fc6f324012945f19942fcc74" title="Create command queues on devices by given criteria.">queue_list</a>(
+std::tie(context, queue) = <a class="code" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a" title="Create command queues on devices by given criteria.">queue_list</a>(
     [](<span class="keyword">const</span> cl::Device &amp;d) {
         <span class="keywordflow">return</span> d.getInfo&lt;CL_DEVICE_VENDOR&gt;() == <span class="stringliteral">&quot;NVIDIA Corporation&quot;</span>;
     } &amp;&amp; Filter::Count(2)
@@ -84,7 +82,7 @@ std::generate(x.begin(), x.end(), [](){ <span class="keywordflow">return</span> 
 
 cl::Context context;
 std::vector&lt;cl::CommandQueue&gt; queue;
-std::tie(context, queue) = <a class="code" href="namespacevex.html#acd44b741fc6f324012945f19942fcc74" title="Create command queues on devices by given criteria.">queue_list</a>(Filter::Type(CL_DEVICE_TYPE_GPU));
+std::tie(context, queue) = <a class="code" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a" title="Create command queues on devices by given criteria.">queue_list</a>(Filter::Type(CL_DEVICE_TYPE_GPU));
 
 <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> X(queue, CL_MEM_READ_ONLY,  x);
 <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> Y(queue, CL_MEM_READ_WRITE, n);
@@ -119,7 +117,7 @@ Sparse matrix-vector multiplication</h2>
     cl::Context context;
     std::vector&lt;cl::CommandQueue&gt; queue;
 
-    std::tie(context, queue) = <a class="code" href="namespacevex.html#acd44b741fc6f324012945f19942fcc74" title="Create command queues on devices by given criteria.">queue_list</a>(Filter::Type(CL_DEVICE_TYPE_GPU));
+    std::tie(context, queue) = <a class="code" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a" title="Create command queues on devices by given criteria.">queue_list</a>(Filter::Type(CL_DEVICE_TYPE_GPU));
 
     <span class="comment">// Move data to GPU(s)</span>
     uint n = x.size();
@@ -164,7 +162,7 @@ Using custom kernels</h2>
 <p>Custom kernels are of course possible as well. vector::operator(uint) returns cl::Buffer object for a specified device: </p>
 <div class="fragment"><pre class="fragment">cl::Context context;
 std::vector&lt;cl::CommandQueue&gt; queue;
-std::tie(context, queue) = <a class="code" href="namespacevex.html#acd44b741fc6f324012945f19942fcc74" title="Create command queues on devices by given criteria.">queue_list</a>(Filter::Type(CL_DEVICE_TYPE_GPU));
+std::tie(context, queue) = <a class="code" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a" title="Create command queues on devices by given criteria.">queue_list</a>(Filter::Type(CL_DEVICE_TYPE_GPU));
 
 <span class="keyword">const</span> uint n = 1 &lt;&lt; 20;
 <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;float&gt;</a> x(queue, CL_MEM_WRITE_ONLY, n);
