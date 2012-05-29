@@ -117,6 +117,9 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:a10f75afe74f2cc758d06d763969484b2"><td class="memTemplParams" colspan="2"><a class="anchor" id="a10f75afe74f2cc758d06d763969484b2"></a>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:a10f75afe74f2cc758d06d763969484b2"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::inner_product</b> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x, const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;y)</td></tr>
+<tr class="memitem:a1c581e13b2ad42d82840491900838892"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c581e13b2ad42d82840491900838892"></a>
+std::vector&lt; uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a1c581e13b2ad42d82840491900838892">vex::partition</a> (uint n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
+<tr class="memdesc:a1c581e13b2ad42d82840491900838892"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns partitions for vector of size n. <br/></td></tr>
 <tr class="memitem:a7896b8bc121f843d62d724a98ebe3b46"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7896b8bc121f843d62d724a98ebe3b46"></a>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:a7896b8bc121f843d62d724a98ebe3b46"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a7896b8bc121f843d62d724a98ebe3b46">vex::copy</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;dv, std::vector&lt; T &gt; &amp;hv, cl_bool blocking=CL_TRUE)</td></tr>
@@ -174,6 +177,9 @@ BinaryExpression&lt; LHS, <br class="typebreak"/>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:a53f74439e6dca489cb5fe5af5a911685"><td class="memTemplItemLeft" align="right" valign="top">Constant&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a53f74439e6dca489cb5fe5af5a911685">vex::Const</a> (T value)</td></tr>
 <tr class="memdesc:a53f74439e6dca489cb5fe5af5a911685"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structvex_1_1Constant.html" title="Constant for use in vector expressions.">Constant</a> for use in vector expressions. <br/></td></tr>
+<tr class="memitem:abaacc61056fc9195d0c02f6deac9ac65"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abaacc61056fc9195d0c02f6deac9ac65"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#abaacc61056fc9195d0c02f6deac9ac65">vex::device_weight</a> (const cl::Context &amp;context, const cl::Device &amp;device, uint test_size=1048576U)</td></tr>
+<tr class="memdesc:abaacc61056fc9195d0c02f6deac9ac65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns device weight after simple bandwidth test. <br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>OpenCL device vector. </p>
