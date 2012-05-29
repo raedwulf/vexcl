@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node7" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="225,238,337,266"/>
+<area shape="rect" id="node17" href="$devlist_8hpp.html" title="OpenCL device enumeration." alt="" coords="1332,161,1468,189"/>
+<area shape="rect" id="node23" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="788,161,921,189"/>
+<area shape="rect" id="node37" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="440,83,573,111"/>
+<area shape="rect" id="node56" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="1041,83,1180,111"/>
+</map>
