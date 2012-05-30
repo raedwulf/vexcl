@@ -75,8 +75,9 @@ std::tie(context, queue) = <a class="code" href="namespacevex.html#ad5a7fdbec637
     );
 </pre></div><h2><a class="anchor" id="vector"></a>
 Memory allocation and vector arithmetic</h2>
-<p>Once you got queue list, you can allocate OpenCL buffers on the associated devices. <a class="el" href="classvex_1_1vector.html" title="Device vector.">vex::vector</a> constructor accepts std::vector of cl::CommandQueue. The contents of the created vector will be equally partitioned between each queue (presumably, each of the provided queues is linked with separate device). Size of each partition will be proportional to relative device bandwidth unless macro <code>VEXCL_DUMB_PARTITIONING</code> is defined, in which case equal partitioning scheme will be applied. Device bandwidth is measured first time it is requested by launch of small test kernel.</p>
-<p>Multi-platform computation is supported (that is, you can spread your vectors across devices by different vendors), but should be used with caution: all computations will be performed with the speed of the slowest device selected. </p>
+<p>Once you got queue list, you can allocate OpenCL buffers on the associated devices. <a class="el" href="classvex_1_1vector.html" title="Device vector.">vex::vector</a> constructor accepts std::vector of cl::CommandQueue. The contents of the created vector will be equally partitioned between each queue (presumably, each of the provided queues is linked with separate device). Size of each partition will be proportional to relative device bandwidth unless macro VEXCL_DUMB_PARTITIONING is defined, in which case equal partitioning scheme will be applied. Device bandwidth is measured first time it is requested by launch of small test kernel.</p>
+<p>Multi-platform computation is supported (that is, you can spread your vectors across devices by different vendors), but should be used with caution: all computations will be performed with the speed of the slowest device selected.</p>
+<p>In the example below host vector is allocated and initialized, then copied to all devices obtained with the <a class="el" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a" title="Create command queues on devices by given criteria.">queue_list()</a> call. A couple of empty device vectors are allocated as well: </p>
 <div class="fragment"><pre class="fragment"><span class="keyword">const</span> uint n = 1 &lt;&lt; 20;
 std::vector&lt;double&gt; x(n);
 std::generate(x.begin(), x.end(), [](){ <span class="keywordflow">return</span> (<span class="keywordtype">double</span>)rand() / RAND_MAX; });
@@ -185,11 +186,19 @@ std::cout &lt;&lt; <a class="code" href="namespacevex.html#ad6a208feaf1e127a3dbc
 </pre></div><h2><a class="anchor" id="scalability"></a>
 Scalability</h2>
 <p>In the images below, scalability of the library with respect to number of compute devices is shown. Effective performance (GFLOPS) and bandwidth (GB/sec) were measured by launching big number of test kernels on one, two, or three Nvidia Tesla C2070 cards. The results shown are averaged over 50 runs.</p>
-<p>The details of the experiments may be found in examples/profiling.cpp file.</p>
-<div class="image">
+<p>The details of the experiments may be found in <a href="https://github.com/ddemidov/vexcl/blob/master/examples/profiling.cpp">examples/profiling.cpp</a> file. Basically, performance of the following code was measured:</p>
+<div class="fragment"><pre class="fragment"><span class="comment">// Vector arithmetic</span>
+a += b + c * d;
+
+<span class="comment">// Reduction</span>
+<span class="keywordtype">double</span> s = <a class="code" href="namespacevex.html#ad6a208feaf1e127a3dbcbbabc54b79b2" title="Sum of vector elements.">sum</a>(a * b);
+
+<span class="comment">// SpMV</span>
+y += A * x;
+</pre></div><div class="image">
 <img src="gflops.png" alt="gflops.png"/>
 </div>
- <div class="image">
+<div class="image">
 <img src="bwidth.png" alt="bwidth.png"/>
 </div>
 </div></div><!-- contents -->
