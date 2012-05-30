@@ -107,14 +107,6 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
 <tr class="memitem:abb803b9f4d11c3a7c21f4b3df265b2a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb803b9f4d11c3a7c21f4b3df265b2a1"></a>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, <a class="el" href="classvex_1_1profiler.html">profiler</a> &amp;prof)</td></tr>
-<tr class="memitem:ad6a208feaf1e127a3dbcbbabc54b79b2"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad6a208feaf1e127a3dbcbbabc54b79b2"></a>
-template&lt;typename real &gt; </td></tr>
-<tr class="memitem:ad6a208feaf1e127a3dbcbbabc54b79b2"><td class="memTemplItemLeft" align="right" valign="top">real&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ad6a208feaf1e127a3dbcbbabc54b79b2">sum</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x)</td></tr>
-<tr class="memdesc:ad6a208feaf1e127a3dbcbbabc54b79b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sum of vector elements. <br/></td></tr>
-<tr class="memitem:a3a84a11996573bb241f908efd8ab3731"><td class="memTemplParams" colspan="2"><a class="anchor" id="a3a84a11996573bb241f908efd8ab3731"></a>
-template&lt;typename real &gt; </td></tr>
-<tr class="memitem:a3a84a11996573bb241f908efd8ab3731"><td class="memTemplItemLeft" align="right" valign="top">real&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a3a84a11996573bb241f908efd8ab3731">inner_product</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x, const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;y)</td></tr>
-<tr class="memdesc:a3a84a11996573bb241f908efd8ab3731"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inner product of two vectors. <br/></td></tr>
 <tr class="memitem:a52781310676622f84818bd017c24561e"><td class="memTemplParams" colspan="2"><a class="anchor" id="a52781310676622f84818bd017c24561e"></a>
 template&lt;typename real &gt; </td></tr>
 <tr class="memitem:a52781310676622f84818bd017c24561e"><td class="memTemplItemLeft" align="right" valign="top">SpMV&lt; real &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a52781310676622f84818bd017c24561e">operator*</a> (const <a class="el" href="classvex_1_1SpMat.html">SpMat</a>&lt; real &gt; &amp;A, const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x)</td></tr>
@@ -165,18 +157,12 @@ template&lt;class T &gt; </td></tr>
 &lt; std::is_integral&lt; T &gt;::value, <br class="typebreak"/>
 T &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a8c39134f49eb496e0b2bdaf3d3e1cea1">alignup</a> (T n, T m=16U)</td></tr>
 <tr class="memdesc:a8c39134f49eb496e0b2bdaf3d3e1cea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Align n to the next multiple of m. <br/></td></tr>
-<tr class="memitem:ab6b01bcf8d0e27e9617766b02e69aae8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6b01bcf8d0e27e9617766b02e69aae8"></a>
-cl::Program&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#ab6b01bcf8d0e27e9617766b02e69aae8">build_sources</a> (cl::Context context, const std::string &amp;source)</td></tr>
-<tr class="memdesc:ab6b01bcf8d0e27e9617766b02e69aae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and build a program from source string. <br/></td></tr>
+<tr class="memitem:a61989abf337d9845cad96ce9e805fd56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61989abf337d9845cad96ce9e805fd56"></a>
+cl::Program&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a61989abf337d9845cad96ce9e805fd56">build_sources</a> (const cl::Context &amp;context, const std::string &amp;source)</td></tr>
+<tr class="memdesc:a61989abf337d9845cad96ce9e805fd56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and build a program from source string. <br/></td></tr>
 <tr class="memitem:a4fac2859dd788e5adab97240c238c946"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fac2859dd788e5adab97240c238c946"></a>
 uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a4fac2859dd788e5adab97240c238c946">kernel_workgroup_size</a> (const cl::Kernel &amp;kernel, const std::vector&lt; cl::Device &gt; &amp;device)</td></tr>
 <tr class="memdesc:a4fac2859dd788e5adab97240c238c946"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get maximum possible workgroup size for given kernel. <br/></td></tr>
-<tr class="memitem:a2a7285fc16878ba4d3436b280e62eae5"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2a7285fc16878ba4d3436b280e62eae5"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a2a7285fc16878ba4d3436b280e62eae5"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sum</b> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x)</td></tr>
-<tr class="memitem:a10f75afe74f2cc758d06d763969484b2"><td class="memTemplParams" colspan="2"><a class="anchor" id="a10f75afe74f2cc758d06d763969484b2"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a10f75afe74f2cc758d06d763969484b2"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>inner_product</b> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x, const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;y)</td></tr>
 <tr class="memitem:a1c581e13b2ad42d82840491900838892"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c581e13b2ad42d82840491900838892"></a>
 std::vector&lt; uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a1c581e13b2ad42d82840491900838892">partition</a> (uint n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
 <tr class="memdesc:a1c581e13b2ad42d82840491900838892"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns partitions for vector of size n. <br/></td></tr>

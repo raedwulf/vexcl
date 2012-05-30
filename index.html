@@ -97,10 +97,10 @@ Z = sqrt(<a class="code" href="namespacevex.html#a53f74439e6dca489cb5fe5af5a9116
 <div class="fragment"><pre class="fragment"><a class="code" href="namespacevex.html#a7896b8bc121f843d62d724a98ebe3b46" title="Copy device vector to host vector.">copy</a>(Z, x);
 assert(x[42] == Z[42]);
 </pre></div><p>Another frequently performed operation is reduction of a vector expression to single value, such as summation. This can be done with <a class="el" href="classvex_1_1Reductor.html" title="Parallel reduction of arbitrary expression.">vex::Reductor</a> class: </p>
-<div class="fragment"><pre class="fragment">Reductor&lt;double&gt; <a class="code" href="namespacevex.html#ad6a208feaf1e127a3dbcbbabc54b79b2" title="Sum of vector elements.">sum</a>(queue);
+<div class="fragment"><pre class="fragment">Reductor&lt;double&gt; sum(queue);
 
-std::cout &lt;&lt; <a class="code" href="namespacevex.html#ad6a208feaf1e127a3dbcbbabc54b79b2" title="Sum of vector elements.">sum</a>(Z) &lt;&lt; std::endl;
-std::cout &lt;&lt; <a class="code" href="namespacevex.html#ad6a208feaf1e127a3dbcbbabc54b79b2" title="Sum of vector elements.">sum</a>(sqrt(<a class="code" href="namespacevex.html#a53f74439e6dca489cb5fe5af5a911685" title="Constant for use in vector expressions.">Const</a>(2) * X) + cos(Y)) &lt;&lt; std::endl;
+std::cout &lt;&lt; sum(Z) &lt;&lt; std::endl;
+std::cout &lt;&lt; sum(sqrt(<a class="code" href="namespacevex.html#a53f74439e6dca489cb5fe5af5a911685" title="Constant for use in vector expressions.">Const</a>(2) * X) + cos(Y)) &lt;&lt; std::endl;
 </pre></div><h2><a class="anchor" id="spmv"></a>
 Sparse matrix-vector multiplication</h2>
 <p>One of the most common operations in linear algebra is matrix-vector multiplication. Class <a class="el" href="classvex_1_1SpMat.html" title="Sparse matrix.">vex::SpMat</a> holds representation of a sparse matrix, spanning several GPUs. In the example below it is used for solution of a system of linear equations with conjugate gradients method: </p>
@@ -131,13 +131,14 @@ Sparse matrix-vector multiplication</h2>
     <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> q(queue, CL_MEM_READ_WRITE, n);
 
     Reductor&lt;real,MAX&gt; max(queue);
+    Reductor&lt;real,SUM&gt; sum(queue);
 
     <span class="comment">// Solve equation Au = f with conjugate gradients method.</span>
     real rho1, rho2;
     r = f - A * u;
 
     <span class="keywordflow">for</span>(uint iter = 0; max(Abs(r)) &gt; 1e-8 &amp;&amp; iter &lt; n; iter++) {
-        rho1 = <a class="code" href="namespacevex.html#a3a84a11996573bb241f908efd8ab3731" title="Inner product of two vectors.">inner_product</a>(r, r);
+        rho1 = sum(r * r);
 
         <span class="keywordflow">if</span> (iter == 0) {
             p = r;
@@ -148,7 +149,7 @@ Sparse matrix-vector multiplication</h2>
 
         q = A * p;
 
-        real alpha = rho1 / <a class="code" href="namespacevex.html#a3a84a11996573bb241f908efd8ab3731" title="Inner product of two vectors.">inner_product</a>(p, q);
+        real alpha = rho1 / sum(p * q);
 
         u += <a class="code" href="namespacevex.html#a53f74439e6dca489cb5fe5af5a911685" title="Constant for use in vector expressions.">Const</a>(alpha) * p;
         r -= <a class="code" href="namespacevex.html#a53f74439e6dca489cb5fe5af5a911685" title="Constant for use in vector expressions.">Const</a>(alpha) * q;
@@ -169,7 +170,7 @@ std::tie(context, queue) = <a class="code" href="namespacevex.html#ad5a7fdbec637
 <span class="keyword">const</span> uint n = 1 &lt;&lt; 20;
 <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;float&gt;</a> x(queue, CL_MEM_WRITE_ONLY, n);
 
-<span class="keyword">auto</span> program = <a class="code" href="namespacevex.html#ab6b01bcf8d0e27e9617766b02e69aae8" title="Create and build a program from source string.">build_sources</a>(context, std::string(
+<span class="keyword">auto</span> program = <a class="code" href="namespacevex.html#a61989abf337d9845cad96ce9e805fd56" title="Create and build a program from source string.">build_sources</a>(context, std::string(
     <span class="stringliteral">&quot;kernel void dummy(uint size, global float *x)\n&quot;</span>
     <span class="stringliteral">&quot;{\n&quot;</span>
     <span class="stringliteral">&quot;    uint i = get_global_id(0);\n&quot;</span>
@@ -182,7 +183,8 @@ std::tie(context, queue) = <a class="code" href="namespacevex.html#ad5a7fdbec637
     dummy((uint)x.part_size(d), x(d));
 }
 
-std::cout &lt;&lt; <a class="code" href="namespacevex.html#ad6a208feaf1e127a3dbcbbabc54b79b2" title="Sum of vector elements.">sum</a>(x) &lt;&lt; std::endl;
+Reductor&lt;float,SUM&gt; sum(queue);
+std::cout &lt;&lt; sum(x) &lt;&lt; std::endl;
 </pre></div><h2><a class="anchor" id="scalability"></a>
 Scalability</h2>
 <p>In the images below, scalability of the library with respect to number of compute devices is shown. Effective performance (GFLOPS) and bandwidth (GB/sec) were measured by launching big number of test kernels on one, two, or three Nvidia Tesla C2070 cards. The results shown are averaged over 50 runs.</p>
@@ -191,7 +193,7 @@ Scalability</h2>
 a += b + c * d;
 
 <span class="comment">// Reduction</span>
-<span class="keywordtype">double</span> s = <a class="code" href="namespacevex.html#ad6a208feaf1e127a3dbcbbabc54b79b2" title="Sum of vector elements.">sum</a>(a * b);
+<span class="keywordtype">double</span> s = sum(a * b);
 
 <span class="comment">// SpMV</span>
 y += A * x;
