@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node7" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="171,238,283,266"/>
-<area shape="rect" id="node17" href="$devlist_8hpp.html" title="OpenCL device enumeration." alt="" coords="1432,161,1568,189"/>
-<area shape="rect" id="node23" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="1060,161,1193,189"/>
-<area shape="rect" id="node37" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="709,83,843,111"/>
-<area shape="rect" id="node56" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="1324,83,1463,111"/>
-<area shape="rect" id="node66" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="537,161,676,189"/>
+<area shape="rect" id="node7" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="1395,238,1507,266"/>
+<area shape="rect" id="node17" href="$devlist_8hpp.html" title="OpenCL device enumeration." alt="" coords="95,161,231,189"/>
+<area shape="rect" id="node25" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="1190,161,1323,189"/>
+<area shape="rect" id="node39" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="623,83,757,111"/>
+<area shape="rect" id="node57" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="1187,83,1326,111"/>
+<area shape="rect" id="node67" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="727,161,866,189"/>
 </map>
