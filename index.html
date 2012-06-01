@@ -103,7 +103,7 @@ std::cout &lt;&lt; sum(Z) &lt;&lt; std::endl;
 std::cout &lt;&lt; sum(sqrt(<a class="code" href="namespacevex.html#a53f74439e6dca489cb5fe5af5a911685" title="Constant for use in vector expressions.">Const</a>(2) * X) + cos(Y)) &lt;&lt; std::endl;
 </pre></div><h2><a class="anchor" id="spmv"></a>
 Sparse matrix-vector multiplication</h2>
-<p>One of the most common operations in linear algebra is matrix-vector multiplication. Class <a class="el" href="classvex_1_1SpMat.html" title="Sparse matrix.">vex::SpMat</a> holds representation of a sparse matrix, spanning several GPUs. In the example below it is used for solution of a system of linear equations with conjugate gradients method: </p>
+<p>One of the most common operations in linear algebra is matrix-vector multiplication. Class <a class="el" href="classvex_1_1SpMat.html" title="Sparse matrix.">vex::SpMat</a> holds representation of a sparse matrix, spanning several devices. In the example below it is used for solution of a system of linear equations with conjugate gradients method: </p>
 <div class="fragment"><pre class="fragment"><span class="keyword">typedef</span> <span class="keywordtype">double</span> real;
 <span class="comment">// Solve system of linear equations A u = f with conjugate gradients method.</span>
 <span class="comment">// Input matrix is represented in CSR format (parameters row, col, and val).</span>
@@ -115,13 +115,13 @@ Sparse matrix-vector multiplication</h2>
         std::vector&lt;real&gt; &amp;x            <span class="comment">// In: initial approximation; out: result.</span>
         )
 {
-    <span class="comment">// Init OpenCL</span>
+    <span class="comment">// Init OpenCL.</span>
     cl::Context context;
     std::vector&lt;cl::CommandQueue&gt; queue;
 
     std::tie(context, queue) = <a class="code" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a" title="Create command queues on devices by given criteria.">queue_list</a>(Filter::Type(CL_DEVICE_TYPE_GPU));
 
-    <span class="comment">// Move data to GPU(s)</span>
+    <span class="comment">// Move data to compute devices.</span>
     uint n = x.size();
     <a class="code" href="classvex_1_1SpMat.html" title="Sparse matrix.">vex::SpMat&lt;real&gt;</a>  A(queue, n, row.data(), col.data(), val.data());
     <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> f(queue, CL_MEM_READ_ONLY,  rhs);
