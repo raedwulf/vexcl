@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>vexcl: vex::Constant&lt; T &gt; Struct Template Reference</title>
+<title>vexcl: vex::KernelGenerator&lt; T, typename std::enable_if&lt; std::is_arithmetic&lt; T &gt;::value &gt;::type &gt; Struct Template Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -54,50 +54,45 @@
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="namespacevex.html">vex</a>      </li>
-      <li class="navelem"><a class="el" href="structvex_1_1Constant.html">Constant</a>      </li>
+      <li class="navelem"><a class="el" href="structvex_1_1KernelGenerator_3_01T_00_01typename_01std_1_1enable__if_3_01std_1_1is__arithmetic_3d04b5cec75627687c2da3da58e30b5d6.html">KernelGenerator&lt; T, typename std::enable_if&lt; std::is_arithmetic&lt; T &gt;::value &gt;::type &gt;</a>      </li>
     </ul>
   </div>
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">vex::Constant&lt; T &gt; Struct Template Reference</div>  </div>
+<div class="title">vex::KernelGenerator&lt; T, typename std::enable_if&lt; std::is_arithmetic&lt; T &gt;::value &gt;::type &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="structvex_1_1Constant.html" title="Constant for use in vector expressions.">Constant</a> for use in vector expressions.  
- <a href="structvex_1_1Constant.html#details">More...</a></p>
+<p>Kernel generation helper for arithmetic types.  
+ <a href="structvex_1_1KernelGenerator_3_01T_00_01typename_01std_1_1enable__if_3_01std_1_1is__arithmetic_3d04b5cec75627687c2da3da58e30b5d6.html#details">More...</a></p>
 
 <p><code>#include &lt;vector.hpp&gt;</code></p>
 
-<p><a href="structvex_1_1Constant-members.html">List of all members.</a></p>
+<p><a href="structvex_1_1KernelGenerator_3_01T_00_01typename_01std_1_1enable__if_3_01std_1_1is__arithmetic_3f13e5c8a86f00eead033e3b225d86585.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afc3033be822d97da634d8e19734bcfd3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc3033be822d97da634d8e19734bcfd3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Constant</b> (T value)</td></tr>
-<tr class="memitem:acbfe5e25e08d3ed5cec6e738a18b7d0d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbfe5e25e08d3ed5cec6e738a18b7d0d"></a>
+<tr class="memitem:a5696871355e686a5dc97763311a28c6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5696871355e686a5dc97763311a28c6b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>KernelGenerator</b> (const T &amp;value)</td></tr>
+<tr class="memitem:a11e39bcc0dfbbc438eb91d1e13034481"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11e39bcc0dfbbc438eb91d1e13034481"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>kernel_name</b> () const </td></tr>
-<tr class="memitem:a50e9e080a56a8362fd71e40e29f3f1a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50e9e080a56a8362fd71e40e29f3f1a6"></a>
+<tr class="memitem:ad2a5a294a55f2db7dffeb77a2361f333"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2a5a294a55f2db7dffeb77a2361f333"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>kernel_expr</b> (std::ostream &amp;os, std::string name=&quot;c&quot;) const </td></tr>
-<tr class="memitem:ac934d1c9d5ccd48bc4173614f805fafc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac934d1c9d5ccd48bc4173614f805fafc"></a>
+<tr class="memitem:aaea5e6e424e79a657c0a3b6675358299"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaea5e6e424e79a657c0a3b6675358299"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>kernel_prm</b> (std::ostream &amp;os, std::string name=&quot;c&quot;) const </td></tr>
-<tr class="memitem:ae430ad31c29db38bead1c176cd5d87bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae430ad31c29db38bead1c176cd5d87bc"></a>
+<tr class="memitem:a4ca38eaec91617a983096d89bbd355de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ca38eaec91617a983096d89bbd355de"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>kernel_args</b> (cl::Kernel &amp;k, uint devnum, uint &amp;pos) const </td></tr>
-<tr class="memitem:aa1cd6880efbb35817018781a7fbaf13e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1cd6880efbb35817018781a7fbaf13e"></a>
+<tr class="memitem:ae16d22492454c565add10b2cb6152e37"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae16d22492454c565add10b2cb6152e37"></a>
 uint&#160;</td><td class="memItemRight" valign="bottom"><b>part_size</b> (uint dev) const </td></tr>
-<tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a3507324b8390b55d45f19b116f816e83"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3507324b8390b55d45f19b116f816e83"></a>
-static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_expression</b> = true</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><h3>template&lt;class T&gt;<br/>
-struct vex::Constant&lt; T &gt;</h3>
+<div class="textblock"><h3>template&lt;typename T&gt;<br/>
+struct vex::KernelGenerator&lt; T, typename std::enable_if&lt; std::is_arithmetic&lt; T &gt;::value &gt;::type &gt;</h3>
 
-<p><a class="el" href="structvex_1_1Constant.html" title="Constant for use in vector expressions.">Constant</a> for use in vector expressions. </p>
+<p>Kernel generation helper for arithmetic types. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="vector_8hpp.html">vector.hpp</a></li>
 </ul>

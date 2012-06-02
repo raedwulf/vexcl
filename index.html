@@ -91,8 +91,8 @@ std::tie(context, queue) = <a class="code" href="namespacevex.html#ad5a7fdbec637
 <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> Z(queue, CL_MEM_READ_WRITE, n);
 </pre></div><p>You can now use simple vector arithmetic with device vector. For every expression you use, appropriate kernel is compiled (first time it is encountered in your program) and called automagically.</p>
 <p>Vectors are processed in parallel across all devices they were allocated on: </p>
-<div class="fragment"><pre class="fragment">Y = <a class="code" href="namespacevex.html#a53f74439e6dca489cb5fe5af5a911685" title="Constant for use in vector expressions.">Const</a>(42);
-Z = sqrt(<a class="code" href="namespacevex.html#a53f74439e6dca489cb5fe5af5a911685" title="Constant for use in vector expressions.">Const</a>(2) * X) + cos(Y);
+<div class="fragment"><pre class="fragment">Y = 42;
+Z = sqrt(2 * X) + cos(Y);
 </pre></div><p>You can copy the result back to host or you can use vector::operator[] to read (or write) vector elements directly. Though latter technique is very ineffective and should be used for debugging purposes only. </p>
 <div class="fragment"><pre class="fragment"><a class="code" href="namespacevex.html#a7896b8bc121f843d62d724a98ebe3b46" title="Copy device vector to host vector.">copy</a>(Z, x);
 assert(x[42] == Z[42]);
@@ -100,7 +100,7 @@ assert(x[42] == Z[42]);
 <div class="fragment"><pre class="fragment">Reductor&lt;double&gt; sum(queue);
 
 std::cout &lt;&lt; sum(Z) &lt;&lt; std::endl;
-std::cout &lt;&lt; sum(sqrt(<a class="code" href="namespacevex.html#a53f74439e6dca489cb5fe5af5a911685" title="Constant for use in vector expressions.">Const</a>(2) * X) + cos(Y)) &lt;&lt; std::endl;
+std::cout &lt;&lt; sum(sqrt(2 * X) + cos(Y)) &lt;&lt; std::endl;
 </pre></div><h2><a class="anchor" id="spmv"></a>
 Sparse matrix-vector multiplication</h2>
 <p>One of the most common operations in linear algebra is matrix-vector multiplication. Class <a class="el" href="classvex_1_1SpMat.html" title="Sparse matrix.">vex::SpMat</a> holds representation of a sparse matrix, spanning several devices. In the example below it is used for solution of a system of linear equations with conjugate gradients method: </p>
@@ -144,15 +144,15 @@ Sparse matrix-vector multiplication</h2>
             p = r;
         } <span class="keywordflow">else</span> {
             real beta = rho1 / rho2;
-            p = r + <a class="code" href="namespacevex.html#a53f74439e6dca489cb5fe5af5a911685" title="Constant for use in vector expressions.">Const</a>(beta) * p;
+            p = r + beta * p;
         }
 
         q = A * p;
 
         real alpha = rho1 / sum(p * q);
 
-        u += <a class="code" href="namespacevex.html#a53f74439e6dca489cb5fe5af5a911685" title="Constant for use in vector expressions.">Const</a>(alpha) * p;
-        r -= <a class="code" href="namespacevex.html#a53f74439e6dca489cb5fe5af5a911685" title="Constant for use in vector expressions.">Const</a>(alpha) * q;
+        u += alpha * p;
+        r -= alpha * q;
 
         rho2 = rho1;
     }
