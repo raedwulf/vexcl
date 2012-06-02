@@ -48,6 +48,7 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -77,18 +78,16 @@
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a752f28b156c489402ed4b71e690f2a84"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a752f28b156c489402ed4b71e690f2a84"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>KernelGenerator</b> (const T &amp;value)</td></tr>
+<tr class="memitem:a9bbf6bd316d4745a2d88e38920427c21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bbf6bd316d4745a2d88e38920427c21"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>preamble</b> (std::ostream &amp;os, std::string name) const </td></tr>
 <tr class="memitem:a024f53919cb032a1594c530001afbe22"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a024f53919cb032a1594c530001afbe22"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>kernel_name</b> () const </td></tr>
-<tr class="memitem:af3fca4dd1a127a8aa8a80c4b50739c6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3fca4dd1a127a8aa8a80c4b50739c6f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>kernel_expr</b> (std::ostream &amp;os, std::string name) const </td></tr>
-<tr class="memitem:a39d5b31021d5eac26b00b7a668d1000f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39d5b31021d5eac26b00b7a668d1000f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>kernel_expr</b> (std::ostream &amp;os) const </td></tr>
 <tr class="memitem:adb1617f501ed9dd4e00ec4013dbe1ee1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb1617f501ed9dd4e00ec4013dbe1ee1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>kernel_prm</b> (std::ostream &amp;os, std::string name) const </td></tr>
-<tr class="memitem:a087eb5bb9a819a32f3e18050ca5c0b1f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a087eb5bb9a819a32f3e18050ca5c0b1f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>kernel_prm</b> (std::ostream &amp;os) const </td></tr>
 <tr class="memitem:a8f8fba036b7ddd86ea30de8b85d77605"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f8fba036b7ddd86ea30de8b85d77605"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>kernel_args</b> (cl::Kernel &amp;k, uint devnum, uint &amp;pos) const </td></tr>
+<tr class="memitem:af3fca4dd1a127a8aa8a80c4b50739c6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3fca4dd1a127a8aa8a80c4b50739c6f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>kernel_expr</b> (std::ostream &amp;os, std::string name) const </td></tr>
 <tr class="memitem:a76d7bb76777f621527118b24425cbad3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76d7bb76777f621527118b24425cbad3"></a>
 uint&#160;</td><td class="memItemRight" valign="bottom"><b>part_size</b> (uint dev) const </td></tr>
 </table>
@@ -97,7 +96,7 @@ uint&#160;</td><td class="memItemRight" valign="bottom"><b>part_size</b> (uint d
 struct vex::KernelGenerator&lt; T, Enable &gt;</h3>
 
 <p>Default kernel generation helper. </p>
-<p>Works on top of classes providing required functions. </p>
+<p>Works on top of classes inheriting expression interface; </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="vector_8hpp.html">vector.hpp</a></li>
 </ul>

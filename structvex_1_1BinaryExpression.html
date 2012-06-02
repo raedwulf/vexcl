@@ -48,6 +48,7 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -61,8 +62,7 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
+<a href="#pub-attribs">Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">vex::BinaryExpression&lt; LHS, OP, RHS &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
@@ -73,13 +73,22 @@
 
 <p><code>#include &lt;vector.hpp&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for vex::BinaryExpression&lt; LHS, OP, RHS &gt;:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for vex::BinaryExpression&lt; LHS, OP, RHS &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="structvex_1_1BinaryExpression__inherit__graph.png" border="0" usemap="#vex_1_1BinaryExpression_3_01LHS_00_01OP_00_01RHS_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="vex_1_1BinaryExpression_3_01LHS_00_01OP_00_01RHS_01_4_inherit__map" id="vex_1_1BinaryExpression_3_01LHS_00_01OP_00_01RHS_01_4_inherit__map">
+<area shape="rect" id="node2" href="structvex_1_1expression.html" title="Base class for a member of an expression." alt="" coords="87,6,215,34"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for vex::BinaryExpression&lt; LHS, OP, RHS &gt;:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="structvex_1_1BinaryExpression__coll__graph.png" border="0" usemap="#vex_1_1BinaryExpression_3_01LHS_00_01OP_00_01RHS_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="vex_1_1BinaryExpression_3_01LHS_00_01OP_00_01RHS_01_4_coll__map" id="vex_1_1BinaryExpression_3_01LHS_00_01OP_00_01RHS_01_4_coll__map">
-<area shape="rect" id="node2" href="structvex_1_1KernelGenerator.html" title="vex::KernelGenerator\&lt; RHS \&gt;" alt="" coords="5,6,229,34"/><area shape="rect" id="node4" href="structvex_1_1KernelGenerator.html" title="vex::KernelGenerator\&lt; LHS \&gt;" alt="" coords="253,6,475,34"/></map>
+<area shape="rect" id="node2" href="structvex_1_1expression.html" title="Base class for a member of an expression." alt="" coords="5,6,133,34"/><area shape="rect" id="node4" href="structvex_1_1KernelGenerator.html" title="vex::KernelGenerator\&lt; RHS \&gt;" alt="" coords="157,6,381,34"/><area shape="rect" id="node6" href="structvex_1_1KernelGenerator.html" title="vex::KernelGenerator\&lt; LHS \&gt;" alt="" coords="405,6,627,34"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="structvex_1_1BinaryExpression-members.html">List of all members.</a></p>
@@ -88,33 +97,214 @@
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aea48c0e4126f19b1c20649289d789f67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea48c0e4126f19b1c20649289d789f67"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>BinaryExpression</b> (const LHS &amp;lhs, const RHS &amp;rhs)</td></tr>
-<tr class="memitem:ae7b1cdd961cb35bf5662d5464c1ba853"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7b1cdd961cb35bf5662d5464c1ba853"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>kernel_name</b> () const </td></tr>
-<tr class="memitem:ade4a253d07208b28edf9b751aee45415"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade4a253d07208b28edf9b751aee45415"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>kernel_prm</b> (std::ostream &amp;os, std::string name=&quot;&quot;) const </td></tr>
-<tr class="memitem:a6a957fcc09359629c938dd71eaff9063"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a957fcc09359629c938dd71eaff9063"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>kernel_expr</b> (std::ostream &amp;os, std::string name=&quot;&quot;) const </td></tr>
-<tr class="memitem:aa7053380a5c8497e2e862016c2e294cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7053380a5c8497e2e862016c2e294cc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>kernel_args</b> (cl::Kernel &amp;k, uint devnum, uint &amp;pos) const </td></tr>
-<tr class="memitem:aed023883b5a18afcea6f53d72aeaceb9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed023883b5a18afcea6f53d72aeaceb9"></a>
-uint&#160;</td><td class="memItemRight" valign="bottom"><b>part_size</b> (uint dev) const </td></tr>
+<tr class="memitem:ae7b1cdd961cb35bf5662d5464c1ba853"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1BinaryExpression.html#ae7b1cdd961cb35bf5662d5464c1ba853">kernel_name</a> () const </td></tr>
+<tr class="memdesc:ae7b1cdd961cb35bf5662d5464c1ba853"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kernel name.  <a href="#ae7b1cdd961cb35bf5662d5464c1ba853"></a><br/></td></tr>
+<tr class="memitem:ade4a253d07208b28edf9b751aee45415"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1BinaryExpression.html#ade4a253d07208b28edf9b751aee45415">kernel_prm</a> (std::ostream &amp;os, std::string name=&quot;&quot;) const </td></tr>
+<tr class="memdesc:ade4a253d07208b28edf9b751aee45415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kernel parameter list.  <a href="#ade4a253d07208b28edf9b751aee45415"></a><br/></td></tr>
+<tr class="memitem:a6a957fcc09359629c938dd71eaff9063"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1BinaryExpression.html#a6a957fcc09359629c938dd71eaff9063">kernel_expr</a> (std::ostream &amp;os, std::string name=&quot;&quot;) const </td></tr>
+<tr class="memdesc:a6a957fcc09359629c938dd71eaff9063"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kernel body.  <a href="#a6a957fcc09359629c938dd71eaff9063"></a><br/></td></tr>
+<tr class="memitem:aa7053380a5c8497e2e862016c2e294cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1BinaryExpression.html#aa7053380a5c8497e2e862016c2e294cc">kernel_args</a> (cl::Kernel &amp;k, uint devnum, uint &amp;pos) const </td></tr>
+<tr class="memdesc:aa7053380a5c8497e2e862016c2e294cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kernel arguments.  <a href="#aa7053380a5c8497e2e862016c2e294cc"></a><br/></td></tr>
+<tr class="memitem:aed023883b5a18afcea6f53d72aeaceb9"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1BinaryExpression.html#aed023883b5a18afcea6f53d72aeaceb9">part_size</a> (uint dev) const </td></tr>
+<tr class="memdesc:aed023883b5a18afcea6f53d72aeaceb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of vectors forming the expression.  <a href="#aed023883b5a18afcea6f53d72aeaceb9"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ab60f69adfa48058edb766a0d8c009866"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab60f69adfa48058edb766a0d8c009866"></a>
 const <a class="el" href="structvex_1_1KernelGenerator.html">KernelGenerator</a>&lt; LHS &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>lhs</b></td></tr>
 <tr class="memitem:ad9ac96e3cc566ca51fa09cde04ba0244"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9ac96e3cc566ca51fa09cde04ba0244"></a>
 const <a class="el" href="structvex_1_1KernelGenerator.html">KernelGenerator</a>&lt; RHS &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>rhs</b></td></tr>
-<tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a039c6f9c3e6484ec97767295d997867c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a039c6f9c3e6484ec97767295d997867c"></a>
-static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_expression</b> = true</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class LHS, char OP, class RHS&gt;<br/>
 struct vex::BinaryExpression&lt; LHS, OP, RHS &gt;</h3>
 
 <p>Expression template. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="aa7053380a5c8497e2e862016c2e294cc"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class LHS, char OP, class RHS&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structvex_1_1BinaryExpression.html">vex::BinaryExpression</a>&lt; LHS, OP, RHS &gt;::<a class="el" href="structvex_1_1BinaryExpression.html#aa7053380a5c8497e2e862016c2e294cc">kernel_args</a> </td>
+          <td>(</td>
+          <td class="paramtype">cl::Kernel &amp;&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>devnum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Kernel arguments. </p>
+<p>This function is called at the time of actual kernel launch. Each terminal expression should set kernel arguments for the parameters it needs at specified position. Position should be incremented afterwards. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>OpenCL kernel that is being prepared to launch. </td></tr>
+    <tr><td class="paramname">devnum</td><td>Number of queue in queue list for which the kernel is launched. </td></tr>
+    <tr><td class="paramname">pos</td><td>Current position in parameter stack. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="structvex_1_1expression.html#a6b24e8d28bd01c9fa1251d29914c448b">vex::expression</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6a957fcc09359629c938dd71eaff9063"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class LHS, char OP, class RHS&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structvex_1_1BinaryExpression.html">vex::BinaryExpression</a>&lt; LHS, OP, RHS &gt;::<a class="el" href="structvex_1_1BinaryExpression.html#a6a957fcc09359629c938dd71eaff9063">kernel_expr</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Kernel body. </p>
+<p>The actual expression which forms the kernel body. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>Output stream which holds kernel source. </td></tr>
+    <tr><td class="paramname">name</td><td>Name of current node in an expression tree. Should be used directly or as a prefix to form parameter name(s). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="structvex_1_1expression.html#a5e61c6e9c042b05f752a735524f513f7">vex::expression</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae7b1cdd961cb35bf5662d5464c1ba853"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class LHS, char OP, class RHS&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="structvex_1_1BinaryExpression.html">vex::BinaryExpression</a>&lt; LHS, OP, RHS &gt;::<a class="el" href="structvex_1_1BinaryExpression.html#ae7b1cdd961cb35bf5662d5464c1ba853">kernel_name</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Kernel name. </p>
+<p>Name of the kernel is formed by its members through calls to their <a class="el" href="structvex_1_1BinaryExpression.html#ae7b1cdd961cb35bf5662d5464c1ba853" title="Kernel name.">kernel_name()</a> functions. For example, expression </p>
+<div class="fragment"><pre class="fragment">   x = 3 * y + z;
+</pre></div><p> will result in kernel named "ptcvv" (plus times constant vector vector; polish notation is used). This naming scheme is not strictly necessary, as each expression template holds its own cl::Program object and no ambiguity is possible. But it helps when you profiling your program performance. </p>
+
+<p>Implements <a class="el" href="structvex_1_1expression.html#a484ab189ffcc72aac844dd3930ca1a1c">vex::expression</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ade4a253d07208b28edf9b751aee45415"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class LHS, char OP, class RHS&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structvex_1_1BinaryExpression.html">vex::BinaryExpression</a>&lt; LHS, OP, RHS &gt;::<a class="el" href="structvex_1_1BinaryExpression.html#ade4a253d07208b28edf9b751aee45415">kernel_prm</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Kernel parameter list. </p>
+<p>Each terminal expression should output type and name of kernel parameters it needs here. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>Output stream which holds kernel source. </td></tr>
+    <tr><td class="paramname">name</td><td>Name of current node in an expression tree. Should be used directly or as a prefix to form parameter name(s). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="structvex_1_1expression.html#a667249405062a73ac52cfaa0614243f5">vex::expression</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aed023883b5a18afcea6f53d72aeaceb9"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class LHS, char OP, class RHS&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint <a class="el" href="structvex_1_1BinaryExpression.html">vex::BinaryExpression</a>&lt; LHS, OP, RHS &gt;::<a class="el" href="structvex_1_1BinaryExpression.html#aed023883b5a18afcea6f53d72aeaceb9">part_size</a> </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>dev</em></td><td>)</td>
+          <td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Size of vectors forming the expression. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>Position in active queue list for which to return the size. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="structvex_1_1expression.html#a7b4097ae4f5f75d6a27f1595ab590c32">vex::expression</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="vector_8hpp.html">vector.hpp</a></li>
 </ul>
 </div><!-- contents -->
