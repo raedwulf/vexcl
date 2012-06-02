@@ -86,9 +86,9 @@ cl::Context context;
 std::vector&lt;cl::CommandQueue&gt; queue;
 std::tie(context, queue) = <a class="code" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a" title="Create command queues on devices by given criteria.">queue_list</a>(Filter::Type(CL_DEVICE_TYPE_GPU));
 
-<a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> X(queue, CL_MEM_READ_ONLY,  x);
-<a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> Y(queue, CL_MEM_READ_WRITE, n);
-<a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> Z(queue, CL_MEM_READ_WRITE, n);
+<a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> X(queue, x);
+<a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> Y(queue, n);
+<a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> Z(queue, n);
 </pre></div><p>You can now use simple vector arithmetic with device vector. For every expression you use, appropriate kernel is compiled (first time it is encountered in your program) and called automagically.</p>
 <p>Vectors are processed in parallel across all devices they were allocated on: </p>
 <div class="fragment"><pre class="fragment">Y = 42;
@@ -124,11 +124,11 @@ Sparse matrix-vector multiplication</h2>
     <span class="comment">// Move data to compute devices.</span>
     uint n = x.size();
     <a class="code" href="classvex_1_1SpMat.html" title="Sparse matrix.">vex::SpMat&lt;real&gt;</a>  A(queue, n, row.data(), col.data(), val.data());
-    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> f(queue, CL_MEM_READ_ONLY,  rhs);
-    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> u(queue, CL_MEM_READ_WRITE, x);
-    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> r(queue, CL_MEM_READ_WRITE, n);
-    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> p(queue, CL_MEM_READ_WRITE, n);
-    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> q(queue, CL_MEM_READ_WRITE, n);
+    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> f(queue, rhs);
+    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> u(queue, x);
+    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> r(queue, n);
+    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> p(queue, n);
+    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> q(queue, n);
 
     Reductor&lt;real,MAX&gt; max(queue);
     Reductor&lt;real,SUM&gt; sum(queue);
@@ -168,7 +168,7 @@ std::vector&lt;cl::CommandQueue&gt; queue;
 std::tie(context, queue) = <a class="code" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a" title="Create command queues on devices by given criteria.">queue_list</a>(Filter::Type(CL_DEVICE_TYPE_GPU));
 
 <span class="keyword">const</span> uint n = 1 &lt;&lt; 20;
-<a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;float&gt;</a> x(queue, CL_MEM_WRITE_ONLY, n);
+<a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;float&gt;</a> x(queue, n);
 
 <span class="keyword">auto</span> program = <a class="code" href="namespacevex.html#a61989abf337d9845cad96ce9e805fd56" title="Create and build a program from source string.">build_sources</a>(context, std::string(
     <span class="stringliteral">&quot;kernel void dummy(uint size, global float *x)\n&quot;</span>
