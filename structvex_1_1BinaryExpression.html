@@ -83,6 +83,8 @@
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aea48c0e4126f19b1c20649289d789f67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea48c0e4126f19b1c20649289d789f67"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>BinaryExpression</b> (const LHS &amp;lhs, const RHS &amp;rhs)</td></tr>
+<tr class="memitem:ae1195de3941f4d32376d1cd70d00b4c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1BinaryExpression.html#ae1195de3941f4d32376d1cd70d00b4c4">preamble</a> (std::ostream &amp;os, std::string name) const </td></tr>
+<tr class="memdesc:ae1195de3941f4d32376d1cd70d00b4c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Preamble.  <a href="#ae1195de3941f4d32376d1cd70d00b4c4"></a><br/></td></tr>
 <tr class="memitem:ae7b1cdd961cb35bf5662d5464c1ba853"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1BinaryExpression.html#ae7b1cdd961cb35bf5662d5464c1ba853">kernel_name</a> () const </td></tr>
 <tr class="memdesc:ae7b1cdd961cb35bf5662d5464c1ba853"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kernel name.  <a href="#ae7b1cdd961cb35bf5662d5464c1ba853"></a><br/></td></tr>
 <tr class="memitem:ade4a253d07208b28edf9b751aee45415"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1BinaryExpression.html#ade4a253d07208b28edf9b751aee45415">kernel_prm</a> (std::ostream &amp;os, std::string name=&quot;&quot;) const </td></tr>
@@ -93,9 +95,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa7053380a5c8497e2e862016c2e294cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kernel arguments.  <a href="#aa7053380a5c8497e2e862016c2e294cc"></a><br/></td></tr>
 <tr class="memitem:afe67f47c365ccd4cf7696bf87e00397a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1BinaryExpression.html#afe67f47c365ccd4cf7696bf87e00397a">part_size</a> (uint dev) const </td></tr>
 <tr class="memdesc:afe67f47c365ccd4cf7696bf87e00397a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of vectors forming the expression.  <a href="#afe67f47c365ccd4cf7696bf87e00397a"></a><br/></td></tr>
-<tr class="inherit_header pub_methods_structvex_1_1expression"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structvex_1_1expression')"><img src="closed.png" alt="-"/>&nbsp;Public Member Functions inherited from <a class="el" href="structvex_1_1expression.html">vex::expression</a></td></tr>
-<tr class="memitem:a0b054002a358e3f9f1df0a6e32f19d5b inherit pub_methods_structvex_1_1expression"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1expression.html#a0b054002a358e3f9f1df0a6e32f19d5b">preamble</a> (std::ostream &amp;os, std::string name) const </td></tr>
-<tr class="memdesc:a0b054002a358e3f9f1df0a6e32f19d5b inherit pub_methods_structvex_1_1expression"><td class="mdescLeft">&#160;</td><td class="mdescRight">Preamble.  <a href="#a0b054002a358e3f9f1df0a6e32f19d5b"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -332,6 +331,54 @@ template&lt;class LHS, char OP, class RHS&gt; </div>
 </dl>
 
 <p>Implements <a class="el" href="structvex_1_1expression.html#a88d2a41d8298eb9d23999c0476d43f77">vex::expression</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae1195de3941f4d32376d1cd70d00b4c4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class LHS, char OP, class RHS&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structvex_1_1BinaryExpression.html">vex::BinaryExpression</a>&lt; LHS, OP, RHS &gt;::preamble </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Preamble. </p>
+<p>An expression might need to put something prior the kernel definition. This could be a typedef, a helper function definition or anything else. Most expressions don't need it and so default empty function is provided. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>Output stream which holds kernel source. </td></tr>
+    <tr><td class="paramname">name</td><td>Name of current node in an expression tree. Should be used as prefix when naming any objects created to escape possible ambiguities with other nodes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="structvex_1_1expression.html#a0b054002a358e3f9f1df0a6e32f19d5b">vex::expression</a>.</p>
 
 </div>
 </div>
