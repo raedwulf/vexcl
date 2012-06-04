@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>vexcl: vex::SpMat&lt; real &gt; Class Template Reference</title>
+<title>vexcl: vex::SpMat&lt; real, column_t &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -49,7 +49,7 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">vex::SpMat&lt; real &gt; Class Template Reference</div>  </div>
+<div class="title">vex::SpMat&lt; real, column_t &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -62,25 +62,25 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8385d6897fd914a64f868b8f44791127"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#a8385d6897fd914a64f868b8f44791127">SpMat</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, size_t n, const size_t *row, const size_t *col, const real *val)</td></tr>
-<tr class="memdesc:a8385d6897fd914a64f868b8f44791127"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a8385d6897fd914a64f868b8f44791127"></a><br/></td></tr>
-<tr class="memitem:a961ed5c90f7522511d65dbcdd7d76932"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#a961ed5c90f7522511d65dbcdd7d76932">mul</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x, <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;y, real alpha=1, bool append=false) const </td></tr>
-<tr class="memdesc:a961ed5c90f7522511d65dbcdd7d76932"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix-vector multiplication.  <a href="#a961ed5c90f7522511d65dbcdd7d76932"></a><br/></td></tr>
+<tr class="memitem:a50f1f3e9d1be35426021a2c0f7e424f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#a50f1f3e9d1be35426021a2c0f7e424f2">SpMat</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, size_t n, const size_t *row, const column_t *col, const real *val)</td></tr>
+<tr class="memdesc:a50f1f3e9d1be35426021a2c0f7e424f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a50f1f3e9d1be35426021a2c0f7e424f2"></a><br/></td></tr>
+<tr class="memitem:acae77d141617a11e707b4813e5dca847"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#acae77d141617a11e707b4813e5dca847">mul</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x, <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;y, real alpha=1, bool append=false) const </td></tr>
+<tr class="memdesc:acae77d141617a11e707b4813e5dca847"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix-vector multiplication.  <a href="#acae77d141617a11e707b4813e5dca847"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename real&gt;<br/>
-class vex::SpMat&lt; real &gt;</h3>
+<div class="textblock"><h3>template&lt;typename real, typename column_t = size_t&gt;<br/>
+class vex::SpMat&lt; real, column_t &gt;</h3>
 
 <p>Sparse matrix. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a8385d6897fd914a64f868b8f44791127"></a>
+<a class="anchor" id="a50f1f3e9d1be35426021a2c0f7e424f2"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename real &gt; </div>
+template&lt;typename real , typename column_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvex_1_1SpMat.html">vex::SpMat</a>&lt; real &gt;::<a class="el" href="classvex_1_1SpMat.html">SpMat</a> </td>
+          <td class="memname"><a class="el" href="classvex_1_1SpMat.html">vex::SpMat</a>&lt; real, column_t &gt;::<a class="el" href="classvex_1_1SpMat.html">SpMat</a> </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; cl::CommandQueue &gt; &amp;&#160;</td>
           <td class="paramname"><em>queue</em>, </td>
@@ -100,7 +100,7 @@ template&lt;typename real &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const size_t *&#160;</td>
+          <td class="paramtype">const column_t *&#160;</td>
           <td class="paramname"><em>col</em>, </td>
         </tr>
         <tr>
@@ -135,14 +135,14 @@ template&lt;typename real &gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a961ed5c90f7522511d65dbcdd7d76932"></a>
+<a class="anchor" id="acae77d141617a11e707b4813e5dca847"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename real &gt; </div>
+template&lt;typename real , typename column_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classvex_1_1SpMat.html">vex::SpMat</a>&lt; real &gt;::mul </td>
+          <td class="memname">void <a class="el" href="classvex_1_1SpMat.html">vex::SpMat</a>&lt; real, column_t &gt;::mul </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;&#160;</td>
           <td class="paramname"><em>x</em>, </td>

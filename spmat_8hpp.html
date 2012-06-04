@@ -91,7 +91,7 @@
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html">vex::SpMat&lt; real &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html">vex::SpMat&lt; real, column_t &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sparse matrix.  <a href="classvex_1_1SpMat.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
@@ -108,22 +108,24 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a52781310676622f84818bd017c24561e"><td class="memTemplParams" colspan="2"><a class="anchor" id="a52781310676622f84818bd017c24561e"></a>
-template&lt;typename real &gt; </td></tr>
-<tr class="memitem:a52781310676622f84818bd017c24561e"><td class="memTemplItemLeft" align="right" valign="top">SpMV&lt; real &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a52781310676622f84818bd017c24561e">vex::operator*</a> (const SpMat&lt; real &gt; &amp;A, const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x)</td></tr>
-<tr class="memdesc:a52781310676622f84818bd017c24561e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply sparse matrix and a vector. <br/></td></tr>
-<tr class="memitem:a82b6c15051f38048900e899bed6b5ae0"><td class="memTemplParams" colspan="2"><a class="anchor" id="a82b6c15051f38048900e899bed6b5ae0"></a>
-template&lt;class Expr , typename real &gt; </td></tr>
-<tr class="memitem:a82b6c15051f38048900e899bed6b5ae0"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+<tr class="memitem:a06e0bd0125a146d4d3ffb14fe74839ee"><td class="memTemplParams" colspan="2"><a class="anchor" id="a06e0bd0125a146d4d3ffb14fe74839ee"></a>
+template&lt;typename real , typename column_t &gt; </td></tr>
+<tr class="memitem:a06e0bd0125a146d4d3ffb14fe74839ee"><td class="memTemplItemLeft" align="right" valign="top">SpMV&lt; real, column_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a06e0bd0125a146d4d3ffb14fe74839ee">vex::operator*</a> (const SpMat&lt; real, column_t &gt; &amp;A, const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x)</td></tr>
+<tr class="memdesc:a06e0bd0125a146d4d3ffb14fe74839ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply sparse matrix and a vector. <br/></td></tr>
+<tr class="memitem:a2311f2cf5edce025ea85fc239e47d523"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2311f2cf5edce025ea85fc239e47d523"></a>
+template&lt;class Expr , typename real , typename column_t &gt; </td></tr>
+<tr class="memitem:a2311f2cf5edce025ea85fc239e47d523"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
 &lt; Expr::is_expression, ExSpMV<br class="typebreak"/>
-&lt; Expr, real &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a82b6c15051f38048900e899bed6b5ae0">vex::operator+</a> (const Expr &amp;expr, const SpMV&lt; real &gt; &amp;spmv)</td></tr>
-<tr class="memdesc:a82b6c15051f38048900e899bed6b5ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an expression and sparse matrix - vector product. <br/></td></tr>
-<tr class="memitem:a34bb039d53997ebba7c34ab07f0c0d2c"><td class="memTemplParams" colspan="2"><a class="anchor" id="a34bb039d53997ebba7c34ab07f0c0d2c"></a>
-template&lt;class Expr , typename real &gt; </td></tr>
-<tr class="memitem:a34bb039d53997ebba7c34ab07f0c0d2c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+&lt; Expr, real, column_t &gt;<br class="typebreak"/>
+ &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a2311f2cf5edce025ea85fc239e47d523">vex::operator+</a> (const Expr &amp;expr, const SpMV&lt; real, column_t &gt; &amp;spmv)</td></tr>
+<tr class="memdesc:a2311f2cf5edce025ea85fc239e47d523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an expression and sparse matrix - vector product. <br/></td></tr>
+<tr class="memitem:ae111cec9de1083c720b563c0fdf8527c"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae111cec9de1083c720b563c0fdf8527c"></a>
+template&lt;class Expr , typename real , typename column_t &gt; </td></tr>
+<tr class="memitem:ae111cec9de1083c720b563c0fdf8527c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
 &lt; Expr::is_expression, ExSpMV<br class="typebreak"/>
-&lt; Expr, real &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a34bb039d53997ebba7c34ab07f0c0d2c">vex::operator-</a> (const Expr &amp;expr, const SpMV&lt; real &gt; &amp;spmv)</td></tr>
-<tr class="memdesc:a34bb039d53997ebba7c34ab07f0c0d2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtruct sparse matrix - vector product from an expression. <br/></td></tr>
+&lt; Expr, real, column_t &gt;<br class="typebreak"/>
+ &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ae111cec9de1083c720b563c0fdf8527c">vex::operator-</a> (const Expr &amp;expr, const SpMV&lt; real, column_t &gt; &amp;spmv)</td></tr>
+<tr class="memdesc:ae111cec9de1083c720b563c0fdf8527c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtruct sparse matrix - vector product from an expression. <br/></td></tr>
 <tr class="memitem:a6bfb624117ba61e479e77e03a25caf51"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bfb624117ba61e479e77e03a25caf51"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a6bfb624117ba61e479e77e03a25caf51">vex::device_spmv_perf</a> (const cl::Context &amp;context, const cl::Device &amp;device, size_t test_size=64U)</td></tr>
 <tr class="memdesc:a6bfb624117ba61e479e77e03a25caf51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns device weight after spmv test. <br/></td></tr>
