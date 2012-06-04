@@ -1,4 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node13" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="201,83,334,111"/>
-<area shape="rect" id="node26" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="310,161,422,189"/>
+<area shape="rect" id="node13" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="451,83,584,111"/>
+<area shape="rect" id="node26" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="373,161,485,189"/>
+<area shape="rect" id="node37" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="712,161,851,189"/>
 </map>

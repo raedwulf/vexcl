@@ -54,10 +54,12 @@
 </div>
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Defines</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">util.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -67,8 +69,10 @@
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br/>
 <code>#include &lt;string&gt;</code><br/>
+<code>#include &lt;vector&gt;</code><br/>
 <code>#include &lt;algorithm&gt;</code><br/>
 <code>#include &lt;type_traits&gt;</code><br/>
+<code>#include &lt;functional&gt;</code><br/>
 <code>#include &lt;CL/cl.hpp&gt;</code><br/>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for util.hpp:</div>
@@ -89,6 +93,10 @@
 <area shape="rect" id="node3" href="spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="26,161,120,189"/><area shape="rect" id="node5" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="72,238,157,266"/><area shape="rect" id="node7" href="vector_8hpp.html" title="OpenCL device vector." alt="" coords="110,83,204,111"/><area shape="rect" id="node9" href="reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="194,161,293,189"/></map>
 </div>
 </div><table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1partitioning__scheme.html">vex::partitioning_scheme</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitioning scheme for vectors and matrices.  <a href="structvex_1_1partitioning__scheme.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacevex"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html">vex</a></td></tr>
@@ -123,18 +131,17 @@ template&lt;&gt; </td></tr>
 <tr class="memitem:a1849327bc469c143c9b7dc88dff17714"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1849327bc469c143c9b7dc88dff17714"></a>
 template&lt;&gt; </td></tr>
 <tr class="memitem:a1849327bc469c143c9b7dc88dff17714"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::type_name&lt; uchar &gt;</b> ()</td></tr>
-<tr class="memitem:adc1919298730ae7ec0ed4fda6b6bd93a"><td class="memTemplParams" colspan="2"><a class="anchor" id="adc1919298730ae7ec0ed4fda6b6bd93a"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:adc1919298730ae7ec0ed4fda6b6bd93a"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
-&lt; std::is_integral&lt; T &gt;::value, <br class="typebreak"/>
-T &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#adc1919298730ae7ec0ed4fda6b6bd93a">vex::nextpow2</a> (T x)</td></tr>
-<tr class="memdesc:adc1919298730ae7ec0ed4fda6b6bd93a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return next power of 2. <br/></td></tr>
-<tr class="memitem:a8c39134f49eb496e0b2bdaf3d3e1cea1"><td class="memTemplParams" colspan="2"><a class="anchor" id="a8c39134f49eb496e0b2bdaf3d3e1cea1"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a8c39134f49eb496e0b2bdaf3d3e1cea1"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
-&lt; std::is_integral&lt; T &gt;::value, <br class="typebreak"/>
-T &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a8c39134f49eb496e0b2bdaf3d3e1cea1">vex::alignup</a> (T n, T m=16U)</td></tr>
-<tr class="memdesc:a8c39134f49eb496e0b2bdaf3d3e1cea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Align n to the next multiple of m. <br/></td></tr>
+<tr class="memitem:a1529b8ae74f7355e6d35b1c1ce05dadb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1529b8ae74f7355e6d35b1c1ce05dadb"></a>
+uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a1529b8ae74f7355e6d35b1c1ce05dadb">vex::nextpow2</a> (uint x)</td></tr>
+<tr class="memdesc:a1529b8ae74f7355e6d35b1c1ce05dadb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return next power of 2. <br/></td></tr>
+<tr class="memitem:a6351d29a96dd37f45229b357c97018e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6351d29a96dd37f45229b357c97018e6"></a>
+uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a6351d29a96dd37f45229b357c97018e6">vex::alignup</a> (uint n, uint m=16U)</td></tr>
+<tr class="memdesc:a6351d29a96dd37f45229b357c97018e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Align n to the next multiple of m. <br/></td></tr>
+<tr class="memitem:a947a5ba5a622420c6fea51e3a3826104"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a947a5ba5a622420c6fea51e3a3826104">vex::partition_by_vector_perf</a> (uint n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
+<tr class="memdesc:a947a5ba5a622420c6fea51e3a3826104"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitions vector wrt to vector performance of devices.  <a href="#a947a5ba5a622420c6fea51e3a3826104"></a><br/></td></tr>
+<tr class="memitem:a717c7d6ef00f0e00cd4a413356fc7939"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a717c7d6ef00f0e00cd4a413356fc7939"></a>
+std::vector&lt; uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a717c7d6ef00f0e00cd4a413356fc7939">vex::partition_equally</a> (uint n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
+<tr class="memdesc:a717c7d6ef00f0e00cd4a413356fc7939"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitions vector equally. <br/></td></tr>
 <tr class="memitem:a61989abf337d9845cad96ce9e805fd56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61989abf337d9845cad96ce9e805fd56"></a>
 cl::Program&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a61989abf337d9845cad96ce9e805fd56">vex::build_sources</a> (const cl::Context &amp;context, const std::string &amp;source)</td></tr>
 <tr class="memdesc:a61989abf337d9845cad96ce9e805fd56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and build a program from source string. <br/></td></tr>
@@ -144,6 +151,10 @@ uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 <tr class="memitem:a820f9bfc5d19b05ae97d079a51f1cfa3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a820f9bfc5d19b05ae97d079a51f1cfa3"></a>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8hpp.html#a820f9bfc5d19b05ae97d079a51f1cfa3">operator&lt;&lt;</a> (std::ostream &amp;os, const cl::Error &amp;e)</td></tr>
 <tr class="memdesc:a820f9bfc5d19b05ae97d079a51f1cfa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output description of an OpenCL error to a stream. <br/></td></tr>
+<tr><td colspan="2"><h2><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a08a4ea13ce578f7c12d65934166f382a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08a4ea13ce578f7c12d65934166f382a"></a>
+struct <a class="el" href="structvex_1_1partitioning__scheme.html">vex::partitioning_scheme</a>&#160;</td><td class="memItemRight" valign="bottom"><b>vex::partition</b></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>OpenCL general utilities. </p>

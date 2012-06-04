@@ -57,7 +57,8 @@
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">vex Namespace Reference</div>  </div>
 </div><!--header-->
@@ -78,6 +79,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parallel reduction of arbitrary expression.  <a href="classvex_1_1Reductor.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html">SpMat</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sparse matrix.  <a href="classvex_1_1SpMat.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1partitioning__scheme.html">partitioning_scheme</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitioning scheme for vectors and matrices.  <a href="structvex_1_1partitioning__scheme.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1expression.html">expression</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for a member of an expression.  <a href="structvex_1_1expression.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1KernelGenerator.html">KernelGenerator</a></td></tr>
@@ -149,27 +152,23 @@ template&lt;&gt; </td></tr>
 <tr class="memitem:a1849327bc469c143c9b7dc88dff17714"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1849327bc469c143c9b7dc88dff17714"></a>
 template&lt;&gt; </td></tr>
 <tr class="memitem:a1849327bc469c143c9b7dc88dff17714"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>type_name&lt; uchar &gt;</b> ()</td></tr>
-<tr class="memitem:adc1919298730ae7ec0ed4fda6b6bd93a"><td class="memTemplParams" colspan="2"><a class="anchor" id="adc1919298730ae7ec0ed4fda6b6bd93a"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:adc1919298730ae7ec0ed4fda6b6bd93a"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
-&lt; std::is_integral&lt; T &gt;::value, <br class="typebreak"/>
-T &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#adc1919298730ae7ec0ed4fda6b6bd93a">nextpow2</a> (T x)</td></tr>
-<tr class="memdesc:adc1919298730ae7ec0ed4fda6b6bd93a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return next power of 2. <br/></td></tr>
-<tr class="memitem:a8c39134f49eb496e0b2bdaf3d3e1cea1"><td class="memTemplParams" colspan="2"><a class="anchor" id="a8c39134f49eb496e0b2bdaf3d3e1cea1"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a8c39134f49eb496e0b2bdaf3d3e1cea1"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
-&lt; std::is_integral&lt; T &gt;::value, <br class="typebreak"/>
-T &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a8c39134f49eb496e0b2bdaf3d3e1cea1">alignup</a> (T n, T m=16U)</td></tr>
-<tr class="memdesc:a8c39134f49eb496e0b2bdaf3d3e1cea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Align n to the next multiple of m. <br/></td></tr>
+<tr class="memitem:a1529b8ae74f7355e6d35b1c1ce05dadb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1529b8ae74f7355e6d35b1c1ce05dadb"></a>
+uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a1529b8ae74f7355e6d35b1c1ce05dadb">nextpow2</a> (uint x)</td></tr>
+<tr class="memdesc:a1529b8ae74f7355e6d35b1c1ce05dadb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return next power of 2. <br/></td></tr>
+<tr class="memitem:a6351d29a96dd37f45229b357c97018e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6351d29a96dd37f45229b357c97018e6"></a>
+uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a6351d29a96dd37f45229b357c97018e6">alignup</a> (uint n, uint m=16U)</td></tr>
+<tr class="memdesc:a6351d29a96dd37f45229b357c97018e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Align n to the next multiple of m. <br/></td></tr>
+<tr class="memitem:a947a5ba5a622420c6fea51e3a3826104"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a947a5ba5a622420c6fea51e3a3826104">partition_by_vector_perf</a> (uint n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
+<tr class="memdesc:a947a5ba5a622420c6fea51e3a3826104"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitions vector wrt to vector performance of devices.  <a href="#a947a5ba5a622420c6fea51e3a3826104"></a><br/></td></tr>
+<tr class="memitem:a717c7d6ef00f0e00cd4a413356fc7939"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a717c7d6ef00f0e00cd4a413356fc7939"></a>
+std::vector&lt; uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a717c7d6ef00f0e00cd4a413356fc7939">partition_equally</a> (uint n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
+<tr class="memdesc:a717c7d6ef00f0e00cd4a413356fc7939"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitions vector equally. <br/></td></tr>
 <tr class="memitem:a61989abf337d9845cad96ce9e805fd56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61989abf337d9845cad96ce9e805fd56"></a>
 cl::Program&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a61989abf337d9845cad96ce9e805fd56">build_sources</a> (const cl::Context &amp;context, const std::string &amp;source)</td></tr>
 <tr class="memdesc:a61989abf337d9845cad96ce9e805fd56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and build a program from source string. <br/></td></tr>
 <tr class="memitem:a4fac2859dd788e5adab97240c238c946"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fac2859dd788e5adab97240c238c946"></a>
 uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a4fac2859dd788e5adab97240c238c946">kernel_workgroup_size</a> (const cl::Kernel &amp;kernel, const std::vector&lt; cl::Device &gt; &amp;device)</td></tr>
 <tr class="memdesc:a4fac2859dd788e5adab97240c238c946"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get maximum possible workgroup size for given kernel. <br/></td></tr>
-<tr class="memitem:a1c581e13b2ad42d82840491900838892"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c581e13b2ad42d82840491900838892"></a>
-std::vector&lt; uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a1c581e13b2ad42d82840491900838892">partition</a> (uint n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
-<tr class="memdesc:a1c581e13b2ad42d82840491900838892"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns partitions for vector of size n. <br/></td></tr>
 <tr class="memitem:a7896b8bc121f843d62d724a98ebe3b46"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7896b8bc121f843d62d724a98ebe3b46"></a>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:a7896b8bc121f843d62d724a98ebe3b46"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a7896b8bc121f843d62d724a98ebe3b46">copy</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;dv, std::vector&lt; T &gt; &amp;hv, cl_bool blocking=CL_TRUE)</td></tr>
@@ -231,9 +230,13 @@ template&lt;class LHS , class RHS &gt; </td></tr>
 <a class="el" href="structvex_1_1BinaryExpression.html">BinaryExpression</a>&lt; LHS, <br class="typebreak"/>
 '/', RHS &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a9515b67a1be99969b698fbbf6cd9544d">operator/</a> (const LHS &amp;lhs, const RHS &amp;rhs)</td></tr>
 <tr class="memdesc:a9515b67a1be99969b698fbbf6cd9544d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Division of two expressions. <br/></td></tr>
-<tr class="memitem:abaacc61056fc9195d0c02f6deac9ac65"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abaacc61056fc9195d0c02f6deac9ac65"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#abaacc61056fc9195d0c02f6deac9ac65">device_weight</a> (const cl::Context &amp;context, const cl::Device &amp;device, uint test_size=1048576U)</td></tr>
-<tr class="memdesc:abaacc61056fc9195d0c02f6deac9ac65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns device weight after simple bandwidth test. <br/></td></tr>
+<tr class="memitem:a409fedad15d67313e29c6834d6ab0de5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a409fedad15d67313e29c6834d6ab0de5"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a409fedad15d67313e29c6834d6ab0de5">device_vector_perf</a> (const cl::Context &amp;context, const cl::Device &amp;device, uint test_size=1024U *1024U)</td></tr>
+<tr class="memdesc:a409fedad15d67313e29c6834d6ab0de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns device weight after simple bandwidth test. <br/></td></tr>
+<tr><td colspan="2"><h2><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a08a4ea13ce578f7c12d65934166f382a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08a4ea13ce578f7c12d65934166f382a"></a>
+struct <a class="el" href="structvex_1_1partitioning__scheme.html">vex::partitioning_scheme</a>&#160;</td><td class="memItemRight" valign="bottom"><b>partition</b></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>OpenCL convenience utilities. </p>
@@ -312,6 +315,40 @@ template&lt;class DevFilter  = Filter::All&gt; </div>
             Filter::Type(CL_DEVICE_TYPE_GPU) &amp;&amp; Filter::DoublePrecision()
             );
 </pre></div> 
+</div>
+</div>
+<a class="anchor" id="a947a5ba5a622420c6fea51e3a3826104"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; uint &gt; <a class="el" href="namespacevex.html#a947a5ba5a622420c6fea51e3a3826104">vex::partition_by_vector_perf</a> </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; cl::CommandQueue &gt; &amp;&#160;</td>
+          <td class="paramname"><em>queue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Partitions vector wrt to vector performance of devices. </p>
+<p>Launches the following kernel on each device: </p>
+<div class="fragment"><pre class="fragment"> a = b + c;
+</pre></div><p> where a, b and c are device vectors. Each device gets portion of the vector proportional to the performance of this operation. </p>
+
+<p>References <a class="el" href="namespacevex.html#a6351d29a96dd37f45229b357c97018e6">alignup()</a>, and <a class="el" href="namespacevex.html#a409fedad15d67313e29c6834d6ab0de5">device_vector_perf()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ad5a7fdbec637a7a896600280b175912a"></a>

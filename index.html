@@ -179,7 +179,7 @@ std::tie(context, queue) = <a class="code" href="namespacevex.html#ad5a7fdbec637
     ));
 
 <span class="keywordflow">for</span>(uint d = 0; d &lt; queue.size(); d++) {
-    <span class="keyword">auto</span> dummy = cl::Kernel(program, <span class="stringliteral">&quot;dummy&quot;</span>).bind(queue[d], <a class="code" href="namespacevex.html#a8c39134f49eb496e0b2bdaf3d3e1cea1" title="Align n to the next multiple of m.">alignup</a>(n, 256), 256);
+    <span class="keyword">auto</span> dummy = cl::Kernel(program, <span class="stringliteral">&quot;dummy&quot;</span>).bind(queue[d], <a class="code" href="namespacevex.html#a6351d29a96dd37f45229b357c97018e6" title="Align n to the next multiple of m.">alignup</a>(n, 256), 256);
     dummy((uint)x.part_size(d), x(d));
 }
 
