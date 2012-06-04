@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$structvex_1_1expression.html" title="Base class for a member of an expression." alt="" coords="5,6,133,34"/>
-<area shape="rect" id="node4" href="$structvex_1_1KernelGenerator.html" title="vex::KernelGenerator\&lt; RHS \&gt;" alt="" coords="157,6,381,34"/>
-<area shape="rect" id="node6" href="$structvex_1_1KernelGenerator.html" title="vex::KernelGenerator\&lt; LHS \&gt;" alt="" coords="405,6,627,34"/>
+<area shape="rect" id="node2" href="$structvex_1_1expression.html" title="Base class for a member of an expression." alt="" coords="5,14,133,42"/>
+<area shape="rect" id="node4" href="$structvex_1_1KernelGenerator.html" title="vex::KernelGenerator\l\&lt; RHS \&gt;" alt="" coords="157,6,323,50"/>
+<area shape="rect" id="node6" href="$structvex_1_1KernelGenerator.html" title="vex::KernelGenerator\l\&lt; LHS \&gt;" alt="" coords="347,6,512,50"/>
 </map>
