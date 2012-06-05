@@ -90,6 +90,14 @@ Public Member Functions</h2></td></tr>
 class vex::SpMatCCSR&lt; real, column_t &gt;</h3>
 
 <p>Sparse matrix in CCSR format. </p>
+<p>Compressed CSR format. row, col, and val arrays contain unique rows of the matrix. Column numbers in col array are relative to diagonal. idx array contains index into row vector, corresponding to each row of the matrix. So that matrix-vector multiplication may be performed as follows: </p>
+<div class="fragment"><div class="line"> <span class="keywordflow">for</span>(uint i = 0; i &lt; n; i++) {</div>
+<div class="line">     real sum = 0;</div>
+<div class="line">     <span class="keywordflow">for</span>(uint j = row[idx[i]]; j &lt; row[idx[i] + 1]; j++)</div>
+<div class="line">         sum += val[j] * x[i + col[j]];</div>
+<div class="line">     y[i] = sum;</div>
+<div class="line"> }</div>
+</div><!-- fragment --><p> This format does not support multi-device computation, so it accepts single queue at initialization. Vectors x and y should also be single-queued and reside on the same device with matrix. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ab63405d060e34629ad637d93c6bace75"></a>
 <div class="memitem">
@@ -151,8 +159,9 @@ template&lt;typename real , typename column_t &gt; </div>
 <p>Constructs GPU representation of the CCSR matrix. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
-    <tr><td class="paramname">queue</td><td>vector of queues. Each queue represents one compute device. </td></tr>
+    <tr><td class="paramname">queue</td><td>single queue. </td></tr>
     <tr><td class="paramname">n</td><td>number of rows in the matrix. </td></tr>
+    <tr><td class="paramname">m</td><td>number of unique rows in the matrix. </td></tr>
     <tr><td class="paramname">idx</td><td>index into row vector. </td></tr>
     <tr><td class="paramname">row</td><td>row index into col and val vectors. </td></tr>
     <tr><td class="paramname">col</td><td>column positions of nonzero elements wrt to diagonal. </td></tr>
