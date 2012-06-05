@@ -91,27 +91,24 @@
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMatBase.html">vex::SpMatBase&lt; real, column_t &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for sparse matrix.  <a href="classvex_1_1SpMatBase.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html">vex::SpMat&lt; real, column_t &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sparse matrix.  <a href="classvex_1_1SpMat.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sparse matrix in ELL format.  <a href="classvex_1_1SpMat.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMatCCSR.html">vex::SpMatCCSR&lt; real, column_t &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sparse matrix in CCSR format.  <a href="classvex_1_1SpMatCCSR.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacevex"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html">vex</a></td></tr>
 <tr class="memdesc:namespacevex"><td class="mdescLeft">&#160;</td><td class="mdescRight">OpenCL convenience utilities. <br/></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:af1b68fb4ba71d72d397f46a730f03f2f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1b68fb4ba71d72d397f46a730f03f2f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>__CL_ENABLE_EXCEPTIONS</b></td></tr>
-<tr class="memitem:a1133f0acccd213ff23c60599bfa1a0b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1133f0acccd213ff23c60599bfa1a0b2"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>NCOL</b>&#160;&#160;&#160;(~0U)</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a06e0bd0125a146d4d3ffb14fe74839ee"><td class="memTemplParams" colspan="2"><a class="anchor" id="a06e0bd0125a146d4d3ffb14fe74839ee"></a>
+<tr class="memitem:a2eca041bc53030635bcb0ad706960bed"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2eca041bc53030635bcb0ad706960bed"></a>
 template&lt;typename real , typename column_t &gt; </td></tr>
-<tr class="memitem:a06e0bd0125a146d4d3ffb14fe74839ee"><td class="memTemplItemLeft" align="right" valign="top">SpMV&lt; real, column_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a06e0bd0125a146d4d3ffb14fe74839ee">vex::operator*</a> (const SpMat&lt; real, column_t &gt; &amp;A, const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x)</td></tr>
-<tr class="memdesc:a06e0bd0125a146d4d3ffb14fe74839ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply sparse matrix and a vector. <br/></td></tr>
+<tr class="memitem:a2eca041bc53030635bcb0ad706960bed"><td class="memTemplItemLeft" align="right" valign="top">SpMV&lt; real, column_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a2eca041bc53030635bcb0ad706960bed">vex::operator*</a> (const SpMatBase&lt; real, column_t &gt; &amp;A, const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x)</td></tr>
+<tr class="memdesc:a2eca041bc53030635bcb0ad706960bed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply sparse matrix and a vector. <br/></td></tr>
 <tr class="memitem:a2311f2cf5edce025ea85fc239e47d523"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2311f2cf5edce025ea85fc239e47d523"></a>
 template&lt;class Expr , typename real , typename column_t &gt; </td></tr>
 <tr class="memitem:a2311f2cf5edce025ea85fc239e47d523"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
