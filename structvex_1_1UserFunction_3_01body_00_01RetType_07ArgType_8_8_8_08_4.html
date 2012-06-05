@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>vexcl: vex::UserFunction&lt; body, RetType, ArgType &gt; Struct Template Reference</title>
+<title>vexcl: vex::UserFunction&lt; body, RetType(ArgType...)&gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -42,37 +42,37 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacevex.html">vex</a></li><li class="navelem"><a class="el" href="structvex_1_1UserFunction.html">UserFunction</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacevex.html">vex</a></li><li class="navelem"><a class="el" href="structvex_1_1UserFunction_3_01body_00_01RetType_07ArgType_8_8_8_08_4.html">UserFunction< body, RetType(ArgType...)></a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">vex::UserFunction&lt; body, RetType, ArgType &gt; Struct Template Reference</div>  </div>
+<div class="title">vex::UserFunction&lt; body, RetType(ArgType...)&gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>Custom user function.  
- <a href="structvex_1_1UserFunction.html#details">More...</a></p>
+ <a href="structvex_1_1UserFunction_3_01body_00_01RetType_07ArgType_8_8_8_08_4.html#details">More...</a></p>
 
 <p><code>#include &lt;vector.hpp&gt;</code></p>
 
-<p><a href="structvex_1_1UserFunction-members.html">List of all members.</a></p>
+<p><a href="structvex_1_1UserFunction_3_01body_00_01RetType_07ArgType_8_8_8_08_4-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa5fe37b5893216141b29717ec5567f2a"><td class="memTemplParams" colspan="2">template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:aa5fe37b5893216141b29717ec5567f2a"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; sizeof...(ArgType)==sizeof...(Expr), <br class="typebreak"/>
+<tr class="memitem:ab88e3e2b53f19f6df4b598bb31a3c899"><td class="memTemplParams" colspan="2">template&lt;class... Expr&gt; </td></tr>
+<tr class="memitem:ab88e3e2b53f19f6df4b598bb31a3c899"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; sizeof...(ArgType)==sizeof...(Expr), <br class="typebreak"/>
 typename UserFunctionFamily<br class="typebreak"/>
 &lt; RetType, ArgType...&gt;<br class="typebreak"/>
 ::template Function&lt; body, <br class="typebreak"/>
-Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structvex_1_1UserFunction.html#aa5fe37b5893216141b29717ec5567f2a">operator()</a> (const Expr &amp;...expr) const </td></tr>
-<tr class="memdesc:aa5fe37b5893216141b29717ec5567f2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply user function to the list of expressions.  <a href="#aa5fe37b5893216141b29717ec5567f2a"></a><br/></td></tr>
+Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structvex_1_1UserFunction_3_01body_00_01RetType_07ArgType_8_8_8_08_4.html#ab88e3e2b53f19f6df4b598bb31a3c899">operator()</a> (const Expr &amp;...expr) const </td></tr>
+<tr class="memdesc:ab88e3e2b53f19f6df4b598bb31a3c899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply user function to the list of expressions.  <a href="#ab88e3e2b53f19f6df4b598bb31a3c899"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;const char * body, class RetType, class... ArgType&gt;<br/>
-struct vex::UserFunction&lt; body, RetType, ArgType &gt;</h3>
+struct vex::UserFunction&lt; body, RetType(ArgType...)&gt;</h3>
 
 <p>Custom user function. </p>
 <p>Is used for introduction of custom functions into expressions. For example, to count how many elements in x vector are greater than their counterparts in y vector, the following code may be used: </p>
@@ -96,7 +96,7 @@ struct vex::UserFunction&lt; body, RetType, ArgType &gt;</h3>
   </dd>
 </dl>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aa5fe37b5893216141b29717ec5567f2a"></a>
+<a class="anchor" id="ab88e3e2b53f19f6df4b598bb31a3c899"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -108,7 +108,7 @@ template&lt;class... Expr&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt;sizeof...(ArgType) == sizeof...(Expr), typename UserFunctionFamily&lt;RetType, ArgType...&gt;::template Function&lt;body, Expr...&gt; &gt;::type <a class="el" href="structvex_1_1UserFunction.html">vex::UserFunction</a>&lt; body, RetType, ArgType &gt;::operator() </td>
+          <td class="memname">std::enable_if&lt;sizeof...(ArgType) == sizeof...(Expr), typename UserFunctionFamily&lt;RetType, ArgType...&gt;::template Function&lt;body, Expr...&gt; &gt;::type vex::UserFunction&lt; body, RetType(ArgType...)&gt;::operator() </td>
           <td>(</td>
           <td class="paramtype">const Expr &amp;...&#160;</td>
           <td class="paramname"><em>expr</em></td><td>)</td>

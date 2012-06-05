@@ -80,8 +80,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device vector.  <a href="classvex_1_1vector.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1BinaryExpression.html">BinaryExpression</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expression template.  <a href="structvex_1_1BinaryExpression.html#details">More...</a><br/></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1UserFunction.html">UserFunction</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom user function.  <a href="structvex_1_1UserFunction.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1UserFunction_3_01body_00_01RetType_07ArgType_8_8_8_08_4.html">UserFunction&lt; body, RetType(ArgType...)&gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom user function.  <a href="structvex_1_1UserFunction_3_01body_00_01RetType_07ArgType_8_8_8_08_4.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -236,6 +236,22 @@ template&lt;class LHS , class RHS &gt; </td></tr>
 <a class="el" href="structvex_1_1BinaryExpression.html">BinaryExpression</a>&lt; LHS, <br class="typebreak"/>
 '/', RHS &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a9515b67a1be99969b698fbbf6cd9544d">operator/</a> (const LHS &amp;lhs, const RHS &amp;rhs)</td></tr>
 <tr class="memdesc:a9515b67a1be99969b698fbbf6cd9544d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Division of two expressions. <br/></td></tr>
+<tr class="memitem:a361fa1c8a07d5cf7ddf64ea2e15f5c01"><td class="memTemplParams" colspan="2"><a class="anchor" id="a361fa1c8a07d5cf7ddf64ea2e15f5c01"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:a361fa1c8a07d5cf7ddf64ea2e15f5c01"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>all_expressions_valid</b> ()</td></tr>
+<tr class="memitem:ac62b0a4565dd3be1c11fde4419afab28"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac62b0a4565dd3be1c11fde4419afab28"></a>
+template&lt;class Head , class... Expr&gt; </td></tr>
+<tr class="memitem:ac62b0a4565dd3be1c11fde4419afab28"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::enable_if<br class="typebreak"/>
+&lt; sizeof...(Expr), bool &gt;<br class="typebreak"/>
+::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>all_expressions_valid</b> ()</td></tr>
+<tr class="memitem:a4c04e454534fb3ffab79851ff247c855"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4c04e454534fb3ffab79851ff247c855"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:a4c04e454534fb3ffab79851ff247c855"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>all_expressions_arithmetic</b> ()</td></tr>
+<tr class="memitem:aec1d5ebe4b73d97eb3d5547faf4f4578"><td class="memTemplParams" colspan="2"><a class="anchor" id="aec1d5ebe4b73d97eb3d5547faf4f4578"></a>
+template&lt;class Head , class... Expr&gt; </td></tr>
+<tr class="memitem:aec1d5ebe4b73d97eb3d5547faf4f4578"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::enable_if<br class="typebreak"/>
+&lt; sizeof...(Expr), bool &gt;<br class="typebreak"/>
+::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>all_expressions_arithmetic</b> ()</td></tr>
 <tr class="memitem:a9fb24979832dd30275c0f5d0dec5e3af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9fb24979832dd30275c0f5d0dec5e3af"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a9fb24979832dd30275c0f5d0dec5e3af">device_vector_perf</a> (const cl::Context &amp;context, const cl::Device &amp;device, size_t test_size=1024U *1024U)</td></tr>
 <tr class="memdesc:a9fb24979832dd30275c0f5d0dec5e3af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns device weight after simple bandwidth test. <br/></td></tr>

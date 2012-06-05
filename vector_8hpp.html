@@ -101,13 +101,21 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator class.  <a href="classvex_1_1vector_1_1iterator__type.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1BinaryExpression.html">vex::BinaryExpression&lt; LHS, OP, RHS &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expression template.  <a href="structvex_1_1BinaryExpression.html#details">More...</a><br/></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1UserFunction.html">vex::UserFunction&lt; body, RetType, ArgType &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom user function.  <a href="structvex_1_1UserFunction.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1UserFunction_3_01body_00_01RetType_07ArgType_8_8_8_08_4.html">vex::UserFunction&lt; body, RetType(ArgType...)&gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom user function.  <a href="structvex_1_1UserFunction_3_01body_00_01RetType_07ArgType_8_8_8_08_4.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacevex"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html">vex</a></td></tr>
 <tr class="memdesc:namespacevex"><td class="mdescLeft">&#160;</td><td class="mdescRight">OpenCL convenience utilities. <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a35b11ab259680b9c9e3d1ac39aa2d15d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35b11ab259680b9c9e3d1ac39aa2d15d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VEXCL_VARIADIC_TEMPLATES</b></td></tr>
+<tr class="memitem:af1b68fb4ba71d72d397f46a730f03f2f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1b68fb4ba71d72d397f46a730f03f2f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>__CL_ENABLE_EXCEPTIONS</b></td></tr>
+<tr class="memitem:a8189489c8e89d7455dac4e5507c94bc9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>DEFINE_BUILTIN_FUNCTION</b>(name)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -172,6 +180,22 @@ template&lt;class LHS , class RHS &gt; </td></tr>
 BinaryExpression&lt; LHS, <br class="typebreak"/>
 '/', RHS &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a9515b67a1be99969b698fbbf6cd9544d">vex::operator/</a> (const LHS &amp;lhs, const RHS &amp;rhs)</td></tr>
 <tr class="memdesc:a9515b67a1be99969b698fbbf6cd9544d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Division of two expressions. <br/></td></tr>
+<tr class="memitem:a361fa1c8a07d5cf7ddf64ea2e15f5c01"><td class="memTemplParams" colspan="2"><a class="anchor" id="a361fa1c8a07d5cf7ddf64ea2e15f5c01"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:a361fa1c8a07d5cf7ddf64ea2e15f5c01"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::all_expressions_valid</b> ()</td></tr>
+<tr class="memitem:ac62b0a4565dd3be1c11fde4419afab28"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac62b0a4565dd3be1c11fde4419afab28"></a>
+template&lt;class Head , class... Expr&gt; </td></tr>
+<tr class="memitem:ac62b0a4565dd3be1c11fde4419afab28"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::enable_if<br class="typebreak"/>
+&lt; sizeof...(Expr), bool &gt;<br class="typebreak"/>
+::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::all_expressions_valid</b> ()</td></tr>
+<tr class="memitem:a4c04e454534fb3ffab79851ff247c855"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4c04e454534fb3ffab79851ff247c855"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:a4c04e454534fb3ffab79851ff247c855"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::all_expressions_arithmetic</b> ()</td></tr>
+<tr class="memitem:aec1d5ebe4b73d97eb3d5547faf4f4578"><td class="memTemplParams" colspan="2"><a class="anchor" id="aec1d5ebe4b73d97eb3d5547faf4f4578"></a>
+template&lt;class Head , class... Expr&gt; </td></tr>
+<tr class="memitem:aec1d5ebe4b73d97eb3d5547faf4f4578"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::enable_if<br class="typebreak"/>
+&lt; sizeof...(Expr), bool &gt;<br class="typebreak"/>
+::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::all_expressions_arithmetic</b> ()</td></tr>
 <tr class="memitem:a9fb24979832dd30275c0f5d0dec5e3af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9fb24979832dd30275c0f5d0dec5e3af"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a9fb24979832dd30275c0f5d0dec5e3af">vex::device_vector_perf</a> (const cl::Context &amp;context, const cl::Device &amp;device, size_t test_size=1024U *1024U)</td></tr>
 <tr class="memdesc:a9fb24979832dd30275c0f5d0dec5e3af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns device weight after simple bandwidth test. <br/></td></tr>
@@ -181,7 +205,31 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>OpenCL device vector. </p>
 <dl class="section author"><dt>Author:</dt><dd>Denis Demidov <a href="#" onclick="location.href='mai'+'lto:'+'dde'+'mi'+'dov'+'@k'+'su.'+'ru'; return false;">ddemi<span style="display: none;">.nosp@m.</span>dov@<span style="display: none;">.nosp@m.</span>ksu.r<span style="display: none;">.nosp@m.</span>u</a> </dd></dl>
-</div></div><!-- contents -->
+</div><hr/><h2>Macro Definition Documentation</h2>
+<a class="anchor" id="a8189489c8e89d7455dac4e5507c94bc9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEFINE_BUILTIN_FUNCTION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> name##_fun[] = #name; \</div>
+<div class="line">template &lt;<span class="keyword">class</span>... Expr&gt; \</div>
+<div class="line">typename std::enable_if&lt;all_expressions_valid&lt;Expr...&gt;() &amp;&amp; !all_expressions_arithmetic&lt;Expr...&gt;(), \</div>
+<div class="line">BuiltinFunction&lt;name##_fun, Expr...&gt;&gt;::type \</div>
+<div class="line">name(<span class="keyword">const</span> Expr&amp;... expr) { \</div>
+<div class="line">return BuiltinFunction&lt;name##_fun, Expr...&gt;(expr...); \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

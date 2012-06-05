@@ -125,7 +125,7 @@ Sparse matrix-vector multiplication</h1>
 <div class="line">    real rho1, rho2;</div>
 <div class="line">    r = f - A * u;</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">for</span>(uint iter = 0; max(Abs(r)) &gt; 1e-8 &amp;&amp; iter &lt; n; iter++) {</div>
+<div class="line">    <span class="keywordflow">for</span>(uint iter = 0; max(fabs(r)) &gt; 1e-8 &amp;&amp; iter &lt; n; iter++) {</div>
 <div class="line">        rho1 = sum(r * r);</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> (iter == 0) {</div>
@@ -156,7 +156,7 @@ User-defined functions</h1>
 <div class="line"><span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> one_greater_than_other[] = <span class="stringliteral">&quot;return prm1 &gt; prm2 ? 1 : 0&quot;</span>;</div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">size_t</span> count_if_greater(<span class="keyword">const</span> vex:vector&lt;float&gt; &amp;x, <span class="keyword">const</span> <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;float&gt;</a> &amp;y) {</div>
-<div class="line">    UserFunction&lt;one_greater_than_other, size_t, float, float&gt; greater;</div>
+<div class="line">    UserFunction&lt;one_greater_than_other, size_t(float, float)&gt; greater;</div>
 <div class="line"></div>
 <div class="line">    Reductor&lt;size_t, SUM&gt; sum(x.queue_list());</div>
 <div class="line"></div>
