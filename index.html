@@ -68,7 +68,7 @@ Memory allocation and vector arithmetic</h1>
 <p>In the example below host vector is allocated and initialized, then copied to all devices obtained with the <a class="el" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a" title="Create command queues on devices by given criteria.">queue_list()</a> call. A couple of empty device vectors are allocated as well: </p>
 <div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> n = 1 &lt;&lt; 20;</div>
 <div class="line">std::vector&lt;double&gt; x(n);</div>
-<div class="line">std::generate(x.begin(), x.end(), [](){ <span class="keywordflow">return</span> (<span class="keywordtype">double</span>)rand() / RAND_MAX; });</div>
+<div class="line">std::generate(x.<a class="code" href="classvex_1_1vector.html#ad15856f00b1c4b80726e6f908260ef57" title="Const iterator to beginning.">begin</a>(), x.<a class="code" href="classvex_1_1vector.html#a5169d2645c884403fa690d45c77552fa" title="Const iterator to end.">end</a>(), [](){ <span class="keywordflow">return</span> (<span class="keywordtype">double</span>)rand() / RAND_MAX; });</div>
 <div class="line"></div>
 <div class="line">cl::Context context;</div>
 <div class="line">std::vector&lt;cl::CommandQueue&gt; queue;</div>
@@ -148,7 +148,22 @@ Sparse matrix-vector multiplication</h1>
 <div class="line">    <span class="comment">// Get result to host.</span></div>
 <div class="line">    <a class="code" href="namespacevex.html#a7896b8bc121f843d62d724a98ebe3b46" title="Copy device vector to host vector.">copy</a>(u, x);</div>
 <div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="custkern"></a>
+</div><!-- fragment --><h1><a class="anchor" id="userfun"></a>
+User-defined functions</h1>
+<p>Simple arithmetic expressions are sometimes not enough. Imagine that you need to count how many elements in vector x are greater that their counterparts in vector y. This may be achieved by introduction of custom function. In order to build such a function, you need to supply its body, its return type and types of its arguments. After that, you can apply the function to any valid vector expressions: </p>
+<div class="fragment"><div class="line"><span class="comment">// Function body has to be defined at global scope, and it has to be of `extern</span></div>
+<div class="line"><span class="comment">// const char[]` type. This allows us to use it as a template parameter.</span></div>
+<div class="line"><span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> one_greater_than_other[] = <span class="stringliteral">&quot;return prm1 &gt; prm2 ? 1 : 0&quot;</span>;</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">size_t</span> count_if_greater(<span class="keyword">const</span> vex:vector&lt;float&gt; &amp;x, <span class="keyword">const</span> <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;float&gt;</a> &amp;y) {</div>
+<div class="line">    UserFunction&lt;one_greater_than_other, size_t, float, float&gt; greater;</div>
+<div class="line"></div>
+<div class="line">    Reductor&lt;size_t, SUM&gt; sum(x.queue_list());</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> sum(greater(x, y));</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>You could also write sum(greater(x + y, 5 * y)), or use any other expressions as parameters to the <code>greater()</code> call. Note that in the function body parameters are always named as prm1, prm2, etc.</p>
+<h1><a class="anchor" id="custkern"></a>
 Using custom kernels</h1>
 <p>Custom kernels are of course possible as well. vector::operator(uint) returns cl::Buffer object for a specified device: </p>
 <div class="fragment"><div class="line">cl::Context context;</div>
