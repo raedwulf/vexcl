@@ -62,13 +62,30 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab88e3e2b53f19f6df4b598bb31a3c899"><td class="memTemplParams" colspan="2">template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ab88e3e2b53f19f6df4b598bb31a3c899"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; sizeof...(ArgType)==sizeof...(Expr), <br class="typebreak"/>
-typename UserFunctionFamily<br class="typebreak"/>
-&lt; RetType, ArgType...&gt;<br class="typebreak"/>
-::template Function&lt; body, <br class="typebreak"/>
-Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structvex_1_1UserFunction_3_01body_00_01RetType_07ArgType_8_8_8_08_4.html#ab88e3e2b53f19f6df4b598bb31a3c899">operator()</a> (const Expr &amp;...expr) const </td></tr>
-<tr class="memdesc:ab88e3e2b53f19f6df4b598bb31a3c899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply user function to the list of expressions.  <a href="#ab88e3e2b53f19f6df4b598bb31a3c899"></a><br/></td></tr>
+<tr class="memitem:ac9b4b77036fd4a28c8cea13ead8fc5f4"><td class="memTemplParams" colspan="2">template&lt;class... Expr&gt; </td></tr>
+<tr class="memitem:ac9b4b77036fd4a28c8cea13ead8fc5f4"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; sizeof...(ArgType)==sizeof...(Expr)&amp;&amp;All<br class="typebreak"/>
+&lt; All&lt; valid_expr&lt; Expr &gt;<br class="typebreak"/>
+...&gt;, Not&lt; All<br class="typebreak"/>
+&lt; std::is_arithmetic&lt; Expr &gt;<br class="typebreak"/>
+...&gt; &gt; &gt;::value, typename <br class="typebreak"/>
+UserFunctionFamily&lt; RetType, <br class="typebreak"/>
+ArgType...&gt;::template Function<br class="typebreak"/>
+&lt; body, Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structvex_1_1UserFunction_3_01body_00_01RetType_07ArgType_8_8_8_08_4.html#ac9b4b77036fd4a28c8cea13ead8fc5f4">operator()</a> (const Expr &amp;...expr) const </td></tr>
+<tr class="memdesc:ac9b4b77036fd4a28c8cea13ead8fc5f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply user function to the list of expressions.  <a href="#ac9b4b77036fd4a28c8cea13ead8fc5f4"></a><br/></td></tr>
+<tr class="memitem:a24e77218eb925bfd1039bfd5c7864861"><td class="memTemplParams" colspan="2"><a class="anchor" id="a24e77218eb925bfd1039bfd5c7864861"></a>
+template&lt;class... Expr&gt; </td></tr>
+<tr class="memitem:a24e77218eb925bfd1039bfd5c7864861"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; sizeof...(ArgType)==sizeof...(Expr)&amp;&amp;All<br class="typebreak"/>
+&lt; All&lt; valid_multiex&lt; Expr &gt;<br class="typebreak"/>
+...&gt;, Not&lt; All<br class="typebreak"/>
+&lt; std::is_arithmetic&lt; Expr &gt;<br class="typebreak"/>
+...&gt; &gt; &gt;::value, <br class="typebreak"/>
+<a class="el" href="structvex_1_1MultiExpression.html">MultiExpression</a>&lt; typename <br class="typebreak"/>
+UserFunctionFamily&lt; RetType, <br class="typebreak"/>
+ArgType...&gt;::template Function<br class="typebreak"/>
+&lt; body, typename <br class="typebreak"/>
+multiex_traits&lt; Expr &gt;<br class="typebreak"/>
+::subtype...&gt;, multiex_dim<br class="typebreak"/>
+&lt; Expr...&gt;::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (const Expr &amp;...expr) const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;const char * body, class RetType, class... ArgType&gt;<br/>
@@ -96,7 +113,7 @@ struct vex::UserFunction&lt; body, RetType(ArgType...)&gt;</h3>
   </dd>
 </dl>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ab88e3e2b53f19f6df4b598bb31a3c899"></a>
+<a class="anchor" id="ac9b4b77036fd4a28c8cea13ead8fc5f4"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -108,7 +125,7 @@ template&lt;class... Expr&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt;sizeof...(ArgType) == sizeof...(Expr), typename UserFunctionFamily&lt;RetType, ArgType...&gt;::template Function&lt;body, Expr...&gt; &gt;::type vex::UserFunction&lt; body, RetType(ArgType...)&gt;::operator() </td>
+          <td class="memname">std::enable_if&lt; sizeof...(ArgType) == sizeof...(Expr) &amp;&amp; All&lt;All&lt;valid_expr&lt;Expr&gt;...&gt;, Not&lt;All&lt;std::is_arithmetic&lt;Expr&gt;...&gt; &gt; &gt;::value, typename UserFunctionFamily&lt;RetType, ArgType...&gt;::template Function&lt;body, Expr...&gt; &gt;::type vex::UserFunction&lt; body, RetType(ArgType...)&gt;::operator() </td>
           <td>(</td>
           <td class="paramtype">const Expr &amp;...&#160;</td>
           <td class="paramname"><em>expr</em></td><td>)</td>

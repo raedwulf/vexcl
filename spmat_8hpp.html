@@ -77,7 +77,7 @@
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="spmat_8hpp__incl.png" border="0" usemap="#spmat_8hpp" alt=""/></div>
 <map name="spmat_8hpp" id="spmat_8hpp">
-<area shape="rect" id="node23" href="util_8hpp.html" title="OpenCL general utilities." alt="" coords="887,161,999,189"/><area shape="rect" id="node35" href="vector_8hpp.html" title="OpenCL device vector." alt="" coords="679,83,812,111"/><area shape="rect" id="node45" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="369,161,508,189"/></map>
+<area shape="rect" id="node23" href="util_8hpp.html" title="OpenCL general utilities." alt="" coords="355,161,467,189"/><area shape="rect" id="node35" href="vector_8hpp.html" title="OpenCL device vector." alt="" coords="592,83,725,111"/><area shape="rect" id="node49" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="976,161,1115,189"/></map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
@@ -109,20 +109,18 @@ Functions</h2></td></tr>
 template&lt;typename real , typename column_t &gt; </td></tr>
 <tr class="memitem:a2eca041bc53030635bcb0ad706960bed"><td class="memTemplItemLeft" align="right" valign="top">SpMV&lt; real, column_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a2eca041bc53030635bcb0ad706960bed">vex::operator*</a> (const SpMatBase&lt; real, column_t &gt; &amp;A, const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x)</td></tr>
 <tr class="memdesc:a2eca041bc53030635bcb0ad706960bed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply sparse matrix and a vector. <br/></td></tr>
-<tr class="memitem:a2311f2cf5edce025ea85fc239e47d523"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2311f2cf5edce025ea85fc239e47d523"></a>
+<tr class="memitem:ad74c3b659c67565910435d01b83bc799"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad74c3b659c67565910435d01b83bc799"></a>
 template&lt;class Expr , typename real , typename column_t &gt; </td></tr>
-<tr class="memitem:a2311f2cf5edce025ea85fc239e47d523"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
-&lt; Expr::is_expression, ExSpMV<br class="typebreak"/>
-&lt; Expr, real, column_t &gt;<br class="typebreak"/>
- &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a2311f2cf5edce025ea85fc239e47d523">vex::operator+</a> (const Expr &amp;expr, const SpMV&lt; real, column_t &gt; &amp;spmv)</td></tr>
-<tr class="memdesc:a2311f2cf5edce025ea85fc239e47d523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an expression and sparse matrix - vector product. <br/></td></tr>
-<tr class="memitem:ae111cec9de1083c720b563c0fdf8527c"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae111cec9de1083c720b563c0fdf8527c"></a>
+<tr class="memitem:ad74c3b659c67565910435d01b83bc799"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; Expr::is_expr, <br class="typebreak"/>
+ExSpMV&lt; Expr, real, column_t &gt;<br class="typebreak"/>
+ &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ad74c3b659c67565910435d01b83bc799">vex::operator+</a> (const Expr &amp;expr, const SpMV&lt; real, column_t &gt; &amp;spmv)</td></tr>
+<tr class="memdesc:ad74c3b659c67565910435d01b83bc799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an expression and sparse matrix - vector product. <br/></td></tr>
+<tr class="memitem:a73f231a9e85e1e48c279c3c1018ea8ec"><td class="memTemplParams" colspan="2"><a class="anchor" id="a73f231a9e85e1e48c279c3c1018ea8ec"></a>
 template&lt;class Expr , typename real , typename column_t &gt; </td></tr>
-<tr class="memitem:ae111cec9de1083c720b563c0fdf8527c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
-&lt; Expr::is_expression, ExSpMV<br class="typebreak"/>
-&lt; Expr, real, column_t &gt;<br class="typebreak"/>
- &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ae111cec9de1083c720b563c0fdf8527c">vex::operator-</a> (const Expr &amp;expr, const SpMV&lt; real, column_t &gt; &amp;spmv)</td></tr>
-<tr class="memdesc:ae111cec9de1083c720b563c0fdf8527c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtruct sparse matrix - vector product from an expression. <br/></td></tr>
+<tr class="memitem:a73f231a9e85e1e48c279c3c1018ea8ec"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; Expr::is_expr, <br class="typebreak"/>
+ExSpMV&lt; Expr, real, column_t &gt;<br class="typebreak"/>
+ &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a73f231a9e85e1e48c279c3c1018ea8ec">vex::operator-</a> (const Expr &amp;expr, const SpMV&lt; real, column_t &gt; &amp;spmv)</td></tr>
+<tr class="memdesc:a73f231a9e85e1e48c279c3c1018ea8ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtruct sparse matrix - vector product from an expression. <br/></td></tr>
 <tr class="memitem:a6bfb624117ba61e479e77e03a25caf51"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bfb624117ba61e479e77e03a25caf51"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a6bfb624117ba61e479e77e03a25caf51">vex::device_spmv_perf</a> (const cl::Context &amp;context, const cl::Device &amp;device, size_t test_size=64U)</td></tr>
 <tr class="memdesc:a6bfb624117ba61e479e77e03a25caf51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns device weight after spmv test. <br/></td></tr>

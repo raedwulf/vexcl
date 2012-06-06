@@ -59,7 +59,7 @@
 <p>Container for several vex::vectors.  
  <a href="classvex_1_1multivector.html#details">More...</a></p>
 
-<p><code>#include &lt;multivector.hpp&gt;</code></p>
+<p><code>#include &lt;vector.hpp&gt;</code></p>
 
 <p><a href="classvex_1_1multivector-members.html">List of all members.</a></p>
 <table class="memberdecls">
@@ -126,9 +126,12 @@ const std::vector<br class="typebreak"/>
 <tr><td colspan="2"><div class="groupHeader">Expression assignments.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>All operations are delegated to components of the multivector. </p>
 </div></td></tr>
-<tr class="memitem:aadd3ffad682be272abe8fcd512abd62f"><td class="memTemplParams" colspan="2"><a class="anchor" id="aadd3ffad682be272abe8fcd512abd62f"></a>
+<tr class="memitem:af64e991003e0b21a18655bec82d45029"><td class="memTemplParams" colspan="2"><a class="anchor" id="af64e991003e0b21a18655bec82d45029"></a>
 template&lt;class Expr &gt; </td></tr>
-<tr class="memitem:aadd3ffad682be272abe8fcd512abd62f"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const Expr &amp;expr)</td></tr>
+<tr class="memitem:af64e991003e0b21a18655bec82d45029"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+&lt; compatible_multiex<br class="typebreak"/>
+&lt; <a class="el" href="classvex_1_1multivector.html">multivector</a>, Expr &gt;::value, <br class="typebreak"/>
+const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const Expr &amp;expr)</td></tr>
 <tr class="memitem:a978816ec67ac42fcf834405ccdbd6fdb"><td class="memTemplParams" colspan="2"><a class="anchor" id="a978816ec67ac42fcf834405ccdbd6fdb"></a>
 template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:a978816ec67ac42fcf834405ccdbd6fdb"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator+=</b> (const Expr &amp;expr)</td></tr>
@@ -144,8 +147,8 @@ template&lt;class Expr &gt; </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:ab6109f344bbce3ce7f073dd47663a9ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6109f344bbce3ce7f073dd47663a9ea"></a>
-static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_multiexpression</b> = true</td></tr>
+<tr class="memitem:ad7ad0f1b697f68f89b7419b7b1244b53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7ad0f1b697f68f89b7419b7b1244b53"></a>
+static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_multiex</b> = true</td></tr>
 <tr class="memitem:a3de42299e65b63517faff18ad04ec94b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3de42299e65b63517faff18ad04ec94b"></a>
 static const uint&#160;</td><td class="memItemRight" valign="bottom"><b>dim</b> = N</td></tr>
 </table>
@@ -272,7 +275,7 @@ template&lt;typename T, uint N&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="multivector_8hpp.html">multivector.hpp</a></li>
+<li><a class="el" href="vector_8hpp.html">vector.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -83,7 +83,7 @@ Memory allocation and vector arithmetic</h1>
 <div class="fragment"><div class="line">Y = 42;</div>
 <div class="line">Z = sqrt(2 * X) + cos(Y);</div>
 </div><!-- fragment --><p>You can copy the result back to host or you can use vector::operator[] to read (or write) vector elements directly. Though latter technique is very ineffective and should be used for debugging purposes only. </p>
-<div class="fragment"><div class="line"><a class="code" href="namespacevex.html#aaa68b032f0d66695e3b3b6c5375e8cf6" title="Copy multivector to host vector.">copy</a>(Z, x);</div>
+<div class="fragment"><div class="line"><a class="code" href="namespacevex.html#a7896b8bc121f843d62d724a98ebe3b46" title="Copy device vector to host vector.">copy</a>(Z, x);</div>
 <div class="line">assert(x[42] == Z[42]);</div>
 </div><!-- fragment --><p>Another frequently performed operation is reduction of a vector expression to single value, such as summation. This can be done with <a class="el" href="classvex_1_1Reductor.html" title="Parallel reduction of arbitrary expression.">vex::Reductor</a> class: </p>
 <div class="fragment"><div class="line">Reductor&lt;double&gt; sum(ctx.queue());</div>
@@ -144,7 +144,7 @@ Sparse matrix-vector multiplication</h1>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Get result to host.</span></div>
-<div class="line">    <a class="code" href="namespacevex.html#aaa68b032f0d66695e3b3b6c5375e8cf6" title="Copy multivector to host vector.">copy</a>(u, x);</div>
+<div class="line">    <a class="code" href="namespacevex.html#a7896b8bc121f843d62d724a98ebe3b46" title="Copy device vector to host vector.">copy</a>(u, x);</div>
 <div class="line">}</div>
 </div><!-- fragment --><h1><a class="anchor" id="userfun"></a>
 User-defined functions</h1>
@@ -159,7 +159,23 @@ User-defined functions</h1>
 <div class="line">    <span class="keywordflow">return</span> sum(greater(x, y));</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>You could also write sum(greater(x + y, 5 * y)), or use any other expressions as parameters to the <code>greater()</code> call. Note that in the function body parameters are always named as prm1, prm2, etc.</p>
-<h1><a class="anchor" id="custkern"></a>
+<h1><a class="anchor" id="multivector"></a>
+Multi-component vectors</h1>
+<p>Class template vex::multivector&lt;T,N&gt; allows to store several equally sized device vector and perform computations on all components synchronously. Operations are delegated to the underlying vectors. </p>
+<div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> n = 1 &lt;&lt; 20;</div>
+<div class="line">std::vector&lt;double&gt; host(n * 3);</div>
+<div class="line">std::generate(host.begin(), host.end(), rand);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="classvex_1_1multivector.html" title="Container for several vex::vectors.">vex::multivector&lt;double,3&gt;</a> x(ctx.queue(), host);</div>
+<div class="line"><a class="code" href="classvex_1_1multivector.html" title="Container for several vex::vectors.">vex::multivector&lt;double,3&gt;</a> y(ctx.queue(), n);</div>
+<div class="line"></div>
+<div class="line">y = 2 * cos(x) - 5;</div>
+<div class="line"></div>
+<div class="line">std::array&lt;double,3&gt; v = y[42];</div>
+<div class="line">assert(fabs(v[1] - (2 * cos(host[n + 42]) - 5)) &lt; 1e-8);</div>
+</div><!-- fragment --><p>Components of a multivector may be accessed with operator(): </p>
+<div class="fragment"><div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> z = y(1);</div>
+</div><!-- fragment --><h1><a class="anchor" id="custkern"></a>
 Using custom kernels</h1>
 <p>Custom kernels are of course possible as well. vector::operator(uint) returns cl::Buffer object for a specified device: </p>
 <div class="fragment"><div class="line"><a class="code" href="classvex_1_1Context.html" title="VexCL context holder.">vex::Context</a> ctx(Filter::Type(CL_DEVICE_TYPE_GPU));</div>

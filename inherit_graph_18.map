@@ -1,5 +1,3 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$classvex_1_1SpMatBase.html" title="Base class for sparse matrix." alt="" coords="5,26,181,70"/>
-<area shape="rect" id="node3" href="$classvex_1_1SpMat.html" title="Sparse matrix in ELL format." alt="" coords="229,5,453,33"/>
-<area shape="rect" id="node5" href="$classvex_1_1SpMatCCSR.html" title="Sparse matrix in CCSR format." alt="" coords="252,55,431,99"/>
+<area shape="rect" id="node1" href="$classvex_1_1Reductor.html" title="Parallel reduction of arbitrary expression." alt="" coords="7,5,167,49"/>
 </map>
