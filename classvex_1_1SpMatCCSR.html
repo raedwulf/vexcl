@@ -220,7 +220,7 @@ template&lt;typename real , typename column_t &gt; </div>
 </div><div class="memdoc">
 
 <p>Matrix-vector multiplication. </p>
-<p>Matrix vector multiplication (y = alpha Ax or y += alpha Ax) is performed in parallel on all registered compute devices. Ghost values of x are transfered across GPU boundaries as needed. </p>
+<p>Matrix vector multiplication (y = alpha Ax or y += alpha Ax). Vectors x and y should also be single-queued and reside on the same device with matrix. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>input vector. </td></tr>

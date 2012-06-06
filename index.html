@@ -83,7 +83,7 @@ Memory allocation and vector arithmetic</h1>
 <div class="fragment"><div class="line">Y = 42;</div>
 <div class="line">Z = sqrt(2 * X) + cos(Y);</div>
 </div><!-- fragment --><p>You can copy the result back to host or you can use vector::operator[] to read (or write) vector elements directly. Though latter technique is very ineffective and should be used for debugging purposes only. </p>
-<div class="fragment"><div class="line">copy(Z, x);</div>
+<div class="fragment"><div class="line"><a class="code" href="namespacevex.html#aaa68b032f0d66695e3b3b6c5375e8cf6" title="Copy multivector to host vector.">copy</a>(Z, x);</div>
 <div class="line">assert(x[42] == Z[42]);</div>
 </div><!-- fragment --><p>Another frequently performed operation is reduction of a vector expression to single value, such as summation. This can be done with <a class="el" href="classvex_1_1Reductor.html" title="Parallel reduction of arbitrary expression.">vex::Reductor</a> class: </p>
 <div class="fragment"><div class="line">Reductor&lt;double&gt; sum(ctx.queue());</div>
@@ -144,7 +144,7 @@ Sparse matrix-vector multiplication</h1>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Get result to host.</span></div>
-<div class="line">    copy(u, x);</div>
+<div class="line">    <a class="code" href="namespacevex.html#aaa68b032f0d66695e3b3b6c5375e8cf6" title="Copy multivector to host vector.">copy</a>(u, x);</div>
 <div class="line">}</div>
 </div><!-- fragment --><h1><a class="anchor" id="userfun"></a>
 User-defined functions</h1>
@@ -185,7 +185,7 @@ Using custom kernels</h1>
 </div><!-- fragment --><h1><a class="anchor" id="scalability"></a>
 Scalability</h1>
 <p>In the images below, scalability of the library with respect to number of compute devices is shown. Effective performance (GFLOPS) and bandwidth (GB/sec) were measured by launching big number of test kernels on one, two, or three Nvidia Tesla C2070 cards. The results shown are averaged over 20 runs.</p>
-<p>The details of the experiments may be found in <a href="https://github.com/ddemidov/vexcl/blob/master/examples/benchmark.cpp">examples/profiling.cpp</a> file. Basically, performance of the following code was measured:</p>
+<p>The details of the experiments may be found in <a href="https://github.com/ddemidov/vexcl/blob/master/examples/benchmark.cpp">examples/benchmark.cpp</a> file. Basically, performance of the following code was measured:</p>
 <div class="fragment"><div class="line"><span class="comment">// Vector arithmetic</span></div>
 <div class="line">a += b + c * d;</div>
 <div class="line"></div>
