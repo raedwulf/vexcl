@@ -47,45 +47,46 @@ Selection of compute devices</h1>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL.">vexcl/vexcl.hpp</a>&gt;</span></div>
 <div class="line"><span class="keyword">using namespace </span>vex;</div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
-<div class="line">    <span class="keyword">auto</span> device = <a class="code" href="namespacevex.html#a91041b9b4ad749b9d4ef7de0a29b16e4" title="Select devices by given criteria.">device_list</a>(</div>
-<div class="line">        <a class="code" href="structvex_1_1Filter_1_1Name.html" title="Selects devices whose names match given value.">Filter::Name</a>(<span class="stringliteral">&quot;Radeon&quot;</span>) &amp;&amp; <a class="code" href="structvex_1_1Filter_1_1DoublePrecision.html" title="Selects devices supporting double precision.">Filter::DoublePrecision</a>()</div>
+<div class="line">    <span class="keyword">auto</span> device = <a class="code" href="namespacevex.html#a0571bb5e0afbc53f844665652a204b0a" title="Select devices by given criteria.">device_list</a>(</div>
+<div class="line">        <a class="code" href="structvex_1_1Filter_1_1Name.html" title="Selects devices whose names match given value.">Filter::Name</a>(<span class="stringliteral">&quot;Radeon&quot;</span>) &amp;&amp; Filter::DoublePrecision</div>
 <div class="line">        );</div>
 <div class="line">    std::cout &lt;&lt; device &lt;&lt; std::endl;</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>Often you want not just device list, but initialized OpenCL context with command queue on each available device. This may be achieved with <a class="el" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a" title="Create command queues on devices by given criteria.">queue_list()</a> function: </p>
+</div><!-- fragment --><p>Often you want not just device list, but initialized OpenCL context with command queue on each available device. This may be achieved with <a class="el" href="namespacevex.html#a7adacdbabcefdd8480ff64ae7b93541a" title="Create command queues on devices by given criteria.">queue_list()</a> function: </p>
 <div class="fragment"><div class="line">cl::Context context;</div>
 <div class="line">std::vector&lt;cl::CommandQueue&gt; queue;</div>
 <div class="line"><span class="comment">// Select no more than 2 NVIDIA GPUs:</span></div>
-<div class="line">std::tie(context, queue) = <a class="code" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a" title="Create command queues on devices by given criteria.">queue_list</a>(</div>
+<div class="line">std::tie(context, queue) = <a class="code" href="namespacevex.html#a7adacdbabcefdd8480ff64ae7b93541a" title="Create command queues on devices by given criteria.">queue_list</a>(</div>
 <div class="line">    [](<span class="keyword">const</span> cl::Device &amp;d) {</div>
 <div class="line">        <span class="keywordflow">return</span> d.getInfo&lt;CL_DEVICE_VENDOR&gt;() == <span class="stringliteral">&quot;NVIDIA Corporation&quot;</span>;</div>
 <div class="line">    } &amp;&amp; Filter::Count(2)</div>
 <div class="line">    );</div>
+</div><!-- fragment --><p>Last operation may be wrapped into single call to a <a class="el" href="classvex_1_1Context.html" title="VexCL context holder.">vex::Context</a> constructor: </p>
+<div class="fragment"><div class="line"><a class="code" href="classvex_1_1Context.html" title="VexCL context holder.">vex::Context</a> ctx(Filter::Env);</div>
+<div class="line">std::cout &lt;&lt; ctx &lt;&lt; std::endl;</div>
 </div><!-- fragment --><h1><a class="anchor" id="vector"></a>
 Memory allocation and vector arithmetic</h1>
 <p>Once you got queue list, you can allocate OpenCL buffers on the associated devices. <a class="el" href="classvex_1_1vector.html" title="Device vector.">vex::vector</a> constructor accepts std::vector of cl::CommandQueue. The contents of the created vector will be equally partitioned between each queue (presumably, each of the provided queues is linked with separate device). Size of each partition will be proportional to relative device bandwidth unless macro VEXCL_DUMB_PARTITIONING is defined, in which case equal partitioning scheme will be applied. Device bandwidth is measured first time it is requested by launch of small test kernel.</p>
 <p>Multi-platform computation is supported (that is, you can spread your vectors across devices by different vendors), but should be used with caution: all computations will be performed with the speed of the slowest device selected.</p>
-<p>In the example below host vector is allocated and initialized, then copied to all devices obtained with the <a class="el" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a" title="Create command queues on devices by given criteria.">queue_list()</a> call. A couple of empty device vectors are allocated as well: </p>
+<p>In the example below host vector is allocated and initialized, then copied to all GPU devices found in the system. A couple of empty device vectors are allocated as well: </p>
 <div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> n = 1 &lt;&lt; 20;</div>
 <div class="line">std::vector&lt;double&gt; x(n);</div>
 <div class="line">std::generate(x.<a class="code" href="classvex_1_1vector.html#ad15856f00b1c4b80726e6f908260ef57" title="Const iterator to beginning.">begin</a>(), x.<a class="code" href="classvex_1_1vector.html#a5169d2645c884403fa690d45c77552fa" title="Const iterator to end.">end</a>(), [](){ <span class="keywordflow">return</span> (<span class="keywordtype">double</span>)rand() / RAND_MAX; });</div>
 <div class="line"></div>
-<div class="line">cl::Context context;</div>
-<div class="line">std::vector&lt;cl::CommandQueue&gt; queue;</div>
-<div class="line">std::tie(context, queue) = <a class="code" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a" title="Create command queues on devices by given criteria.">queue_list</a>(Filter::Type(CL_DEVICE_TYPE_GPU));</div>
+<div class="line"><a class="code" href="classvex_1_1Context.html" title="VexCL context holder.">vex::Context</a> ctx(Filter::Type(CL_DEVICE_TYPE_GPU));</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> X(queue, x);</div>
-<div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> Y(queue, n);</div>
-<div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> Z(queue, n);</div>
+<div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> X(ctx.queue(), x);</div>
+<div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> Y(ctx.queue(), n);</div>
+<div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> Z(ctx.queue(), n);</div>
 </div><!-- fragment --><p>You can now use simple vector arithmetic with device vector. For every expression you use, appropriate kernel is compiled (first time it is encountered in your program) and called automagically.</p>
 <p>Vectors are processed in parallel across all devices they were allocated on: </p>
 <div class="fragment"><div class="line">Y = 42;</div>
 <div class="line">Z = sqrt(2 * X) + cos(Y);</div>
 </div><!-- fragment --><p>You can copy the result back to host or you can use vector::operator[] to read (or write) vector elements directly. Though latter technique is very ineffective and should be used for debugging purposes only. </p>
-<div class="fragment"><div class="line"><a class="code" href="namespacevex.html#a7896b8bc121f843d62d724a98ebe3b46" title="Copy device vector to host vector.">copy</a>(Z, x);</div>
+<div class="fragment"><div class="line">copy(Z, x);</div>
 <div class="line">assert(x[42] == Z[42]);</div>
 </div><!-- fragment --><p>Another frequently performed operation is reduction of a vector expression to single value, such as summation. This can be done with <a class="el" href="classvex_1_1Reductor.html" title="Parallel reduction of arbitrary expression.">vex::Reductor</a> class: </p>
-<div class="fragment"><div class="line">Reductor&lt;double&gt; sum(queue);</div>
+<div class="fragment"><div class="line">Reductor&lt;double&gt; sum(ctx.queue());</div>
 <div class="line"></div>
 <div class="line">std::cout &lt;&lt; sum(Z) &lt;&lt; std::endl;</div>
 <div class="line">std::cout &lt;&lt; sum(sqrt(2 * X) + cos(Y)) &lt;&lt; std::endl;</div>
@@ -104,22 +105,19 @@ Sparse matrix-vector multiplication</h1>
 <div class="line">        )</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Init OpenCL.</span></div>
-<div class="line">    cl::Context context;</div>
-<div class="line">    std::vector&lt;cl::CommandQueue&gt; queue;</div>
-<div class="line"></div>
-<div class="line">    std::tie(context, queue) = <a class="code" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a" title="Create command queues on devices by given criteria.">queue_list</a>(Filter::Type(CL_DEVICE_TYPE_GPU));</div>
+<div class="line">    <a class="code" href="classvex_1_1Context.html" title="VexCL context holder.">vex::Context</a> ctx(Filter::Type(CL_DEVICE_TYPE_GPU));</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Move data to compute devices.</span></div>
 <div class="line">    <span class="keywordtype">size_t</span> n = x.size();</div>
-<div class="line">    <a class="code" href="classvex_1_1SpMat.html" title="Sparse matrix in ELL format.">vex::SpMat&lt;real&gt;</a>  A(queue, n, row.data(), col.data(), val.data());</div>
-<div class="line">    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> f(queue, rhs);</div>
-<div class="line">    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> u(queue, x);</div>
-<div class="line">    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> r(queue, n);</div>
-<div class="line">    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> p(queue, n);</div>
-<div class="line">    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> q(queue, n);</div>
+<div class="line">    <a class="code" href="classvex_1_1SpMat.html" title="Sparse matrix in ELL format.">vex::SpMat&lt;real&gt;</a>  A(ctx.queue(), n, row.data(), col.data(), val.data());</div>
+<div class="line">    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> f(ctx.queue(), rhs);</div>
+<div class="line">    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> u(ctx.queue(), x);</div>
+<div class="line">    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> r(ctx.queue(), n);</div>
+<div class="line">    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> p(ctx.queue(), n);</div>
+<div class="line">    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> q(ctx.queue(), n);</div>
 <div class="line"></div>
-<div class="line">    Reductor&lt;real,MAX&gt; max(queue);</div>
-<div class="line">    Reductor&lt;real,SUM&gt; sum(queue);</div>
+<div class="line">    Reductor&lt;real,MAX&gt; max(ctx.queue());</div>
+<div class="line">    Reductor&lt;real,SUM&gt; sum(ctx.queue());</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Solve equation Au = f with conjugate gradients method.</span></div>
 <div class="line">    real rho1, rho2;</div>
@@ -146,7 +144,7 @@ Sparse matrix-vector multiplication</h1>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Get result to host.</span></div>
-<div class="line">    <a class="code" href="namespacevex.html#a7896b8bc121f843d62d724a98ebe3b46" title="Copy device vector to host vector.">copy</a>(u, x);</div>
+<div class="line">    copy(u, x);</div>
 <div class="line">}</div>
 </div><!-- fragment --><h1><a class="anchor" id="userfun"></a>
 User-defined functions</h1>
@@ -157,21 +155,17 @@ User-defined functions</h1>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">size_t</span> count_if_greater(<span class="keyword">const</span> vex:vector&lt;float&gt; &amp;x, <span class="keyword">const</span> <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;float&gt;</a> &amp;y) {</div>
 <div class="line">    UserFunction&lt;one_greater_than_other, size_t(float, float)&gt; greater;</div>
-<div class="line"></div>
 <div class="line">    Reductor&lt;size_t, SUM&gt; sum(x.queue_list());</div>
-<div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> sum(greater(x, y));</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>You could also write sum(greater(x + y, 5 * y)), or use any other expressions as parameters to the <code>greater()</code> call. Note that in the function body parameters are always named as prm1, prm2, etc.</p>
 <h1><a class="anchor" id="custkern"></a>
 Using custom kernels</h1>
 <p>Custom kernels are of course possible as well. vector::operator(uint) returns cl::Buffer object for a specified device: </p>
-<div class="fragment"><div class="line">cl::Context context;</div>
-<div class="line">std::vector&lt;cl::CommandQueue&gt; queue;</div>
-<div class="line">std::tie(context, queue) = <a class="code" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a" title="Create command queues on devices by given criteria.">queue_list</a>(Filter::Type(CL_DEVICE_TYPE_GPU));</div>
+<div class="fragment"><div class="line"><a class="code" href="classvex_1_1Context.html" title="VexCL context holder.">vex::Context</a> ctx(Filter::Type(CL_DEVICE_TYPE_GPU));</div>
 <div class="line"></div>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> n = 1 &lt;&lt; 20;</div>
-<div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;float&gt;</a> x(queue, n);</div>
+<div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;float&gt;</a> x(ctx.queue(), n);</div>
 <div class="line"></div>
 <div class="line"><span class="keyword">auto</span> program = <a class="code" href="namespacevex.html#a61989abf337d9845cad96ce9e805fd56" title="Create and build a program from source string.">build_sources</a>(context, std::string(</div>
 <div class="line">    <span class="stringliteral">&quot;kernel void dummy(ulong size, global float *x)\n&quot;</span></div>
@@ -181,17 +175,17 @@ Using custom kernels</h1>
 <div class="line">    <span class="stringliteral">&quot;}\n&quot;</span></div>
 <div class="line">    ));</div>
 <div class="line"></div>
-<div class="line"><span class="keywordflow">for</span>(uint d = 0; d &lt; queue.size(); d++) {</div>
-<div class="line">    <span class="keyword">auto</span> dummy = cl::Kernel(program, <span class="stringliteral">&quot;dummy&quot;</span>).bind(queue[d], <a class="code" href="namespacevex.html#adde6e399118c4e9c8fdb111d23d65698" title="Align n to the next multiple of m.">alignup</a>(n, 256), 256);</div>
+<div class="line"><span class="keywordflow">for</span>(uint d = 0; d &lt; ctx.size(); d++) {</div>
+<div class="line">    <span class="keyword">auto</span> dummy = cl::Kernel(program, <span class="stringliteral">&quot;dummy&quot;</span>).bind(ctx.queue()[d], <a class="code" href="namespacevex.html#adde6e399118c4e9c8fdb111d23d65698" title="Align n to the next multiple of m.">alignup</a>(n, 256), 256);</div>
 <div class="line">    dummy((cl_ulong)x.part_size(d), x(d));</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line">Reductor&lt;float,SUM&gt; sum(queue);</div>
+<div class="line">Reductor&lt;float,SUM&gt; sum(ctx.queue());</div>
 <div class="line">std::cout &lt;&lt; sum(x) &lt;&lt; std::endl;</div>
 </div><!-- fragment --><h1><a class="anchor" id="scalability"></a>
 Scalability</h1>
 <p>In the images below, scalability of the library with respect to number of compute devices is shown. Effective performance (GFLOPS) and bandwidth (GB/sec) were measured by launching big number of test kernels on one, two, or three Nvidia Tesla C2070 cards. The results shown are averaged over 20 runs.</p>
-<p>The details of the experiments may be found in <a href="https://github.com/ddemidov/vexcl/blob/master/examples/profiling.cpp">examples/profiling.cpp</a> file. Basically, performance of the following code was measured:</p>
+<p>The details of the experiments may be found in <a href="https://github.com/ddemidov/vexcl/blob/master/examples/benchmark.cpp">examples/profiling.cpp</a> file. Basically, performance of the following code was measured:</p>
 <div class="fragment"><div class="line"><span class="comment">// Vector arithmetic</span></div>
 <div class="line">a += b + c * d;</div>
 <div class="line"></div>

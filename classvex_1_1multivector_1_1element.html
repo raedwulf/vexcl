@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>vexcl: vex::Filter::Env Struct Reference</title>
+<title>vexcl: vex::multivector&lt; T, N &gt;::element Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -42,41 +42,44 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacevex.html">vex</a></li><li class="navelem"><a class="el" href="namespacevex_1_1Filter.html">Filter</a></li><li class="navelem"><a class="el" href="structvex_1_1Filter_1_1Env.html">Env</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacevex.html">vex</a></li><li class="navelem"><a class="el" href="classvex_1_1multivector.html">multivector</a></li><li class="navelem"><a class="el" href="classvex_1_1multivector_1_1element.html">element</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#friends">Friends</a>  </div>
   <div class="headertitle">
-<div class="title">vex::Filter::Env Struct Reference</div>  </div>
+<div class="title">vex::multivector&lt; T, N &gt;::element Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Environment filter.  
- <a href="structvex_1_1Filter_1_1Env.html#details">More...</a></p>
+<p>Proxy class.  
+ <a href="classvex_1_1multivector_1_1element.html#details">More...</a></p>
 
-<p><code>#include &lt;devlist.hpp&gt;</code></p>
+<p><code>#include &lt;multivector.hpp&gt;</code></p>
 
-<p><a href="structvex_1_1Filter_1_1Env-members.html">List of all members.</a></p>
+<p><a href="classvex_1_1multivector_1_1element-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7cf0e362a88e8bfa6c5becfcb73df184"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cf0e362a88e8bfa6c5becfcb73df184"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (const cl::Device &amp;d) const </td></tr>
+<tr class="memitem:a0529ba1c3c8cde0f428e9d17d20591f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0529ba1c3c8cde0f428e9d17d20591f7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>operator value_type</b> () const </td></tr>
+<tr class="memitem:a7f3464ab2f3c9653e28c7bcc4b482d9e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f3464ab2f3c9653e28c7bcc4b482d9e"></a>
+value_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (value_type val)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a84850c1c27413bc0c0abc7284b7e25e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84850c1c27413bc0c0abc7284b7e25e1"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>multivector</b></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Environment filter. </p>
-<p>Selects devices with respect to environment variables. Recognized variables are:</p>
-<ul>
-<li>OCL_PLATFORM &ndash; platform name; </li>
-<li>OCL_VENDOR &ndash; device vendor; </li>
-<li>OCL_DEVICE &ndash; device name; </li>
-<li>OCL_MAX_DEVICES &ndash; maximum number of devices to use.</li>
-</ul>
-<dl class="section note"><dt>Note:</dt><dd>Since this filter possibly counts passed devices, it should be the last in filter expression. Same reasoning applies as in case of <a class="el" href="structvex_1_1Filter_1_1Count.html" title="Selects no more than given number of devices.">Filter::Count</a>. </dd></dl>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="devlist_8hpp.html">devlist.hpp</a></li>
+<div class="textblock"><h3>template&lt;typename T, uint N&gt;<br/>
+class vex::multivector&lt; T, N &gt;::element</h3>
+
+<p>Proxy class. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="multivector_8hpp.html">multivector.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

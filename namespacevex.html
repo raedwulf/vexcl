@@ -62,6 +62,10 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1Context.html">Context</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">VexCL context holder.  <a href="classvex_1_1Context.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1multivector.html">multivector</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container for several vex::vectors.  <a href="classvex_1_1multivector.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1profiler.html">profiler</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for gathering and printing OpenCL and Host profiling info.  <a href="classvex_1_1profiler.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1Reductor.html">Reductor</a></td></tr>
@@ -97,18 +101,64 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a91041b9b4ad749b9d4ef7de0a29b16e4"><td class="memTemplParams" colspan="2">template&lt;class DevFilter  = Filter::All&gt; </td></tr>
-<tr class="memitem:a91041b9b4ad749b9d4ef7de0a29b16e4"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; cl::Device &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a91041b9b4ad749b9d4ef7de0a29b16e4">device_list</a> (DevFilter filter=<a class="el" href="structvex_1_1Filter_1_1All.html">Filter::All</a>())</td></tr>
-<tr class="memdesc:a91041b9b4ad749b9d4ef7de0a29b16e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select devices by given criteria.  <a href="#a91041b9b4ad749b9d4ef7de0a29b16e4"></a><br/></td></tr>
-<tr class="memitem:ad5a7fdbec637a7a896600280b175912a"><td class="memTemplParams" colspan="2">template&lt;class DevFilter  = Filter::All&gt; </td></tr>
-<tr class="memitem:ad5a7fdbec637a7a896600280b175912a"><td class="memTemplItemLeft" align="right" valign="top">std::pair&lt; std::vector<br class="typebreak"/>
+<tr class="memitem:a0571bb5e0afbc53f844665652a204b0a"><td class="memTemplParams" colspan="2">template&lt;class DevFilter  = Filter::AllFilter&gt; </td></tr>
+<tr class="memitem:a0571bb5e0afbc53f844665652a204b0a"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; cl::Device &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a0571bb5e0afbc53f844665652a204b0a">device_list</a> (DevFilter filter=Filter::All)</td></tr>
+<tr class="memdesc:a0571bb5e0afbc53f844665652a204b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select devices by given criteria.  <a href="#a0571bb5e0afbc53f844665652a204b0a"></a><br/></td></tr>
+<tr class="memitem:a7adacdbabcefdd8480ff64ae7b93541a"><td class="memTemplParams" colspan="2">template&lt;class DevFilter  = Filter::AllFilter&gt; </td></tr>
+<tr class="memitem:a7adacdbabcefdd8480ff64ae7b93541a"><td class="memTemplItemLeft" align="right" valign="top">std::pair&lt; std::vector<br class="typebreak"/>
 &lt; cl::Context &gt;, std::vector<br class="typebreak"/>
-&lt; cl::CommandQueue &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a">queue_list</a> (DevFilter filter=<a class="el" href="structvex_1_1Filter_1_1All.html">Filter::All</a>(), cl_command_queue_properties properties=0)</td></tr>
-<tr class="memdesc:ad5a7fdbec637a7a896600280b175912a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create command queues on devices by given criteria.  <a href="#ad5a7fdbec637a7a896600280b175912a"></a><br/></td></tr>
+&lt; cl::CommandQueue &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a7adacdbabcefdd8480ff64ae7b93541a">queue_list</a> (DevFilter filter=Filter::All, cl_command_queue_properties properties=0)</td></tr>
+<tr class="memdesc:a7adacdbabcefdd8480ff64ae7b93541a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create command queues on devices by given criteria.  <a href="#a7adacdbabcefdd8480ff64ae7b93541a"></a><br/></td></tr>
 <tr class="memitem:aa535cb5230606de566781b74eed6d450"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa535cb5230606de566781b74eed6d450"></a>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, const std::vector&lt; cl::Device &gt; &amp;device)</td></tr>
 <tr class="memitem:a656d3a9620fbc306004c367aa8497989"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a656d3a9620fbc306004c367aa8497989"></a>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
+<tr class="memitem:a1293657f0dd4e5ac8246a8d81d4c7264"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1293657f0dd4e5ac8246a8d81d4c7264"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, const <a class="el" href="classvex_1_1Context.html">vex::Context</a> &amp;ctx)</td></tr>
+<tr class="memitem:aaa68b032f0d66695e3b3b6c5375e8cf6"><td class="memTemplParams" colspan="2"><a class="anchor" id="aaa68b032f0d66695e3b3b6c5375e8cf6"></a>
+template&lt;class T , uint N&gt; </td></tr>
+<tr class="memitem:aaa68b032f0d66695e3b3b6c5375e8cf6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>copy</b> (const <a class="el" href="classvex_1_1multivector.html">multivector</a>&lt; T, N &gt; &amp;mv, std::vector&lt; T &gt; &amp;hv)</td></tr>
+<tr class="memitem:a11afb8e8e5387abf04e3b7f815111e0e"><td class="memTemplParams" colspan="2"><a class="anchor" id="a11afb8e8e5387abf04e3b7f815111e0e"></a>
+template&lt;class T , uint N&gt; </td></tr>
+<tr class="memitem:a11afb8e8e5387abf04e3b7f815111e0e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>copy</b> (const std::vector&lt; T &gt; &amp;hv, <a class="el" href="classvex_1_1multivector.html">multivector</a>&lt; T, N &gt; &amp;mv)</td></tr>
+<tr class="memitem:abc7fda3e52fcd22be5faa5a2289cf654"><td class="memTemplParams" colspan="2"><a class="anchor" id="abc7fda3e52fcd22be5faa5a2289cf654"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:abc7fda3e52fcd22be5faa5a2289cf654"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+&lt; Expr::is_multiexpression, <br class="typebreak"/>
+const typename Expr::subtype &amp; &gt;<br class="typebreak"/>
+::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>extract_component</b> (const Expr &amp;expr, uint i)</td></tr>
+<tr class="memitem:a7da94f03234d35f6c5761fe6fb6322a1"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7da94f03234d35f6c5761fe6fb6322a1"></a>
+template&lt;class LHS , class RHS &gt; </td></tr>
+<tr class="memitem:a7da94f03234d35f6c5761fe6fb6322a1"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+&lt; compatible_multiexpressions<br class="typebreak"/>
+&lt; LHS, RHS &gt;::value, <br class="typebreak"/>
+BinaryMultiExpression&lt; LHS, <br class="typebreak"/>
+'+', RHS &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a7da94f03234d35f6c5761fe6fb6322a1">operator+</a> (const LHS &amp;lhs, const RHS &amp;rhs)</td></tr>
+<tr class="memdesc:a7da94f03234d35f6c5761fe6fb6322a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sum of two expressions. <br/></td></tr>
+<tr class="memitem:ac07c2a334a7dd4edfe696eff087ff0c8"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac07c2a334a7dd4edfe696eff087ff0c8"></a>
+template&lt;class LHS , class RHS &gt; </td></tr>
+<tr class="memitem:ac07c2a334a7dd4edfe696eff087ff0c8"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+&lt; compatible_multiexpressions<br class="typebreak"/>
+&lt; LHS, RHS &gt;::value, <br class="typebreak"/>
+BinaryMultiExpression&lt; LHS, <br class="typebreak"/>
+'-', RHS &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ac07c2a334a7dd4edfe696eff087ff0c8">operator-</a> (const LHS &amp;lhs, const RHS &amp;rhs)</td></tr>
+<tr class="memdesc:ac07c2a334a7dd4edfe696eff087ff0c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Difference of two expressions. <br/></td></tr>
+<tr class="memitem:a39bed966bf064f4b5fc346a07bf543da"><td class="memTemplParams" colspan="2"><a class="anchor" id="a39bed966bf064f4b5fc346a07bf543da"></a>
+template&lt;class LHS , class RHS &gt; </td></tr>
+<tr class="memitem:a39bed966bf064f4b5fc346a07bf543da"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+&lt; compatible_multiexpressions<br class="typebreak"/>
+&lt; LHS, RHS &gt;::value, <br class="typebreak"/>
+BinaryMultiExpression&lt; LHS, <br class="typebreak"/>
+'*', RHS &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a39bed966bf064f4b5fc346a07bf543da">operator*</a> (const LHS &amp;lhs, const RHS &amp;rhs)</td></tr>
+<tr class="memdesc:a39bed966bf064f4b5fc346a07bf543da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Product of two expressions. <br/></td></tr>
+<tr class="memitem:ae1fd74c0c3be93ef6300550ecf0a0b37"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae1fd74c0c3be93ef6300550ecf0a0b37"></a>
+template&lt;class LHS , class RHS &gt; </td></tr>
+<tr class="memitem:ae1fd74c0c3be93ef6300550ecf0a0b37"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+&lt; compatible_multiexpressions<br class="typebreak"/>
+&lt; LHS, RHS &gt;::value, <br class="typebreak"/>
+BinaryMultiExpression&lt; LHS, <br class="typebreak"/>
+'/', RHS &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ae1fd74c0c3be93ef6300550ecf0a0b37">operator/</a> (const LHS &amp;lhs, const RHS &amp;rhs)</td></tr>
+<tr class="memdesc:ae1fd74c0c3be93ef6300550ecf0a0b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Division of two expressions. <br/></td></tr>
 <tr class="memitem:abb803b9f4d11c3a7c21f4b3df265b2a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb803b9f4d11c3a7c21f4b3df265b2a1"></a>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, <a class="el" href="classvex_1_1profiler.html">profiler</a> &amp;prof)</td></tr>
 <tr class="memitem:a2eca041bc53030635bcb0ad706960bed"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2eca041bc53030635bcb0ad706960bed"></a>
@@ -204,42 +254,6 @@ OutputIterator &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a6c514253c0f09c5a18dac3e687553465"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a6c514253c0f09c5a18dac3e687553465">swap</a> (<a class="el" href="classvex_1_1vector.html">vector</a>&lt; T &gt; &amp;x, <a class="el" href="classvex_1_1vector.html">vector</a>&lt; T &gt; &amp;y)</td></tr>
 <tr class="memdesc:a6c514253c0f09c5a18dac3e687553465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap two vectors. <br/></td></tr>
-<tr class="memitem:a573527e11f19c23892d8cc15fbed26c4"><td class="memTemplParams" colspan="2"><a class="anchor" id="a573527e11f19c23892d8cc15fbed26c4"></a>
-template&lt;class LHS , class RHS &gt; </td></tr>
-<tr class="memitem:a573527e11f19c23892d8cc15fbed26c4"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
-&lt; valid_expression&lt; LHS &gt;<br class="typebreak"/>
-::value &amp;&amp;valid_expression<br class="typebreak"/>
-&lt; RHS &gt;::value, <br class="typebreak"/>
-<a class="el" href="structvex_1_1BinaryExpression.html">BinaryExpression</a>&lt; LHS, <br class="typebreak"/>
-'+', RHS &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a573527e11f19c23892d8cc15fbed26c4">operator+</a> (const LHS &amp;lhs, const RHS &amp;rhs)</td></tr>
-<tr class="memdesc:a573527e11f19c23892d8cc15fbed26c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sum of two expressions. <br/></td></tr>
-<tr class="memitem:a9d9c0efd602cd9902dce8adae07e14c2"><td class="memTemplParams" colspan="2"><a class="anchor" id="a9d9c0efd602cd9902dce8adae07e14c2"></a>
-template&lt;class LHS , class RHS &gt; </td></tr>
-<tr class="memitem:a9d9c0efd602cd9902dce8adae07e14c2"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
-&lt; valid_expression&lt; LHS &gt;<br class="typebreak"/>
-::value &amp;&amp;valid_expression<br class="typebreak"/>
-&lt; RHS &gt;::value, <br class="typebreak"/>
-<a class="el" href="structvex_1_1BinaryExpression.html">BinaryExpression</a>&lt; LHS, <br class="typebreak"/>
-'-', RHS &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a9d9c0efd602cd9902dce8adae07e14c2">operator-</a> (const LHS &amp;lhs, const RHS &amp;rhs)</td></tr>
-<tr class="memdesc:a9d9c0efd602cd9902dce8adae07e14c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Difference of two expressions. <br/></td></tr>
-<tr class="memitem:aa8a58fc683b4c32f4c1f5dd40c31fa02"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa8a58fc683b4c32f4c1f5dd40c31fa02"></a>
-template&lt;class LHS , class RHS &gt; </td></tr>
-<tr class="memitem:aa8a58fc683b4c32f4c1f5dd40c31fa02"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
-&lt; valid_expression&lt; LHS &gt;<br class="typebreak"/>
-::value &amp;&amp;valid_expression<br class="typebreak"/>
-&lt; RHS &gt;::value, <br class="typebreak"/>
-<a class="el" href="structvex_1_1BinaryExpression.html">BinaryExpression</a>&lt; LHS, <br class="typebreak"/>
-'*', RHS &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#aa8a58fc683b4c32f4c1f5dd40c31fa02">operator*</a> (const LHS &amp;lhs, const RHS &amp;rhs)</td></tr>
-<tr class="memdesc:aa8a58fc683b4c32f4c1f5dd40c31fa02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Product of two expressions. <br/></td></tr>
-<tr class="memitem:a9515b67a1be99969b698fbbf6cd9544d"><td class="memTemplParams" colspan="2"><a class="anchor" id="a9515b67a1be99969b698fbbf6cd9544d"></a>
-template&lt;class LHS , class RHS &gt; </td></tr>
-<tr class="memitem:a9515b67a1be99969b698fbbf6cd9544d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
-&lt; valid_expression&lt; LHS &gt;<br class="typebreak"/>
-::value &amp;&amp;valid_expression<br class="typebreak"/>
-&lt; RHS &gt;::value, <br class="typebreak"/>
-<a class="el" href="structvex_1_1BinaryExpression.html">BinaryExpression</a>&lt; LHS, <br class="typebreak"/>
-'/', RHS &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a9515b67a1be99969b698fbbf6cd9544d">operator/</a> (const LHS &amp;lhs, const RHS &amp;rhs)</td></tr>
-<tr class="memdesc:a9515b67a1be99969b698fbbf6cd9544d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Division of two expressions. <br/></td></tr>
 <tr class="memitem:a361fa1c8a07d5cf7ddf64ea2e15f5c01"><td class="memTemplParams" colspan="2"><a class="anchor" id="a361fa1c8a07d5cf7ddf64ea2e15f5c01"></a>
 template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:a361fa1c8a07d5cf7ddf64ea2e15f5c01"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>all_expressions_valid</b> ()</td></tr>
@@ -268,6 +282,7 @@ struct <a class="el" href="structvex_1_1partitioning__scheme.html">vex::partitio
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>OpenCL convenience utilities. </p>
+<p>Vector expression template library for OpenCL. </p>
 </div><hr/><h2>Function Documentation</h2>
 <a class="anchor" id="ab4ea02c21224302cffaa166e7bcaa2ed"></a>
 <div class="memitem">
@@ -312,17 +327,17 @@ template&lt;class InputIterator , class OutputIterator &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a91041b9b4ad749b9d4ef7de0a29b16e4"></a>
+<a class="anchor" id="a0571bb5e0afbc53f844665652a204b0a"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class DevFilter  = Filter::All&gt; </div>
+template&lt;class DevFilter  = Filter::AllFilter&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;cl::Device&gt; vex::device_list </td>
           <td>(</td>
           <td class="paramtype">DevFilter&#160;</td>
-          <td class="paramname"><em>filter</em> = <code>Filter::All()</code></td><td>)</td>
+          <td class="paramname"><em>filter</em> = <code>Filter::All</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -337,8 +352,8 @@ template&lt;class DevFilter  = Filter::All&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns:</dt><dd>list of devices satisfying the provided filter.</dd></dl>
 <p>This example selects any GPU which supports double precision arithmetic: </p>
-<div class="fragment"><div class="line"> <span class="keyword">auto</span> devices = <a class="code" href="namespacevex.html#a91041b9b4ad749b9d4ef7de0a29b16e4" title="Select devices by given criteria.">device_list</a>(</div>
-<div class="line">            Filter::Type(CL_DEVICE_TYPE_GPU) &amp;&amp; Filter::DoublePrecision()</div>
+<div class="fragment"><div class="line"> <span class="keyword">auto</span> devices = <a class="code" href="namespacevex.html#a0571bb5e0afbc53f844665652a204b0a" title="Select devices by given criteria.">device_list</a>(</div>
+<div class="line">            Filter::Type(CL_DEVICE_TYPE_GPU) &amp;&amp; Filter::DoublePrecision</div>
 <div class="line">            );</div>
 </div><!-- fragment --> 
 </div>
@@ -413,17 +428,17 @@ template&lt;class DevFilter  = Filter::All&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ad5a7fdbec637a7a896600280b175912a"></a>
+<a class="anchor" id="a7adacdbabcefdd8480ff64ae7b93541a"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class DevFilter  = Filter::All&gt; </div>
+template&lt;class DevFilter  = Filter::AllFilter&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">std::pair&lt;std::vector&lt;cl::Context&gt;, std::vector&lt;cl::CommandQueue&gt; &gt; vex::queue_list </td>
           <td>(</td>
           <td class="paramtype">DevFilter&#160;</td>
-          <td class="paramname"><em>filter</em> = <code>Filter::All()</code>, </td>
+          <td class="paramname"><em>filter</em> = <code>Filter::All</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -447,7 +462,7 @@ template&lt;class DevFilter  = Filter::All&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns:</dt><dd>list of queues accociated with selected devices. </dd></dl>
-<dl class="section see"><dt>See also:</dt><dd><a class="el" href="namespacevex.html#a91041b9b4ad749b9d4ef7de0a29b16e4" title="Select devices by given criteria.">device_list</a> </dd></dl>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="namespacevex.html#a0571bb5e0afbc53f844665652a204b0a" title="Select devices by given criteria.">device_list</a> </dd></dl>
 
 </div>
 </div>

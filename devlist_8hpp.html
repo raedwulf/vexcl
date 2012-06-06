@@ -50,7 +50,8 @@
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">devlist.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -83,8 +84,8 @@
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1All.html">vex::Filter::All</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects any device.  <a href="structvex_1_1Filter_1_1All.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1AllFilter.html">vex::Filter::AllFilter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects any device.  <a href="structvex_1_1Filter_1_1AllFilter.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1Vendor.html">vex::Filter::Vendor</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects devices whose vendor name match given value.  <a href="structvex_1_1Filter_1_1Vendor.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1Platform.html">vex::Filter::Platform</a></td></tr>
@@ -93,12 +94,14 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects devices whose names match given value.  <a href="structvex_1_1Filter_1_1Name.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1Type.html">vex::Filter::Type</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects devices by type.  <a href="structvex_1_1Filter_1_1Type.html#details">More...</a><br/></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1DoublePrecision.html">vex::Filter::DoublePrecision</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects devices supporting double precision.  <a href="structvex_1_1Filter_1_1DoublePrecision.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1DoublePrecisionFilter.html">vex::Filter::DoublePrecisionFilter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects devices supporting double precision.  <a href="structvex_1_1Filter_1_1DoublePrecisionFilter.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1Count.html">vex::Filter::Count</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects no more than given number of devices.  <a href="structvex_1_1Filter_1_1Count.html#details">More...</a><br/></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1Env.html">vex::Filter::Env</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Environment filter.  <a href="structvex_1_1Filter_1_1Env.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1EnvFilter.html">vex::Filter::EnvFilter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Environment filter.  <a href="structvex_1_1Filter_1_1EnvFilter.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1Context.html">vex::Context</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">VexCL context holder.  <a href="classvex_1_1Context.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -129,18 +132,30 @@ RightFilter, FilterOr &gt;&#160;</td><td class="memTemplItemRight" valign="botto
 template&lt;class Flt &gt; </td></tr>
 <tr class="memitem:a78f584ca4e3eae2ac1414e56e92287ee"><td class="memTemplItemLeft" align="right" valign="top">NegateFilter&lt; Flt &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#a78f584ca4e3eae2ac1414e56e92287ee">vex::Filter::operator!</a> (const Flt &amp;flt)</td></tr>
 <tr class="memdesc:a78f584ca4e3eae2ac1414e56e92287ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Negate a filter. <br/></td></tr>
-<tr class="memitem:a91041b9b4ad749b9d4ef7de0a29b16e4"><td class="memTemplParams" colspan="2">template&lt;class DevFilter  = Filter::All&gt; </td></tr>
-<tr class="memitem:a91041b9b4ad749b9d4ef7de0a29b16e4"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; cl::Device &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a91041b9b4ad749b9d4ef7de0a29b16e4">vex::device_list</a> (DevFilter filter=Filter::All())</td></tr>
-<tr class="memdesc:a91041b9b4ad749b9d4ef7de0a29b16e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select devices by given criteria.  <a href="#a91041b9b4ad749b9d4ef7de0a29b16e4"></a><br/></td></tr>
-<tr class="memitem:ad5a7fdbec637a7a896600280b175912a"><td class="memTemplParams" colspan="2">template&lt;class DevFilter  = Filter::All&gt; </td></tr>
-<tr class="memitem:ad5a7fdbec637a7a896600280b175912a"><td class="memTemplItemLeft" align="right" valign="top">std::pair&lt; std::vector<br class="typebreak"/>
+<tr class="memitem:a0571bb5e0afbc53f844665652a204b0a"><td class="memTemplParams" colspan="2">template&lt;class DevFilter  = Filter::AllFilter&gt; </td></tr>
+<tr class="memitem:a0571bb5e0afbc53f844665652a204b0a"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; cl::Device &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a0571bb5e0afbc53f844665652a204b0a">vex::device_list</a> (DevFilter filter=Filter::All)</td></tr>
+<tr class="memdesc:a0571bb5e0afbc53f844665652a204b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select devices by given criteria.  <a href="#a0571bb5e0afbc53f844665652a204b0a"></a><br/></td></tr>
+<tr class="memitem:a7adacdbabcefdd8480ff64ae7b93541a"><td class="memTemplParams" colspan="2">template&lt;class DevFilter  = Filter::AllFilter&gt; </td></tr>
+<tr class="memitem:a7adacdbabcefdd8480ff64ae7b93541a"><td class="memTemplItemLeft" align="right" valign="top">std::pair&lt; std::vector<br class="typebreak"/>
 &lt; cl::Context &gt;, std::vector<br class="typebreak"/>
-&lt; cl::CommandQueue &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ad5a7fdbec637a7a896600280b175912a">vex::queue_list</a> (DevFilter filter=Filter::All(), cl_command_queue_properties properties=0)</td></tr>
-<tr class="memdesc:ad5a7fdbec637a7a896600280b175912a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create command queues on devices by given criteria.  <a href="#ad5a7fdbec637a7a896600280b175912a"></a><br/></td></tr>
+&lt; cl::CommandQueue &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a7adacdbabcefdd8480ff64ae7b93541a">vex::queue_list</a> (DevFilter filter=Filter::All, cl_command_queue_properties properties=0)</td></tr>
+<tr class="memdesc:a7adacdbabcefdd8480ff64ae7b93541a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create command queues on devices by given criteria.  <a href="#a7adacdbabcefdd8480ff64ae7b93541a"></a><br/></td></tr>
 <tr class="memitem:aa535cb5230606de566781b74eed6d450"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa535cb5230606de566781b74eed6d450"></a>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>vex::operator&lt;&lt;</b> (std::ostream &amp;os, const std::vector&lt; cl::Device &gt; &amp;device)</td></tr>
 <tr class="memitem:a656d3a9620fbc306004c367aa8497989"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a656d3a9620fbc306004c367aa8497989"></a>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>vex::operator&lt;&lt;</b> (std::ostream &amp;os, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
+<tr class="memitem:a1293657f0dd4e5ac8246a8d81d4c7264"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1293657f0dd4e5ac8246a8d81d4c7264"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>vex::operator&lt;&lt;</b> (std::ostream &amp;os, const <a class="el" href="classvex_1_1Context.html">vex::Context</a> &amp;ctx)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:af78041b2c2e050f434d3d48a8bc38f91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af78041b2c2e050f434d3d48a8bc38f91"></a>
+struct <a class="el" href="structvex_1_1Filter_1_1AllFilter.html">vex::Filter::AllFilter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>vex::Filter::All</b></td></tr>
+<tr class="memitem:a5c51153dbce80aebc1d68c0ce92b3668"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c51153dbce80aebc1d68c0ce92b3668"></a>
+struct <br class="typebreak"/>
+<a class="el" href="structvex_1_1Filter_1_1DoublePrecisionFilter.html">vex::Filter::DoublePrecisionFilter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>vex::Filter::DoublePrecision</b></td></tr>
+<tr class="memitem:a89445c49852c70e6bd01ed82133f127c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89445c49852c70e6bd01ed82133f127c"></a>
+struct <a class="el" href="structvex_1_1Filter_1_1EnvFilter.html">vex::Filter::EnvFilter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>vex::Filter::Env</b></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>OpenCL device enumeration. </p>
