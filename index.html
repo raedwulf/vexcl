@@ -151,7 +151,7 @@ User-defined functions</h1>
 <p>Simple arithmetic expressions are sometimes not enough. Imagine that you need to count how many elements in vector x are greater that their counterparts in vector y. This may be achieved by introduction of custom function. In order to build such a function, you need to supply its body, its return type and types of its arguments. After that, you can apply the function to any valid vector expressions: </p>
 <div class="fragment"><div class="line"><span class="comment">// Function body has to be defined at global scope, and it has to be of `extern</span></div>
 <div class="line"><span class="comment">// const char[]` type. This allows us to use it as a template parameter.</span></div>
-<div class="line"><span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> one_greater_than_other[] = <span class="stringliteral">&quot;return prm1 &gt; prm2 ? 1 : 0&quot;</span>;</div>
+<div class="line"><span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> one_greater_than_other[] = <span class="stringliteral">&quot;return prm1 &gt; prm2 ? 1 : 0;&quot;</span>;</div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">size_t</span> count_if_greater(<span class="keyword">const</span> vex:vector&lt;float&gt; &amp;x, <span class="keyword">const</span> <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;float&gt;</a> &amp;y) {</div>
 <div class="line">    UserFunction&lt;one_greater_than_other, size_t(float, float)&gt; greater;</div>
