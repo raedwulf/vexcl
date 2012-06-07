@@ -121,6 +121,10 @@ template&lt;class Expr , typename real , typename column_t &gt; </td></tr>
 ExSpMV&lt; Expr, real, column_t &gt;<br class="typebreak"/>
  &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a73f231a9e85e1e48c279c3c1018ea8ec">vex::operator-</a> (const Expr &amp;expr, const SpMV&lt; real, column_t &gt; &amp;spmv)</td></tr>
 <tr class="memdesc:a73f231a9e85e1e48c279c3c1018ea8ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtruct sparse matrix - vector product from an expression. <br/></td></tr>
+<tr class="memitem:a799d69aae7db74f51a33f929793ae1a7"><td class="memTemplParams" colspan="2"><a class="anchor" id="a799d69aae7db74f51a33f929793ae1a7"></a>
+template&lt;typename real , typename column_t , uint N&gt; </td></tr>
+<tr class="memitem:a799d69aae7db74f51a33f929793ae1a7"><td class="memTemplItemLeft" align="right" valign="top">MultiSpMV&lt; real, column_t, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a799d69aae7db74f51a33f929793ae1a7">vex::operator*</a> (const SpMatBase&lt; real, column_t &gt; &amp;A, const <a class="el" href="classvex_1_1multivector.html">vex::multivector</a>&lt; real, N &gt; &amp;x)</td></tr>
+<tr class="memdesc:a799d69aae7db74f51a33f929793ae1a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply sparse matrix and a vector. <br/></td></tr>
 <tr class="memitem:a6bfb624117ba61e479e77e03a25caf51"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bfb624117ba61e479e77e03a25caf51"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a6bfb624117ba61e479e77e03a25caf51">vex::device_spmv_perf</a> (const cl::Context &amp;context, const cl::Device &amp;device, size_t test_size=64U)</td></tr>
 <tr class="memdesc:a6bfb624117ba61e479e77e03a25caf51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns device weight after spmv test. <br/></td></tr>
