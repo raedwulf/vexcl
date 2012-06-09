@@ -78,7 +78,7 @@ Memory allocation and vector arithmetic</h1>
 <div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> X(ctx.queue(), x);</div>
 <div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> Y(ctx.queue(), n);</div>
 <div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> Z(ctx.queue(), n);</div>
-</div><!-- fragment --><p>You can now use simple vector arithmetic with device vector. For every expression you use, appropriate kernel is compiled (first time it is encountered in your program) and called automagically.</p>
+</div><!-- fragment --><p>You can now use simple vector arithmetic with device vector. For every expression you use, appropriate kernel is compiled (first time it is encountered in your program) and called automagically. If you want to see sources of the generated kernels on the standard output, define <code>VEXCL_SHOW_KERNELS</code> macro before including VexCL headers.</p>
 <p>Vectors are processed in parallel across all devices they were allocated on: </p>
 <div class="fragment"><div class="line">Y = 42;</div>
 <div class="line">Z = sqrt(2 * X) + cos(Y);</div>
