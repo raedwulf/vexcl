@@ -44,28 +44,14 @@
 <h1><a class="anchor" id="devlist"></a>
 Selection of compute devices</h1>
 <p>You can select any number of available compute devices, which satisfy provided filters. Filter is a functor returning bool and acting on a cl::Device parameter. Several standard filters are provided, such as device type or name filter, double precision support etc. Filters can be combined with logical operators. In the example below all devices with names matching "Radeon" and supporting double precision are selected: </p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL.">vexcl/vexcl.hpp</a>&gt;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL.">vexcl/vexcl.hpp</a>&gt;</span></div>
 <div class="line"><span class="keyword">using namespace </span>vex;</div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
-<div class="line">    <span class="keyword">auto</span> device = <a class="code" href="namespacevex.html#a0571bb5e0afbc53f844665652a204b0a" title="Select devices by given criteria.">device_list</a>(</div>
-<div class="line">        <a class="code" href="structvex_1_1Filter_1_1Name.html" title="Selects devices whose names match given value.">Filter::Name</a>(<span class="stringliteral">&quot;Radeon&quot;</span>) &amp;&amp; Filter::DoublePrecision</div>
-<div class="line">        );</div>
+<div class="line">    <a class="code" href="classvex_1_1Context.html" title="VexCL context holder.">vex::Context</a> ctx(<a class="code" href="structvex_1_1Filter_1_1Name.html" title="Selects devices whose names match given value.">Filter::Name</a>(<span class="stringliteral">&quot;Radeon&quot;</span>) &amp;&amp; Filter::DoublePrecision);</div>
 <div class="line">    std::cout &lt;&lt; device &lt;&lt; std::endl;</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>Often you want not just device list, but initialized OpenCL context with command queue on each available device. This may be achieved with <a class="el" href="namespacevex.html#a7adacdbabcefdd8480ff64ae7b93541a" title="Create command queues on devices by given criteria.">queue_list()</a> function: </p>
-<div class="fragment"><div class="line">cl::Context context;</div>
-<div class="line">std::vector&lt;cl::CommandQueue&gt; queue;</div>
-<div class="line"><span class="comment">// Select no more than 2 NVIDIA GPUs:</span></div>
-<div class="line">std::tie(context, queue) = <a class="code" href="namespacevex.html#a7adacdbabcefdd8480ff64ae7b93541a" title="Create command queues on devices by given criteria.">queue_list</a>(</div>
-<div class="line">    [](<span class="keyword">const</span> cl::Device &amp;d) {</div>
-<div class="line">        <span class="keywordflow">return</span> d.getInfo&lt;CL_DEVICE_VENDOR&gt;() == <span class="stringliteral">&quot;NVIDIA Corporation&quot;</span>;</div>
-<div class="line">    } &amp;&amp; Filter::Count(2)</div>
-<div class="line">    );</div>
-</div><!-- fragment --><p>Last operation may be wrapped into single call to a <a class="el" href="classvex_1_1Context.html" title="VexCL context holder.">vex::Context</a> constructor: </p>
-<div class="fragment"><div class="line"><a class="code" href="classvex_1_1Context.html" title="VexCL context holder.">vex::Context</a> ctx(Filter::Env);</div>
-<div class="line">std::cout &lt;&lt; ctx &lt;&lt; std::endl;</div>
-</div><!-- fragment --><h1><a class="anchor" id="vector"></a>
+</div><!-- fragment --><p> <a class="el" href="classvex_1_1Context.html" title="VexCL context holder.">vex::Context</a> object holds list of initialized OpenCL contexts and command queues for each filtered device. If you just need list of available devices without creating contexts and queues on them, then look for <a class="el" href="namespacevex.html#a0571bb5e0afbc53f844665652a204b0a" title="Select devices by given criteria.">device_list()</a> function in documenation.</p>
+<h1><a class="anchor" id="vector"></a>
 Memory allocation and vector arithmetic</h1>
 <p>Once you got queue list, you can allocate OpenCL buffers on the associated devices. <a class="el" href="classvex_1_1vector.html">vex::vector</a> constructor accepts std::vector of cl::CommandQueue. The contents of the created vector will be partitioned between each queue (presumably, each of the provided queues is linked with separate device). Size of each partition will be proportional to relative device bandwidth unless macro VEXCL_DUMB_PARTITIONING is defined, in which case equal partitioning scheme will be applied. Device bandwidth is measured first time it is requested by launch of small test kernel.</p>
 <p>Multi-platform computation is supported (that is, you can spread your vectors across devices by different vendors), but should be used with caution: all computations will be performed with the speed of the slowest device selected.</p>
@@ -79,7 +65,7 @@ Memory allocation and vector arithmetic</h1>
 <div class="line"><a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a> X(ctx.queue(), x);</div>
 <div class="line"><a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a> Y(ctx.queue(), n);</div>
 <div class="line"><a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a> Z(ctx.queue(), n);</div>
-</div><!-- fragment --><p>You can now use simple vector arithmetic with device vector. For every expression you use, appropriate kernel is compiled (first time it is encountered in your program) and called automagically. If you want to see sources of the generated kernels on the standard output, define <code>VEXCL_SHOW_KERNELS</code> macro before including VexCL headers.</p>
+</div><!-- fragment --><p>You can now use simple vector arithmetic with device vector. For every expression you use, appropriate kernel is compiled (first time it is encountered in your program) and called automagically. If you want to see sources of the generated kernels on the standard output, define VEXCL_SHOW_KERNELS macro before including VexCL headers.</p>
 <p>Vectors are processed in parallel across all devices they were allocated on: </p>
 <div class="fragment"><div class="line">Y = 42;</div>
 <div class="line">Z = sqrt(2 * X) + cos(Y);</div>
@@ -159,7 +145,7 @@ User-defined functions</h1>
 <div class="line">    Reductor&lt;size_t, SUM&gt; sum(x.queue_list());</div>
 <div class="line">    <span class="keywordflow">return</span> sum(greater(x, y));</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>You could also write sum(greater(x + y, 5 * y)), or use any other expressions as parameters to the <code>greater()</code> call. Note that in the function body parameters are always named as prm1, prm2, etc.</p>
+</div><!-- fragment --><p>You could also write sum(greater(x + y, 5 * y)), or use any other expressions as parameters to the greater() call. Note that in the function body parameters are always named as prm1, prm2, etc.</p>
 <h1><a class="anchor" id="multivector"></a>
 Multi-component vectors</h1>
 <p>Class template vex::multivector&lt;T,N&gt; allows to store several equally sized device vectors and perform computations on all components synchronously. Operations are delegated to the underlying vectors. Expressions may include std::array&lt;T,N&gt; values, where N is equal to the number of multivector components. Each component gets corresponding element of std::array&lt;&gt; when expression is applied. </p>
