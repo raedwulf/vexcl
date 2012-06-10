@@ -28,6 +28,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -36,7 +37,6 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -53,47 +53,25 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Sparse matrix in ELL format.  
+<p>Sparse matrix in hybrid ELL-CSR format.  
  <a href="classvex_1_1SpMat.html#details">More...</a></p>
 
 <p><code>#include &lt;spmat.hpp&gt;</code></p>
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for vex::SpMat&lt; real, column_t &gt;:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classvex_1_1SpMat__inherit__graph.png" border="0" usemap="#vex_1_1SpMat_3_01real_00_01column__t_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="vex_1_1SpMat_3_01real_00_01column__t_01_4_inherit__map" id="vex_1_1SpMat_3_01real_00_01column__t_01_4_inherit__map">
-<area shape="rect" id="node2" href="classvex_1_1SpMatBase.html" title="Base class for sparse matrix." alt="" coords="29,6,205,50"/></map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for vex::SpMat&lt; real, column_t &gt;:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classvex_1_1SpMat__coll__graph.png" border="0" usemap="#vex_1_1SpMat_3_01real_00_01column__t_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="vex_1_1SpMat_3_01real_00_01column__t_01_4_coll__map" id="vex_1_1SpMat_3_01real_00_01column__t_01_4_coll__map">
-<area shape="rect" id="node2" href="classvex_1_1SpMatBase.html" title="Base class for sparse matrix." alt="" coords="29,6,205,50"/></map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="classvex_1_1SpMat-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a50f1f3e9d1be35426021a2c0f7e424f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#a50f1f3e9d1be35426021a2c0f7e424f2">SpMat</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, size_t n, const size_t *row, const column_t *col, const real *val)</td></tr>
-<tr class="memdesc:a50f1f3e9d1be35426021a2c0f7e424f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for ELL format.  <a href="#a50f1f3e9d1be35426021a2c0f7e424f2"></a><br/></td></tr>
+<tr class="memdesc:a50f1f3e9d1be35426021a2c0f7e424f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a50f1f3e9d1be35426021a2c0f7e424f2"></a><br/></td></tr>
 <tr class="memitem:acae77d141617a11e707b4813e5dca847"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#acae77d141617a11e707b4813e5dca847">mul</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x, <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;y, real alpha=1, bool append=false) const </td></tr>
 <tr class="memdesc:acae77d141617a11e707b4813e5dca847"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix-vector multiplication.  <a href="#acae77d141617a11e707b4813e5dca847"></a><br/></td></tr>
-<tr class="inherit_header pub_methods_classvex_1_1SpMatBase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classvex_1_1SpMatBase')"><img src="closed.png" alt="-"/>&nbsp;Public Member Functions inherited from <a class="el" href="classvex_1_1SpMatBase.html">vex::SpMatBase< real, column_t ></a></td></tr>
-<tr class="memitem:a9e8a63b8456855473b03c76e8d451c84 inherit pub_methods_classvex_1_1SpMatBase"><td class="memTemplParams" colspan="2"><a class="anchor" id="a9e8a63b8456855473b03c76e8d451c84"></a>
-template&lt;uint N&gt; </td></tr>
-<tr class="memitem:a9e8a63b8456855473b03c76e8d451c84"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>mul</b> (const <a class="el" href="classvex_1_1multivector.html">vex::multivector</a>&lt; real, N &gt; &amp;x, <a class="el" href="classvex_1_1multivector.html">vex::multivector</a>&lt; real, N &gt; &amp;y, real alpha=1, bool append=false) const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename real, typename column_t = size_t&gt;<br/>
 class vex::SpMat&lt; real, column_t &gt;</h3>
 
-<p>Sparse matrix in ELL format. </p>
+<p>Sparse matrix in hybrid ELL-CSR format. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a50f1f3e9d1be35426021a2c0f7e424f2"></a>
 <div class="memitem">
@@ -139,7 +117,7 @@ template&lt;typename real , typename column_t &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor for ELL format. </p>
+<p>Constructor. </p>
 <p>Constructs GPU representation of the matrix. Input matrix is in CSR format. GPU matrix utilizes ELL format and is split equally across all compute devices. When there are more than one device, secondary queue can be used to perform transfer of ghost values across GPU boundaries in parallel with computation kernel. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
@@ -162,9 +140,6 @@ template&lt;typename real , typename column_t &gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename real , typename column_t &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classvex_1_1SpMat.html">vex::SpMat</a>&lt; real, column_t &gt;::mul </td>
@@ -196,11 +171,6 @@ template&lt;typename real , typename column_t &gt; </div>
           <td></td><td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Matrix-vector multiplication. </p>
@@ -215,9 +185,7 @@ template&lt;typename real , typename column_t &gt; </div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classvex_1_1SpMatBase.html#a675d0386ec5562b8836478faab8c1609">vex::SpMatBase&lt; real, column_t &gt;</a>.</p>
-
-<p>References <a class="el" href="namespacevex.html#adde6e399118c4e9c8fdb111d23d65698">vex::alignup()</a>, and <a class="el" href="namespacevex.html#a37245498a17729728b1466d34626b751">vex::bytes()</a>.</p>
+<p>References <a class="el" href="namespacevex.html#adde6e399118c4e9c8fdb111d23d65698">vex::alignup()</a>.</p>
 
 </div>
 </div>

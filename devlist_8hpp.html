@@ -28,6 +28,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -49,7 +50,6 @@
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -79,7 +79,7 @@
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="devlist_8hpp__dep__incl.png" border="0" usemap="#devlist_8hppdep" alt=""/></div>
 <map name="devlist_8hppdep" id="devlist_8hppdep">
-<area shape="rect" id="node3" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="11,83,96,111"/></map>
+<area shape="rect" id="node3" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="9,80,91,107"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
@@ -102,29 +102,23 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects one device at the given position.  <a href="structvex_1_1Filter_1_1Position.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1EnvFilter.html">vex::Filter::EnvFilter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Environment filter.  <a href="structvex_1_1Filter_1_1EnvFilter.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1NegateFilter.html">vex::Filter::NegateFilter&lt; Flt &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Negation of a filter.  <a href="structvex_1_1Filter_1_1NegateFilter.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1Context.html">vex::Context</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">VexCL context holder.  <a href="classvex_1_1Context.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacevex"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html">vex</a></td></tr>
-<tr class="memdesc:namespacevex"><td class="mdescLeft">&#160;</td><td class="mdescRight">OpenCL convenience utilities. <br/></td></tr>
+<tr class="memdesc:namespacevex"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression template library for OpenCL. <br/></td></tr>
 <tr class="memitem:namespacevex_1_1Filter"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html">vex::Filter</a></td></tr>
 <tr class="memdesc:namespacevex_1_1Filter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device filters. <br/></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:afe77447f8663ac7e356fd1c326bac8aa"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>FilterOp</b> { <b>FilterAnd</b>, 
-<b>FilterOr</b>
- }</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a88ee82aa3e462528b522dffa30c447d0"><td class="memTemplParams" colspan="2"><a class="anchor" id="a88ee82aa3e462528b522dffa30c447d0"></a>
-template&lt;class LeftFilter , class RightFilter &gt; </td></tr>
+<tr class="memitem:a88ee82aa3e462528b522dffa30c447d0"><td class="memTemplParams" colspan="2">template&lt;class LeftFilter , class RightFilter &gt; </td></tr>
 <tr class="memitem:a88ee82aa3e462528b522dffa30c447d0"><td class="memTemplItemLeft" align="right" valign="top">FilterBinaryOp&lt; LeftFilter, <br class="typebreak"/>
 RightFilter, FilterAnd &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#a88ee82aa3e462528b522dffa30c447d0">vex::Filter::operator&amp;&amp;</a> (const LeftFilter &amp;left, const RightFilter &amp;right)</td></tr>
-<tr class="memdesc:a88ee82aa3e462528b522dffa30c447d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Join two filters with AND operator. <br/></td></tr>
 <tr class="memitem:af22bdf7eca4b8cf86854997dbf6aae24"><td class="memTemplParams" colspan="2"><a class="anchor" id="af22bdf7eca4b8cf86854997dbf6aae24"></a>
 template&lt;class LeftFilter , class RightFilter &gt; </td></tr>
 <tr class="memitem:af22bdf7eca4b8cf86854997dbf6aae24"><td class="memTemplItemLeft" align="right" valign="top">FilterBinaryOp&lt; LeftFilter, <br class="typebreak"/>
@@ -143,11 +137,14 @@ template&lt;class Flt &gt; </td></tr>
 &lt; cl::CommandQueue &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a7adacdbabcefdd8480ff64ae7b93541a">vex::queue_list</a> (DevFilter filter=Filter::All, cl_command_queue_properties properties=0)</td></tr>
 <tr class="memdesc:a7adacdbabcefdd8480ff64ae7b93541a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create command queues on devices by given criteria.  <a href="#a7adacdbabcefdd8480ff64ae7b93541a"></a><br/></td></tr>
 <tr class="memitem:aa535cb5230606de566781b74eed6d450"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa535cb5230606de566781b74eed6d450"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>vex::operator&lt;&lt;</b> (std::ostream &amp;os, const std::vector&lt; cl::Device &gt; &amp;device)</td></tr>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#aa535cb5230606de566781b74eed6d450">vex::operator&lt;&lt;</a> (std::ostream &amp;os, const std::vector&lt; cl::Device &gt; &amp;device)</td></tr>
+<tr class="memdesc:aa535cb5230606de566781b74eed6d450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output list of devices to stream. <br/></td></tr>
 <tr class="memitem:a656d3a9620fbc306004c367aa8497989"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a656d3a9620fbc306004c367aa8497989"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>vex::operator&lt;&lt;</b> (std::ostream &amp;os, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a656d3a9620fbc306004c367aa8497989">vex::operator&lt;&lt;</a> (std::ostream &amp;os, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
+<tr class="memdesc:a656d3a9620fbc306004c367aa8497989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output list of devices to stream. <br/></td></tr>
 <tr class="memitem:a1293657f0dd4e5ac8246a8d81d4c7264"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1293657f0dd4e5ac8246a8d81d4c7264"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>vex::operator&lt;&lt;</b> (std::ostream &amp;os, const <a class="el" href="classvex_1_1Context.html">vex::Context</a> &amp;ctx)</td></tr>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a1293657f0dd4e5ac8246a8d81d4c7264">vex::operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classvex_1_1Context.html">vex::Context</a> &amp;ctx)</td></tr>
+<tr class="memdesc:a1293657f0dd4e5ac8246a8d81d4c7264"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output list of devices to stream. <br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>

@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="5,83,104,111"/>
-<area shape="rect" id="node5" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="99,161,184,189"/>
-<area shape="rect" id="node7" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="179,83,272,111"/>
+<area shape="rect" id="node3" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="5,80,99,107"/>
+<area shape="rect" id="node5" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="96,155,177,181"/>
+<area shape="rect" id="node7" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="175,80,265,107"/>
 </map>

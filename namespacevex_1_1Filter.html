@@ -28,6 +28,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -47,7 +48,6 @@
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -78,20 +78,14 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects one device at the given position.  <a href="structvex_1_1Filter_1_1Position.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1EnvFilter.html">EnvFilter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Environment filter.  <a href="structvex_1_1Filter_1_1EnvFilter.html#details">More...</a><br/></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:afe77447f8663ac7e356fd1c326bac8aa"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>FilterOp</b> { <b>FilterAnd</b>, 
-<b>FilterOr</b>
- }</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1Filter_1_1NegateFilter.html">NegateFilter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Negation of a filter.  <a href="structvex_1_1Filter_1_1NegateFilter.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a88ee82aa3e462528b522dffa30c447d0"><td class="memTemplParams" colspan="2"><a class="anchor" id="a88ee82aa3e462528b522dffa30c447d0"></a>
-template&lt;class LeftFilter , class RightFilter &gt; </td></tr>
+<tr class="memitem:a88ee82aa3e462528b522dffa30c447d0"><td class="memTemplParams" colspan="2">template&lt;class LeftFilter , class RightFilter &gt; </td></tr>
 <tr class="memitem:a88ee82aa3e462528b522dffa30c447d0"><td class="memTemplItemLeft" align="right" valign="top">FilterBinaryOp&lt; LeftFilter, <br class="typebreak"/>
 RightFilter, FilterAnd &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#a88ee82aa3e462528b522dffa30c447d0">operator&amp;&amp;</a> (const LeftFilter &amp;left, const RightFilter &amp;right)</td></tr>
-<tr class="memdesc:a88ee82aa3e462528b522dffa30c447d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Join two filters with AND operator. <br/></td></tr>
 <tr class="memitem:af22bdf7eca4b8cf86854997dbf6aae24"><td class="memTemplParams" colspan="2"><a class="anchor" id="af22bdf7eca4b8cf86854997dbf6aae24"></a>
 template&lt;class LeftFilter , class RightFilter &gt; </td></tr>
 <tr class="memitem:af22bdf7eca4b8cf86854997dbf6aae24"><td class="memTemplItemLeft" align="right" valign="top">FilterBinaryOp&lt; LeftFilter, <br class="typebreak"/>
@@ -99,7 +93,7 @@ RightFilter, FilterOr &gt;&#160;</td><td class="memTemplItemRight" valign="botto
 <tr class="memdesc:af22bdf7eca4b8cf86854997dbf6aae24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Join two filters with OR operator. <br/></td></tr>
 <tr class="memitem:a78f584ca4e3eae2ac1414e56e92287ee"><td class="memTemplParams" colspan="2"><a class="anchor" id="a78f584ca4e3eae2ac1414e56e92287ee"></a>
 template&lt;class Flt &gt; </td></tr>
-<tr class="memitem:a78f584ca4e3eae2ac1414e56e92287ee"><td class="memTemplItemLeft" align="right" valign="top">NegateFilter&lt; Flt &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#a78f584ca4e3eae2ac1414e56e92287ee">operator!</a> (const Flt &amp;flt)</td></tr>
+<tr class="memitem:a78f584ca4e3eae2ac1414e56e92287ee"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structvex_1_1Filter_1_1NegateFilter.html">NegateFilter</a>&lt; Flt &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#a78f584ca4e3eae2ac1414e56e92287ee">operator!</a> (const Flt &amp;flt)</td></tr>
 <tr class="memdesc:a78f584ca4e3eae2ac1414e56e92287ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Negate a filter. <br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
@@ -114,7 +108,37 @@ struct <a class="el" href="structvex_1_1Filter_1_1EnvFilter.html">vex::Filter::E
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Device filters. </p>
-</div></div><!-- contents -->
+</div><hr/><h2>Function Documentation</h2>
+<a class="anchor" id="a88ee82aa3e462528b522dffa30c447d0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class LeftFilter , class RightFilter &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">FilterBinaryOp&lt;LeftFilter, RightFilter, FilterAnd&gt; vex::Filter::operator&amp;&amp; </td>
+          <td>(</td>
+          <td class="paramtype">const LeftFilter &amp;&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const RightFilter &amp;&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Join two filters with AND operator. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -28,6 +28,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -77,7 +78,7 @@
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="spmat_8hpp__incl.png" border="0" usemap="#spmat_8hpp" alt=""/></div>
 <map name="spmat_8hpp" id="spmat_8hpp">
-<area shape="rect" id="node23" href="util_8hpp.html" title="OpenCL general utilities." alt="" coords="355,161,467,189"/><area shape="rect" id="node35" href="vector_8hpp.html" title="OpenCL device vector." alt="" coords="592,83,725,111"/><area shape="rect" id="node49" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="976,161,1115,189"/></map>
+<area shape="rect" id="node23" href="util_8hpp.html" title="OpenCL general utilities." alt="" coords="350,155,455,181"/><area shape="rect" id="node35" href="vector_8hpp.html" title="OpenCL device vector." alt="" coords="583,80,708,107"/><area shape="rect" id="node49" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="966,155,1095,181"/></map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
@@ -86,33 +87,25 @@
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="spmat_8hpp__dep__incl.png" border="0" usemap="#spmat_8hppdep" alt=""/></div>
 <map name="spmat_8hppdep" id="spmat_8hppdep">
-<area shape="rect" id="node3" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="9,83,95,111"/></map>
+<area shape="rect" id="node3" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="9,80,91,107"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMatBase.html">vex::SpMatBase&lt; real, column_t &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for sparse matrix.  <a href="classvex_1_1SpMatBase.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html">vex::SpMat&lt; real, column_t &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sparse matrix in ELL format.  <a href="classvex_1_1SpMat.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sparse matrix in hybrid ELL-CSR format.  <a href="classvex_1_1SpMat.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMatCCSR.html">vex::SpMatCCSR&lt; real, column_t &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sparse matrix in CCSR format.  <a href="classvex_1_1SpMatCCSR.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacevex"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html">vex</a></td></tr>
-<tr class="memdesc:namespacevex"><td class="mdescLeft">&#160;</td><td class="mdescRight">OpenCL convenience utilities. <br/></td></tr>
+<tr class="memdesc:namespacevex"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression template library for OpenCL. <br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a37245498a17729728b1466d34626b751"><td class="memTemplParams" colspan="2"><a class="anchor" id="a37245498a17729728b1466d34626b751"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a37245498a17729728b1466d34626b751"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a37245498a17729728b1466d34626b751">vex::bytes</a> (const std::vector&lt; T &gt; &amp;x)</td></tr>
-<tr class="memdesc:a37245498a17729728b1466d34626b751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return size of std::vector in bytes. <br/></td></tr>
-<tr class="memitem:a2eca041bc53030635bcb0ad706960bed"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2eca041bc53030635bcb0ad706960bed"></a>
-template&lt;typename real , typename column_t &gt; </td></tr>
+<tr class="memitem:a2eca041bc53030635bcb0ad706960bed"><td class="memTemplParams" colspan="2">template&lt;typename real , typename column_t &gt; </td></tr>
 <tr class="memitem:a2eca041bc53030635bcb0ad706960bed"><td class="memTemplItemLeft" align="right" valign="top">SpMV&lt; real, column_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a2eca041bc53030635bcb0ad706960bed">vex::operator*</a> (const SpMatBase&lt; real, column_t &gt; &amp;A, const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x)</td></tr>
-<tr class="memdesc:a2eca041bc53030635bcb0ad706960bed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply sparse matrix and a vector. <br/></td></tr>
 <tr class="memitem:ad74c3b659c67565910435d01b83bc799"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad74c3b659c67565910435d01b83bc799"></a>
 template&lt;class Expr , typename real , typename column_t &gt; </td></tr>
 <tr class="memitem:ad74c3b659c67565910435d01b83bc799"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; Expr::is_expr, <br class="typebreak"/>

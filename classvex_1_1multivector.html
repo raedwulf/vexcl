@@ -28,6 +28,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -36,7 +37,6 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -55,9 +55,6 @@
 <div class="title">vex::multivector&lt; T, N &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Container for several vex::vectors.  
- <a href="classvex_1_1multivector.html#details">More...</a></p>
 
 <p><code>#include &lt;vector.hpp&gt;</code></p>
 
@@ -123,6 +120,12 @@ iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 const std::vector<br class="typebreak"/>
 &lt; cl::CommandQueue &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1multivector.html#a5d49d9214864a651f59890346e7818fa">queue_list</a> () const </td></tr>
 <tr class="memdesc:a5d49d9214864a651f59890346e7818fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reference to multivector's queue list. <br/></td></tr>
+<tr class="memitem:a41caf0ea263fe86f230b9b13f100f7c2"><td class="memTemplParams" colspan="2"><a class="anchor" id="a41caf0ea263fe86f230b9b13f100f7c2"></a>
+template&lt;typename column_t &gt; </td></tr>
+<tr class="memitem:a41caf0ea263fe86f230b9b13f100f7c2"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a>&lt; real, N &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const MultiSpMV&lt; real, column_t, N &gt; &amp;spmv)</td></tr>
+<tr class="memitem:acc7f0c2945a66d5ede5f355d1e24ce6d"><td class="memTemplParams" colspan="2"><a class="anchor" id="acc7f0c2945a66d5ede5f355d1e24ce6d"></a>
+template&lt;class Expr , typename column_t &gt; </td></tr>
+<tr class="memitem:acc7f0c2945a66d5ede5f355d1e24ce6d"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a>&lt; real, N &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const MultiExSpMV&lt; Expr, real, column_t, N &gt; &amp;xmv)</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Expression assignments.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>All operations are delegated to components of the multivector. </p>
 </div></td></tr>
@@ -135,21 +138,39 @@ const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp; &g
 <tr class="memitem:a978816ec67ac42fcf834405ccdbd6fdb"><td class="memTemplParams" colspan="2"><a class="anchor" id="a978816ec67ac42fcf834405ccdbd6fdb"></a>
 template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:a978816ec67ac42fcf834405ccdbd6fdb"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator+=</b> (const Expr &amp;expr)</td></tr>
+<tr class="memitem:a429b1ddfbc96eb4413b391ba4b46678e"><td class="memTemplParams" colspan="2"><a class="anchor" id="a429b1ddfbc96eb4413b391ba4b46678e"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:a429b1ddfbc96eb4413b391ba4b46678e"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-=</b> (const Expr &amp;expr)</td></tr>
 <tr class="memitem:abfebca2f7f5852dda102c030e1bb3394"><td class="memTemplParams" colspan="2"><a class="anchor" id="abfebca2f7f5852dda102c030e1bb3394"></a>
 template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:abfebca2f7f5852dda102c030e1bb3394"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*=</b> (const Expr &amp;expr)</td></tr>
 <tr class="memitem:a3ba6b3193699d1a55d2fa2240ecab7ee"><td class="memTemplParams" colspan="2"><a class="anchor" id="a3ba6b3193699d1a55d2fa2240ecab7ee"></a>
 template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:a3ba6b3193699d1a55d2fa2240ecab7ee"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator/=</b> (const Expr &amp;expr)</td></tr>
-<tr class="memitem:a429b1ddfbc96eb4413b391ba4b46678e"><td class="memTemplParams" colspan="2"><a class="anchor" id="a429b1ddfbc96eb4413b391ba4b46678e"></a>
+<tr class="memitem:a50c37cd6205d1705544eaad2e88ea82f"><td class="memTemplParams" colspan="2"><a class="anchor" id="a50c37cd6205d1705544eaad2e88ea82f"></a>
 template&lt;class Expr &gt; </td></tr>
-<tr class="memitem:a429b1ddfbc96eb4413b391ba4b46678e"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-=</b> (const Expr &amp;expr)</td></tr>
-<tr class="memitem:aa51d9acdd18ebf275be8bf977ff1b930"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa51d9acdd18ebf275be8bf977ff1b930"></a>
+<tr class="memitem:a50c37cd6205d1705544eaad2e88ea82f"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator%=</b> (const Expr &amp;expr)</td></tr>
+<tr class="memitem:aae6ac81d1d6880f82463bfebd4dcf043"><td class="memTemplParams" colspan="2"><a class="anchor" id="aae6ac81d1d6880f82463bfebd4dcf043"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:aae6ac81d1d6880f82463bfebd4dcf043"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&amp;=</b> (const Expr &amp;expr)</td></tr>
+<tr class="memitem:a0785462380d1f3826a1e12f2a2ccd58c"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0785462380d1f3826a1e12f2a2ccd58c"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:a0785462380d1f3826a1e12f2a2ccd58c"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator|=</b> (const Expr &amp;expr)</td></tr>
+<tr class="memitem:aa771fe3c578b1af257eb84712359d3c4"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa771fe3c578b1af257eb84712359d3c4"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:aa771fe3c578b1af257eb84712359d3c4"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator^=</b> (const Expr &amp;expr)</td></tr>
+<tr class="memitem:a58e7221ea67072e613d033b80dd763da"><td class="memTemplParams" colspan="2"><a class="anchor" id="a58e7221ea67072e613d033b80dd763da"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:a58e7221ea67072e613d033b80dd763da"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;&lt;=</b> (const Expr &amp;expr)</td></tr>
+<tr class="memitem:a4a404c761d265ba027ab16a82725b987"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4a404c761d265ba027ab16a82725b987"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:a4a404c761d265ba027ab16a82725b987"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&gt;&gt;=</b> (const Expr &amp;expr)</td></tr>
+<tr class="memitem:a5ee8f35a16cfca132a7ff1db271eea32"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5ee8f35a16cfca132a7ff1db271eea32"></a>
 template&lt;typename column_t &gt; </td></tr>
-<tr class="memitem:aa51d9acdd18ebf275be8bf977ff1b930"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const MultiSpMV&lt; T, column_t, N &gt; &amp;spmv)</td></tr>
-<tr class="memitem:a33dc59ae4436522260d19807ddd9f98b"><td class="memTemplParams" colspan="2"><a class="anchor" id="a33dc59ae4436522260d19807ddd9f98b"></a>
+<tr class="memitem:a5ee8f35a16cfca132a7ff1db271eea32"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const MultiSpMV&lt; T, column_t, N &gt; &amp;spmv)</td></tr>
+<tr class="memitem:a98e459aba8df6f1da17090691cdb92ef"><td class="memTemplParams" colspan="2"><a class="anchor" id="a98e459aba8df6f1da17090691cdb92ef"></a>
 template&lt;class Expr , typename column_t &gt; </td></tr>
-<tr class="memitem:a33dc59ae4436522260d19807ddd9f98b"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const MultiExSpMV&lt; Expr, T, column_t, N &gt; &amp;xmv)</td></tr>
+<tr class="memitem:a98e459aba8df6f1da17090691cdb92ef"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const MultiExSpMV&lt; Expr, T, column_t, N &gt; &amp;xmv)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -162,8 +183,7 @@ static const uint&#160;</td><td class="memItemRight" valign="bottom"><b>dim</b> 
 <div class="textblock"><h3>template&lt;typename T, uint N&gt;<br/>
 class vex::multivector&lt; T, N &gt;</h3>
 
-<p>Container for several vex::vectors. </p>
-<p>This class allows to synchronously operate on several vex::vectors of the same type and size. </p>
+<p>Container for several vex::vectors. This class allows to synchronously operate on several vex::vectors of the same type and size. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a35b628677f6a82028795f03f709119e2"></a>
 <div class="memitem">
@@ -215,6 +235,8 @@ template&lt;typename T, uint N&gt; </div>
   </table>
   </dd>
 </dl>
+
+<p>References <a class="el" href="classvex_1_1multivector.html#ad3c7abe7faa85d0653cc001baaffbc8b">vex::multivector&lt; T, N &gt;::size()</a>.</p>
 
 </div>
 </div>

@@ -28,6 +28,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -36,7 +37,6 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -55,28 +55,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Device vector.  
- <a href="classvex_1_1vector.html#details">More...</a></p>
-
 <p><code>#include &lt;vector.hpp&gt;</code></p>
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for vex::vector&lt; T &gt;:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classvex_1_1vector__inherit__graph.png" border="0" usemap="#vex_1_1vector_3_01T_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="vex_1_1vector_3_01T_01_4_inherit__map" id="vex_1_1vector_3_01T_01_4_inherit__map">
-<area shape="rect" id="node2" href="structvex_1_1expression.html" title="Base class for a member of an expression." alt="" coords="9,6,137,34"/></map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for vex::vector&lt; T &gt;:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classvex_1_1vector__coll__graph.png" border="0" usemap="#vex_1_1vector_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="vex_1_1vector_3_01T_01_4_coll__map" id="vex_1_1vector_3_01T_01_4_coll__map">
-<area shape="rect" id="node2" href="structvex_1_1expression.html" title="Base class for a member of an expression." alt="" coords="9,6,137,34"/></map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="classvex_1_1vector-members.html">List of all members.</a></p>
 <table class="memberdecls">
@@ -165,12 +144,12 @@ const std::vector<br class="typebreak"/>
 <tr class="memitem:adedf824ab0681d4bc7e230c716a77c40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adedf824ab0681d4bc7e230c716a77c40"></a>
 const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#adedf824ab0681d4bc7e230c716a77c40">operator=</a> (const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;x)</td></tr>
 <tr class="memdesc:adedf824ab0681d4bc7e230c716a77c40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies data from device vector. <br/></td></tr>
-<tr class="memitem:a79dc9f8d9b9d34698a8e9fdaec9c72f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79dc9f8d9b9d34698a8e9fdaec9c72f5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a79dc9f8d9b9d34698a8e9fdaec9c72f5">write_data</a> (size_t offset, size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>, const T *hostptr, cl_bool blocking)</td></tr>
-<tr class="memdesc:a79dc9f8d9b9d34698a8e9fdaec9c72f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy data from host buffer to device(s). <br/></td></tr>
-<tr class="memitem:addecd3736da882b8a9c344a530c4843f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="addecd3736da882b8a9c344a530c4843f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#addecd3736da882b8a9c344a530c4843f">read_data</a> (size_t offset, size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>, T *hostptr, cl_bool blocking) const </td></tr>
-<tr class="memdesc:addecd3736da882b8a9c344a530c4843f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy data from device(s) to host buffer . <br/></td></tr>
+<tr class="memitem:a123707d08e0672af0eddf7696fd3699f"><td class="memTemplParams" colspan="2"><a class="anchor" id="a123707d08e0672af0eddf7696fd3699f"></a>
+template&lt;typename column_t &gt; </td></tr>
+<tr class="memitem:a123707d08e0672af0eddf7696fd3699f"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a>&lt; real &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const SpMV&lt; real, column_t &gt; &amp;spmv)</td></tr>
+<tr class="memitem:a5d92a08e321e478144037bbd40864ee0"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5d92a08e321e478144037bbd40864ee0"></a>
+template&lt;class Expr , typename column_t &gt; </td></tr>
+<tr class="memitem:a5d92a08e321e478144037bbd40864ee0"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a>&lt; real &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const ExSpMV&lt; Expr, real, column_t &gt; &amp;xmv)</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Expression assignments.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>The appropriate kernel is compiled first time the assignment is made. Vectors participating in expression should have same number of parts; corresponding parts of the vectors should reside on the same compute devices. </p>
 </div></td></tr>
@@ -180,230 +159,46 @@ template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:abde5fd2b20412cc73bde08f33c83fb2f"><td class="memTemplParams" colspan="2"><a class="anchor" id="abde5fd2b20412cc73bde08f33c83fb2f"></a>
 template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:abde5fd2b20412cc73bde08f33c83fb2f"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator+=</b> (const Expr &amp;expr)</td></tr>
+<tr class="memitem:abc692cd6e6c89c352f0e3dd87fbed427"><td class="memTemplParams" colspan="2"><a class="anchor" id="abc692cd6e6c89c352f0e3dd87fbed427"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:abc692cd6e6c89c352f0e3dd87fbed427"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-=</b> (const Expr &amp;expr)</td></tr>
 <tr class="memitem:aadbae2ada65e7ba984ea217b36ab9670"><td class="memTemplParams" colspan="2"><a class="anchor" id="aadbae2ada65e7ba984ea217b36ab9670"></a>
 template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:aadbae2ada65e7ba984ea217b36ab9670"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*=</b> (const Expr &amp;expr)</td></tr>
 <tr class="memitem:a51076907d763c0917e12c880ce575536"><td class="memTemplParams" colspan="2"><a class="anchor" id="a51076907d763c0917e12c880ce575536"></a>
 template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:a51076907d763c0917e12c880ce575536"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator/=</b> (const Expr &amp;expr)</td></tr>
-<tr class="memitem:abc692cd6e6c89c352f0e3dd87fbed427"><td class="memTemplParams" colspan="2"><a class="anchor" id="abc692cd6e6c89c352f0e3dd87fbed427"></a>
+<tr class="memitem:acdad9a64471bb43b6d49029de902d80b"><td class="memTemplParams" colspan="2"><a class="anchor" id="acdad9a64471bb43b6d49029de902d80b"></a>
 template&lt;class Expr &gt; </td></tr>
-<tr class="memitem:abc692cd6e6c89c352f0e3dd87fbed427"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-=</b> (const Expr &amp;expr)</td></tr>
-<tr class="memitem:a269db0bfb6b0f37757e445822643d297"><td class="memTemplParams" colspan="2"><a class="anchor" id="a269db0bfb6b0f37757e445822643d297"></a>
+<tr class="memitem:acdad9a64471bb43b6d49029de902d80b"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator%=</b> (const Expr &amp;expr)</td></tr>
+<tr class="memitem:adde46afcd466bca9be02356c19da9b15"><td class="memTemplParams" colspan="2"><a class="anchor" id="adde46afcd466bca9be02356c19da9b15"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:adde46afcd466bca9be02356c19da9b15"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&amp;=</b> (const Expr &amp;expr)</td></tr>
+<tr class="memitem:a6008a53ec28a3730e2e910662007edc3"><td class="memTemplParams" colspan="2"><a class="anchor" id="a6008a53ec28a3730e2e910662007edc3"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:a6008a53ec28a3730e2e910662007edc3"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator|=</b> (const Expr &amp;expr)</td></tr>
+<tr class="memitem:af4472df58973e0d54e087910ec59ac39"><td class="memTemplParams" colspan="2"><a class="anchor" id="af4472df58973e0d54e087910ec59ac39"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:af4472df58973e0d54e087910ec59ac39"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator^=</b> (const Expr &amp;expr)</td></tr>
+<tr class="memitem:a92b1cde3a0421f75f323d1839d832499"><td class="memTemplParams" colspan="2"><a class="anchor" id="a92b1cde3a0421f75f323d1839d832499"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:a92b1cde3a0421f75f323d1839d832499"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;&lt;=</b> (const Expr &amp;expr)</td></tr>
+<tr class="memitem:a84b61181a23a107422f658e295008d25"><td class="memTemplParams" colspan="2"><a class="anchor" id="a84b61181a23a107422f658e295008d25"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:a84b61181a23a107422f658e295008d25"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&gt;&gt;=</b> (const Expr &amp;expr)</td></tr>
+<tr class="memitem:adb16ad4fadd6a2eba5ffcb2814423581"><td class="memTemplParams" colspan="2"><a class="anchor" id="adb16ad4fadd6a2eba5ffcb2814423581"></a>
 template&lt;class Expr , typename column_t &gt; </td></tr>
-<tr class="memitem:a269db0bfb6b0f37757e445822643d297"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const ExSpMV&lt; Expr, T, column_t &gt; &amp;xmv)</td></tr>
-<tr class="memitem:a2354abf9c187ee4f82ae0c2cd958f4e4"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2354abf9c187ee4f82ae0c2cd958f4e4"></a>
+<tr class="memitem:adb16ad4fadd6a2eba5ffcb2814423581"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const ExSpMV&lt; Expr, T, column_t &gt; &amp;xmv)</td></tr>
+<tr class="memitem:aa7b63f769db06947e15074c35322d1f5"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa7b63f769db06947e15074c35322d1f5"></a>
 template&lt;typename column_t &gt; </td></tr>
-<tr class="memitem:a2354abf9c187ee4f82ae0c2cd958f4e4"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const SpMV&lt; T, column_t &gt; &amp;spmv)</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Service methods used for kernel generation.</div></td></tr>
-<tr class="memitem:ab6eed97fe105cc43a54d9f954e56c11f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#ab6eed97fe105cc43a54d9f954e56c11f">kernel_name</a> () const </td></tr>
-<tr class="memdesc:ab6eed97fe105cc43a54d9f954e56c11f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kernel name.  <a href="#ab6eed97fe105cc43a54d9f954e56c11f"></a><br/></td></tr>
-<tr class="memitem:a6fabc794a73441c1abd5a611877e9bf4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a6fabc794a73441c1abd5a611877e9bf4">kernel_expr</a> (std::ostream &amp;os, std::string name) const </td></tr>
-<tr class="memdesc:a6fabc794a73441c1abd5a611877e9bf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kernel body.  <a href="#a6fabc794a73441c1abd5a611877e9bf4"></a><br/></td></tr>
-<tr class="memitem:a7f35266a8b9d677050a2409cd846c60f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a7f35266a8b9d677050a2409cd846c60f">kernel_prm</a> (std::ostream &amp;os, std::string name) const </td></tr>
-<tr class="memdesc:a7f35266a8b9d677050a2409cd846c60f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kernel parameter list.  <a href="#a7f35266a8b9d677050a2409cd846c60f"></a><br/></td></tr>
-<tr class="memitem:ac66f80a18afbd2fd380d93c130e244dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#ac66f80a18afbd2fd380d93c130e244dd">kernel_args</a> (cl::Kernel &amp;k, uint devnum, uint &amp;pos) const </td></tr>
-<tr class="memdesc:ac66f80a18afbd2fd380d93c130e244dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kernel arguments.  <a href="#ac66f80a18afbd2fd380d93c130e244dd"></a><br/></td></tr>
-<tr class="inherit_header pub_methods_structvex_1_1expression"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structvex_1_1expression')"><img src="closed.png" alt="-"/>&nbsp;Public Member Functions inherited from <a class="el" href="structvex_1_1expression.html">vex::expression</a></td></tr>
-<tr class="memitem:a0b054002a358e3f9f1df0a6e32f19d5b inherit pub_methods_structvex_1_1expression"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1expression.html#a0b054002a358e3f9f1df0a6e32f19d5b">preamble</a> (std::ostream &amp;os, std::string name) const </td></tr>
-<tr class="memdesc:a0b054002a358e3f9f1df0a6e32f19d5b inherit pub_methods_structvex_1_1expression"><td class="mdescLeft">&#160;</td><td class="mdescRight">Preamble.  <a href="#a0b054002a358e3f9f1df0a6e32f19d5b"></a><br/></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_static_attribs_structvex_1_1expression"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_structvex_1_1expression')"><img src="closed.png" alt="-"/>&nbsp;Static Public Attributes inherited from <a class="el" href="structvex_1_1expression.html">vex::expression</a></td></tr>
-<tr class="memitem:a0f75093f482b20142a92391a5a20780c inherit pub_static_attribs_structvex_1_1expression"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f75093f482b20142a92391a5a20780c"></a>
-static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_expr</b> = true</td></tr>
+<tr class="memitem:aa7b63f769db06947e15074c35322d1f5"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const SpMV&lt; T, column_t &gt; &amp;spmv)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class T&gt;<br/>
 class vex::vector&lt; T &gt;</h3>
 
 <p>Device vector. </p>
-</div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ac66f80a18afbd2fd380d93c130e244dd"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt;::kernel_args </td>
-          <td>(</td>
-          <td class="paramtype">cl::Kernel &amp;&#160;</td>
-          <td class="paramname"><em>k</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint&#160;</td>
-          <td class="paramname"><em>devnum</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint &amp;&#160;</td>
-          <td class="paramname"><em>pos</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Kernel arguments. </p>
-<p>This function is called at the time of actual kernel launch. Each terminal expression should set kernel arguments for the parameters it needs at specified position. Position should be incremented afterwards. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">k</td><td>OpenCL kernel that is being prepared to launch. </td></tr>
-    <tr><td class="paramname">devnum</td><td>Number of queue in queue list for which the kernel is launched. </td></tr>
-    <tr><td class="paramname">pos</td><td>Current position in parameter stack. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="structvex_1_1expression.html#a6b24e8d28bd01c9fa1251d29914c448b">vex::expression</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a6fabc794a73441c1abd5a611877e9bf4"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt;::kernel_expr </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>name</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Kernel body. </p>
-<p>The actual expression which forms the kernel body. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">os</td><td>Output stream which holds kernel source. </td></tr>
-    <tr><td class="paramname">name</td><td>Name of current node in an expression tree. Should be used directly or as a prefix to form parameter name(s). </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="structvex_1_1expression.html#a5e61c6e9c042b05f752a735524f513f7">vex::expression</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab6eed97fe105cc43a54d9f954e56c11f"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt;::kernel_name </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Kernel name. </p>
-<p>Name of the kernel is formed by its members through calls to their <a class="el" href="classvex_1_1vector.html#ab6eed97fe105cc43a54d9f954e56c11f" title="Kernel name.">kernel_name()</a> functions. For example, expression </p>
-<div class="fragment"><div class="line">   x = 3 * y + z;</div>
-</div><!-- fragment --><p> will result in kernel named "ptcvv" (plus times constant vector vector; polish notation is used). This naming scheme is not strictly necessary, as each expression template holds its own cl::Program object and no ambiguity is possible. But it helps when you profiling your program performance. </p>
-
-<p>Implements <a class="el" href="structvex_1_1expression.html#a484ab189ffcc72aac844dd3930ca1a1c">vex::expression</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a7f35266a8b9d677050a2409cd846c60f"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt;::kernel_prm </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>name</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Kernel parameter list. </p>
-<p>Each terminal expression should output type and name of kernel parameters it needs here. </p>
-<dl class="params"><dt>Parameters:</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">os</td><td>Output stream which holds kernel source. </td></tr>
-    <tr><td class="paramname">name</td><td>Name of current node in an expression tree. Should be used directly or as a prefix to form parameter name(s). </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="structvex_1_1expression.html#a667249405062a73ac52cfaa0614243f5">vex::expression</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="vector_8hpp.html">vector.hpp</a></li>
 <li><a class="el" href="spmat_8hpp.html">spmat.hpp</a></li>
 </ul>
