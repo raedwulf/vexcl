@@ -48,7 +48,7 @@ Selection of compute devices</h1>
 <div class="line"><span class="keyword">using namespace </span>vex;</div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line">    <a class="code" href="classvex_1_1Context.html" title="VexCL context holder.">vex::Context</a> ctx(<a class="code" href="structvex_1_1Filter_1_1Name.html" title="Selects devices whose names match given value.">Filter::Name</a>(<span class="stringliteral">&quot;Radeon&quot;</span>) &amp;&amp; Filter::DoublePrecision);</div>
-<div class="line">    std::cout &lt;&lt; device &lt;&lt; std::endl;</div>
+<div class="line">    std::cout &lt;&lt; ctx &lt;&lt; std::endl;</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> <a class="el" href="classvex_1_1Context.html" title="VexCL context holder.">vex::Context</a> object holds list of initialized OpenCL contexts and command queues for each filtered device. If you just need list of available devices without creating contexts and queues on them, then look for <a class="el" href="namespacevex.html#a0571bb5e0afbc53f844665652a204b0a" title="Select devices by given criteria.">device_list()</a> function in documenation.</p>
 <h1><a class="anchor" id="vector"></a>
