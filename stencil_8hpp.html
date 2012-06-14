@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>VexCL: profiler.hpp File Reference</title>
+<title>VexCL: stencil.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -51,45 +51,42 @@
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">profiler.hpp File Reference</div>  </div>
+<div class="title">stencil.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Simple OpenCL/Host profiler.  
+<p>Stencil convolution.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br/>
-<code>#include &lt;iomanip&gt;</code><br/>
-<code>#include &lt;string&gt;</code><br/>
+<div class="textblock"><code>#include &lt;vector&gt;</code><br/>
 <code>#include &lt;map&gt;</code><br/>
-<code>#include &lt;memory&gt;</code><br/>
-<code>#include &lt;stack&gt;</code><br/>
-<code>#include &lt;vector&gt;</code><br/>
-<code>#include &lt;CL/cl.hpp&gt;</code><br/>
+<code>#include &lt;sstream&gt;</code><br/>
 <code>#include &lt;cassert&gt;</code><br/>
-<code>#include &lt;chrono&gt;</code><br/>
+<code>#include &lt;CL/cl.hpp&gt;</code><br/>
+<code>#include &lt;<a class="el" href="util_8hpp.html">vexcl/util.hpp</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="vector_8hpp.html">vexcl/vector.hpp</a>&gt;</code><br/>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for profiler.hpp:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for stencil.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="profiler_8hpp__incl.png" border="0" usemap="#profiler_8hpp" alt=""/></div>
-<map name="profiler_8hpp" id="profiler_8hpp">
-</map>
+<div class="center"><img src="stencil_8hpp__incl.png" border="0" usemap="#stencil_8hpp" alt=""/></div>
+<map name="stencil_8hpp" id="stencil_8hpp">
+<area shape="rect" id="node13" href="util_8hpp.html" title="OpenCL general utilities." alt="" coords="371,155,476,181"/><area shape="rect" id="node28" href="vector_8hpp.html" title="OpenCL device vector." alt="" coords="604,80,729,107"/><area shape="rect" id="node41" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="771,155,900,181"/></map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="profiler_8hpp__dep__incl.png" border="0" usemap="#profiler_8hppdep" alt=""/></div>
-<map name="profiler_8hppdep" id="profiler_8hppdep">
-<area shape="rect" id="node3" href="vector_8hpp.html" title="OpenCL device vector." alt="" coords="175,80,264,107"/><area shape="rect" id="node7" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="179,229,260,256"/><area shape="rect" id="node5" href="reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="5,155,99,181"/><area shape="rect" id="node9" href="spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="175,155,265,181"/><area shape="rect" id="node12" href="stencil_8hpp.html" title="Stencil convolution." alt="" coords="289,155,380,181"/></map>
+<div class="center"><img src="stencil_8hpp__dep__incl.png" border="0" usemap="#stencil_8hppdep" alt=""/></div>
+<map name="stencil_8hppdep" id="stencil_8hppdep">
+<area shape="rect" id="node3" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="9,80,91,107"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1profiler.html">vex::profiler</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for gathering and printing OpenCL and Host profiling info.  <a href="classvex_1_1profiler.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1stencil.html">vex::stencil&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stencil.  <a href="classvex_1_1stencil.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -98,11 +95,15 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:abb803b9f4d11c3a7c21f4b3df265b2a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb803b9f4d11c3a7c21f4b3df265b2a1"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>vex::operator&lt;&lt;</b> (std::ostream &amp;os, profiler &amp;prof)</td></tr>
+<tr class="memitem:a4d1bc5b4dab3e298f101c9d152bcfaf3"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4d1bc5b4dab3e298f101c9d152bcfaf3"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4d1bc5b4dab3e298f101c9d152bcfaf3"><td class="memTemplItemLeft" align="right" valign="top">Conv&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::operator*</b> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x, const stencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a0b2a12399789264fe73b1ee151b8ec49"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0b2a12399789264fe73b1ee151b8ec49"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0b2a12399789264fe73b1ee151b8ec49"><td class="memTemplItemLeft" align="right" valign="top">Conv&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::operator*</b> (const stencil&lt; T &gt; &amp;s, const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Simple OpenCL/Host profiler. </p>
+<div class="textblock"><p>Stencil convolution. </p>
 <dl class="section author"><dt>Author:</dt><dd>Denis Demidov <a href="#" onclick="location.href='mai'+'lto:'+'dde'+'mi'+'dov'+'@k'+'su.'+'ru'; return false;">ddemi<span style="display: none;">.nosp@m.</span>dov@<span style="display: none;">.nosp@m.</span>ksu.r<span style="display: none;">.nosp@m.</span>u</a> </dd></dl>
 </div></div><!-- contents -->
 <!-- start footer part -->

@@ -77,6 +77,18 @@ Memory allocation and vector arithmetic</h1>
 <div class="line"></div>
 <div class="line">std::cout &lt;&lt; sum(Z) &lt;&lt; std::endl;</div>
 <div class="line">std::cout &lt;&lt; sum(sqrt(2 * X) + cos(Y)) &lt;&lt; std::endl;</div>
+</div><!-- fragment --><h1><a class="anchor" id="stencil"></a>
+Stencil convolution</h1>
+<p>Stencil convolution operation comes in handy in many situations. For example, it allows us to apply a moving average filter to a device vector. All you need is to construct a <a class="el" href="classvex_1_1stencil.html" title="Stencil.">vex::stencil</a> object: </p>
+<div class="fragment"><div class="line"><span class="comment">// Moving average with 5-points window.</span></div>
+<div class="line">std::vector&lt;double&gt; sdata(5, 0.2);</div>
+<div class="line">stencil(ctx.queue(), sdata, sdata.size() / 2);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a> x(ctx.queue(), 1024 * 1024);</div>
+<div class="line"><a class="code" href="classvex_1_1vector.html">vex::vector&lt;double&gt;</a> y(ctx.queue(), 1024 * 1024);</div>
+<div class="line"></div>
+<div class="line">x = 1;</div>
+<div class="line">y = x * s; <span class="comment">// convolve x with s</span></div>
 </div><!-- fragment --><h1><a class="anchor" id="spmv"></a>
 Sparse matrix-vector multiplication</h1>
 <p>One of the most common operations in linear algebra is matrix-vector multiplication. Class <a class="el" href="classvex_1_1SpMat.html" title="Sparse matrix in hybrid ELL-CSR format.">vex::SpMat</a> holds representation of a sparse matrix, spanning several devices. In the example below it is used for solution of a system of linear equations with conjugate gradients method: </p>
@@ -139,10 +151,14 @@ User-defined functions</h1>
 <div class="fragment"><div class="line"><span class="comment">// Function body has to be defined at global scope, and it has to be of `extern</span></div>
 <div class="line"><span class="comment">// const char[]` type. This allows us to use it as a template parameter.</span></div>
 <div class="line"><span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> one_greater_than_other[] = <span class="stringliteral">&quot;return prm1 &gt; prm2 ? 1 : 0;&quot;</span>;</div>
+<div class="line">UserFunction&lt;one_greater_than_other, size_t(float, float)&gt; greater;</div>
 <div class="line"></div>
-<div class="line"><span class="keywordtype">size_t</span> count_if_greater(<span class="keyword">const</span> vex:vector&lt;float&gt; &amp;x, <span class="keyword">const</span> <a class="code" href="classvex_1_1vector.html">vex::vector&lt;float&gt;</a> &amp;y) {</div>
-<div class="line">    UserFunction&lt;one_greater_than_other, size_t(float, float)&gt; greater;</div>
-<div class="line">    Reductor&lt;size_t, SUM&gt; sum(x.queue_list());</div>
+<div class="line"><span class="keywordtype">size_t</span> count_if_greater(</div>
+<div class="line">    <span class="keyword">const</span> Reductor&lt;size_t, SUM&gt; &amp;sum,</div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="classvex_1_1vector.html">vex::vector&lt;float&gt;</a> &amp;x,</div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="classvex_1_1vector.html">vex::vector&lt;float&gt;</a> &amp;y</div>
+<div class="line">    )</div>
+<div class="line">{</div>
 <div class="line">    <span class="keywordflow">return</span> sum(greater(x, y));</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>You could also write sum(greater(x + y, 5 * y)), or use any other expressions as parameters to the greater() call. Note that in the function body parameters are always named as prm1, prm2, etc.</p>
@@ -182,7 +198,7 @@ Using custom kernels</h1>
 <div class="line"></div>
 <div class="line"><span class="keywordflow">for</span>(uint d = 0; d &lt; ctx.size(); d++) {</div>
 <div class="line">    <span class="keyword">auto</span> dummy = cl::Kernel(program, <span class="stringliteral">&quot;dummy&quot;</span>).bind(ctx.queue()[d], <a class="code" href="namespacevex.html#adde6e399118c4e9c8fdb111d23d65698" title="Align n to the next multiple of m.">alignup</a>(n, 256), 256);</div>
-<div class="line">    dummy((cl_ulong)x.part_size(d), x(d));</div>
+<div class="line">    dummy((cl_ulong)x.<a class="code" href="classvex_1_1vector.html#a3404c8ef9b7b06ed88679d0247016359" title="Return size of part on a given device.">part_size</a>(d), x(d));</div>
 <div class="line">}</div>
 <div class="line"></div>
 <div class="line">Reductor&lt;float,SUM&gt; sum(ctx.queue());</div>

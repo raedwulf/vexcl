@@ -1,6 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="26,155,117,181"/>
-<area shape="rect" id="node5" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="72,229,153,256"/>
-<area shape="rect" id="node7" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="110,80,198,107"/>
-<area shape="rect" id="node9" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="192,155,286,181"/>
+<area shape="rect" id="node3" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="28,155,118,181"/>
+<area shape="rect" id="node5" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="146,229,228,256"/>
+<area shape="rect" id="node7" href="$stencil_8hpp.html" title="Stencil convolution." alt="" coords="142,155,233,181"/>
+<area shape="rect" id="node10" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="162,80,250,107"/>
+<area shape="rect" id="node12" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="258,155,352,181"/>
 </map>

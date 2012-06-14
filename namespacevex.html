@@ -73,6 +73,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sparse matrix in hybrid ELL-CSR format.  <a href="classvex_1_1SpMat.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMatCCSR.html">SpMatCCSR</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sparse matrix in CCSR format.  <a href="classvex_1_1SpMatCCSR.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1stencil.html">stencil</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stencil.  <a href="classvex_1_1stencil.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1partitioning__scheme.html">partitioning_scheme</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitioning scheme for vectors and matrices.  <a href="structvex_1_1partitioning__scheme.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html">vector</a></td></tr>
@@ -145,6 +147,12 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na
 <tr class="memdesc:a6bfb624117ba61e479e77e03a25caf51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns device weight after spmv test. <br/></td></tr>
 <tr class="memitem:a107bd5e3e6dec3c4b85cc4888624a50c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a107bd5e3e6dec3c4b85cc4888624a50c">partition_by_spmv_perf</a> (size_t n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
 <tr class="memdesc:a107bd5e3e6dec3c4b85cc4888624a50c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitions vector wrt to vector performance of devices.  <a href="#a107bd5e3e6dec3c4b85cc4888624a50c"></a><br/></td></tr>
+<tr class="memitem:a4d1bc5b4dab3e298f101c9d152bcfaf3"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4d1bc5b4dab3e298f101c9d152bcfaf3"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4d1bc5b4dab3e298f101c9d152bcfaf3"><td class="memTemplItemLeft" align="right" valign="top">Conv&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x, const <a class="el" href="classvex_1_1stencil.html">stencil</a>&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a0b2a12399789264fe73b1ee151b8ec49"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0b2a12399789264fe73b1ee151b8ec49"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0b2a12399789264fe73b1ee151b8ec49"><td class="memTemplItemLeft" align="right" valign="top">Conv&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classvex_1_1stencil.html">stencil</a>&lt; T &gt; &amp;s, const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x)</td></tr>
 <tr class="memitem:a56365bca0357a23c638d8d39a0224304"><td class="memTemplParams" colspan="2"><a class="anchor" id="a56365bca0357a23c638d8d39a0224304"></a>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:a56365bca0357a23c638d8d39a0224304"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a56365bca0357a23c638d8d39a0224304">type_name</a> ()</td></tr>
@@ -161,6 +169,9 @@ template&lt;&gt; </td></tr>
 <tr class="memitem:a49aa0984c418224aafa75a065f53e4d5"><td class="memTemplParams" colspan="2"><a class="anchor" id="a49aa0984c418224aafa75a065f53e4d5"></a>
 template&lt;&gt; </td></tr>
 <tr class="memitem:a49aa0984c418224aafa75a065f53e4d5"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>type_name&lt; char &gt;</b> ()</td></tr>
+<tr class="memitem:a790312b95005275fad69da96b758dd55"><td class="memTemplParams" colspan="2"><a class="anchor" id="a790312b95005275fad69da96b758dd55"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a790312b95005275fad69da96b758dd55"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>type_name&lt; bool &gt;</b> ()</td></tr>
 <tr class="memitem:a45fc28c19e47b403e6cc9cd46326ebab"><td class="memTemplParams" colspan="2"><a class="anchor" id="a45fc28c19e47b403e6cc9cd46326ebab"></a>
 template&lt;&gt; </td></tr>
 <tr class="memitem:a45fc28c19e47b403e6cc9cd46326ebab"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>type_name&lt; uint &gt;</b> ()</td></tr>
@@ -187,9 +198,12 @@ std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><
 <tr class="memitem:a61989abf337d9845cad96ce9e805fd56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61989abf337d9845cad96ce9e805fd56"></a>
 cl::Program&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a61989abf337d9845cad96ce9e805fd56">build_sources</a> (const cl::Context &amp;context, const std::string &amp;source)</td></tr>
 <tr class="memdesc:a61989abf337d9845cad96ce9e805fd56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and build a program from source string. <br/></td></tr>
-<tr class="memitem:a8f26c8e437a976a1a4fdbf685674f450"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f26c8e437a976a1a4fdbf685674f450"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a8f26c8e437a976a1a4fdbf685674f450">kernel_workgroup_size</a> (const cl::Kernel &amp;kernel, const std::vector&lt; cl::Device &gt; &amp;device)</td></tr>
-<tr class="memdesc:a8f26c8e437a976a1a4fdbf685674f450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get maximum possible workgroup size for given kernel. <br/></td></tr>
+<tr class="memitem:a90a8336dca27e8e2c3e31bb8a2b70e91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90a8336dca27e8e2c3e31bb8a2b70e91"></a>
+uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a90a8336dca27e8e2c3e31bb8a2b70e91">kernel_workgroup_size</a> (const cl::Kernel &amp;kernel, const cl::Device &amp;device)</td></tr>
+<tr class="memdesc:a90a8336dca27e8e2c3e31bb8a2b70e91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get maximum possible workgroup size for given kernel. <br/></td></tr>
+<tr class="memitem:a12458566eb59095a1eef59f6747c0668"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12458566eb59095a1eef59f6747c0668"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a12458566eb59095a1eef59f6747c0668">operator&lt;&lt;</a> (std::ostream &amp;os, const cl::Error &amp;e)</td></tr>
+<tr class="memdesc:a12458566eb59095a1eef59f6747c0668"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output description of an OpenCL error to a stream. <br/></td></tr>
 <tr class="memitem:a7896b8bc121f843d62d724a98ebe3b46"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7896b8bc121f843d62d724a98ebe3b46"></a>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:a7896b8bc121f843d62d724a98ebe3b46"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a7896b8bc121f843d62d724a98ebe3b46">copy</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;dv, std::vector&lt; T &gt; &amp;hv, cl_bool blocking=CL_TRUE)</td></tr>

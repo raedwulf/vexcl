@@ -37,7 +37,6 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div id="nav-path" class="navpath">
@@ -84,7 +83,7 @@
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="util_8hpp__dep__incl.png" border="0" usemap="#util_8hppdep" alt=""/></div>
 <map name="util_8hppdep" id="util_8hppdep">
-<area shape="rect" id="node3" href="spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="26,155,117,181"/><area shape="rect" id="node5" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="72,229,153,256"/><area shape="rect" id="node7" href="vector_8hpp.html" title="OpenCL device vector." alt="" coords="110,80,198,107"/><area shape="rect" id="node9" href="reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="192,155,286,181"/></map>
+<area shape="rect" id="node3" href="spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="28,155,118,181"/><area shape="rect" id="node5" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="146,229,228,256"/><area shape="rect" id="node7" href="stencil_8hpp.html" title="Stencil convolution." alt="" coords="142,155,233,181"/><area shape="rect" id="node10" href="vector_8hpp.html" title="OpenCL device vector." alt="" coords="162,80,250,107"/><area shape="rect" id="node12" href="reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="258,155,352,181"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
@@ -122,6 +121,9 @@ template&lt;&gt; </td></tr>
 <tr class="memitem:a49aa0984c418224aafa75a065f53e4d5"><td class="memTemplParams" colspan="2"><a class="anchor" id="a49aa0984c418224aafa75a065f53e4d5"></a>
 template&lt;&gt; </td></tr>
 <tr class="memitem:a49aa0984c418224aafa75a065f53e4d5"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::type_name&lt; char &gt;</b> ()</td></tr>
+<tr class="memitem:a790312b95005275fad69da96b758dd55"><td class="memTemplParams" colspan="2"><a class="anchor" id="a790312b95005275fad69da96b758dd55"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a790312b95005275fad69da96b758dd55"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::type_name&lt; bool &gt;</b> ()</td></tr>
 <tr class="memitem:a45fc28c19e47b403e6cc9cd46326ebab"><td class="memTemplParams" colspan="2"><a class="anchor" id="a45fc28c19e47b403e6cc9cd46326ebab"></a>
 template&lt;&gt; </td></tr>
 <tr class="memitem:a45fc28c19e47b403e6cc9cd46326ebab"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::type_name&lt; uint &gt;</b> ()</td></tr>
@@ -150,12 +152,12 @@ std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><
 <tr class="memitem:a61989abf337d9845cad96ce9e805fd56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61989abf337d9845cad96ce9e805fd56"></a>
 cl::Program&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a61989abf337d9845cad96ce9e805fd56">vex::build_sources</a> (const cl::Context &amp;context, const std::string &amp;source)</td></tr>
 <tr class="memdesc:a61989abf337d9845cad96ce9e805fd56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and build a program from source string. <br/></td></tr>
-<tr class="memitem:a8f26c8e437a976a1a4fdbf685674f450"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f26c8e437a976a1a4fdbf685674f450"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a8f26c8e437a976a1a4fdbf685674f450">vex::kernel_workgroup_size</a> (const cl::Kernel &amp;kernel, const std::vector&lt; cl::Device &gt; &amp;device)</td></tr>
-<tr class="memdesc:a8f26c8e437a976a1a4fdbf685674f450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get maximum possible workgroup size for given kernel. <br/></td></tr>
-<tr class="memitem:a820f9bfc5d19b05ae97d079a51f1cfa3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a820f9bfc5d19b05ae97d079a51f1cfa3"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8hpp.html#a820f9bfc5d19b05ae97d079a51f1cfa3">operator&lt;&lt;</a> (std::ostream &amp;os, const cl::Error &amp;e)</td></tr>
-<tr class="memdesc:a820f9bfc5d19b05ae97d079a51f1cfa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output description of an OpenCL error to a stream. <br/></td></tr>
+<tr class="memitem:a90a8336dca27e8e2c3e31bb8a2b70e91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90a8336dca27e8e2c3e31bb8a2b70e91"></a>
+uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a90a8336dca27e8e2c3e31bb8a2b70e91">vex::kernel_workgroup_size</a> (const cl::Kernel &amp;kernel, const cl::Device &amp;device)</td></tr>
+<tr class="memdesc:a90a8336dca27e8e2c3e31bb8a2b70e91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get maximum possible workgroup size for given kernel. <br/></td></tr>
+<tr class="memitem:a12458566eb59095a1eef59f6747c0668"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12458566eb59095a1eef59f6747c0668"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a12458566eb59095a1eef59f6747c0668">vex::operator&lt;&lt;</a> (std::ostream &amp;os, const cl::Error &amp;e)</td></tr>
+<tr class="memdesc:a12458566eb59095a1eef59f6747c0668"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output description of an OpenCL error to a stream. <br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
