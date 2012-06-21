@@ -153,6 +153,9 @@ template&lt;class Expr , typename column_t &gt; </td></tr>
 <tr class="memitem:afe0701f44482410d5123d38c4fc27229"><td class="memTemplParams" colspan="2"><a class="anchor" id="afe0701f44482410d5123d38c4fc27229"></a>
 template&lt;class func &gt; </td></tr>
 <tr class="memitem:afe0701f44482410d5123d38c4fc27229"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const GConv&lt; func, T &gt; &amp;cnv)</td></tr>
+<tr class="memitem:a74d99eeb0ba2f7b8161a9ac2f4f5ccd5"><td class="memTemplParams" colspan="2"><a class="anchor" id="a74d99eeb0ba2f7b8161a9ac2f4f5ccd5"></a>
+template&lt;class Expr , class func &gt; </td></tr>
+<tr class="memitem:a74d99eeb0ba2f7b8161a9ac2f4f5ccd5"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const ExGConv&lt; Expr, func, T &gt; &amp;xc)</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Expression assignments.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>The appropriate kernel is compiled first time the assignment is made. Vectors participating in expression should have same number of parts; corresponding parts of the vectors should reside on the same compute devices. </p>
 </div></td></tr>
@@ -200,6 +203,12 @@ const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><t
 <tr class="memitem:a873079cffd954c532d0737cbd15c681a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a873079cffd954c532d0737cbd15c681a"></a>
 template&lt;class f &gt; </td></tr>
 <tr class="memitem:a873079cffd954c532d0737cbd15c681a"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const GConv&lt; f, T &gt; &amp;cnv)</td></tr>
+<tr class="memitem:a97a3fb1790066b3c70ed80382dae5aa6"><td class="memTemplParams" colspan="2"><a class="anchor" id="a97a3fb1790066b3c70ed80382dae5aa6"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:a97a3fb1790066b3c70ed80382dae5aa6"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const ExConv&lt; Expr, T &gt; &amp;xc)</td></tr>
+<tr class="memitem:aae70547d7910ed0a409013aed1079466"><td class="memTemplParams" colspan="2"><a class="anchor" id="aae70547d7910ed0a409013aed1079466"></a>
+template&lt;class Expr , class f &gt; </td></tr>
+<tr class="memitem:aae70547d7910ed0a409013aed1079466"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const ExGConv&lt; Expr, f, T &gt; &amp;xc)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class T&gt;<br/>

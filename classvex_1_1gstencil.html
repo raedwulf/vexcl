@@ -69,9 +69,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a64ce2d951f1e097752a2241cc30b70fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a64ce2d951f1e097752a2241cc30b70fc"></a><br/></td></tr>
 <tr class="memitem:a9fc8104675bb712b0e8d307909bf82e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1gstencil.html#a9fc8104675bb712b0e8d307909bf82e0">gstencil</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, uint rows, uint cols, uint center, const std::initializer_list&lt; T &gt; &amp;data)</td></tr>
 <tr class="memdesc:a9fc8104675bb712b0e8d307909bf82e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Costructor.  <a href="#a9fc8104675bb712b0e8d307909bf82e0"></a><br/></td></tr>
-<tr class="memitem:a80531a8d89c6b27beabce3300ad8aaaf"><td class="memTemplParams" colspan="2">template&lt;class func_name &gt; </td></tr>
-<tr class="memitem:a80531a8d89c6b27beabce3300ad8aaaf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvex_1_1gstencil.html#a80531a8d89c6b27beabce3300ad8aaaf">convolve</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x, <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;y) const </td></tr>
-<tr class="memdesc:a80531a8d89c6b27beabce3300ad8aaaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolve stencil with a vector.  <a href="#a80531a8d89c6b27beabce3300ad8aaaf"></a><br/></td></tr>
+<tr class="memitem:a95c5263d669af3dbde5e54524bb8ef0d"><td class="memTemplParams" colspan="2">template&lt;class func_name &gt; </td></tr>
+<tr class="memitem:a95c5263d669af3dbde5e54524bb8ef0d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvex_1_1gstencil.html#a95c5263d669af3dbde5e54524bb8ef0d">convolve</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x, <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;y, T alpha=0, T beta=1) const </td></tr>
+<tr class="memdesc:a95c5263d669af3dbde5e54524bb8ef0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolve stencil with a vector.  <a href="#a95c5263d669af3dbde5e54524bb8ef0d"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br/>
@@ -83,7 +83,7 @@ class vex::gstencil&lt; T &gt;</h3>
 <div class="line">     1, -1,  0,</div>
 <div class="line">     0,  1, -1</div>
 <div class="line"> });</div>
-<div class="line"> y = x * sin(S);</div>
+<div class="line"> y = sin(x * S);</div>
 </div><!-- fragment --><p> This admittedly unintuitive notation corresponds to <img class="formulaInl" alt="$y_i = \sum_k sin(\sum_j S_{kj} * x_{i+j-c})$" src="form_0.png"/>, where c is center of the stencil. Please see github wiki for further examples of this class usage. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a5cbbaa7ea6ea35dd8bec61f7d8820ffb"></a>
@@ -294,7 +294,7 @@ template&lt;typename T&gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a80531a8d89c6b27beabce3300ad8aaaf"></a>
+<a class="anchor" id="a95c5263d669af3dbde5e54524bb8ef0d"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -312,7 +312,19 @@ template&lt;class func &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>alpha</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>beta</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
