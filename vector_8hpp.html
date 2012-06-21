@@ -49,8 +49,7 @@
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">vector.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -290,1552 +289,1417 @@ template&lt;class LHS , class RHS &gt; </td></tr>
 BinaryExpression&lt; LHS, <br class="typebreak"/>
 binop::LeftShift, RHS &gt;<br class="typebreak"/>
  &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::operator&lt;&lt;</b> (const LHS &amp;lhs, const RHS &amp;rhs)</td></tr>
-<tr class="memitem:ga205d90567cd337402cb732c10e22cf84"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga205d90567cd337402cb732c10e22cf84"></a>
+<tr class="memitem:gacbeb684b88300fbe6ee7d8faf7a55d68"><td class="memTemplParams" colspan="2"><a class="anchor" id="gacbeb684b88300fbe6ee7d8faf7a55d68"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga205d90567cd337402cb732c10e22cf84"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gacbeb684b88300fbe6ee7d8faf7a55d68"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; acos_fun, <br class="typebreak"/>
+BuiltinFunction&lt; acos_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::acos</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga0f35464770517572a818e97688e8575d"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga0f35464770517572a818e97688e8575d"></a>
+<tr class="memitem:ga66f001f435924b3fe3977b6dd8d454e5"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga66f001f435924b3fe3977b6dd8d454e5"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga0f35464770517572a818e97688e8575d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga66f001f435924b3fe3977b6dd8d454e5"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; acos_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; acos_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::acos</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga24f273e83d995995305fa9d400204871"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga24f273e83d995995305fa9d400204871"></a>
+<tr class="memitem:gaadf09b863d59ae35d49ca2a9dfeb43d7"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaadf09b863d59ae35d49ca2a9dfeb43d7"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga24f273e83d995995305fa9d400204871"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gaadf09b863d59ae35d49ca2a9dfeb43d7"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; acosh_fun, <br class="typebreak"/>
+BuiltinFunction&lt; acosh_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::acosh</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gae475545e6c722677e1f6585a93e3493d"><td class="memTemplParams" colspan="2"><a class="anchor" id="gae475545e6c722677e1f6585a93e3493d"></a>
+<tr class="memitem:gaeda010520f4509cde351e4e57c4cddba"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaeda010520f4509cde351e4e57c4cddba"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gae475545e6c722677e1f6585a93e3493d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gaeda010520f4509cde351e4e57c4cddba"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; acosh_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; acosh_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::acosh</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gaa2ade95f4da2f8d5d5df919ca3c33849"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaa2ade95f4da2f8d5d5df919ca3c33849"></a>
+<tr class="memitem:gae75c8ca5ee26289b89257d1096e623b2"><td class="memTemplParams" colspan="2"><a class="anchor" id="gae75c8ca5ee26289b89257d1096e623b2"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gaa2ade95f4da2f8d5d5df919ca3c33849"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gae75c8ca5ee26289b89257d1096e623b2"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; acospi_fun, <br class="typebreak"/>
+BuiltinFunction&lt; acospi_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::acospi</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga532b7e0f45ba48081e60eff88dfb0d92"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga532b7e0f45ba48081e60eff88dfb0d92"></a>
+<tr class="memitem:ga842c9f82d2745123e3dff723633e6e8a"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga842c9f82d2745123e3dff723633e6e8a"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga532b7e0f45ba48081e60eff88dfb0d92"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga842c9f82d2745123e3dff723633e6e8a"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; acospi_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; acospi_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::acospi</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gaf1e2adba3484c3b8c1c06cefcc071b31"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaf1e2adba3484c3b8c1c06cefcc071b31"></a>
+<tr class="memitem:gad3a0df6d4140da0b7d1719de93bf281c"><td class="memTemplParams" colspan="2"><a class="anchor" id="gad3a0df6d4140da0b7d1719de93bf281c"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gaf1e2adba3484c3b8c1c06cefcc071b31"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gad3a0df6d4140da0b7d1719de93bf281c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; asin_fun, <br class="typebreak"/>
+BuiltinFunction&lt; asin_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::asin</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga132fe6814b4638311df81056ca4af4f6"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga132fe6814b4638311df81056ca4af4f6"></a>
+<tr class="memitem:ga40245efe759f215cc3421d80852454da"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga40245efe759f215cc3421d80852454da"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga132fe6814b4638311df81056ca4af4f6"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga40245efe759f215cc3421d80852454da"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; asin_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; asin_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::asin</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gad0912f8c61cb7ea53cdac11cc72683c3"><td class="memTemplParams" colspan="2"><a class="anchor" id="gad0912f8c61cb7ea53cdac11cc72683c3"></a>
+<tr class="memitem:ga16e9602114c9c6efd560f264cc483e8e"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga16e9602114c9c6efd560f264cc483e8e"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gad0912f8c61cb7ea53cdac11cc72683c3"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga16e9602114c9c6efd560f264cc483e8e"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; asinh_fun, <br class="typebreak"/>
+BuiltinFunction&lt; asinh_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::asinh</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga7c0c8dbabde25aa531904f0b5a54ec41"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga7c0c8dbabde25aa531904f0b5a54ec41"></a>
+<tr class="memitem:ga3b2874e811a976faa0c2941dfb2db5fd"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga3b2874e811a976faa0c2941dfb2db5fd"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga7c0c8dbabde25aa531904f0b5a54ec41"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga3b2874e811a976faa0c2941dfb2db5fd"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; asinh_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; asinh_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::asinh</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gaba37fd15446a700bbb1acf7f1aa6aa3d"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaba37fd15446a700bbb1acf7f1aa6aa3d"></a>
+<tr class="memitem:gaf58038be9edcfec0e7a17857fad5b7c5"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaf58038be9edcfec0e7a17857fad5b7c5"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gaba37fd15446a700bbb1acf7f1aa6aa3d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gaf58038be9edcfec0e7a17857fad5b7c5"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; asinpi_fun, <br class="typebreak"/>
+BuiltinFunction&lt; asinpi_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::asinpi</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gaefe5bae75a591fc8c2de8b2cdd6ef712"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaefe5bae75a591fc8c2de8b2cdd6ef712"></a>
+<tr class="memitem:gaa2cb8c33e84449bae4307347baf27257"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaa2cb8c33e84449bae4307347baf27257"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gaefe5bae75a591fc8c2de8b2cdd6ef712"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gaa2cb8c33e84449bae4307347baf27257"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; asinpi_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; asinpi_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::asinpi</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga506edc4906459b81b9065690d2b8be0a"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga506edc4906459b81b9065690d2b8be0a"></a>
+<tr class="memitem:ga207c2b69a5d96e6a56d187baf2c86b78"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga207c2b69a5d96e6a56d187baf2c86b78"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga506edc4906459b81b9065690d2b8be0a"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga207c2b69a5d96e6a56d187baf2c86b78"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; atan_fun, <br class="typebreak"/>
+BuiltinFunction&lt; atan_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::atan</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga98e85e43eb5b00f7de091a9370d76bb3"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga98e85e43eb5b00f7de091a9370d76bb3"></a>
+<tr class="memitem:ga75ed1f06def9b1d96952786761a47cb2"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga75ed1f06def9b1d96952786761a47cb2"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga98e85e43eb5b00f7de091a9370d76bb3"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga75ed1f06def9b1d96952786761a47cb2"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; atan_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; atan_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::atan</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga0a8c60be6b0e643ba925403840171fd9"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga0a8c60be6b0e643ba925403840171fd9"></a>
+<tr class="memitem:ga0cb2555501decda011645a60b38a54b1"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga0cb2555501decda011645a60b38a54b1"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga0a8c60be6b0e643ba925403840171fd9"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga0cb2555501decda011645a60b38a54b1"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; atan2_fun, <br class="typebreak"/>
+BuiltinFunction&lt; atan2_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::atan2</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gafcbf48c722ad3b48adc3bc3535d93f06"><td class="memTemplParams" colspan="2"><a class="anchor" id="gafcbf48c722ad3b48adc3bc3535d93f06"></a>
+<tr class="memitem:gae37133d85b02141c77fc62924022a4a6"><td class="memTemplParams" colspan="2"><a class="anchor" id="gae37133d85b02141c77fc62924022a4a6"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gafcbf48c722ad3b48adc3bc3535d93f06"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gae37133d85b02141c77fc62924022a4a6"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; atan2_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; atan2_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::atan2</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga81b391bce6f56e1ad2b9c3729591b329"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga81b391bce6f56e1ad2b9c3729591b329"></a>
+<tr class="memitem:ga9fce60871af1002b12550a7ea2b95485"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga9fce60871af1002b12550a7ea2b95485"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga81b391bce6f56e1ad2b9c3729591b329"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga9fce60871af1002b12550a7ea2b95485"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; atanh_fun, <br class="typebreak"/>
+BuiltinFunction&lt; atanh_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::atanh</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga48b818aa6387e7c5c4e6c0371ace065b"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga48b818aa6387e7c5c4e6c0371ace065b"></a>
+<tr class="memitem:ga6a6784f1d7b8729b8f3204bbe64c6d7e"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga6a6784f1d7b8729b8f3204bbe64c6d7e"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga48b818aa6387e7c5c4e6c0371ace065b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga6a6784f1d7b8729b8f3204bbe64c6d7e"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; atanh_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; atanh_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::atanh</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gac2ce5a330185c035ee73c3d8accad54f"><td class="memTemplParams" colspan="2"><a class="anchor" id="gac2ce5a330185c035ee73c3d8accad54f"></a>
+<tr class="memitem:gac0b96e3b7d48edacc9cb95a10f6f891a"><td class="memTemplParams" colspan="2"><a class="anchor" id="gac0b96e3b7d48edacc9cb95a10f6f891a"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gac2ce5a330185c035ee73c3d8accad54f"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gac0b96e3b7d48edacc9cb95a10f6f891a"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; atanpi_fun, <br class="typebreak"/>
+BuiltinFunction&lt; atanpi_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::atanpi</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga697eda329486e919b0f1c257ccc94378"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga697eda329486e919b0f1c257ccc94378"></a>
+<tr class="memitem:ga6cd7792e08995d3b82ce949b7aededbf"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga6cd7792e08995d3b82ce949b7aededbf"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga697eda329486e919b0f1c257ccc94378"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga6cd7792e08995d3b82ce949b7aededbf"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; atanpi_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; atanpi_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::atanpi</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gacec6bda4ef75429983e411de4a308a07"><td class="memTemplParams" colspan="2"><a class="anchor" id="gacec6bda4ef75429983e411de4a308a07"></a>
+<tr class="memitem:gaee97a375e9c467117f3f4403bd697fd1"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaee97a375e9c467117f3f4403bd697fd1"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gacec6bda4ef75429983e411de4a308a07"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gaee97a375e9c467117f3f4403bd697fd1"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; atan2pi_fun, <br class="typebreak"/>
+BuiltinFunction&lt; atan2pi_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::atan2pi</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga44f44d653fd84e66bd37baca15070f05"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga44f44d653fd84e66bd37baca15070f05"></a>
+<tr class="memitem:ga2830a759cc7446944afeab61564d1912"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga2830a759cc7446944afeab61564d1912"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga44f44d653fd84e66bd37baca15070f05"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga2830a759cc7446944afeab61564d1912"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; atan2pi_fun, <br class="typebreak"/>
-typename multiex_traits<br class="typebreak"/>
-&lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
-, multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
-::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::atan2pi</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga76a379cc56079812b4239708c30ef720"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga76a379cc56079812b4239708c30ef720"></a>
+&lt; BuiltinFunction<br class="typebreak"/>
+&lt; atan2pi_name, typename <br class="typebreak"/>
+multiex_traits&lt; MultiEx &gt;<br class="typebreak"/>
+::subtype...&gt;, multiex_dim<br class="typebreak"/>
+&lt; MultiEx...&gt;::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::atan2pi</b> (const MultiEx &amp;...multiexpr)</td></tr>
+<tr class="memitem:ga773164db5874e96b3bb3935b89931564"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga773164db5874e96b3bb3935b89931564"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga76a379cc56079812b4239708c30ef720"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga773164db5874e96b3bb3935b89931564"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; cbrt_fun, <br class="typebreak"/>
+BuiltinFunction&lt; cbrt_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::cbrt</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gaf11947ce0de498fa2539850ab0faaead"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaf11947ce0de498fa2539850ab0faaead"></a>
+<tr class="memitem:gacab1b4f180153393bd8562f976c1fbe4"><td class="memTemplParams" colspan="2"><a class="anchor" id="gacab1b4f180153393bd8562f976c1fbe4"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gaf11947ce0de498fa2539850ab0faaead"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gacab1b4f180153393bd8562f976c1fbe4"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; cbrt_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; cbrt_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::cbrt</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga391563436a88003ee2ba91022bd078e3"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga391563436a88003ee2ba91022bd078e3"></a>
+<tr class="memitem:ga2a641719824136688787eff0282b6352"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga2a641719824136688787eff0282b6352"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga391563436a88003ee2ba91022bd078e3"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga2a641719824136688787eff0282b6352"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; ceil_fun, <br class="typebreak"/>
+BuiltinFunction&lt; ceil_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::ceil</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gac2190d56356fae6088cecce6d780ce99"><td class="memTemplParams" colspan="2"><a class="anchor" id="gac2190d56356fae6088cecce6d780ce99"></a>
+<tr class="memitem:ga6b768357704fc9b45e6905cede3df7ba"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga6b768357704fc9b45e6905cede3df7ba"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gac2190d56356fae6088cecce6d780ce99"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga6b768357704fc9b45e6905cede3df7ba"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; ceil_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; ceil_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::ceil</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga49cf424e9b03a3e1bee808e718094478"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga49cf424e9b03a3e1bee808e718094478"></a>
+<tr class="memitem:gad0f0e593244fbfab5bbabb037b14d27c"><td class="memTemplParams" colspan="2"><a class="anchor" id="gad0f0e593244fbfab5bbabb037b14d27c"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga49cf424e9b03a3e1bee808e718094478"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gad0f0e593244fbfab5bbabb037b14d27c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; copysign_fun, <br class="typebreak"/>
+BuiltinFunction&lt; copysign_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::copysign</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga0cb2e1dc71a32b8aded4a0ea58d6da71"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga0cb2e1dc71a32b8aded4a0ea58d6da71"></a>
+<tr class="memitem:gaf31da8ef4f099ccbb21df6592b9ed52c"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaf31da8ef4f099ccbb21df6592b9ed52c"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga0cb2e1dc71a32b8aded4a0ea58d6da71"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gaf31da8ef4f099ccbb21df6592b9ed52c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
 &lt; BuiltinFunction<br class="typebreak"/>
-&lt; copysign_fun, typename <br class="typebreak"/>
+&lt; copysign_name, typename <br class="typebreak"/>
 multiex_traits&lt; MultiEx &gt;<br class="typebreak"/>
 ::subtype...&gt;, multiex_dim<br class="typebreak"/>
 &lt; MultiEx...&gt;::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::copysign</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gac0e324648ec4869e1911b1e7a3ad7bb4"><td class="memTemplParams" colspan="2"><a class="anchor" id="gac0e324648ec4869e1911b1e7a3ad7bb4"></a>
+<tr class="memitem:ga5b5e86cdd40784eff32f7953e13db9f9"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga5b5e86cdd40784eff32f7953e13db9f9"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gac0e324648ec4869e1911b1e7a3ad7bb4"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga5b5e86cdd40784eff32f7953e13db9f9"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; cos_fun, <br class="typebreak"/>
+BuiltinFunction&lt; cos_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::cos</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gadf8b644851e066706b6a86549b81bb5b"><td class="memTemplParams" colspan="2"><a class="anchor" id="gadf8b644851e066706b6a86549b81bb5b"></a>
+<tr class="memitem:ga9ade5f5a3a055e7ee37b8d717effbbb9"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga9ade5f5a3a055e7ee37b8d717effbbb9"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gadf8b644851e066706b6a86549b81bb5b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga9ade5f5a3a055e7ee37b8d717effbbb9"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; cos_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; cos_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::cos</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gaab5b1c0068de111fb009dc7e354f6cf8"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaab5b1c0068de111fb009dc7e354f6cf8"></a>
+<tr class="memitem:ga55a983f8db3594393abe25430656312e"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga55a983f8db3594393abe25430656312e"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gaab5b1c0068de111fb009dc7e354f6cf8"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga55a983f8db3594393abe25430656312e"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; cosh_fun, <br class="typebreak"/>
+BuiltinFunction&lt; cosh_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::cosh</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gaa6e104c96d998bd8857059e4f0cdbb5b"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaa6e104c96d998bd8857059e4f0cdbb5b"></a>
+<tr class="memitem:gaf33807ddba327d2de68887e74b1b947e"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaf33807ddba327d2de68887e74b1b947e"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gaa6e104c96d998bd8857059e4f0cdbb5b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gaf33807ddba327d2de68887e74b1b947e"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; cosh_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; cosh_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::cosh</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga16ee5b2c76a8fc485877f0c680e3fde1"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga16ee5b2c76a8fc485877f0c680e3fde1"></a>
+<tr class="memitem:ga0e80cba98dafc5720dcc8691b6fb3915"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga0e80cba98dafc5720dcc8691b6fb3915"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga16ee5b2c76a8fc485877f0c680e3fde1"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga0e80cba98dafc5720dcc8691b6fb3915"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; cospi_fun, <br class="typebreak"/>
+BuiltinFunction&lt; cospi_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::cospi</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga685929e73b9d1b168263b9357c28971c"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga685929e73b9d1b168263b9357c28971c"></a>
+<tr class="memitem:ga2bcfd4c8db7d0398840d0d6329a1197d"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga2bcfd4c8db7d0398840d0d6329a1197d"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga685929e73b9d1b168263b9357c28971c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga2bcfd4c8db7d0398840d0d6329a1197d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; cospi_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; cospi_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::cospi</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga495d13c1bc96fc1045953e56d69c1b07"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga495d13c1bc96fc1045953e56d69c1b07"></a>
+<tr class="memitem:ga5bdfe70fcb7dda4b5e395f3db90db436"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga5bdfe70fcb7dda4b5e395f3db90db436"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga495d13c1bc96fc1045953e56d69c1b07"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga5bdfe70fcb7dda4b5e395f3db90db436"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; erfc_fun, <br class="typebreak"/>
+BuiltinFunction&lt; erfc_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::erfc</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga9716f7653c03557f23e3f4366aef7571"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga9716f7653c03557f23e3f4366aef7571"></a>
+<tr class="memitem:ga64e5f9cd29dbe9643135087c159e6247"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga64e5f9cd29dbe9643135087c159e6247"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga9716f7653c03557f23e3f4366aef7571"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga64e5f9cd29dbe9643135087c159e6247"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; erfc_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; erfc_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::erfc</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gab528e01896c37b8e423db29089b32a93"><td class="memTemplParams" colspan="2"><a class="anchor" id="gab528e01896c37b8e423db29089b32a93"></a>
+<tr class="memitem:gabbac792aca5a75c33cb8141730aef698"><td class="memTemplParams" colspan="2"><a class="anchor" id="gabbac792aca5a75c33cb8141730aef698"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gab528e01896c37b8e423db29089b32a93"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gabbac792aca5a75c33cb8141730aef698"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; erf_fun, <br class="typebreak"/>
+BuiltinFunction&lt; erf_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::erf</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga30a81c4cb9e8fd40dfd7b3569e09ffa9"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga30a81c4cb9e8fd40dfd7b3569e09ffa9"></a>
+<tr class="memitem:gade31b71309ad734bbf9aad79efaab600"><td class="memTemplParams" colspan="2"><a class="anchor" id="gade31b71309ad734bbf9aad79efaab600"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga30a81c4cb9e8fd40dfd7b3569e09ffa9"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gade31b71309ad734bbf9aad79efaab600"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; erf_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; erf_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::erf</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gacf1022598dd677079bb76356368aae02"><td class="memTemplParams" colspan="2"><a class="anchor" id="gacf1022598dd677079bb76356368aae02"></a>
+<tr class="memitem:ga3553c05da8123abaa1029b4d6d1d2090"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga3553c05da8123abaa1029b4d6d1d2090"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gacf1022598dd677079bb76356368aae02"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga3553c05da8123abaa1029b4d6d1d2090"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; exp_fun, <br class="typebreak"/>
+BuiltinFunction&lt; exp_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::exp</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga1b8219c26159bcf9b58507f2b858313d"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga1b8219c26159bcf9b58507f2b858313d"></a>
+<tr class="memitem:ga2cff3ed51ccc6dd830ac99cf848477e2"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga2cff3ed51ccc6dd830ac99cf848477e2"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga1b8219c26159bcf9b58507f2b858313d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga2cff3ed51ccc6dd830ac99cf848477e2"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; exp_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; exp_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::exp</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gad39e54a87f76739635319b2dc875a9db"><td class="memTemplParams" colspan="2"><a class="anchor" id="gad39e54a87f76739635319b2dc875a9db"></a>
+<tr class="memitem:gac6251a83b87a64f49f5c12b25db67f21"><td class="memTemplParams" colspan="2"><a class="anchor" id="gac6251a83b87a64f49f5c12b25db67f21"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gad39e54a87f76739635319b2dc875a9db"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gac6251a83b87a64f49f5c12b25db67f21"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; exp2_fun, <br class="typebreak"/>
+BuiltinFunction&lt; exp2_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::exp2</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gafae7db57367b6030e4175f9b05d4cade"><td class="memTemplParams" colspan="2"><a class="anchor" id="gafae7db57367b6030e4175f9b05d4cade"></a>
+<tr class="memitem:ga2cf0381eeb8a2e27ab7846c87767a391"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga2cf0381eeb8a2e27ab7846c87767a391"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gafae7db57367b6030e4175f9b05d4cade"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga2cf0381eeb8a2e27ab7846c87767a391"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; exp2_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; exp2_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::exp2</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gaf259d6e80e11aa5d81141e0e30b862ab"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaf259d6e80e11aa5d81141e0e30b862ab"></a>
+<tr class="memitem:gafd7236a76d3289a9418d1c4b03534724"><td class="memTemplParams" colspan="2"><a class="anchor" id="gafd7236a76d3289a9418d1c4b03534724"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gaf259d6e80e11aa5d81141e0e30b862ab"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gafd7236a76d3289a9418d1c4b03534724"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; exp10_fun, <br class="typebreak"/>
+BuiltinFunction&lt; exp10_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::exp10</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gac6fe89005a554189f7ad397197b2a1e9"><td class="memTemplParams" colspan="2"><a class="anchor" id="gac6fe89005a554189f7ad397197b2a1e9"></a>
+<tr class="memitem:ga2215060a3a25fe8d322c7e46dc8f841c"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga2215060a3a25fe8d322c7e46dc8f841c"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gac6fe89005a554189f7ad397197b2a1e9"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga2215060a3a25fe8d322c7e46dc8f841c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; exp10_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; exp10_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::exp10</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gaa1c0798386affb92f01dbfe8252e9540"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaa1c0798386affb92f01dbfe8252e9540"></a>
+<tr class="memitem:ga8c616581a4395737cd8415a360ac1752"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga8c616581a4395737cd8415a360ac1752"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gaa1c0798386affb92f01dbfe8252e9540"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga8c616581a4395737cd8415a360ac1752"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; expm1_fun, <br class="typebreak"/>
+BuiltinFunction&lt; expm1_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::expm1</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gaf176a251553f80e834fc3c76dec920ac"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaf176a251553f80e834fc3c76dec920ac"></a>
+<tr class="memitem:ga7be2fedfcbe7ede07b4e9286c02a76c6"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga7be2fedfcbe7ede07b4e9286c02a76c6"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gaf176a251553f80e834fc3c76dec920ac"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga7be2fedfcbe7ede07b4e9286c02a76c6"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; expm1_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; expm1_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::expm1</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga02e4283064d62295dfafa53a843a6899"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga02e4283064d62295dfafa53a843a6899"></a>
+<tr class="memitem:ga712519a72401f5a45e9296fef2d0e99d"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga712519a72401f5a45e9296fef2d0e99d"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga02e4283064d62295dfafa53a843a6899"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga712519a72401f5a45e9296fef2d0e99d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; fabs_fun, <br class="typebreak"/>
+BuiltinFunction&lt; fabs_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fabs</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga4540af058690c66d485cf257cecde867"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga4540af058690c66d485cf257cecde867"></a>
+<tr class="memitem:ga382fb3ca2e57de99247d60d3275eda9c"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga382fb3ca2e57de99247d60d3275eda9c"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga4540af058690c66d485cf257cecde867"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga382fb3ca2e57de99247d60d3275eda9c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; fabs_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; fabs_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fabs</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gab3330e786f2f94a77fef03599b860d39"><td class="memTemplParams" colspan="2"><a class="anchor" id="gab3330e786f2f94a77fef03599b860d39"></a>
+<tr class="memitem:ga71bc25cf8f46f1076909e22c30c4a49d"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga71bc25cf8f46f1076909e22c30c4a49d"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gab3330e786f2f94a77fef03599b860d39"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga71bc25cf8f46f1076909e22c30c4a49d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; fdim_fun, <br class="typebreak"/>
+BuiltinFunction&lt; fdim_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fdim</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga45bcb59d662fa42693189dab09e60cb4"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga45bcb59d662fa42693189dab09e60cb4"></a>
+<tr class="memitem:ga2f2cd8b7152daf233afb8de79ba8997d"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga2f2cd8b7152daf233afb8de79ba8997d"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga45bcb59d662fa42693189dab09e60cb4"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga2f2cd8b7152daf233afb8de79ba8997d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; fdim_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; fdim_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fdim</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga90c3e0b36f20e2c6275ae62dd4842b1c"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga90c3e0b36f20e2c6275ae62dd4842b1c"></a>
+<tr class="memitem:gadd3e8db7b6212d633ca454924db36c26"><td class="memTemplParams" colspan="2"><a class="anchor" id="gadd3e8db7b6212d633ca454924db36c26"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga90c3e0b36f20e2c6275ae62dd4842b1c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gadd3e8db7b6212d633ca454924db36c26"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; floor_fun, <br class="typebreak"/>
+BuiltinFunction&lt; floor_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::floor</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gabc0cea9f93a6c97dffdac82c52197108"><td class="memTemplParams" colspan="2"><a class="anchor" id="gabc0cea9f93a6c97dffdac82c52197108"></a>
+<tr class="memitem:ga20062bba1327a146c4f6ddaf097a06df"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga20062bba1327a146c4f6ddaf097a06df"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gabc0cea9f93a6c97dffdac82c52197108"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga20062bba1327a146c4f6ddaf097a06df"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; floor_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; floor_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::floor</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gaf9d6ef1605e034c73261d024c957634b"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaf9d6ef1605e034c73261d024c957634b"></a>
+<tr class="memitem:ga7afec663ef386b24a7bb8cbc8303d397"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga7afec663ef386b24a7bb8cbc8303d397"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gaf9d6ef1605e034c73261d024c957634b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga7afec663ef386b24a7bb8cbc8303d397"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; fma_fun, <br class="typebreak"/>
+BuiltinFunction&lt; fma_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fma</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga7e3fbf459facdc7d59b421259c4d6960"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga7e3fbf459facdc7d59b421259c4d6960"></a>
+<tr class="memitem:gab9960908097e4e0091f11dd192f64416"><td class="memTemplParams" colspan="2"><a class="anchor" id="gab9960908097e4e0091f11dd192f64416"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga7e3fbf459facdc7d59b421259c4d6960"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gab9960908097e4e0091f11dd192f64416"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; fma_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; fma_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fma</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga006c211647fc245b121ce962a1802dcd"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga006c211647fc245b121ce962a1802dcd"></a>
+<tr class="memitem:gab3ce2a33874734a602b41ab5957f2ff9"><td class="memTemplParams" colspan="2"><a class="anchor" id="gab3ce2a33874734a602b41ab5957f2ff9"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga006c211647fc245b121ce962a1802dcd"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gab3ce2a33874734a602b41ab5957f2ff9"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; fmax_fun, <br class="typebreak"/>
+BuiltinFunction&lt; fmax_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fmax</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga44ffad7d3578019d5118de18e411a343"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga44ffad7d3578019d5118de18e411a343"></a>
+<tr class="memitem:gab84583fb68a84ede6f8e9b72c75c46cc"><td class="memTemplParams" colspan="2"><a class="anchor" id="gab84583fb68a84ede6f8e9b72c75c46cc"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga44ffad7d3578019d5118de18e411a343"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gab84583fb68a84ede6f8e9b72c75c46cc"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; fmax_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; fmax_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fmax</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga921df837a259c41d4918ba59a4b3680c"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga921df837a259c41d4918ba59a4b3680c"></a>
+<tr class="memitem:ga5927e4ab72ba1e9a9b8bf947ad4ad37e"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga5927e4ab72ba1e9a9b8bf947ad4ad37e"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga921df837a259c41d4918ba59a4b3680c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga5927e4ab72ba1e9a9b8bf947ad4ad37e"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; fmin_fun, <br class="typebreak"/>
+BuiltinFunction&lt; fmin_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fmin</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gaf372db7eae5b4048c7e093466dd747b6"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaf372db7eae5b4048c7e093466dd747b6"></a>
+<tr class="memitem:ga82e510c14022997d659625737aa36163"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga82e510c14022997d659625737aa36163"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gaf372db7eae5b4048c7e093466dd747b6"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga82e510c14022997d659625737aa36163"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; fmin_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; fmin_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fmin</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gabe350bb1953cdbe248fd7b82aff3315d"><td class="memTemplParams" colspan="2"><a class="anchor" id="gabe350bb1953cdbe248fd7b82aff3315d"></a>
+<tr class="memitem:ga167e23e70baaa30ff3d8fba2d7e57426"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga167e23e70baaa30ff3d8fba2d7e57426"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gabe350bb1953cdbe248fd7b82aff3315d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga167e23e70baaa30ff3d8fba2d7e57426"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; fmod_fun, <br class="typebreak"/>
+BuiltinFunction&lt; fmod_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fmod</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga9c2d4568e3e8bfaef6db276d4cad17d0"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga9c2d4568e3e8bfaef6db276d4cad17d0"></a>
+<tr class="memitem:gaa699583233429449fa556d09d04cc04d"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaa699583233429449fa556d09d04cc04d"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga9c2d4568e3e8bfaef6db276d4cad17d0"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gaa699583233429449fa556d09d04cc04d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; fmod_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; fmod_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fmod</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga885c8b5787acd0f865eb2fd6dfc97979"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga885c8b5787acd0f865eb2fd6dfc97979"></a>
+<tr class="memitem:ga2ed8dabea2fa10b0775c5b49cf3954b2"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga2ed8dabea2fa10b0775c5b49cf3954b2"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga885c8b5787acd0f865eb2fd6dfc97979"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga2ed8dabea2fa10b0775c5b49cf3954b2"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; fract_fun, <br class="typebreak"/>
+BuiltinFunction&lt; fract_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fract</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gaa1c4547a1395a66ae4c2d1b461154c28"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaa1c4547a1395a66ae4c2d1b461154c28"></a>
+<tr class="memitem:ga1da6ab543367d4f070994cb7d2d6cca5"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga1da6ab543367d4f070994cb7d2d6cca5"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gaa1c4547a1395a66ae4c2d1b461154c28"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga1da6ab543367d4f070994cb7d2d6cca5"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; fract_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; fract_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fract</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gadd720186ed929f2e78a7350ebcc9191d"><td class="memTemplParams" colspan="2"><a class="anchor" id="gadd720186ed929f2e78a7350ebcc9191d"></a>
+<tr class="memitem:gaba412b33e182777123ec939f065f596f"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaba412b33e182777123ec939f065f596f"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gadd720186ed929f2e78a7350ebcc9191d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gaba412b33e182777123ec939f065f596f"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; frexp_fun, <br class="typebreak"/>
+BuiltinFunction&lt; frexp_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::frexp</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga645cddc445d024ec9cc0e5b6d46fa070"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga645cddc445d024ec9cc0e5b6d46fa070"></a>
+<tr class="memitem:ga385e5da41a0c96a3871cba0c6071de26"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga385e5da41a0c96a3871cba0c6071de26"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga645cddc445d024ec9cc0e5b6d46fa070"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga385e5da41a0c96a3871cba0c6071de26"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; frexp_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; frexp_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::frexp</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga94bd238fc6e0799976eea2ecb60b3c10"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga94bd238fc6e0799976eea2ecb60b3c10"></a>
+<tr class="memitem:ga876d6e26e45210aef99b0cd099be4e51"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga876d6e26e45210aef99b0cd099be4e51"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga94bd238fc6e0799976eea2ecb60b3c10"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga876d6e26e45210aef99b0cd099be4e51"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; hypot_fun, <br class="typebreak"/>
+BuiltinFunction&lt; hypot_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::hypot</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga43fa3a6eb20cb516768aadbb0cb3b3d6"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga43fa3a6eb20cb516768aadbb0cb3b3d6"></a>
+<tr class="memitem:ga75abb90a0fe7edf92aa67c4a47193bd9"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga75abb90a0fe7edf92aa67c4a47193bd9"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga43fa3a6eb20cb516768aadbb0cb3b3d6"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga75abb90a0fe7edf92aa67c4a47193bd9"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; hypot_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; hypot_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::hypot</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga7248c6d36290ef8dcba023f08576482b"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga7248c6d36290ef8dcba023f08576482b"></a>
+<tr class="memitem:ga54d79689f2b29c65043796f6aff065d3"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga54d79689f2b29c65043796f6aff065d3"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga7248c6d36290ef8dcba023f08576482b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga54d79689f2b29c65043796f6aff065d3"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; ilogb_fun, <br class="typebreak"/>
+BuiltinFunction&lt; ilogb_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::ilogb</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga9880900f8b06aec575f2fd0d62c32bd9"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga9880900f8b06aec575f2fd0d62c32bd9"></a>
+<tr class="memitem:ga0276346dc72c048b268657ac0470ff24"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga0276346dc72c048b268657ac0470ff24"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga9880900f8b06aec575f2fd0d62c32bd9"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga0276346dc72c048b268657ac0470ff24"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; ilogb_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; ilogb_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::ilogb</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga7cc56ae1a4fa64225459d47fdeb5dc12"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga7cc56ae1a4fa64225459d47fdeb5dc12"></a>
+<tr class="memitem:ga7200aa39ac8cfbd990ba036a8f5e9386"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga7200aa39ac8cfbd990ba036a8f5e9386"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga7cc56ae1a4fa64225459d47fdeb5dc12"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga7200aa39ac8cfbd990ba036a8f5e9386"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; ldexp_fun, <br class="typebreak"/>
+BuiltinFunction&lt; ldexp_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::ldexp</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gac4cdc40b9ae9008bad79c3c5c8a9ad56"><td class="memTemplParams" colspan="2"><a class="anchor" id="gac4cdc40b9ae9008bad79c3c5c8a9ad56"></a>
+<tr class="memitem:gadc2795113d21e409ca385590bde185a8"><td class="memTemplParams" colspan="2"><a class="anchor" id="gadc2795113d21e409ca385590bde185a8"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gac4cdc40b9ae9008bad79c3c5c8a9ad56"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gadc2795113d21e409ca385590bde185a8"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; ldexp_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; ldexp_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::ldexp</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gaa6d815914bf9b3d84521ff9795763d90"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaa6d815914bf9b3d84521ff9795763d90"></a>
+<tr class="memitem:gab4354813db01f2af10f73972c8470a62"><td class="memTemplParams" colspan="2"><a class="anchor" id="gab4354813db01f2af10f73972c8470a62"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gaa6d815914bf9b3d84521ff9795763d90"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gab4354813db01f2af10f73972c8470a62"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; lgamma_fun, <br class="typebreak"/>
+BuiltinFunction&lt; lgamma_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::lgamma</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga1b994c6da6f71846ba93b7cbe97b4be4"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga1b994c6da6f71846ba93b7cbe97b4be4"></a>
+<tr class="memitem:ga0d1211600d3626467f18a26631309258"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga0d1211600d3626467f18a26631309258"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga1b994c6da6f71846ba93b7cbe97b4be4"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga0d1211600d3626467f18a26631309258"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; lgamma_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; lgamma_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::lgamma</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gabe8d0f48324f53568fdc63d50435be65"><td class="memTemplParams" colspan="2"><a class="anchor" id="gabe8d0f48324f53568fdc63d50435be65"></a>
+<tr class="memitem:ga95ab8ff7c27bc786b5b802d389b89333"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga95ab8ff7c27bc786b5b802d389b89333"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gabe8d0f48324f53568fdc63d50435be65"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga95ab8ff7c27bc786b5b802d389b89333"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; lgamma_r_fun, <br class="typebreak"/>
+BuiltinFunction&lt; lgamma_r_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::lgamma_r</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga018c6380310b66114e81d89d4b70d804"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga018c6380310b66114e81d89d4b70d804"></a>
+<tr class="memitem:ga60a198afe171d65bb09cbad8c0608b55"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga60a198afe171d65bb09cbad8c0608b55"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga018c6380310b66114e81d89d4b70d804"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga60a198afe171d65bb09cbad8c0608b55"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
 &lt; BuiltinFunction<br class="typebreak"/>
-&lt; lgamma_r_fun, typename <br class="typebreak"/>
+&lt; lgamma_r_name, typename <br class="typebreak"/>
 multiex_traits&lt; MultiEx &gt;<br class="typebreak"/>
 ::subtype...&gt;, multiex_dim<br class="typebreak"/>
 &lt; MultiEx...&gt;::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::lgamma_r</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gab645ccc016753fec500730bcdd8732be"><td class="memTemplParams" colspan="2"><a class="anchor" id="gab645ccc016753fec500730bcdd8732be"></a>
+<tr class="memitem:ga56649adaf90d531ea6f707b21c80a12e"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga56649adaf90d531ea6f707b21c80a12e"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gab645ccc016753fec500730bcdd8732be"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga56649adaf90d531ea6f707b21c80a12e"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; log_fun, <br class="typebreak"/>
+BuiltinFunction&lt; log_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::log</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gaa483c1e0be1878026ad9291ebb0d9f0b"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaa483c1e0be1878026ad9291ebb0d9f0b"></a>
+<tr class="memitem:ga235141af3678951719052ef12be80bd7"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga235141af3678951719052ef12be80bd7"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gaa483c1e0be1878026ad9291ebb0d9f0b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga235141af3678951719052ef12be80bd7"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; log_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; log_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::log</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gab117ee20499142570dcc1cf6e722170d"><td class="memTemplParams" colspan="2"><a class="anchor" id="gab117ee20499142570dcc1cf6e722170d"></a>
+<tr class="memitem:ga87611368ab4a758aefa53c942db40aff"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga87611368ab4a758aefa53c942db40aff"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gab117ee20499142570dcc1cf6e722170d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga87611368ab4a758aefa53c942db40aff"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; log2_fun, <br class="typebreak"/>
+BuiltinFunction&lt; log2_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::log2</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga97b43a2c980166b1252519be8c33a87f"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga97b43a2c980166b1252519be8c33a87f"></a>
+<tr class="memitem:ga522c4b929725db0fe85ae4fada1d8392"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga522c4b929725db0fe85ae4fada1d8392"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga97b43a2c980166b1252519be8c33a87f"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga522c4b929725db0fe85ae4fada1d8392"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; log2_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; log2_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::log2</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga3911164791008cc089bf99e3662aa6da"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga3911164791008cc089bf99e3662aa6da"></a>
+<tr class="memitem:gaec7beb2d698f13adefe328878fa41180"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaec7beb2d698f13adefe328878fa41180"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga3911164791008cc089bf99e3662aa6da"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gaec7beb2d698f13adefe328878fa41180"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; log10_fun, <br class="typebreak"/>
+BuiltinFunction&lt; log10_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::log10</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga9f05ae338e6653409061a7a2bc19d34c"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga9f05ae338e6653409061a7a2bc19d34c"></a>
+<tr class="memitem:gab7c1ccda50b02f27298d351fed094c81"><td class="memTemplParams" colspan="2"><a class="anchor" id="gab7c1ccda50b02f27298d351fed094c81"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga9f05ae338e6653409061a7a2bc19d34c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gab7c1ccda50b02f27298d351fed094c81"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; log10_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; log10_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::log10</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga18bdd3973d6f6ac4411c2cda75f1b82c"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga18bdd3973d6f6ac4411c2cda75f1b82c"></a>
+<tr class="memitem:ga53bb48a3f871b440fba8a228c54a3cb5"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga53bb48a3f871b440fba8a228c54a3cb5"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga18bdd3973d6f6ac4411c2cda75f1b82c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga53bb48a3f871b440fba8a228c54a3cb5"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; log1p_fun, <br class="typebreak"/>
+BuiltinFunction&lt; log1p_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::log1p</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gadda242d9075310abcfefec76a3254206"><td class="memTemplParams" colspan="2"><a class="anchor" id="gadda242d9075310abcfefec76a3254206"></a>
+<tr class="memitem:ga9a7951351a9c468fb9ecbf9c7c274d1c"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga9a7951351a9c468fb9ecbf9c7c274d1c"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gadda242d9075310abcfefec76a3254206"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga9a7951351a9c468fb9ecbf9c7c274d1c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; log1p_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; log1p_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::log1p</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga5897e4c8941e7f86680893ab9eb3c8bf"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga5897e4c8941e7f86680893ab9eb3c8bf"></a>
+<tr class="memitem:ga5c32318253e9ce79f1741f6ec91c35d9"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga5c32318253e9ce79f1741f6ec91c35d9"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga5897e4c8941e7f86680893ab9eb3c8bf"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga5c32318253e9ce79f1741f6ec91c35d9"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; logb_fun, <br class="typebreak"/>
+BuiltinFunction&lt; logb_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::logb</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga2d24ef7253752d7b9ec0b671320a5762"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga2d24ef7253752d7b9ec0b671320a5762"></a>
+<tr class="memitem:gadd0734ab61f7bed0855049a58f191d4d"><td class="memTemplParams" colspan="2"><a class="anchor" id="gadd0734ab61f7bed0855049a58f191d4d"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga2d24ef7253752d7b9ec0b671320a5762"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gadd0734ab61f7bed0855049a58f191d4d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; logb_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; logb_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::logb</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga1e25dc17a1d5d824a6dcb0ecb794b985"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga1e25dc17a1d5d824a6dcb0ecb794b985"></a>
+<tr class="memitem:gaff5ab282b74b386f73e9015bbf0c1f3a"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaff5ab282b74b386f73e9015bbf0c1f3a"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga1e25dc17a1d5d824a6dcb0ecb794b985"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gaff5ab282b74b386f73e9015bbf0c1f3a"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; mad_fun, <br class="typebreak"/>
+BuiltinFunction&lt; mad_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::mad</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga8482bac23a7df442679344997856426b"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga8482bac23a7df442679344997856426b"></a>
+<tr class="memitem:gab9ed7938cb7d8b6781d82fef3e23244b"><td class="memTemplParams" colspan="2"><a class="anchor" id="gab9ed7938cb7d8b6781d82fef3e23244b"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga8482bac23a7df442679344997856426b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gab9ed7938cb7d8b6781d82fef3e23244b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; mad_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; mad_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::mad</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gaed7526086f48881a1f5c16dde1788ded"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaed7526086f48881a1f5c16dde1788ded"></a>
+<tr class="memitem:ga5dcad31f7c22d226105e467b54ea40d8"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga5dcad31f7c22d226105e467b54ea40d8"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gaed7526086f48881a1f5c16dde1788ded"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga5dcad31f7c22d226105e467b54ea40d8"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; maxmag_fun, <br class="typebreak"/>
+BuiltinFunction&lt; maxmag_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::maxmag</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gaba3e754e98b4ce16959d71f144f110d5"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaba3e754e98b4ce16959d71f144f110d5"></a>
+<tr class="memitem:ga39ffd5c0c6578fecb7ea577408c1c83b"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga39ffd5c0c6578fecb7ea577408c1c83b"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gaba3e754e98b4ce16959d71f144f110d5"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga39ffd5c0c6578fecb7ea577408c1c83b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; maxmag_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; maxmag_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::maxmag</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga74f3ff5eedd12e3a1af7389b7f744a2c"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga74f3ff5eedd12e3a1af7389b7f744a2c"></a>
+<tr class="memitem:gab8b8416d8b6dc62e583323345f5e52e8"><td class="memTemplParams" colspan="2"><a class="anchor" id="gab8b8416d8b6dc62e583323345f5e52e8"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga74f3ff5eedd12e3a1af7389b7f744a2c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gab8b8416d8b6dc62e583323345f5e52e8"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; minmag_fun, <br class="typebreak"/>
+BuiltinFunction&lt; minmag_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::minmag</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gadbdaafcffc0ae59516aa96aa425e40fe"><td class="memTemplParams" colspan="2"><a class="anchor" id="gadbdaafcffc0ae59516aa96aa425e40fe"></a>
+<tr class="memitem:ga4d1b93d7d3fb78b460cd95be2d62550b"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga4d1b93d7d3fb78b460cd95be2d62550b"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gadbdaafcffc0ae59516aa96aa425e40fe"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga4d1b93d7d3fb78b460cd95be2d62550b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; minmag_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; minmag_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::minmag</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga84049379496bb00be1676b6de3602e60"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga84049379496bb00be1676b6de3602e60"></a>
+<tr class="memitem:gabc444e4617d9f5874d237196a5a967f4"><td class="memTemplParams" colspan="2"><a class="anchor" id="gabc444e4617d9f5874d237196a5a967f4"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga84049379496bb00be1676b6de3602e60"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gabc444e4617d9f5874d237196a5a967f4"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; modf_fun, <br class="typebreak"/>
+BuiltinFunction&lt; modf_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::modf</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga91a8efe1b987f60b9d9515f2b977d957"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga91a8efe1b987f60b9d9515f2b977d957"></a>
+<tr class="memitem:gab583fb0d544d515deb7ddfa36b13619b"><td class="memTemplParams" colspan="2"><a class="anchor" id="gab583fb0d544d515deb7ddfa36b13619b"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga91a8efe1b987f60b9d9515f2b977d957"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gab583fb0d544d515deb7ddfa36b13619b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; modf_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; modf_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::modf</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gabd92b55fbcf2d63c19c28dca25a99191"><td class="memTemplParams" colspan="2"><a class="anchor" id="gabd92b55fbcf2d63c19c28dca25a99191"></a>
+<tr class="memitem:ga7dbc7b33cd44a9f857d357babd1d0eae"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga7dbc7b33cd44a9f857d357babd1d0eae"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gabd92b55fbcf2d63c19c28dca25a99191"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga7dbc7b33cd44a9f857d357babd1d0eae"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; nan_fun, <br class="typebreak"/>
+BuiltinFunction&lt; nan_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::nan</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga6c8c28ebcbba25ba0f5fbb463864a9c8"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga6c8c28ebcbba25ba0f5fbb463864a9c8"></a>
+<tr class="memitem:ga1193a211b4ba47e5cc3b82334e1bfc98"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga1193a211b4ba47e5cc3b82334e1bfc98"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga6c8c28ebcbba25ba0f5fbb463864a9c8"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga1193a211b4ba47e5cc3b82334e1bfc98"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; nan_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; nan_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::nan</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga862d4ef5a353ad7abde3b7b433989e90"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga862d4ef5a353ad7abde3b7b433989e90"></a>
+<tr class="memitem:ga10d4f9b04f5b2f16e6014378ee257d00"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga10d4f9b04f5b2f16e6014378ee257d00"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga862d4ef5a353ad7abde3b7b433989e90"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga10d4f9b04f5b2f16e6014378ee257d00"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; nextafter_fun, <br class="typebreak"/>
-Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::nextafter</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga6e6bcb799301da627c2fcf956160a13f"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga6e6bcb799301da627c2fcf956160a13f"></a>
+BuiltinFunction<br class="typebreak"/>
+&lt; nextafter_name, Expr...&gt;<br class="typebreak"/>
+ &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::nextafter</b> (const Expr &amp;...expr)</td></tr>
+<tr class="memitem:gaf59753db5b55c89ac80ef146d6257b01"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaf59753db5b55c89ac80ef146d6257b01"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga6e6bcb799301da627c2fcf956160a13f"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gaf59753db5b55c89ac80ef146d6257b01"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
 &lt; BuiltinFunction<br class="typebreak"/>
-&lt; nextafter_fun, typename <br class="typebreak"/>
+&lt; nextafter_name, typename <br class="typebreak"/>
 multiex_traits&lt; MultiEx &gt;<br class="typebreak"/>
 ::subtype...&gt;, multiex_dim<br class="typebreak"/>
 &lt; MultiEx...&gt;::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::nextafter</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga1f82bedcd5849824bf47cebc75d6ea0a"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga1f82bedcd5849824bf47cebc75d6ea0a"></a>
+<tr class="memitem:gab8d43e2e166bb574304153f02664446a"><td class="memTemplParams" colspan="2"><a class="anchor" id="gab8d43e2e166bb574304153f02664446a"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga1f82bedcd5849824bf47cebc75d6ea0a"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gab8d43e2e166bb574304153f02664446a"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; pow_fun, <br class="typebreak"/>
+BuiltinFunction&lt; pow_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::pow</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gaefe739879acbd0cfa902016fdfe3540f"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaefe739879acbd0cfa902016fdfe3540f"></a>
+<tr class="memitem:ga0f7e8a997b8a876bc74700a1f5ada88c"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga0f7e8a997b8a876bc74700a1f5ada88c"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gaefe739879acbd0cfa902016fdfe3540f"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga0f7e8a997b8a876bc74700a1f5ada88c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; pow_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; pow_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::pow</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga5202284e24581fecfb51d15e4f4e6a1b"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga5202284e24581fecfb51d15e4f4e6a1b"></a>
+<tr class="memitem:ga916b1e6a7dc3c83eb75b8bde88439958"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga916b1e6a7dc3c83eb75b8bde88439958"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga5202284e24581fecfb51d15e4f4e6a1b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga916b1e6a7dc3c83eb75b8bde88439958"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; pown_fun, <br class="typebreak"/>
+BuiltinFunction&lt; pown_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::pown</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gac177f5e4f3a2840662820a35596c1e6e"><td class="memTemplParams" colspan="2"><a class="anchor" id="gac177f5e4f3a2840662820a35596c1e6e"></a>
+<tr class="memitem:gad1d63ddb1120f8fa2cbe3ac5040bf2b0"><td class="memTemplParams" colspan="2"><a class="anchor" id="gad1d63ddb1120f8fa2cbe3ac5040bf2b0"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gac177f5e4f3a2840662820a35596c1e6e"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gad1d63ddb1120f8fa2cbe3ac5040bf2b0"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; pown_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; pown_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::pown</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gaa2306e4e2114b45495856267a84d601b"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaa2306e4e2114b45495856267a84d601b"></a>
+<tr class="memitem:ga85421733095e833d964b50fb875f0782"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga85421733095e833d964b50fb875f0782"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gaa2306e4e2114b45495856267a84d601b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga85421733095e833d964b50fb875f0782"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; powr_fun, <br class="typebreak"/>
+BuiltinFunction&lt; powr_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::powr</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga3572a900a643f2dbe20da768e6dc2ee0"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga3572a900a643f2dbe20da768e6dc2ee0"></a>
+<tr class="memitem:ga3d61cb31d72798bcd4a083c3ffeadd80"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga3d61cb31d72798bcd4a083c3ffeadd80"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga3572a900a643f2dbe20da768e6dc2ee0"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga3d61cb31d72798bcd4a083c3ffeadd80"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; powr_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; powr_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::powr</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gaa0ed15a6511005559315a26a6b5f08bd"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaa0ed15a6511005559315a26a6b5f08bd"></a>
+<tr class="memitem:ga08b39f8900976f634a74f3edd0452c23"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga08b39f8900976f634a74f3edd0452c23"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gaa0ed15a6511005559315a26a6b5f08bd"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga08b39f8900976f634a74f3edd0452c23"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; remainder_fun, <br class="typebreak"/>
-Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::remainder</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gaf79ec6ebd711650e8752babba2228e60"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaf79ec6ebd711650e8752babba2228e60"></a>
+BuiltinFunction<br class="typebreak"/>
+&lt; remainder_name, Expr...&gt;<br class="typebreak"/>
+ &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::remainder</b> (const Expr &amp;...expr)</td></tr>
+<tr class="memitem:ga8853c88dfb19ed306ecc77bec0ea0be7"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga8853c88dfb19ed306ecc77bec0ea0be7"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gaf79ec6ebd711650e8752babba2228e60"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga8853c88dfb19ed306ecc77bec0ea0be7"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
 &lt; BuiltinFunction<br class="typebreak"/>
-&lt; remainder_fun, typename <br class="typebreak"/>
+&lt; remainder_name, typename <br class="typebreak"/>
 multiex_traits&lt; MultiEx &gt;<br class="typebreak"/>
 ::subtype...&gt;, multiex_dim<br class="typebreak"/>
 &lt; MultiEx...&gt;::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::remainder</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gae1de5eb58de2ceee0068ac55ba5715ea"><td class="memTemplParams" colspan="2"><a class="anchor" id="gae1de5eb58de2ceee0068ac55ba5715ea"></a>
+<tr class="memitem:gaeea4683772adbe1d439cac88a75e79af"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaeea4683772adbe1d439cac88a75e79af"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gae1de5eb58de2ceee0068ac55ba5715ea"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gaeea4683772adbe1d439cac88a75e79af"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; remquo_fun, <br class="typebreak"/>
+BuiltinFunction&lt; remquo_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::remquo</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga8e03f1c7427bdb8a2e0f9d44dc66765f"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga8e03f1c7427bdb8a2e0f9d44dc66765f"></a>
+<tr class="memitem:ga47095d878a09b5f7e22973c7fd52fe6b"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga47095d878a09b5f7e22973c7fd52fe6b"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga8e03f1c7427bdb8a2e0f9d44dc66765f"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga47095d878a09b5f7e22973c7fd52fe6b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; remquo_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; remquo_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::remquo</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga09bfe4a3150ed237bb776a3a2c0e4d5a"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga09bfe4a3150ed237bb776a3a2c0e4d5a"></a>
+<tr class="memitem:gad2f3b2726007f872bb2ec5d0ab0e4b17"><td class="memTemplParams" colspan="2"><a class="anchor" id="gad2f3b2726007f872bb2ec5d0ab0e4b17"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga09bfe4a3150ed237bb776a3a2c0e4d5a"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gad2f3b2726007f872bb2ec5d0ab0e4b17"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; rint_fun, <br class="typebreak"/>
+BuiltinFunction&lt; rint_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::rint</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga63d557fc3a4d08e23fcb7e25ff16d193"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga63d557fc3a4d08e23fcb7e25ff16d193"></a>
+<tr class="memitem:ga1797ca25e0048018f35cf502454881d5"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga1797ca25e0048018f35cf502454881d5"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga63d557fc3a4d08e23fcb7e25ff16d193"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga1797ca25e0048018f35cf502454881d5"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; rint_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; rint_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::rint</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga2ff75b0178292a30d5b663dd3cef454d"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga2ff75b0178292a30d5b663dd3cef454d"></a>
+<tr class="memitem:ga7784632eeedf4738d2a624ab89629e6b"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga7784632eeedf4738d2a624ab89629e6b"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga2ff75b0178292a30d5b663dd3cef454d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga7784632eeedf4738d2a624ab89629e6b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; rootn_fun, <br class="typebreak"/>
+BuiltinFunction&lt; rootn_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::rootn</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga9fb186f6a0572354d03df7a9597d53c1"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga9fb186f6a0572354d03df7a9597d53c1"></a>
+<tr class="memitem:ga62340c1a9d01f0df967e411037e2729d"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga62340c1a9d01f0df967e411037e2729d"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga9fb186f6a0572354d03df7a9597d53c1"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga62340c1a9d01f0df967e411037e2729d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; rootn_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; rootn_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::rootn</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gaabd4967eb32e02c0b77fde03384939d8"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaabd4967eb32e02c0b77fde03384939d8"></a>
+<tr class="memitem:ga81daf2b3fa17e8840697689ea1d21a4d"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga81daf2b3fa17e8840697689ea1d21a4d"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gaabd4967eb32e02c0b77fde03384939d8"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga81daf2b3fa17e8840697689ea1d21a4d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; round_fun, <br class="typebreak"/>
+BuiltinFunction&lt; round_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::round</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gacbed88d751efe3787960a287650efe94"><td class="memTemplParams" colspan="2"><a class="anchor" id="gacbed88d751efe3787960a287650efe94"></a>
+<tr class="memitem:gab3449df6716fe6cb2d2c5173214a32e9"><td class="memTemplParams" colspan="2"><a class="anchor" id="gab3449df6716fe6cb2d2c5173214a32e9"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gacbed88d751efe3787960a287650efe94"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gab3449df6716fe6cb2d2c5173214a32e9"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; round_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; round_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::round</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gac94ca6fdad5ce1a836ca745690a30c38"><td class="memTemplParams" colspan="2"><a class="anchor" id="gac94ca6fdad5ce1a836ca745690a30c38"></a>
+<tr class="memitem:gaf20aa318be6cf8bb4712f35c5bc9aaac"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaf20aa318be6cf8bb4712f35c5bc9aaac"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gac94ca6fdad5ce1a836ca745690a30c38"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gaf20aa318be6cf8bb4712f35c5bc9aaac"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; rsqrt_fun, <br class="typebreak"/>
+BuiltinFunction&lt; rsqrt_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::rsqrt</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga61c1ef07509c00b56215c1e36ec080a4"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga61c1ef07509c00b56215c1e36ec080a4"></a>
+<tr class="memitem:gae4759c7b9b8662fd8b2ba408d26af26f"><td class="memTemplParams" colspan="2"><a class="anchor" id="gae4759c7b9b8662fd8b2ba408d26af26f"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga61c1ef07509c00b56215c1e36ec080a4"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gae4759c7b9b8662fd8b2ba408d26af26f"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; rsqrt_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; rsqrt_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::rsqrt</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gab147a738249e64555970c4a472dbe225"><td class="memTemplParams" colspan="2"><a class="anchor" id="gab147a738249e64555970c4a472dbe225"></a>
+<tr class="memitem:gadf53da9b5a22e92f604185541ba7158c"><td class="memTemplParams" colspan="2"><a class="anchor" id="gadf53da9b5a22e92f604185541ba7158c"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gab147a738249e64555970c4a472dbe225"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gadf53da9b5a22e92f604185541ba7158c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; sin_fun, <br class="typebreak"/>
+BuiltinFunction&lt; sin_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::sin</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga95276175559013049297a671d0f90ef5"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga95276175559013049297a671d0f90ef5"></a>
+<tr class="memitem:ga4ab03d9a0058daf109ae5a591aeba233"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga4ab03d9a0058daf109ae5a591aeba233"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga95276175559013049297a671d0f90ef5"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga4ab03d9a0058daf109ae5a591aeba233"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; sin_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; sin_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::sin</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga27a2289dd0fd1dc6ac73e0e8e2fd033f"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga27a2289dd0fd1dc6ac73e0e8e2fd033f"></a>
+<tr class="memitem:ga71911a06161e995baff3e46f82367f4d"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga71911a06161e995baff3e46f82367f4d"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga27a2289dd0fd1dc6ac73e0e8e2fd033f"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga71911a06161e995baff3e46f82367f4d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; sincos_fun, <br class="typebreak"/>
+BuiltinFunction&lt; sincos_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::sincos</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gad5f061ab3a7105b726f644c4cb052068"><td class="memTemplParams" colspan="2"><a class="anchor" id="gad5f061ab3a7105b726f644c4cb052068"></a>
+<tr class="memitem:ga3228dadb5e3e72d977efa45eae78c1ae"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga3228dadb5e3e72d977efa45eae78c1ae"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gad5f061ab3a7105b726f644c4cb052068"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga3228dadb5e3e72d977efa45eae78c1ae"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; sincos_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; sincos_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::sincos</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga6a0e51ea999cf3d0113ad961864e5529"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga6a0e51ea999cf3d0113ad961864e5529"></a>
+<tr class="memitem:ga399b3419ef2a8f04d4092d5b1f6a4b3f"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga399b3419ef2a8f04d4092d5b1f6a4b3f"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga6a0e51ea999cf3d0113ad961864e5529"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga399b3419ef2a8f04d4092d5b1f6a4b3f"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; sinh_fun, <br class="typebreak"/>
+BuiltinFunction&lt; sinh_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::sinh</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga1d43643973cc7e582cb15b04a58dc5ea"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga1d43643973cc7e582cb15b04a58dc5ea"></a>
+<tr class="memitem:ga203f895a9e3fb3ec6564df771a51dc0c"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga203f895a9e3fb3ec6564df771a51dc0c"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga1d43643973cc7e582cb15b04a58dc5ea"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga203f895a9e3fb3ec6564df771a51dc0c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; sinh_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; sinh_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::sinh</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gaf1338ca4d7fdfcd047250098fcbd10f0"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaf1338ca4d7fdfcd047250098fcbd10f0"></a>
+<tr class="memitem:ga381cdc0ac4be75c84a43a8fd7e714974"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga381cdc0ac4be75c84a43a8fd7e714974"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gaf1338ca4d7fdfcd047250098fcbd10f0"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga381cdc0ac4be75c84a43a8fd7e714974"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; sinpi_fun, <br class="typebreak"/>
+BuiltinFunction&lt; sinpi_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::sinpi</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:gad9af6c058db2137964892e46b1fb8d36"><td class="memTemplParams" colspan="2"><a class="anchor" id="gad9af6c058db2137964892e46b1fb8d36"></a>
+<tr class="memitem:ga2e8cfb477b734c7aa626b35043f64814"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga2e8cfb477b734c7aa626b35043f64814"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:gad9af6c058db2137964892e46b1fb8d36"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga2e8cfb477b734c7aa626b35043f64814"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; sinpi_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; sinpi_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::sinpi</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gadc33179b3f1b18e41be752dcbe69f185"><td class="memTemplParams" colspan="2"><a class="anchor" id="gadc33179b3f1b18e41be752dcbe69f185"></a>
+<tr class="memitem:gaa397bf3a8a7ad0513d6c65f3b3491b0a"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaa397bf3a8a7ad0513d6c65f3b3491b0a"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gadc33179b3f1b18e41be752dcbe69f185"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gaa397bf3a8a7ad0513d6c65f3b3491b0a"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; sqrt_fun, <br class="typebreak"/>
+BuiltinFunction&lt; sqrt_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::sqrt</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga3833b40a1433eb8a34f69d10c0e55da6"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga3833b40a1433eb8a34f69d10c0e55da6"></a>
+<tr class="memitem:ga8b0b1ff264e25eff96714cd8924b4b13"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga8b0b1ff264e25eff96714cd8924b4b13"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga3833b40a1433eb8a34f69d10c0e55da6"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga8b0b1ff264e25eff96714cd8924b4b13"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; sqrt_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; sqrt_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::sqrt</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:gabc6ec8e7d026af379fc4796c7e0c23fd"><td class="memTemplParams" colspan="2"><a class="anchor" id="gabc6ec8e7d026af379fc4796c7e0c23fd"></a>
+<tr class="memitem:ga828213b85a68061745162cd68b4f8bc7"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga828213b85a68061745162cd68b4f8bc7"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:gabc6ec8e7d026af379fc4796c7e0c23fd"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga828213b85a68061745162cd68b4f8bc7"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; tan_fun, <br class="typebreak"/>
+BuiltinFunction&lt; tan_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::tan</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga6b28ac7bbf93aa0ffcf994d63d60bac9"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga6b28ac7bbf93aa0ffcf994d63d60bac9"></a>
+<tr class="memitem:ga030e3bfe02ea27e6be661ebf22341285"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga030e3bfe02ea27e6be661ebf22341285"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga6b28ac7bbf93aa0ffcf994d63d60bac9"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga030e3bfe02ea27e6be661ebf22341285"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; tan_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; tan_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::tan</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga84b8d6e6e77454dca776999b183f3a37"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga84b8d6e6e77454dca776999b183f3a37"></a>
+<tr class="memitem:ga153fa939360d4e426c93b51cf9ddd9f3"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga153fa939360d4e426c93b51cf9ddd9f3"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga84b8d6e6e77454dca776999b183f3a37"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga153fa939360d4e426c93b51cf9ddd9f3"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; tanh_fun, <br class="typebreak"/>
+BuiltinFunction&lt; tanh_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::tanh</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga8e5cbcf5238d0c58f15f10cf21f94f10"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga8e5cbcf5238d0c58f15f10cf21f94f10"></a>
+<tr class="memitem:ga36d6ccef0956fff9e35f37cbe4f26f97"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga36d6ccef0956fff9e35f37cbe4f26f97"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga8e5cbcf5238d0c58f15f10cf21f94f10"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga36d6ccef0956fff9e35f37cbe4f26f97"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; tanh_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; tanh_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::tanh</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga6e186384afadef2995b09de4024f49c2"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga6e186384afadef2995b09de4024f49c2"></a>
+<tr class="memitem:ga04f66c3ac0a541d9f84b2e7ee288e834"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga04f66c3ac0a541d9f84b2e7ee288e834"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga6e186384afadef2995b09de4024f49c2"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:ga04f66c3ac0a541d9f84b2e7ee288e834"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; tanpi_fun, <br class="typebreak"/>
+BuiltinFunction&lt; tanpi_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::tanpi</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga182320df6df2db5d5d67fbeebe983284"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga182320df6df2db5d5d67fbeebe983284"></a>
+<tr class="memitem:gab22b82454409cadb44cad03eee0d65ed"><td class="memTemplParams" colspan="2"><a class="anchor" id="gab22b82454409cadb44cad03eee0d65ed"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga182320df6df2db5d5d67fbeebe983284"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gab22b82454409cadb44cad03eee0d65ed"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; tanpi_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; tanpi_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::tanpi</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga7feccd90a0983242f7d8180cf6991532"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga7feccd90a0983242f7d8180cf6991532"></a>
+<tr class="memitem:gad1fc3cf03aadfc295fbc575128d71083"><td class="memTemplParams" colspan="2"><a class="anchor" id="gad1fc3cf03aadfc295fbc575128d71083"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga7feccd90a0983242f7d8180cf6991532"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gad1fc3cf03aadfc295fbc575128d71083"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; tgamma_fun, <br class="typebreak"/>
+BuiltinFunction&lt; tgamma_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::tgamma</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga2ee4308d040fdf4f940a50151e8d9846"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga2ee4308d040fdf4f940a50151e8d9846"></a>
+<tr class="memitem:ga2ccbef5cf80271adb30d79bd3918063c"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga2ccbef5cf80271adb30d79bd3918063c"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga2ee4308d040fdf4f940a50151e8d9846"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:ga2ccbef5cf80271adb30d79bd3918063c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; tgamma_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; tgamma_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::tgamma</b> (const MultiEx &amp;...multiexpr)</td></tr>
-<tr class="memitem:ga9e9677b7df3be316840362a1ad5667c3"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga9e9677b7df3be316840362a1ad5667c3"></a>
+<tr class="memitem:gab6b65cfef6205df2e3434509a72e9573"><td class="memTemplParams" colspan="2"><a class="anchor" id="gab6b65cfef6205df2e3434509a72e9573"></a>
 template&lt;class... Expr&gt; </td></tr>
-<tr class="memitem:ga9e9677b7df3be316840362a1ad5667c3"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
+<tr class="memitem:gab6b65cfef6205df2e3434509a72e9573"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All&lt; All<br class="typebreak"/>
 &lt; valid_expr&lt; Expr &gt;...&gt;, Not<br class="typebreak"/>
 &lt; All&lt; std::is_arithmetic<br class="typebreak"/>
 &lt; Expr &gt;...&gt; &gt; &gt;::value, <br class="typebreak"/>
-BuiltinFunction&lt; trunc_fun, <br class="typebreak"/>
+BuiltinFunction&lt; trunc_name, <br class="typebreak"/>
 Expr...&gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::trunc</b> (const Expr &amp;...expr)</td></tr>
-<tr class="memitem:ga253be8b4bcbcd30c953d37c27b01f4ac"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga253be8b4bcbcd30c953d37c27b01f4ac"></a>
+<tr class="memitem:gab7be379375b57a81c820c414bc717c3d"><td class="memTemplParams" colspan="2"><a class="anchor" id="gab7be379375b57a81c820c414bc717c3d"></a>
 template&lt;class... MultiEx&gt; </td></tr>
-<tr class="memitem:ga253be8b4bcbcd30c953d37c27b01f4ac"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
+<tr class="memitem:gab7be379375b57a81c820c414bc717c3d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; valid_multiex&lt; MultiEx &gt;<br class="typebreak"/>
 ..., Not&lt; All<br class="typebreak"/>
 &lt; std::is_arithmetic&lt; MultiEx &gt;<br class="typebreak"/>
 ...&gt; &gt; &gt;::value, <br class="typebreak"/>
 MultiExpression<br class="typebreak"/>
-&lt; BuiltinFunction&lt; trunc_fun, <br class="typebreak"/>
+&lt; BuiltinFunction&lt; trunc_name, <br class="typebreak"/>
 typename multiex_traits<br class="typebreak"/>
 &lt; MultiEx &gt;::subtype...&gt;<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::trunc</b> (const MultiEx &amp;...multiexpr)</td></tr>
 <tr class="memitem:a14786a0605f83c1df74e9e66685630b0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a14786a0605f83c1df74e9e66685630b0">vex::partition_by_vector_perf</a> (size_t n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
 <tr class="memdesc:a14786a0605f83c1df74e9e66685630b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitions vector wrt to vector performance of devices.  <a href="#a14786a0605f83c1df74e9e66685630b0"></a><br/></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ga1bd2312bf2e9a3e801828449e54c0630"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga1bd2312bf2e9a3e801828449e54c0630"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::acos_fun</b> [] = &quot;acos&quot;</td></tr>
-<tr class="memitem:gacdec96298aa100f3811a238d10a473a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gacdec96298aa100f3811a238d10a473a6"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::acosh_fun</b> [] = &quot;acosh&quot;</td></tr>
-<tr class="memitem:ga825b7cde753227b56f83417354a7526f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga825b7cde753227b56f83417354a7526f"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::acospi_fun</b> [] = &quot;acospi&quot;</td></tr>
-<tr class="memitem:ga8e88ef3994b3ca85f5568027851392d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga8e88ef3994b3ca85f5568027851392d8"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::asin_fun</b> [] = &quot;asin&quot;</td></tr>
-<tr class="memitem:gaa90d733497e7295e33757701bb9646a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa90d733497e7295e33757701bb9646a3"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::asinh_fun</b> [] = &quot;asinh&quot;</td></tr>
-<tr class="memitem:ga71524346694be84a1b14fd1ea46f5088"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga71524346694be84a1b14fd1ea46f5088"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::asinpi_fun</b> [] = &quot;asinpi&quot;</td></tr>
-<tr class="memitem:ga489626eed08119af4d62446ff902d77b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga489626eed08119af4d62446ff902d77b"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::atan_fun</b> [] = &quot;atan&quot;</td></tr>
-<tr class="memitem:gaf9fe0fafd50de24c55b5cadc5db2e5b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaf9fe0fafd50de24c55b5cadc5db2e5b5"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::atan2_fun</b> [] = &quot;atan2&quot;</td></tr>
-<tr class="memitem:ga95dc45f13a1134df0ab780f0d9532b4d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga95dc45f13a1134df0ab780f0d9532b4d"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::atanh_fun</b> [] = &quot;atanh&quot;</td></tr>
-<tr class="memitem:gaae357cfd4f096d2a187f7639d55c90c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaae357cfd4f096d2a187f7639d55c90c3"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::atanpi_fun</b> [] = &quot;atanpi&quot;</td></tr>
-<tr class="memitem:gaa929abce2269eee6dd6a1dbe5a889668"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa929abce2269eee6dd6a1dbe5a889668"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::atan2pi_fun</b> [] = &quot;atan2pi&quot;</td></tr>
-<tr class="memitem:ga422501df4ff01920e60d27cca24c9877"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga422501df4ff01920e60d27cca24c9877"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::cbrt_fun</b> [] = &quot;cbrt&quot;</td></tr>
-<tr class="memitem:gaad696a1857e6033a3c9bac0029aceac7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaad696a1857e6033a3c9bac0029aceac7"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::ceil_fun</b> [] = &quot;ceil&quot;</td></tr>
-<tr class="memitem:ga39515cbfa580f31861149325d1f5ee7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga39515cbfa580f31861149325d1f5ee7d"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::copysign_fun</b> [] = &quot;copysign&quot;</td></tr>
-<tr class="memitem:gadf65f519c52058e3733b8186c13e5bcb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gadf65f519c52058e3733b8186c13e5bcb"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::cos_fun</b> [] = &quot;cos&quot;</td></tr>
-<tr class="memitem:ga9eb14bf2ccb0cd37ce580d6501cf89e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga9eb14bf2ccb0cd37ce580d6501cf89e1"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::cosh_fun</b> [] = &quot;cosh&quot;</td></tr>
-<tr class="memitem:ga484899756b6e1f0802951432fc68bdd3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga484899756b6e1f0802951432fc68bdd3"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::cospi_fun</b> [] = &quot;cospi&quot;</td></tr>
-<tr class="memitem:gae6659aa075f3a45f1219cdfdec1521e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gae6659aa075f3a45f1219cdfdec1521e2"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::erfc_fun</b> [] = &quot;erfc&quot;</td></tr>
-<tr class="memitem:ga3eda7b151b130c941bf257011fdaa700"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga3eda7b151b130c941bf257011fdaa700"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::erf_fun</b> [] = &quot;erf&quot;</td></tr>
-<tr class="memitem:ga33e2425401c27b6ed5e6acd1e3cd6be5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga33e2425401c27b6ed5e6acd1e3cd6be5"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::exp_fun</b> [] = &quot;exp&quot;</td></tr>
-<tr class="memitem:ga301e18323e2c8ea52f7f807c21ab7caa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga301e18323e2c8ea52f7f807c21ab7caa"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::exp2_fun</b> [] = &quot;exp2&quot;</td></tr>
-<tr class="memitem:ga44ea9987cf354e2f7f73ad0a173b2d1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga44ea9987cf354e2f7f73ad0a173b2d1c"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::exp10_fun</b> [] = &quot;exp10&quot;</td></tr>
-<tr class="memitem:ga18b4a98e6b147228b86661317d8df5a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga18b4a98e6b147228b86661317d8df5a0"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::expm1_fun</b> [] = &quot;expm1&quot;</td></tr>
-<tr class="memitem:ga26b64e84ad49ba88e3f3e45e4e2f3eb3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga26b64e84ad49ba88e3f3e45e4e2f3eb3"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::fabs_fun</b> [] = &quot;fabs&quot;</td></tr>
-<tr class="memitem:ga96e4a7af6a9eeb9a2bb57747c0c20916"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga96e4a7af6a9eeb9a2bb57747c0c20916"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::fdim_fun</b> [] = &quot;fdim&quot;</td></tr>
-<tr class="memitem:gaa92f0406c8a1d3de52b95b9266f21eff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa92f0406c8a1d3de52b95b9266f21eff"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::floor_fun</b> [] = &quot;floor&quot;</td></tr>
-<tr class="memitem:ga85b49258db694a2e3b9f21d855e2ff8e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga85b49258db694a2e3b9f21d855e2ff8e"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::fma_fun</b> [] = &quot;fma&quot;</td></tr>
-<tr class="memitem:ga1a551f09e3cba004ea7d4045736d19a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga1a551f09e3cba004ea7d4045736d19a5"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::fmax_fun</b> [] = &quot;fmax&quot;</td></tr>
-<tr class="memitem:gadd8d9c99a986eeed452413b987cac21e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gadd8d9c99a986eeed452413b987cac21e"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::fmin_fun</b> [] = &quot;fmin&quot;</td></tr>
-<tr class="memitem:ga93aad69f2ff04636b24cb7e8e01dec16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga93aad69f2ff04636b24cb7e8e01dec16"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::fmod_fun</b> [] = &quot;fmod&quot;</td></tr>
-<tr class="memitem:gaf6100aba9c60478aa1ec3f034c5d3504"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaf6100aba9c60478aa1ec3f034c5d3504"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::fract_fun</b> [] = &quot;fract&quot;</td></tr>
-<tr class="memitem:ga8988f415c6efe4d8c1c1ae7636f96e18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga8988f415c6efe4d8c1c1ae7636f96e18"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::frexp_fun</b> [] = &quot;frexp&quot;</td></tr>
-<tr class="memitem:ga45b7c32b3d5a5dc26eccf698a7a1b3cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga45b7c32b3d5a5dc26eccf698a7a1b3cd"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::hypot_fun</b> [] = &quot;hypot&quot;</td></tr>
-<tr class="memitem:ga3a022aeeb6a5e7ac1211aa2ec01b70be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga3a022aeeb6a5e7ac1211aa2ec01b70be"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::ilogb_fun</b> [] = &quot;ilogb&quot;</td></tr>
-<tr class="memitem:ga8ef00ea41d81889cf2b8161cf161548d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga8ef00ea41d81889cf2b8161cf161548d"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::ldexp_fun</b> [] = &quot;ldexp&quot;</td></tr>
-<tr class="memitem:ga97a19121f0672c6854e72bfd8bc1cc37"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga97a19121f0672c6854e72bfd8bc1cc37"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::lgamma_fun</b> [] = &quot;lgamma&quot;</td></tr>
-<tr class="memitem:ga43f679017065d7ba7a62f8305f36b918"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga43f679017065d7ba7a62f8305f36b918"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::lgamma_r_fun</b> [] = &quot;lgamma_r&quot;</td></tr>
-<tr class="memitem:gaa882f4d4974c58170b71184a76d81113"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa882f4d4974c58170b71184a76d81113"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::log_fun</b> [] = &quot;log&quot;</td></tr>
-<tr class="memitem:ga03eec3799efd0075caae6e6ce0f4f19e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga03eec3799efd0075caae6e6ce0f4f19e"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::log2_fun</b> [] = &quot;log2&quot;</td></tr>
-<tr class="memitem:ga4eec23eb78c81320f7b6dfbe8e037fb6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga4eec23eb78c81320f7b6dfbe8e037fb6"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::log10_fun</b> [] = &quot;log10&quot;</td></tr>
-<tr class="memitem:gab6b6dfd5217b142e926d4440040af3f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gab6b6dfd5217b142e926d4440040af3f4"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::log1p_fun</b> [] = &quot;log1p&quot;</td></tr>
-<tr class="memitem:ga787d31dabdb0640f79499c062e256594"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga787d31dabdb0640f79499c062e256594"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::logb_fun</b> [] = &quot;logb&quot;</td></tr>
-<tr class="memitem:ga498d41095483c289bcf1800425210073"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga498d41095483c289bcf1800425210073"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::mad_fun</b> [] = &quot;mad&quot;</td></tr>
-<tr class="memitem:ga1205d5f47358e00c9d9e3625a83b55c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga1205d5f47358e00c9d9e3625a83b55c1"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::maxmag_fun</b> [] = &quot;maxmag&quot;</td></tr>
-<tr class="memitem:ga0f7eb547f910b8bcbd348b244984042d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga0f7eb547f910b8bcbd348b244984042d"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::minmag_fun</b> [] = &quot;minmag&quot;</td></tr>
-<tr class="memitem:ga9f40e0fbcfebec78bb25fc65e3dc9ec0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga9f40e0fbcfebec78bb25fc65e3dc9ec0"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::modf_fun</b> [] = &quot;modf&quot;</td></tr>
-<tr class="memitem:gac1cb3b0f7a02b6e9e2b836545e9b0a29"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac1cb3b0f7a02b6e9e2b836545e9b0a29"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::nan_fun</b> [] = &quot;nan&quot;</td></tr>
-<tr class="memitem:gaf0ae4813b1d1f5eae93ac5b2597662f0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaf0ae4813b1d1f5eae93ac5b2597662f0"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::nextafter_fun</b> [] = &quot;nextafter&quot;</td></tr>
-<tr class="memitem:ga0db2bd33845a0e5bbcc2a019d2f4832f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga0db2bd33845a0e5bbcc2a019d2f4832f"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::pow_fun</b> [] = &quot;pow&quot;</td></tr>
-<tr class="memitem:gab40d88ab8a8e5420f1368cbf970b6d47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gab40d88ab8a8e5420f1368cbf970b6d47"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::pown_fun</b> [] = &quot;pown&quot;</td></tr>
-<tr class="memitem:ga23db72e5d986d418b5728619f83768c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga23db72e5d986d418b5728619f83768c6"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::powr_fun</b> [] = &quot;powr&quot;</td></tr>
-<tr class="memitem:ga3ee21e2ca1b6ea9bdf78ba0a4bdf63df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga3ee21e2ca1b6ea9bdf78ba0a4bdf63df"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::remainder_fun</b> [] = &quot;remainder&quot;</td></tr>
-<tr class="memitem:gacb3b78768cdc5a3349ce3613317fab63"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gacb3b78768cdc5a3349ce3613317fab63"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::remquo_fun</b> [] = &quot;remquo&quot;</td></tr>
-<tr class="memitem:ga32e45c2021ccbc59c46a6ae3ac37fc13"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga32e45c2021ccbc59c46a6ae3ac37fc13"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::rint_fun</b> [] = &quot;rint&quot;</td></tr>
-<tr class="memitem:gad29f083f1b65ad14a3af8a79b5626ac0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gad29f083f1b65ad14a3af8a79b5626ac0"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::rootn_fun</b> [] = &quot;rootn&quot;</td></tr>
-<tr class="memitem:ga0df3590d732f3b5fc422d8273cf8446f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga0df3590d732f3b5fc422d8273cf8446f"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::round_fun</b> [] = &quot;round&quot;</td></tr>
-<tr class="memitem:ga14369f7155caeca01b09b2ecc4b48659"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga14369f7155caeca01b09b2ecc4b48659"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::rsqrt_fun</b> [] = &quot;rsqrt&quot;</td></tr>
-<tr class="memitem:ga108909b06810c497e5b8fe6b0869849e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga108909b06810c497e5b8fe6b0869849e"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::sin_fun</b> [] = &quot;sin&quot;</td></tr>
-<tr class="memitem:ga107f6e7410893cd8675c17fb2ac6c209"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga107f6e7410893cd8675c17fb2ac6c209"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::sincos_fun</b> [] = &quot;sincos&quot;</td></tr>
-<tr class="memitem:gafaaf4e13f6cc7bd670a0b57a24c10f9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafaaf4e13f6cc7bd670a0b57a24c10f9a"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::sinh_fun</b> [] = &quot;sinh&quot;</td></tr>
-<tr class="memitem:gaecf00838853dcb32ab69c422ce78da4a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaecf00838853dcb32ab69c422ce78da4a"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::sinpi_fun</b> [] = &quot;sinpi&quot;</td></tr>
-<tr class="memitem:ga2120d664b9f533fbe3a6f1fe48059ff9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga2120d664b9f533fbe3a6f1fe48059ff9"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::sqrt_fun</b> [] = &quot;sqrt&quot;</td></tr>
-<tr class="memitem:ga937fa62ff598c26701f64ae4a5821f35"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga937fa62ff598c26701f64ae4a5821f35"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::tan_fun</b> [] = &quot;tan&quot;</td></tr>
-<tr class="memitem:gaa5b50998681a587564564708e0372f10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa5b50998681a587564564708e0372f10"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::tanh_fun</b> [] = &quot;tanh&quot;</td></tr>
-<tr class="memitem:ga7a40bc03812991e9c34caa36c0d77f05"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7a40bc03812991e9c34caa36c0d77f05"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::tanpi_fun</b> [] = &quot;tanpi&quot;</td></tr>
-<tr class="memitem:ga2b2f4136578172cd198dc85d89463e42"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga2b2f4136578172cd198dc85d89463e42"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::tgamma_fun</b> [] = &quot;tgamma&quot;</td></tr>
-<tr class="memitem:gae0493fac9a35a0bebeff235a1c623682"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gae0493fac9a35a0bebeff235a1c623682"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>vex::trunc_fun</b> [] = &quot;trunc&quot;</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>OpenCL device vector. </p>

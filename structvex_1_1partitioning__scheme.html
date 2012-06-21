@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>VexCL: vex::partitioning_scheme Struct Reference</title>
+<title>VexCL: vex::partitioning_scheme&lt; dummy &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -48,10 +48,9 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">vex::partitioning_scheme Struct Reference</div>  </div>
+<div class="title">vex::partitioning_scheme&lt; dummy &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -64,24 +63,24 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a974bc9ff214679816cea57c3142e377f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a974bc9ff214679816cea57c3142e377f"></a>
+<tr class="memitem:a4b9c7535bf1b7a5a49b688b926af4a5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b9c7535bf1b7a5a49b688b926af4a5f"></a>
 typedef std::function<br class="typebreak"/>
 &lt; std::vector&lt; size_t &gt;size_t, <br class="typebreak"/>
 const std::vector<br class="typebreak"/>
 &lt; cl::CommandQueue &gt; &amp;) &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>function_type</b></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a93dbbbdbe0a05352d9189b4044940a41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93dbbbdbe0a05352d9189b4044940a41"></a>
-std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (size_t n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue) const </td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a0ae266403c971673b4f91524e9acaed6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ae266403c971673b4f91524e9acaed6"></a>
+<tr class="memitem:ad59fdc92925dfb193d28303424db0c78"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad59fdc92925dfb193d28303424db0c78"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (function_type f)</td></tr>
+<tr class="memitem:aeed0a322c7f7672219fcdee17daac6c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeed0a322c7f7672219fcdee17daac6c1"></a>
+static std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (size_t n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Partitioning scheme for vectors and matrices. </p>
+<div class="textblock"><h3>template&lt;bool dummy = true&gt;<br/>
+struct vex::partitioning_scheme&lt; dummy &gt;</h3>
+
+<p>Partitioning scheme for vectors and matrices. </p>
 <p>Should be set once before any object of vector or matrix type is declared. Otherwise default parttioning function (partition_by_vector_perf) is selected. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="util_8hpp.html">util.hpp</a></li>

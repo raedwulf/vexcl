@@ -87,11 +87,21 @@
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1stencil.html">vex::stencil&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stencil.  <a href="classvex_1_1stencil.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1gstencil.html">vex::gstencil&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generalized stencil.  <a href="classvex_1_1gstencil.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacevex"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html">vex</a></td></tr>
 <tr class="memdesc:namespacevex"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression template library for OpenCL. <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:af1b68fb4ba71d72d397f46a730f03f2f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1b68fb4ba71d72d397f46a730f03f2f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>__CL_ENABLE_EXCEPTIONS</b></td></tr>
+<tr class="memitem:a1221aebd10592fff2e97dd837b42fd6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1221aebd10592fff2e97dd837b42fd6c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>INITIALIZER_LISTS_AVAILABLE</b></td></tr>
+<tr class="memitem:aa9ee4b1d5a78411eac69ba3ef0804e5f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>OVERLOAD_BUILTIN_FOR_GSTENCIL</b>(name)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -101,11 +111,167 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a0b2a12399789264fe73b1ee151b8ec49"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0b2a12399789264fe73b1ee151b8ec49"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a0b2a12399789264fe73b1ee151b8ec49"><td class="memTemplItemLeft" align="right" valign="top">Conv&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::operator*</b> (const stencil&lt; T &gt; &amp;s, const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x)</td></tr>
+<tr class="memitem:a5b85f6388d2352af6a69ba66bbdb8229"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5b85f6388d2352af6a69ba66bbdb8229"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a5b85f6388d2352af6a69ba66bbdb8229"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; acos_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::acos</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a8e61368cdb1707d036f554a4b03be959"><td class="memTemplParams" colspan="2"><a class="anchor" id="a8e61368cdb1707d036f554a4b03be959"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8e61368cdb1707d036f554a4b03be959"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; acosh_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::acosh</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a248c20866285dee87d65cfff6580dbc9"><td class="memTemplParams" colspan="2"><a class="anchor" id="a248c20866285dee87d65cfff6580dbc9"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a248c20866285dee87d65cfff6580dbc9"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; acospi_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::acospi</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a544a05723a129d92f6f958dabfe3b516"><td class="memTemplParams" colspan="2"><a class="anchor" id="a544a05723a129d92f6f958dabfe3b516"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a544a05723a129d92f6f958dabfe3b516"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; asin_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::asin</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:ae10d36d1684a713ec4802530f62f342b"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae10d36d1684a713ec4802530f62f342b"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ae10d36d1684a713ec4802530f62f342b"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; asinh_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::asinh</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a0863859b73e97ea25fb90deeea9fd626"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0863859b73e97ea25fb90deeea9fd626"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0863859b73e97ea25fb90deeea9fd626"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; asinpi_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::asinpi</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a956722f079951343ff7f41ea00c182f4"><td class="memTemplParams" colspan="2"><a class="anchor" id="a956722f079951343ff7f41ea00c182f4"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a956722f079951343ff7f41ea00c182f4"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; atan_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::atan</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a793738c31d62ddb2b73acc394a3f58d1"><td class="memTemplParams" colspan="2"><a class="anchor" id="a793738c31d62ddb2b73acc394a3f58d1"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a793738c31d62ddb2b73acc394a3f58d1"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; atanh_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::atanh</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:ac7ff5a385f178e9fd2d0941fc3916ff4"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac7ff5a385f178e9fd2d0941fc3916ff4"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac7ff5a385f178e9fd2d0941fc3916ff4"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; atanpi_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::atanpi</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a6880571892af70bebb82bad9a1004f6a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a6880571892af70bebb82bad9a1004f6a"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a6880571892af70bebb82bad9a1004f6a"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; cbrt_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::cbrt</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:af5f47b37bd12caf4b7241a27bc1b5f08"><td class="memTemplParams" colspan="2"><a class="anchor" id="af5f47b37bd12caf4b7241a27bc1b5f08"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af5f47b37bd12caf4b7241a27bc1b5f08"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; ceil_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::ceil</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:ab19fb0c65b044e0cc7438aac8a39fddd"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab19fb0c65b044e0cc7438aac8a39fddd"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab19fb0c65b044e0cc7438aac8a39fddd"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; cos_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::cos</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:aaaba4788bcc8027ffc1fee162efdfbbc"><td class="memTemplParams" colspan="2"><a class="anchor" id="aaaba4788bcc8027ffc1fee162efdfbbc"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aaaba4788bcc8027ffc1fee162efdfbbc"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; cosh_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::cosh</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a0ccd6e329a7afb53b41459e1720d6f56"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0ccd6e329a7afb53b41459e1720d6f56"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0ccd6e329a7afb53b41459e1720d6f56"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; cospi_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::cospi</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:aaf649e164ee3a2c436aa6e45d1182212"><td class="memTemplParams" colspan="2"><a class="anchor" id="aaf649e164ee3a2c436aa6e45d1182212"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aaf649e164ee3a2c436aa6e45d1182212"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; erfc_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::erfc</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:ac907f28f7ca294980a7601e3647501e5"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac907f28f7ca294980a7601e3647501e5"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac907f28f7ca294980a7601e3647501e5"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; erf_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::erf</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a217e22a59c952c0ad775f86c337347dd"><td class="memTemplParams" colspan="2"><a class="anchor" id="a217e22a59c952c0ad775f86c337347dd"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a217e22a59c952c0ad775f86c337347dd"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; exp_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::exp</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a67b5af584c3ec367f8ff9383a8d30431"><td class="memTemplParams" colspan="2"><a class="anchor" id="a67b5af584c3ec367f8ff9383a8d30431"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a67b5af584c3ec367f8ff9383a8d30431"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; exp2_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::exp2</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:ae619547de42dc6e736866ac3c1dfe766"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae619547de42dc6e736866ac3c1dfe766"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ae619547de42dc6e736866ac3c1dfe766"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; exp10_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::exp10</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:acae7100d0fb645528249f5a2400a35f1"><td class="memTemplParams" colspan="2"><a class="anchor" id="acae7100d0fb645528249f5a2400a35f1"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:acae7100d0fb645528249f5a2400a35f1"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; expm1_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::expm1</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a9556cfaedb60fe448d08154dbd3a2cec"><td class="memTemplParams" colspan="2"><a class="anchor" id="a9556cfaedb60fe448d08154dbd3a2cec"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9556cfaedb60fe448d08154dbd3a2cec"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; fabs_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::fabs</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a26574e2a99ce3b3e6c45767b215e0528"><td class="memTemplParams" colspan="2"><a class="anchor" id="a26574e2a99ce3b3e6c45767b215e0528"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a26574e2a99ce3b3e6c45767b215e0528"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; floor_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::floor</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a192e10ab756f3e7472f4d19dcf864d97"><td class="memTemplParams" colspan="2"><a class="anchor" id="a192e10ab756f3e7472f4d19dcf864d97"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a192e10ab756f3e7472f4d19dcf864d97"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; ilogb_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::ilogb</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a74d95d436290f3c14963a564e7d6c845"><td class="memTemplParams" colspan="2"><a class="anchor" id="a74d95d436290f3c14963a564e7d6c845"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a74d95d436290f3c14963a564e7d6c845"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; lgamma_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::lgamma</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:ac0b7d8ef8a49affb6be7043c2710a107"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac0b7d8ef8a49affb6be7043c2710a107"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac0b7d8ef8a49affb6be7043c2710a107"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; log_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::log</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a4eace60a76c692ef04a7e2292692b17f"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4eace60a76c692ef04a7e2292692b17f"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4eace60a76c692ef04a7e2292692b17f"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; log2_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::log2</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:ae6fb4a3f977596f35e84b102c72ab8a9"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae6fb4a3f977596f35e84b102c72ab8a9"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ae6fb4a3f977596f35e84b102c72ab8a9"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; log10_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::log10</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a0fbb9f9ea48d121521ca38648590f6cd"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0fbb9f9ea48d121521ca38648590f6cd"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0fbb9f9ea48d121521ca38648590f6cd"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; log1p_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::log1p</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a51001c2376dc3fe9d0a95c3dd0f908ca"><td class="memTemplParams" colspan="2"><a class="anchor" id="a51001c2376dc3fe9d0a95c3dd0f908ca"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a51001c2376dc3fe9d0a95c3dd0f908ca"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; logb_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::logb</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a74df050994f573ea557c10b513d4ced0"><td class="memTemplParams" colspan="2"><a class="anchor" id="a74df050994f573ea557c10b513d4ced0"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a74df050994f573ea557c10b513d4ced0"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; nan_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::nan</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:ae4fbc971b4b20131819d711b3a7af58a"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae4fbc971b4b20131819d711b3a7af58a"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ae4fbc971b4b20131819d711b3a7af58a"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; rint_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::rint</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a2c0d96c224635afc5bc2f49fcf9d694b"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2c0d96c224635afc5bc2f49fcf9d694b"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a2c0d96c224635afc5bc2f49fcf9d694b"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; rootn_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::rootn</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:afe5fc0e206f9bbfa7e761460c754acfc"><td class="memTemplParams" colspan="2"><a class="anchor" id="afe5fc0e206f9bbfa7e761460c754acfc"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:afe5fc0e206f9bbfa7e761460c754acfc"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; round_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::round</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a41eb15af49cb0ce2775a31eb3914da0b"><td class="memTemplParams" colspan="2"><a class="anchor" id="a41eb15af49cb0ce2775a31eb3914da0b"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a41eb15af49cb0ce2775a31eb3914da0b"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; rsqrt_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::rsqrt</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a7f885961b67f321687361492e474a49e"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7f885961b67f321687361492e474a49e"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7f885961b67f321687361492e474a49e"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; sin_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::sin</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a4b3ab8d35e8f878171213e3d8216007b"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4b3ab8d35e8f878171213e3d8216007b"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4b3ab8d35e8f878171213e3d8216007b"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; sinh_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::sinh</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a1ade9acb97a2b197d199374d85f44832"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1ade9acb97a2b197d199374d85f44832"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a1ade9acb97a2b197d199374d85f44832"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; sinpi_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::sinpi</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:ac4a6e7c5c24189cd3a49de4147e32d89"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac4a6e7c5c24189cd3a49de4147e32d89"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac4a6e7c5c24189cd3a49de4147e32d89"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; sqrt_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::sqrt</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:ab93ef1544813566e30a4b5d0c77ce102"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab93ef1544813566e30a4b5d0c77ce102"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab93ef1544813566e30a4b5d0c77ce102"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; tan_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::tan</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a4daa2a67cc0905d8299217cac6fe414b"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4daa2a67cc0905d8299217cac6fe414b"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4daa2a67cc0905d8299217cac6fe414b"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; tanh_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::tanh</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a27b5e0c96d2380b02965b998cf672211"><td class="memTemplParams" colspan="2"><a class="anchor" id="a27b5e0c96d2380b02965b998cf672211"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a27b5e0c96d2380b02965b998cf672211"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; tanpi_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::tanpi</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:ac431f40989e16eca0908e822d310b87d"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac431f40989e16eca0908e822d310b87d"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac431f40989e16eca0908e822d310b87d"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; tgamma_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::tgamma</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:aa2e1157df4e09f1603baa6c4222fca47"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa2e1157df4e09f1603baa6c4222fca47"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa2e1157df4e09f1603baa6c4222fca47"><td class="memTemplItemLeft" align="right" valign="top">FStencil&lt; trunc_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::trunc</b> (const gstencil&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a7a23d2158129914ab1ca2f75ce331493"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7a23d2158129914ab1ca2f75ce331493"></a>
+template&lt;class f , typename T &gt; </td></tr>
+<tr class="memitem:a7a23d2158129914ab1ca2f75ce331493"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; f, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::operator*</b> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x, const FStencil&lt; f, T &gt; &amp;s)</td></tr>
+<tr class="memitem:a45f8e24f772f169c9ff5af9fafde0373"><td class="memTemplParams" colspan="2"><a class="anchor" id="a45f8e24f772f169c9ff5af9fafde0373"></a>
+template&lt;class f , typename T &gt; </td></tr>
+<tr class="memitem:a45f8e24f772f169c9ff5af9fafde0373"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; f, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::operator*</b> (const FStencil&lt; f, T &gt; &amp;s, const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Stencil convolution. </p>
 <dl class="section author"><dt>Author:</dt><dd>Denis Demidov <a href="#" onclick="location.href='mai'+'lto:'+'dde'+'mi'+'dov'+'@k'+'su.'+'ru'; return false;">ddemi<span style="display: none;">.nosp@m.</span>dov@<span style="display: none;">.nosp@m.</span>ksu.r<span style="display: none;">.nosp@m.</span>u</a> </dd></dl>
-</div></div><!-- contents -->
+</div><hr/><h2>Macro Definition Documentation</h2>
+<a class="anchor" id="aa9ee4b1d5a78411eac69ba3ef0804e5f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVERLOAD_BUILTIN_FOR_GSTENCIL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; \</div>
+<div class="line">FStencil&lt;name##_name,T&gt; name(<span class="keyword">const</span> gstencil&lt;T&gt; &amp;s) { \</div>
+<div class="line">    return FStencil&lt;name##_name, T&gt;(s); \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

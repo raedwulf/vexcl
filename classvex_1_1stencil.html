@@ -67,6 +67,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5cdf96c3370d297139513b1cdb05f33b"><td class="memTemplParams" colspan="2">template&lt;class Iterator &gt; </td></tr>
 <tr class="memitem:a5cdf96c3370d297139513b1cdb05f33b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvex_1_1stencil.html#a5cdf96c3370d297139513b1cdb05f33b">stencil</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, Iterator begin, Iterator end, uint center)</td></tr>
 <tr class="memdesc:a5cdf96c3370d297139513b1cdb05f33b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Costructor.  <a href="#a5cdf96c3370d297139513b1cdb05f33b"></a><br/></td></tr>
+<tr class="memitem:a439b0719fcb4d220bce1278e5e285042"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1stencil.html#a439b0719fcb4d220bce1278e5e285042">stencil</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, std::initializer_list&lt; T &gt; list, uint center)</td></tr>
+<tr class="memdesc:a439b0719fcb4d220bce1278e5e285042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Costructor.  <a href="#a439b0719fcb4d220bce1278e5e285042"></a><br/></td></tr>
 <tr class="memitem:a0ad1c1319009b52e026ced5199c18a80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1stencil.html#a0ad1c1319009b52e026ced5199c18a80">convolve</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x, <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;y) const </td></tr>
 <tr class="memdesc:a0ad1c1319009b52e026ced5199c18a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolve stencil with a vector.  <a href="#a0ad1c1319009b52e026ced5199c18a80"></a><br/></td></tr>
 </table>
@@ -191,6 +193,58 @@ template&lt;class Iterator &gt; </div>
     <tr><td class="paramname">queue</td><td>vector of queues. Each queue represents one compute device. </td></tr>
     <tr><td class="paramname">begin</td><td>iterator to begin of sequence holding stencil data. </td></tr>
     <tr><td class="paramname">end</td><td>iterator to end of sequence holding stencil data. </td></tr>
+    <tr><td class="paramname">center</td><td>center of the stencil. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a439b0719fcb4d220bce1278e5e285042"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvex_1_1stencil.html">vex::stencil</a>&lt; T &gt;::<a class="el" href="classvex_1_1stencil.html">stencil</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; cl::CommandQueue &gt; &amp;&#160;</td>
+          <td class="paramname"><em>queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::initializer_list&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>center</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Costructor. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>vector of queues. Each queue represents one compute device. </td></tr>
+    <tr><td class="paramname">st</td><td>intializer list holding stencil values. </td></tr>
     <tr><td class="paramname">center</td><td>center of the stencil. </td></tr>
   </table>
   </dd>

@@ -88,7 +88,7 @@
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1partitioning__scheme.html">vex::partitioning_scheme</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1partitioning__scheme.html">vex::partitioning_scheme&lt; dummy &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitioning scheme for vectors and matrices.  <a href="structvex_1_1partitioning__scheme.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
@@ -146,9 +146,8 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na
 <tr class="memdesc:a14786a0605f83c1df74e9e66685630b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitions vector wrt to vector performance of devices.  <a href="#a14786a0605f83c1df74e9e66685630b0"></a><br/></td></tr>
 <tr class="memitem:a107bd5e3e6dec3c4b85cc4888624a50c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a107bd5e3e6dec3c4b85cc4888624a50c">vex::partition_by_spmv_perf</a> (size_t n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
 <tr class="memdesc:a107bd5e3e6dec3c4b85cc4888624a50c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitions vector wrt to vector performance of devices.  <a href="#a107bd5e3e6dec3c4b85cc4888624a50c"></a><br/></td></tr>
-<tr class="memitem:a061391bd74d4e7210fffb6e90c2bd7b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a061391bd74d4e7210fffb6e90c2bd7b0"></a>
-std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a061391bd74d4e7210fffb6e90c2bd7b0">vex::partition_equally</a> (size_t n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
-<tr class="memdesc:a061391bd74d4e7210fffb6e90c2bd7b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitions vector equally. <br/></td></tr>
+<tr class="memitem:a7107660147252c74f159b733c678c86e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7107660147252c74f159b733c678c86e"></a>
+std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>vex::partition</b> (size_t n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
 <tr class="memitem:a61989abf337d9845cad96ce9e805fd56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61989abf337d9845cad96ce9e805fd56"></a>
 cl::Program&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a61989abf337d9845cad96ce9e805fd56">vex::build_sources</a> (const cl::Context &amp;context, const std::string &amp;source)</td></tr>
 <tr class="memdesc:a61989abf337d9845cad96ce9e805fd56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and build a program from source string. <br/></td></tr>
@@ -161,9 +160,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aa9f3fc5fac977085e005f3f70310b831"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><b>vex::standard_kernel_header</b></td></tr>
-<tr class="memitem:a08a4ea13ce578f7c12d65934166f382a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08a4ea13ce578f7c12d65934166f382a"></a>
-struct <a class="el" href="structvex_1_1partitioning__scheme.html">vex::partitioning_scheme</a>&#160;</td><td class="memItemRight" valign="bottom"><b>vex::partition</b></td></tr>
+<tr class="memitem:a4c383d02ac43c2a77e6b222788abf74c"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>vex::standard_kernel_header</b></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>OpenCL general utilities. </p>
