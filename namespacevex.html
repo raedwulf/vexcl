@@ -163,141 +163,294 @@ ExConv&lt; Expr, T &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valig
 template&lt;class Expr , typename T &gt; </td></tr>
 <tr class="memitem:a8720effe022120fbb208603241799744"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; Expr::is_expr, <br class="typebreak"/>
 ExConv&lt; Expr, T &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-</b> (const Expr &amp;expr, const Conv&lt; T &gt; &amp;cnv)</td></tr>
+<tr class="memitem:a86b11aac42654652da86fa10067b2d6c"><td class="memTemplParams" colspan="2"><a class="anchor" id="a86b11aac42654652da86fa10067b2d6c"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a86b11aac42654652da86fa10067b2d6c"><td class="memTemplItemLeft" align="right" valign="top">MultiConv&lt; T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classvex_1_1multivector.html">multivector</a>&lt; T, N &gt; &amp;x, const <a class="el" href="classvex_1_1stencil.html">stencil</a>&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a79c1dd0902f67a1da2268a8846c9ade1"><td class="memTemplParams" colspan="2"><a class="anchor" id="a79c1dd0902f67a1da2268a8846c9ade1"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a79c1dd0902f67a1da2268a8846c9ade1"><td class="memTemplItemLeft" align="right" valign="top">MultiConv&lt; T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classvex_1_1stencil.html">stencil</a>&lt; T &gt; &amp;s, const <a class="el" href="classvex_1_1multivector.html">multivector</a>&lt; T, N &gt; &amp;x)</td></tr>
+<tr class="memitem:a98d68423ab2ae9b50a32b1baee4a0440"><td class="memTemplParams" colspan="2"><a class="anchor" id="a98d68423ab2ae9b50a32b1baee4a0440"></a>
+template&lt;class Expr , typename T , uint N&gt; </td></tr>
+<tr class="memitem:a98d68423ab2ae9b50a32b1baee4a0440"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+&lt; Expr::is_multiex, <br class="typebreak"/>
+MultiExConv&lt; Expr, T, N &gt;<br class="typebreak"/>
+ &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator+</b> (const Expr &amp;expr, const MultiConv&lt; T, N &gt; &amp;cnv)</td></tr>
+<tr class="memitem:acd59c45b0d672a35bc54d9a988052cf1"><td class="memTemplParams" colspan="2"><a class="anchor" id="acd59c45b0d672a35bc54d9a988052cf1"></a>
+template&lt;class Expr , typename T , uint N&gt; </td></tr>
+<tr class="memitem:acd59c45b0d672a35bc54d9a988052cf1"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+&lt; Expr::is_multiex, <br class="typebreak"/>
+MultiExConv&lt; Expr, T, N &gt;<br class="typebreak"/>
+ &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-</b> (const Expr &amp;expr, const MultiConv&lt; T, N &gt; &amp;cnv)</td></tr>
 <tr class="memitem:ae0ce17a023764a297c7990c314b26f63"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae0ce17a023764a297c7990c314b26f63"></a>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:ae0ce17a023764a297c7990c314b26f63"><td class="memTemplItemLeft" align="right" valign="top">GStencilProd&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x, const <a class="el" href="classvex_1_1gstencil.html">gstencil</a>&lt; T &gt; &amp;s)</td></tr>
 <tr class="memitem:a69bb4ade27c35a8d1ff625ab9b9e1355"><td class="memTemplParams" colspan="2"><a class="anchor" id="a69bb4ade27c35a8d1ff625ab9b9e1355"></a>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:a69bb4ade27c35a8d1ff625ab9b9e1355"><td class="memTemplItemLeft" align="right" valign="top">GStencilProd&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classvex_1_1gstencil.html">gstencil</a>&lt; T &gt; &amp;s, const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x)</td></tr>
+<tr class="memitem:afc22c96682008a5a665cab8a4759273c"><td class="memTemplParams" colspan="2"><a class="anchor" id="afc22c96682008a5a665cab8a4759273c"></a>
+template&lt;class T , uint N&gt; </td></tr>
+<tr class="memitem:afc22c96682008a5a665cab8a4759273c"><td class="memTemplItemLeft" align="right" valign="top">MultiGStencilProd&lt; T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classvex_1_1multivector.html">multivector</a>&lt; T, N &gt; &amp;x, const <a class="el" href="classvex_1_1gstencil.html">gstencil</a>&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a99953f0643ae1c99e87b046632bf3b0b"><td class="memTemplParams" colspan="2"><a class="anchor" id="a99953f0643ae1c99e87b046632bf3b0b"></a>
+template&lt;class T , uint N&gt; </td></tr>
+<tr class="memitem:a99953f0643ae1c99e87b046632bf3b0b"><td class="memTemplItemLeft" align="right" valign="top">MultiGStencilProd&lt; T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classvex_1_1gstencil.html">gstencil</a>&lt; T &gt; &amp;s, const <a class="el" href="classvex_1_1multivector.html">multivector</a>&lt; T, N &gt; &amp;x)</td></tr>
 <tr class="memitem:a2adcfcb58391541d766fb6d72f7d7607"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2adcfcb58391541d766fb6d72f7d7607"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a2adcfcb58391541d766fb6d72f7d7607"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; acos_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>acos</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:aee6c730f5c393f79427b1a360d05fc1b"><td class="memTemplParams" colspan="2"><a class="anchor" id="aee6c730f5c393f79427b1a360d05fc1b"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:aee6c730f5c393f79427b1a360d05fc1b"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; acos_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>acos</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a25b0ee19a356da2de7d80ede2ab654e1"><td class="memTemplParams" colspan="2"><a class="anchor" id="a25b0ee19a356da2de7d80ede2ab654e1"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a25b0ee19a356da2de7d80ede2ab654e1"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; acosh_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>acosh</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a24135fca43dbedfc7d630b6a615a1d84"><td class="memTemplParams" colspan="2"><a class="anchor" id="a24135fca43dbedfc7d630b6a615a1d84"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a24135fca43dbedfc7d630b6a615a1d84"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; acosh_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>acosh</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a28a806eb426159e35bf4295c170a6e18"><td class="memTemplParams" colspan="2"><a class="anchor" id="a28a806eb426159e35bf4295c170a6e18"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a28a806eb426159e35bf4295c170a6e18"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; acospi_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>acospi</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a5b8c9eb037aef64fbf87b17f1c0fbbe8"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5b8c9eb037aef64fbf87b17f1c0fbbe8"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a5b8c9eb037aef64fbf87b17f1c0fbbe8"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; acospi_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>acospi</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:af8f09a1f15f71d064b79888b89bfa1cf"><td class="memTemplParams" colspan="2"><a class="anchor" id="af8f09a1f15f71d064b79888b89bfa1cf"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:af8f09a1f15f71d064b79888b89bfa1cf"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; asin_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>asin</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a534e705bcd957c8c8f41089bee1d821d"><td class="memTemplParams" colspan="2"><a class="anchor" id="a534e705bcd957c8c8f41089bee1d821d"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a534e705bcd957c8c8f41089bee1d821d"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; asin_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>asin</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a138ad85b38e3b587e3f6d85bc605d008"><td class="memTemplParams" colspan="2"><a class="anchor" id="a138ad85b38e3b587e3f6d85bc605d008"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a138ad85b38e3b587e3f6d85bc605d008"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; asinh_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>asinh</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a6f865f5016e09328c7589d17c392c62b"><td class="memTemplParams" colspan="2"><a class="anchor" id="a6f865f5016e09328c7589d17c392c62b"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a6f865f5016e09328c7589d17c392c62b"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; asinh_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>asinh</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:ad2c19d66c39a3d1c951fbb50ccd8c4ee"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad2c19d66c39a3d1c951fbb50ccd8c4ee"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ad2c19d66c39a3d1c951fbb50ccd8c4ee"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; asinpi_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>asinpi</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a4df879339245e64a2bd888cc7ae2e7b9"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4df879339245e64a2bd888cc7ae2e7b9"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a4df879339245e64a2bd888cc7ae2e7b9"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; asinpi_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>asinpi</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a8d246085a6adb5ff5779d8aa0ffc40b6"><td class="memTemplParams" colspan="2"><a class="anchor" id="a8d246085a6adb5ff5779d8aa0ffc40b6"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a8d246085a6adb5ff5779d8aa0ffc40b6"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; atan_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>atan</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a558ee4a29e737af1b714727f6e7d1fe3"><td class="memTemplParams" colspan="2"><a class="anchor" id="a558ee4a29e737af1b714727f6e7d1fe3"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a558ee4a29e737af1b714727f6e7d1fe3"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; atan_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>atan</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a5e1b5962de94c98bb4b21ba70f455c84"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5e1b5962de94c98bb4b21ba70f455c84"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a5e1b5962de94c98bb4b21ba70f455c84"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; atanh_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>atanh</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a8c085672ff6ea3653a4d675c718ce391"><td class="memTemplParams" colspan="2"><a class="anchor" id="a8c085672ff6ea3653a4d675c718ce391"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a8c085672ff6ea3653a4d675c718ce391"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; atanh_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>atanh</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a2c9854b720a8b694dd3381f6a032c449"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2c9854b720a8b694dd3381f6a032c449"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a2c9854b720a8b694dd3381f6a032c449"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; atanpi_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>atanpi</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:af9b3efe881959761dbed60ba0fe94a43"><td class="memTemplParams" colspan="2"><a class="anchor" id="af9b3efe881959761dbed60ba0fe94a43"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:af9b3efe881959761dbed60ba0fe94a43"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; atanpi_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>atanpi</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a9db4f43204dd31358ea34a1c4fa15881"><td class="memTemplParams" colspan="2"><a class="anchor" id="a9db4f43204dd31358ea34a1c4fa15881"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a9db4f43204dd31358ea34a1c4fa15881"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; cbrt_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cbrt</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a0ad4a4e22e09b87d99a74fd024632090"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0ad4a4e22e09b87d99a74fd024632090"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a0ad4a4e22e09b87d99a74fd024632090"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; cbrt_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cbrt</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a060b7a0d4a1f2ccb9747cbfab367a2cf"><td class="memTemplParams" colspan="2"><a class="anchor" id="a060b7a0d4a1f2ccb9747cbfab367a2cf"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a060b7a0d4a1f2ccb9747cbfab367a2cf"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; ceil_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>ceil</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a661419f1abae8b29a995a1fca03e5106"><td class="memTemplParams" colspan="2"><a class="anchor" id="a661419f1abae8b29a995a1fca03e5106"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a661419f1abae8b29a995a1fca03e5106"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; ceil_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>ceil</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a37d75b5002b5318b88e8272616a0f05b"><td class="memTemplParams" colspan="2"><a class="anchor" id="a37d75b5002b5318b88e8272616a0f05b"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a37d75b5002b5318b88e8272616a0f05b"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; cos_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cos</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:ae4445359f74f3cb6baf3188aaf5a6547"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae4445359f74f3cb6baf3188aaf5a6547"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:ae4445359f74f3cb6baf3188aaf5a6547"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; cos_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cos</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a4068c9d48bf56c759f54a22b29729b26"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4068c9d48bf56c759f54a22b29729b26"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a4068c9d48bf56c759f54a22b29729b26"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; cosh_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cosh</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:ab757c5d3c13b468c642039f9e401ff21"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab757c5d3c13b468c642039f9e401ff21"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:ab757c5d3c13b468c642039f9e401ff21"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; cosh_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cosh</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a8dd9ba0cf93cb7dad04a8f14de921e78"><td class="memTemplParams" colspan="2"><a class="anchor" id="a8dd9ba0cf93cb7dad04a8f14de921e78"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a8dd9ba0cf93cb7dad04a8f14de921e78"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; cospi_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cospi</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a23f8b4c5b3481a315520ec910826a90b"><td class="memTemplParams" colspan="2"><a class="anchor" id="a23f8b4c5b3481a315520ec910826a90b"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a23f8b4c5b3481a315520ec910826a90b"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; cospi_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cospi</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a9e469cb44d92666e7ab4980b209e03b9"><td class="memTemplParams" colspan="2"><a class="anchor" id="a9e469cb44d92666e7ab4980b209e03b9"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a9e469cb44d92666e7ab4980b209e03b9"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; erfc_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>erfc</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:ade7ec7cb23cc2cdfda0b1f2991fc694b"><td class="memTemplParams" colspan="2"><a class="anchor" id="ade7ec7cb23cc2cdfda0b1f2991fc694b"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:ade7ec7cb23cc2cdfda0b1f2991fc694b"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; erfc_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>erfc</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a8256c9a715079f3827c618afb6cb8e13"><td class="memTemplParams" colspan="2"><a class="anchor" id="a8256c9a715079f3827c618afb6cb8e13"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a8256c9a715079f3827c618afb6cb8e13"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; erf_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>erf</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:aa50703dda1ba7e9acab36a90420ffe50"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa50703dda1ba7e9acab36a90420ffe50"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:aa50703dda1ba7e9acab36a90420ffe50"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; erf_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>erf</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a91e758f41af4011d653cff08d2f59771"><td class="memTemplParams" colspan="2"><a class="anchor" id="a91e758f41af4011d653cff08d2f59771"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a91e758f41af4011d653cff08d2f59771"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; exp_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>exp</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a51fc66f0f3e675c7ae5543b17e7d519a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a51fc66f0f3e675c7ae5543b17e7d519a"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a51fc66f0f3e675c7ae5543b17e7d519a"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; exp_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>exp</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:af35a825f7bb0073ef5e0f48cdecd5296"><td class="memTemplParams" colspan="2"><a class="anchor" id="af35a825f7bb0073ef5e0f48cdecd5296"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:af35a825f7bb0073ef5e0f48cdecd5296"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; exp2_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>exp2</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a6b6ba560217f4e90ca901614d7fe53b6"><td class="memTemplParams" colspan="2"><a class="anchor" id="a6b6ba560217f4e90ca901614d7fe53b6"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a6b6ba560217f4e90ca901614d7fe53b6"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; exp2_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>exp2</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:af73e31ea58dcc6771dabedc3418546d8"><td class="memTemplParams" colspan="2"><a class="anchor" id="af73e31ea58dcc6771dabedc3418546d8"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:af73e31ea58dcc6771dabedc3418546d8"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; exp10_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>exp10</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a1292c9a1826b45a19e933078e9fcf525"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1292c9a1826b45a19e933078e9fcf525"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a1292c9a1826b45a19e933078e9fcf525"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; exp10_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>exp10</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:abf25e6520917eda377b01cababfb18a4"><td class="memTemplParams" colspan="2"><a class="anchor" id="abf25e6520917eda377b01cababfb18a4"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:abf25e6520917eda377b01cababfb18a4"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; expm1_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>expm1</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a4237204aba5d77f82c484b352999da39"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4237204aba5d77f82c484b352999da39"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a4237204aba5d77f82c484b352999da39"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; expm1_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>expm1</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a7401cf9de2be8dfc3a9e81b68c345056"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7401cf9de2be8dfc3a9e81b68c345056"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a7401cf9de2be8dfc3a9e81b68c345056"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; fabs_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>fabs</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a3b1d600c8689fbf6bc165d47957e28cd"><td class="memTemplParams" colspan="2"><a class="anchor" id="a3b1d600c8689fbf6bc165d47957e28cd"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a3b1d600c8689fbf6bc165d47957e28cd"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; fabs_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>fabs</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a95437bfab6005219ca6f9a75bc391b95"><td class="memTemplParams" colspan="2"><a class="anchor" id="a95437bfab6005219ca6f9a75bc391b95"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a95437bfab6005219ca6f9a75bc391b95"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; floor_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>floor</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:acb8e21ab0c2b6ace8fb099984cc31fae"><td class="memTemplParams" colspan="2"><a class="anchor" id="acb8e21ab0c2b6ace8fb099984cc31fae"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:acb8e21ab0c2b6ace8fb099984cc31fae"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; floor_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>floor</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a8967ae5b0953a2502acb5331086ceef6"><td class="memTemplParams" colspan="2"><a class="anchor" id="a8967ae5b0953a2502acb5331086ceef6"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a8967ae5b0953a2502acb5331086ceef6"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; ilogb_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>ilogb</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a80052d36fcac74dc38a3f7605ee80f24"><td class="memTemplParams" colspan="2"><a class="anchor" id="a80052d36fcac74dc38a3f7605ee80f24"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a80052d36fcac74dc38a3f7605ee80f24"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; ilogb_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>ilogb</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a930e9acbed402af5906432d2d994d1cb"><td class="memTemplParams" colspan="2"><a class="anchor" id="a930e9acbed402af5906432d2d994d1cb"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a930e9acbed402af5906432d2d994d1cb"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; lgamma_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>lgamma</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a3b5fecde5477103b8633c13f304f93e0"><td class="memTemplParams" colspan="2"><a class="anchor" id="a3b5fecde5477103b8633c13f304f93e0"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a3b5fecde5477103b8633c13f304f93e0"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; lgamma_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>lgamma</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:ae4179678a85bf4d1839f12871aa429c8"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae4179678a85bf4d1839f12871aa429c8"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ae4179678a85bf4d1839f12871aa429c8"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; log_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>log</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:ae5d7ec46b8f0bce7fc6e6d4ea5ed78f9"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae5d7ec46b8f0bce7fc6e6d4ea5ed78f9"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:ae5d7ec46b8f0bce7fc6e6d4ea5ed78f9"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; log_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>log</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a12921c0b4ed60c432fc3e670e104ee45"><td class="memTemplParams" colspan="2"><a class="anchor" id="a12921c0b4ed60c432fc3e670e104ee45"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a12921c0b4ed60c432fc3e670e104ee45"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; log2_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>log2</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a385576a2ece222633bb5ba7479d0e87d"><td class="memTemplParams" colspan="2"><a class="anchor" id="a385576a2ece222633bb5ba7479d0e87d"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a385576a2ece222633bb5ba7479d0e87d"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; log2_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>log2</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:ab2fb99187e9890ee9cc785d6d7e2cc46"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab2fb99187e9890ee9cc785d6d7e2cc46"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ab2fb99187e9890ee9cc785d6d7e2cc46"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; log10_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>log10</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a1a8926d1bf75bc15d7138267990a3e06"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1a8926d1bf75bc15d7138267990a3e06"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a1a8926d1bf75bc15d7138267990a3e06"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; log10_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>log10</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a33522d0011989f83098b7919907251e4"><td class="memTemplParams" colspan="2"><a class="anchor" id="a33522d0011989f83098b7919907251e4"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a33522d0011989f83098b7919907251e4"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; log1p_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>log1p</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a567d3bd3478c2a905114254cbe284b85"><td class="memTemplParams" colspan="2"><a class="anchor" id="a567d3bd3478c2a905114254cbe284b85"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a567d3bd3478c2a905114254cbe284b85"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; log1p_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>log1p</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a6604e260b0b6a7742ebe68aab9f5923f"><td class="memTemplParams" colspan="2"><a class="anchor" id="a6604e260b0b6a7742ebe68aab9f5923f"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a6604e260b0b6a7742ebe68aab9f5923f"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; logb_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>logb</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:aa5a57ef5d863798372014e4d84b6a8c9"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa5a57ef5d863798372014e4d84b6a8c9"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:aa5a57ef5d863798372014e4d84b6a8c9"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; logb_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>logb</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a4609f635e94959559c71876daab5688e"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4609f635e94959559c71876daab5688e"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a4609f635e94959559c71876daab5688e"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; nan_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>nan</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a7a6137ef072373c06ede36376c681b9a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7a6137ef072373c06ede36376c681b9a"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a7a6137ef072373c06ede36376c681b9a"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; nan_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>nan</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a332fa4213571ebbc5bfa7c8891e77548"><td class="memTemplParams" colspan="2"><a class="anchor" id="a332fa4213571ebbc5bfa7c8891e77548"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a332fa4213571ebbc5bfa7c8891e77548"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; rint_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>rint</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:ac5aef076d552b0e64e41518fdb39d2ad"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac5aef076d552b0e64e41518fdb39d2ad"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:ac5aef076d552b0e64e41518fdb39d2ad"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; rint_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>rint</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a07df9af70162cef4a644d7ec93a4a601"><td class="memTemplParams" colspan="2"><a class="anchor" id="a07df9af70162cef4a644d7ec93a4a601"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a07df9af70162cef4a644d7ec93a4a601"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; rootn_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>rootn</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:abf0ac9738726f86b01f40cb1054e631c"><td class="memTemplParams" colspan="2"><a class="anchor" id="abf0ac9738726f86b01f40cb1054e631c"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:abf0ac9738726f86b01f40cb1054e631c"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; rootn_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>rootn</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a6ca7a64058bad511ae6792bbaead4c2d"><td class="memTemplParams" colspan="2"><a class="anchor" id="a6ca7a64058bad511ae6792bbaead4c2d"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a6ca7a64058bad511ae6792bbaead4c2d"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; round_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>round</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a79a6b4693dfe936c813e6c0b9a4bc6b0"><td class="memTemplParams" colspan="2"><a class="anchor" id="a79a6b4693dfe936c813e6c0b9a4bc6b0"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a79a6b4693dfe936c813e6c0b9a4bc6b0"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; round_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>round</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:af3fd686cb68b06aa335df87c1dd4c49a"><td class="memTemplParams" colspan="2"><a class="anchor" id="af3fd686cb68b06aa335df87c1dd4c49a"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:af3fd686cb68b06aa335df87c1dd4c49a"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; rsqrt_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>rsqrt</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a19fa419152e8e5456153d4ae16fd247a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a19fa419152e8e5456153d4ae16fd247a"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a19fa419152e8e5456153d4ae16fd247a"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; rsqrt_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>rsqrt</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a1c6b6fba8231f48445d053b410b39356"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1c6b6fba8231f48445d053b410b39356"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a1c6b6fba8231f48445d053b410b39356"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; sin_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sin</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a666d3ddad67c4285b9916579a626bef9"><td class="memTemplParams" colspan="2"><a class="anchor" id="a666d3ddad67c4285b9916579a626bef9"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a666d3ddad67c4285b9916579a626bef9"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; sin_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sin</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a55518079308c44d0aaf85dd4ade671c1"><td class="memTemplParams" colspan="2"><a class="anchor" id="a55518079308c44d0aaf85dd4ade671c1"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a55518079308c44d0aaf85dd4ade671c1"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; sinh_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sinh</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:acfe5b2895e9cc35d05963ad767f33d7c"><td class="memTemplParams" colspan="2"><a class="anchor" id="acfe5b2895e9cc35d05963ad767f33d7c"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:acfe5b2895e9cc35d05963ad767f33d7c"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; sinh_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sinh</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a83feec7e61c95c48a1243b5f07c1fd92"><td class="memTemplParams" colspan="2"><a class="anchor" id="a83feec7e61c95c48a1243b5f07c1fd92"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a83feec7e61c95c48a1243b5f07c1fd92"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; sinpi_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sinpi</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a4f1c0b6504cc7c407e179a2076ddab7a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4f1c0b6504cc7c407e179a2076ddab7a"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a4f1c0b6504cc7c407e179a2076ddab7a"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; sinpi_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sinpi</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a42ed724b2231b6befac9beb84a149715"><td class="memTemplParams" colspan="2"><a class="anchor" id="a42ed724b2231b6befac9beb84a149715"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a42ed724b2231b6befac9beb84a149715"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; sqrt_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sqrt</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a5cbbf54d8dacaf8bd9320c7b7bc5da52"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5cbbf54d8dacaf8bd9320c7b7bc5da52"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a5cbbf54d8dacaf8bd9320c7b7bc5da52"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; sqrt_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sqrt</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a709e07bb78d315aae89a7583256cc844"><td class="memTemplParams" colspan="2"><a class="anchor" id="a709e07bb78d315aae89a7583256cc844"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a709e07bb78d315aae89a7583256cc844"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; tan_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>tan</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:acd9266fdc3028568d39c51f32e5e384e"><td class="memTemplParams" colspan="2"><a class="anchor" id="acd9266fdc3028568d39c51f32e5e384e"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:acd9266fdc3028568d39c51f32e5e384e"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; tan_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>tan</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:af5e98c486e136113cae07ea510df3874"><td class="memTemplParams" colspan="2"><a class="anchor" id="af5e98c486e136113cae07ea510df3874"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:af5e98c486e136113cae07ea510df3874"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; tanh_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>tanh</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a016ac68d7eb94c825ab84e849228cbd8"><td class="memTemplParams" colspan="2"><a class="anchor" id="a016ac68d7eb94c825ab84e849228cbd8"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a016ac68d7eb94c825ab84e849228cbd8"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; tanh_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>tanh</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:ac9a5e2c880ae3f16b1dfe9d2cfd7c0b4"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac9a5e2c880ae3f16b1dfe9d2cfd7c0b4"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ac9a5e2c880ae3f16b1dfe9d2cfd7c0b4"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; tanpi_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>tanpi</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a9f497fb7a896461eb8e9ae2ff442acc0"><td class="memTemplParams" colspan="2"><a class="anchor" id="a9f497fb7a896461eb8e9ae2ff442acc0"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a9f497fb7a896461eb8e9ae2ff442acc0"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; tanpi_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>tanpi</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a2b350830fbaa6ee8fbfb10d4e11bc80a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2b350830fbaa6ee8fbfb10d4e11bc80a"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a2b350830fbaa6ee8fbfb10d4e11bc80a"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; tgamma_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>tgamma</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a7b3e744ac174c3014b9166b939323e4e"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7b3e744ac174c3014b9166b939323e4e"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a7b3e744ac174c3014b9166b939323e4e"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; tgamma_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>tgamma</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a46263e1018ace99b2221e9d4b7ca89e8"><td class="memTemplParams" colspan="2"><a class="anchor" id="a46263e1018ace99b2221e9d4b7ca89e8"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a46263e1018ace99b2221e9d4b7ca89e8"><td class="memTemplItemLeft" align="right" valign="top">GConv&lt; trunc_name, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>trunc</b> (const GStencilProd&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a9f88dfa34ba74b9ea8d69ff5f2b1d5f5"><td class="memTemplParams" colspan="2"><a class="anchor" id="a9f88dfa34ba74b9ea8d69ff5f2b1d5f5"></a>
+template&lt;typename T , uint N&gt; </td></tr>
+<tr class="memitem:a9f88dfa34ba74b9ea8d69ff5f2b1d5f5"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; trunc_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>trunc</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
 <tr class="memitem:a3b634bc5657df26fe7610bbbe0e34c3b"><td class="memTemplParams" colspan="2"><a class="anchor" id="a3b634bc5657df26fe7610bbbe0e34c3b"></a>
 template&lt;class Expr , class func , typename T &gt; </td></tr>
 <tr class="memitem:a3b634bc5657df26fe7610bbbe0e34c3b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; Expr::is_expr, <br class="typebreak"/>
@@ -308,6 +461,18 @@ template&lt;class Expr , class func , typename T &gt; </td></tr>
 <tr class="memitem:a7d457dbff9f3f466a638552a3a7fed53"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; Expr::is_expr, <br class="typebreak"/>
 ExGConv&lt; Expr, func, T &gt;<br class="typebreak"/>
  &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-</b> (const Expr &amp;expr, const GConv&lt; func, T &gt; &amp;cnv)</td></tr>
+<tr class="memitem:a967522011ff2b50d1dafbab72f56ad80"><td class="memTemplParams" colspan="2"><a class="anchor" id="a967522011ff2b50d1dafbab72f56ad80"></a>
+template&lt;class Expr , class func , typename T , uint N&gt; </td></tr>
+<tr class="memitem:a967522011ff2b50d1dafbab72f56ad80"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+&lt; Expr::is_multiex, <br class="typebreak"/>
+MultiExGConv&lt; Expr, func, T, N &gt;<br class="typebreak"/>
+ &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator+</b> (const Expr &amp;expr, const MultiGConv&lt; func, T, N &gt; &amp;cnv)</td></tr>
+<tr class="memitem:a5e8d05058515035038ebe39c3602551c"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5e8d05058515035038ebe39c3602551c"></a>
+template&lt;class Expr , class func , typename T , uint N&gt; </td></tr>
+<tr class="memitem:a5e8d05058515035038ebe39c3602551c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+&lt; Expr::is_multiex, <br class="typebreak"/>
+MultiExGConv&lt; Expr, func, T, N &gt;<br class="typebreak"/>
+ &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-</b> (const Expr &amp;expr, const MultiGConv&lt; func, T, N &gt; &amp;cnv)</td></tr>
 <tr class="memitem:a56365bca0357a23c638d8d39a0224304"><td class="memTemplParams" colspan="2"><a class="anchor" id="a56365bca0357a23c638d8d39a0224304"></a>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:a56365bca0357a23c638d8d39a0224304"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a56365bca0357a23c638d8d39a0224304">type_name</a> ()</td></tr>
@@ -2171,6 +2336,8 @@ template&lt;class DevFilter  = Filter::AllFilter&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns:</dt><dd>list of queues accociated with selected devices. </dd></dl>
 <dl class="section see"><dt>See also:</dt><dd><a class="el" href="namespacevex.html#a0571bb5e0afbc53f844665652a204b0a" title="Select devices by given criteria.">device_list</a> </dd></dl>
+
+<p>Referenced by <a class="el" href="classvex_1_1Context.html#a5dbfaec8e340379f57cf589617a267b8">vex::Context::Context()</a>.</p>
 
 </div>
 </div>

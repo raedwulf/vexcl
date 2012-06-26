@@ -58,6 +58,8 @@
 
 <p><code>#include &lt;stencil.hpp&gt;</code></p>
 
+<p>Inherits vex::stencil_base&lt; T &gt;.</p>
+
 <p><a href="classvex_1_1gstencil-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
@@ -72,19 +74,44 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a95c5263d669af3dbde5e54524bb8ef0d"><td class="memTemplParams" colspan="2">template&lt;class func_name &gt; </td></tr>
 <tr class="memitem:a95c5263d669af3dbde5e54524bb8ef0d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvex_1_1gstencil.html#a95c5263d669af3dbde5e54524bb8ef0d">convolve</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x, <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;y, T alpha=0, T beta=1) const </td></tr>
 <tr class="memdesc:a95c5263d669af3dbde5e54524bb8ef0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolve stencil with a vector.  <a href="#a95c5263d669af3dbde5e54524bb8ef0d"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classvex_1_1stencil__base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classvex_1_1stencil__base')"><img src="closed.png" alt="-"/>&nbsp;Protected Member Functions inherited from <a class="el" href="classvex_1_1stencil__base.html">vex::stencil_base< T ></a></td></tr>
+<tr class="memitem:af1290b5dd8c0af82f8434257eeb0ee32 inherit pro_methods_classvex_1_1stencil__base"><td class="memTemplParams" colspan="2"><a class="anchor" id="af1290b5dd8c0af82f8434257eeb0ee32"></a>
+template&lt;class Iterator &gt; </td></tr>
+<tr class="memitem:af1290b5dd8c0af82f8434257eeb0ee32"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>stencil_base</b> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, uint width, uint center, Iterator begin, Iterator end)</td></tr>
+<tr class="memitem:a7f478f6c792921570c0ff0e6ff4b95d4 inherit pro_methods_classvex_1_1stencil__base"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f478f6c792921570c0ff0e6ff4b95d4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>exchange_halos</b> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x) const </td></tr>
+<tr class="inherit_header pro_attribs_classvex_1_1stencil__base"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classvex_1_1stencil__base')"><img src="closed.png" alt="-"/>&nbsp;Protected Attributes inherited from <a class="el" href="classvex_1_1stencil__base.html">vex::stencil_base< T ></a></td></tr>
+<tr class="memitem:a9500b2e6b1f386d8f9ea3e479217f9ca inherit pro_attribs_classvex_1_1stencil__base"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9500b2e6b1f386d8f9ea3e479217f9ca"></a>
+const std::vector<br class="typebreak"/>
+&lt; cl::CommandQueue &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>queue</b></td></tr>
+<tr class="memitem:a3a960bcceb90a41a8b017c3139852e41 inherit pro_attribs_classvex_1_1stencil__base"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a960bcceb90a41a8b017c3139852e41"></a>
+std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>hbuf</b></td></tr>
+<tr class="memitem:ada344a418662f5e3f54a0ac2cbb81c4f inherit pro_attribs_classvex_1_1stencil__base"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada344a418662f5e3f54a0ac2cbb81c4f"></a>
+std::vector&lt; cl::Buffer &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dbuf</b></td></tr>
+<tr class="memitem:a32770cfcee5246550df3828d6a9f629e inherit pro_attribs_classvex_1_1stencil__base"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32770cfcee5246550df3828d6a9f629e"></a>
+std::vector&lt; cl::Buffer &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>s</b></td></tr>
+<tr class="memitem:a285dfb2443cec3872e9899498c5e193a inherit pro_attribs_classvex_1_1stencil__base"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a285dfb2443cec3872e9899498c5e193a"></a>
+std::vector&lt; cl::Event &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>event</b></td></tr>
+<tr class="memitem:a31005426a5b3e320312fc9b5716479d0 inherit pro_attribs_classvex_1_1stencil__base"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31005426a5b3e320312fc9b5716479d0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>lhalo</b></td></tr>
+<tr class="memitem:a99e23e82a020762c523e66712c18c191 inherit pro_attribs_classvex_1_1stencil__base"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a99e23e82a020762c523e66712c18c191"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>rhalo</b></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br/>
 class vex::gstencil&lt; T &gt;</h3>
 
 <p>Generalized stencil. </p>
-<p>This is generalized stencil class. Basically, this is a small dense matrix. Generalized stencil may be used in combination with standard functions, as in </p>
+<p>This is generalized stencil class. Basically, this is a small dense matrix. Generalized stencil may be used in combination with builtin or user functions of one argument, as in </p>
 <div class="fragment"><div class="line"> <a class="code" href="classvex_1_1gstencil.html" title="Generalized stencil.">vex::gstencil&lt;double&gt;</a> S(ctx.queue(), 2, 3, 1, {</div>
 <div class="line">     1, -1,  0,</div>
 <div class="line">     0,  1, -1</div>
 <div class="line"> });</div>
 <div class="line"> y = sin(x * S);</div>
-</div><!-- fragment --><p> This admittedly unintuitive notation corresponds to <img class="formulaInl" alt="$y_i = \sum_k sin(\sum_j S_{kj} * x_{i+j-c})$" src="form_0.png"/>, where c is center of the stencil. Please see github wiki for further examples of this class usage. </p>
+</div><!-- fragment --><p> This notation corresponds to <img class="formulaInl" alt="$y_i = \sum_k sin(\sum_j S_{kj} * x_{i+j-c})$" src="form_0.png"/>, where c is center of the stencil. Please see github wiki for further examples of this class usage. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a5cbbaa7ea6ea35dd8bec61f7d8820ffb"></a>
 <div class="memitem">
