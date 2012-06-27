@@ -63,6 +63,7 @@
 <code>#include &lt;sstream&gt;</code><br/>
 <code>#include &lt;string&gt;</code><br/>
 <code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;map&gt;</code><br/>
 <code>#include &lt;algorithm&gt;</code><br/>
 <code>#include &lt;type_traits&gt;</code><br/>
 <code>#include &lt;functional&gt;</code><br/>
@@ -142,10 +143,12 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na
 <tr class="memitem:adde6e399118c4e9c8fdb111d23d65698"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adde6e399118c4e9c8fdb111d23d65698"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#adde6e399118c4e9c8fdb111d23d65698">vex::alignup</a> (size_t n, size_t m=16U)</td></tr>
 <tr class="memdesc:adde6e399118c4e9c8fdb111d23d65698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Align n to the next multiple of m. <br/></td></tr>
-<tr class="memitem:a14786a0605f83c1df74e9e66685630b0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a14786a0605f83c1df74e9e66685630b0">vex::partition_by_vector_perf</a> (size_t n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
-<tr class="memdesc:a14786a0605f83c1df74e9e66685630b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitions vector wrt to vector performance of devices.  <a href="#a14786a0605f83c1df74e9e66685630b0"></a><br/></td></tr>
-<tr class="memitem:a107bd5e3e6dec3c4b85cc4888624a50c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a107bd5e3e6dec3c4b85cc4888624a50c">vex::partition_by_spmv_perf</a> (size_t n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
-<tr class="memdesc:a107bd5e3e6dec3c4b85cc4888624a50c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitions vector wrt to vector performance of devices.  <a href="#a107bd5e3e6dec3c4b85cc4888624a50c"></a><br/></td></tr>
+<tr class="memitem:a47b97ac4ec3d1d74e854ec44c0c800d2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a47b97ac4ec3d1d74e854ec44c0c800d2">vex::device_vector_perf</a> (const cl::Context &amp;context, const cl::Device &amp;device)</td></tr>
+<tr class="memdesc:a47b97ac4ec3d1d74e854ec44c0c800d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weights device wrt to vector performance.  <a href="#a47b97ac4ec3d1d74e854ec44c0c800d2"></a><br/></td></tr>
+<tr class="memitem:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a8ffb5d87908b8cbbc57d6ffb2a29aeec">vex::device_spmv_perf</a> (const cl::Context &amp;context, const cl::Device &amp;device)</td></tr>
+<tr class="memdesc:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns device weight after spmv test.  <a href="#a8ffb5d87908b8cbbc57d6ffb2a29aeec"></a><br/></td></tr>
+<tr class="memitem:a545958e083fcea052c69301a0de38903"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a545958e083fcea052c69301a0de38903">vex::equal_weights</a> (const cl::Context &amp;context, const cl::Device &amp;device)</td></tr>
+<tr class="memdesc:a545958e083fcea052c69301a0de38903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns equal weight to each device.  <a href="#a545958e083fcea052c69301a0de38903"></a><br/></td></tr>
 <tr class="memitem:a7107660147252c74f159b733c678c86e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7107660147252c74f159b733c678c86e"></a>
 std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>vex::partition</b> (size_t n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
 <tr class="memitem:a61989abf337d9845cad96ce9e805fd56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61989abf337d9845cad96ce9e805fd56"></a>

@@ -63,17 +63,16 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a4b9c7535bf1b7a5a49b688b926af4a5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b9c7535bf1b7a5a49b688b926af4a5f"></a>
-typedef std::function<br class="typebreak"/>
-&lt; std::vector&lt; size_t &gt;size_t, <br class="typebreak"/>
-const std::vector<br class="typebreak"/>
-&lt; cl::CommandQueue &gt; &amp;) &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>function_type</b></td></tr>
+<tr class="memitem:aef7a4d368d8184099f8c82b75f37022d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef7a4d368d8184099f8c82b75f37022d"></a>
+typedef std::function&lt; double(const <br class="typebreak"/>
+cl::Context &amp;, const <br class="typebreak"/>
+cl::Device &amp;) &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>weight_function</b></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ad59fdc92925dfb193d28303424db0c78"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad59fdc92925dfb193d28303424db0c78"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (function_type f)</td></tr>
-<tr class="memitem:aeed0a322c7f7672219fcdee17daac6c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeed0a322c7f7672219fcdee17daac6c1"></a>
+<tr class="memitem:a49249aa6e2b45eca31b815c781fde55b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49249aa6e2b45eca31b815c781fde55b"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (weight_function f)</td></tr>
+<tr class="memitem:ab43e279b421f55a6f0cc56aa4db7d6bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab43e279b421f55a6f0cc56aa4db7d6bc"></a>
 static std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (size_t n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>

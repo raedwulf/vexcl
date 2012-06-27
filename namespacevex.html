@@ -114,73 +114,54 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, <a class="el" href="classvex_1_1profiler.html">profiler</a> &amp;prof)</td></tr>
 <tr class="memitem:a2eca041bc53030635bcb0ad706960bed"><td class="memTemplParams" colspan="2">template&lt;typename real , typename column_t &gt; </td></tr>
 <tr class="memitem:a2eca041bc53030635bcb0ad706960bed"><td class="memTemplItemLeft" align="right" valign="top">SpMV&lt; real, column_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a2eca041bc53030635bcb0ad706960bed">operator*</a> (const SpMatBase&lt; real, column_t &gt; &amp;A, const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x)</td></tr>
-<tr class="memitem:ad74c3b659c67565910435d01b83bc799"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad74c3b659c67565910435d01b83bc799"></a>
+<tr class="memitem:ab36e86f07000686f35536653de3c7d8e"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab36e86f07000686f35536653de3c7d8e"></a>
 template&lt;class Expr , typename real , typename column_t &gt; </td></tr>
-<tr class="memitem:ad74c3b659c67565910435d01b83bc799"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; Expr::is_expr, <br class="typebreak"/>
-ExSpMV&lt; Expr, real, column_t &gt;<br class="typebreak"/>
- &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ad74c3b659c67565910435d01b83bc799">operator+</a> (const Expr &amp;expr, const SpMV&lt; real, column_t &gt; &amp;spmv)</td></tr>
-<tr class="memdesc:ad74c3b659c67565910435d01b83bc799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an expression and sparse matrix - vector product. <br/></td></tr>
-<tr class="memitem:a73f231a9e85e1e48c279c3c1018ea8ec"><td class="memTemplParams" colspan="2"><a class="anchor" id="a73f231a9e85e1e48c279c3c1018ea8ec"></a>
+<tr class="memitem:ab36e86f07000686f35536653de3c7d8e"><td class="memTemplItemLeft" align="right" valign="top">ExSpMV&lt; Expr, real, column_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ab36e86f07000686f35536653de3c7d8e">operator+</a> (const Expr &amp;expr, const SpMV&lt; real, column_t &gt; &amp;spmv)</td></tr>
+<tr class="memdesc:ab36e86f07000686f35536653de3c7d8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an expression and sparse matrix - vector product. <br/></td></tr>
+<tr class="memitem:a54cebd0e42dbccaa1d5e61b543d89b93"><td class="memTemplParams" colspan="2"><a class="anchor" id="a54cebd0e42dbccaa1d5e61b543d89b93"></a>
 template&lt;class Expr , typename real , typename column_t &gt; </td></tr>
-<tr class="memitem:a73f231a9e85e1e48c279c3c1018ea8ec"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; Expr::is_expr, <br class="typebreak"/>
-ExSpMV&lt; Expr, real, column_t &gt;<br class="typebreak"/>
- &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a73f231a9e85e1e48c279c3c1018ea8ec">operator-</a> (const Expr &amp;expr, const SpMV&lt; real, column_t &gt; &amp;spmv)</td></tr>
-<tr class="memdesc:a73f231a9e85e1e48c279c3c1018ea8ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract sparse matrix - vector product from an expression. <br/></td></tr>
+<tr class="memitem:a54cebd0e42dbccaa1d5e61b543d89b93"><td class="memTemplItemLeft" align="right" valign="top">ExSpMV&lt; Expr, real, column_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a54cebd0e42dbccaa1d5e61b543d89b93">operator-</a> (const Expr &amp;expr, const SpMV&lt; real, column_t &gt; &amp;spmv)</td></tr>
+<tr class="memdesc:a54cebd0e42dbccaa1d5e61b543d89b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract sparse matrix - vector product from an expression. <br/></td></tr>
 <tr class="memitem:a799d69aae7db74f51a33f929793ae1a7"><td class="memTemplParams" colspan="2"><a class="anchor" id="a799d69aae7db74f51a33f929793ae1a7"></a>
 template&lt;typename real , typename column_t , uint N&gt; </td></tr>
 <tr class="memitem:a799d69aae7db74f51a33f929793ae1a7"><td class="memTemplItemLeft" align="right" valign="top">MultiSpMV&lt; real, column_t, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a799d69aae7db74f51a33f929793ae1a7">operator*</a> (const SpMatBase&lt; real, column_t &gt; &amp;A, const <a class="el" href="classvex_1_1multivector.html">vex::multivector</a>&lt; real, N &gt; &amp;x)</td></tr>
 <tr class="memdesc:a799d69aae7db74f51a33f929793ae1a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply sparse matrix and a vector. <br/></td></tr>
-<tr class="memitem:a01e215cc6448b4760199b5a55ee85cda"><td class="memTemplParams" colspan="2"><a class="anchor" id="a01e215cc6448b4760199b5a55ee85cda"></a>
+<tr class="memitem:ac6536b3eaf5b0de3882c297be6b00766"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac6536b3eaf5b0de3882c297be6b00766"></a>
 template&lt;class Expr , typename real , typename column_t , uint N&gt; </td></tr>
-<tr class="memitem:a01e215cc6448b4760199b5a55ee85cda"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
-&lt; Expr::is_multiex, <br class="typebreak"/>
-MultiExSpMV&lt; Expr, real, <br class="typebreak"/>
-column_t, N &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a01e215cc6448b4760199b5a55ee85cda">operator+</a> (const Expr &amp;expr, const MultiSpMV&lt; real, column_t, N &gt; &amp;spmv)</td></tr>
-<tr class="memdesc:a01e215cc6448b4760199b5a55ee85cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an expression and sparse matrix - multivector product. <br/></td></tr>
-<tr class="memitem:ae3743cbcbe53817af291c8128701adc5"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae3743cbcbe53817af291c8128701adc5"></a>
+<tr class="memitem:ac6536b3eaf5b0de3882c297be6b00766"><td class="memTemplItemLeft" align="right" valign="top">MultiExSpMV&lt; Expr, real, <br class="typebreak"/>
+column_t, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ac6536b3eaf5b0de3882c297be6b00766">operator+</a> (const Expr &amp;expr, const MultiSpMV&lt; real, column_t, N &gt; &amp;spmv)</td></tr>
+<tr class="memdesc:ac6536b3eaf5b0de3882c297be6b00766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an expression and sparse matrix - multivector product. <br/></td></tr>
+<tr class="memitem:ade8eed649580b78e0941cc2b45582058"><td class="memTemplParams" colspan="2"><a class="anchor" id="ade8eed649580b78e0941cc2b45582058"></a>
 template&lt;class Expr , typename real , typename column_t , uint N&gt; </td></tr>
-<tr class="memitem:ae3743cbcbe53817af291c8128701adc5"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
-&lt; Expr::is_multiex, <br class="typebreak"/>
-MultiExSpMV&lt; Expr, real, <br class="typebreak"/>
-column_t, N &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ae3743cbcbe53817af291c8128701adc5">operator-</a> (const Expr &amp;expr, const MultiSpMV&lt; real, column_t, N &gt; &amp;spmv)</td></tr>
-<tr class="memdesc:ae3743cbcbe53817af291c8128701adc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtruct sparse matrix - multivector product from an expression. <br/></td></tr>
-<tr class="memitem:a6bfb624117ba61e479e77e03a25caf51"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bfb624117ba61e479e77e03a25caf51"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a6bfb624117ba61e479e77e03a25caf51">device_spmv_perf</a> (const cl::Context &amp;context, const cl::Device &amp;device, size_t test_size=64U)</td></tr>
-<tr class="memdesc:a6bfb624117ba61e479e77e03a25caf51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns device weight after spmv test. <br/></td></tr>
-<tr class="memitem:a107bd5e3e6dec3c4b85cc4888624a50c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a107bd5e3e6dec3c4b85cc4888624a50c">partition_by_spmv_perf</a> (size_t n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
-<tr class="memdesc:a107bd5e3e6dec3c4b85cc4888624a50c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitions vector wrt to vector performance of devices.  <a href="#a107bd5e3e6dec3c4b85cc4888624a50c"></a><br/></td></tr>
+<tr class="memitem:ade8eed649580b78e0941cc2b45582058"><td class="memTemplItemLeft" align="right" valign="top">MultiExSpMV&lt; Expr, real, <br class="typebreak"/>
+column_t, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ade8eed649580b78e0941cc2b45582058">operator-</a> (const Expr &amp;expr, const MultiSpMV&lt; real, column_t, N &gt; &amp;spmv)</td></tr>
+<tr class="memdesc:ade8eed649580b78e0941cc2b45582058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract sparse matrix - multivector product from an expression. <br/></td></tr>
+<tr class="memitem:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a8ffb5d87908b8cbbc57d6ffb2a29aeec">device_spmv_perf</a> (const cl::Context &amp;context, const cl::Device &amp;device)</td></tr>
+<tr class="memdesc:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns device weight after spmv test.  <a href="#a8ffb5d87908b8cbbc57d6ffb2a29aeec"></a><br/></td></tr>
 <tr class="memitem:a4d1bc5b4dab3e298f101c9d152bcfaf3"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4d1bc5b4dab3e298f101c9d152bcfaf3"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a4d1bc5b4dab3e298f101c9d152bcfaf3"><td class="memTemplItemLeft" align="right" valign="top">Conv&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x, const <a class="el" href="classvex_1_1stencil.html">stencil</a>&lt; T &gt; &amp;s)</td></tr>
 <tr class="memitem:a0b2a12399789264fe73b1ee151b8ec49"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0b2a12399789264fe73b1ee151b8ec49"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a0b2a12399789264fe73b1ee151b8ec49"><td class="memTemplItemLeft" align="right" valign="top">Conv&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classvex_1_1stencil.html">stencil</a>&lt; T &gt; &amp;s, const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x)</td></tr>
-<tr class="memitem:af7dc04b2de2155af355ad1765dfc47a2"><td class="memTemplParams" colspan="2"><a class="anchor" id="af7dc04b2de2155af355ad1765dfc47a2"></a>
+<tr class="memitem:a51ee76c6f6e389755a54d1dfe9138355"><td class="memTemplParams" colspan="2"><a class="anchor" id="a51ee76c6f6e389755a54d1dfe9138355"></a>
 template&lt;class Expr , typename T &gt; </td></tr>
-<tr class="memitem:af7dc04b2de2155af355ad1765dfc47a2"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; Expr::is_expr, <br class="typebreak"/>
-ExConv&lt; Expr, T &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator+</b> (const Expr &amp;expr, const Conv&lt; T &gt; &amp;cnv)</td></tr>
-<tr class="memitem:a8720effe022120fbb208603241799744"><td class="memTemplParams" colspan="2"><a class="anchor" id="a8720effe022120fbb208603241799744"></a>
+<tr class="memitem:a51ee76c6f6e389755a54d1dfe9138355"><td class="memTemplItemLeft" align="right" valign="top">ExConv&lt; Expr, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator+</b> (const Expr &amp;expr, const Conv&lt; T &gt; &amp;cnv)</td></tr>
+<tr class="memitem:ad2eeba1c566dfc6d37bf47878fc89e7d"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad2eeba1c566dfc6d37bf47878fc89e7d"></a>
 template&lt;class Expr , typename T &gt; </td></tr>
-<tr class="memitem:a8720effe022120fbb208603241799744"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; Expr::is_expr, <br class="typebreak"/>
-ExConv&lt; Expr, T &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-</b> (const Expr &amp;expr, const Conv&lt; T &gt; &amp;cnv)</td></tr>
+<tr class="memitem:ad2eeba1c566dfc6d37bf47878fc89e7d"><td class="memTemplItemLeft" align="right" valign="top">ExConv&lt; Expr, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-</b> (const Expr &amp;expr, const Conv&lt; T &gt; &amp;cnv)</td></tr>
 <tr class="memitem:a86b11aac42654652da86fa10067b2d6c"><td class="memTemplParams" colspan="2"><a class="anchor" id="a86b11aac42654652da86fa10067b2d6c"></a>
 template&lt;typename T , uint N&gt; </td></tr>
 <tr class="memitem:a86b11aac42654652da86fa10067b2d6c"><td class="memTemplItemLeft" align="right" valign="top">MultiConv&lt; T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classvex_1_1multivector.html">multivector</a>&lt; T, N &gt; &amp;x, const <a class="el" href="classvex_1_1stencil.html">stencil</a>&lt; T &gt; &amp;s)</td></tr>
 <tr class="memitem:a79c1dd0902f67a1da2268a8846c9ade1"><td class="memTemplParams" colspan="2"><a class="anchor" id="a79c1dd0902f67a1da2268a8846c9ade1"></a>
 template&lt;typename T , uint N&gt; </td></tr>
 <tr class="memitem:a79c1dd0902f67a1da2268a8846c9ade1"><td class="memTemplItemLeft" align="right" valign="top">MultiConv&lt; T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classvex_1_1stencil.html">stencil</a>&lt; T &gt; &amp;s, const <a class="el" href="classvex_1_1multivector.html">multivector</a>&lt; T, N &gt; &amp;x)</td></tr>
-<tr class="memitem:a98d68423ab2ae9b50a32b1baee4a0440"><td class="memTemplParams" colspan="2"><a class="anchor" id="a98d68423ab2ae9b50a32b1baee4a0440"></a>
+<tr class="memitem:ab4d67abc0fb283eb13df70c46a4f35f9"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab4d67abc0fb283eb13df70c46a4f35f9"></a>
 template&lt;class Expr , typename T , uint N&gt; </td></tr>
-<tr class="memitem:a98d68423ab2ae9b50a32b1baee4a0440"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
-&lt; Expr::is_multiex, <br class="typebreak"/>
-MultiExConv&lt; Expr, T, N &gt;<br class="typebreak"/>
- &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator+</b> (const Expr &amp;expr, const MultiConv&lt; T, N &gt; &amp;cnv)</td></tr>
-<tr class="memitem:acd59c45b0d672a35bc54d9a988052cf1"><td class="memTemplParams" colspan="2"><a class="anchor" id="acd59c45b0d672a35bc54d9a988052cf1"></a>
+<tr class="memitem:ab4d67abc0fb283eb13df70c46a4f35f9"><td class="memTemplItemLeft" align="right" valign="top">MultiExConv&lt; Expr, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator+</b> (const Expr &amp;expr, const MultiConv&lt; T, N &gt; &amp;cnv)</td></tr>
+<tr class="memitem:aa41f32af33a04254328b54735e17456a"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa41f32af33a04254328b54735e17456a"></a>
 template&lt;class Expr , typename T , uint N&gt; </td></tr>
-<tr class="memitem:acd59c45b0d672a35bc54d9a988052cf1"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
-&lt; Expr::is_multiex, <br class="typebreak"/>
-MultiExConv&lt; Expr, T, N &gt;<br class="typebreak"/>
- &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-</b> (const Expr &amp;expr, const MultiConv&lt; T, N &gt; &amp;cnv)</td></tr>
+<tr class="memitem:aa41f32af33a04254328b54735e17456a"><td class="memTemplItemLeft" align="right" valign="top">MultiExConv&lt; Expr, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-</b> (const Expr &amp;expr, const MultiConv&lt; T, N &gt; &amp;cnv)</td></tr>
 <tr class="memitem:ae0ce17a023764a297c7990c314b26f63"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae0ce17a023764a297c7990c314b26f63"></a>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:ae0ce17a023764a297c7990c314b26f63"><td class="memTemplItemLeft" align="right" valign="top">GStencilProd&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x, const <a class="el" href="classvex_1_1gstencil.html">gstencil</a>&lt; T &gt; &amp;s)</td></tr>
@@ -451,28 +432,18 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a9f88dfa34ba74b9ea8d69ff5f2b1d5f5"><td class="memTemplParams" colspan="2"><a class="anchor" id="a9f88dfa34ba74b9ea8d69ff5f2b1d5f5"></a>
 template&lt;typename T , uint N&gt; </td></tr>
 <tr class="memitem:a9f88dfa34ba74b9ea8d69ff5f2b1d5f5"><td class="memTemplItemLeft" align="right" valign="top">MultiGConv&lt; trunc_name, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>trunc</b> (const MultiGStencilProd&lt; T, N &gt; &amp;s)</td></tr>
-<tr class="memitem:a3b634bc5657df26fe7610bbbe0e34c3b"><td class="memTemplParams" colspan="2"><a class="anchor" id="a3b634bc5657df26fe7610bbbe0e34c3b"></a>
+<tr class="memitem:af2dc774968527e68bfbe5734b93c139d"><td class="memTemplParams" colspan="2"><a class="anchor" id="af2dc774968527e68bfbe5734b93c139d"></a>
 template&lt;class Expr , class func , typename T &gt; </td></tr>
-<tr class="memitem:a3b634bc5657df26fe7610bbbe0e34c3b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; Expr::is_expr, <br class="typebreak"/>
-ExGConv&lt; Expr, func, T &gt;<br class="typebreak"/>
- &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator+</b> (const Expr &amp;expr, const GConv&lt; func, T &gt; &amp;cnv)</td></tr>
-<tr class="memitem:a7d457dbff9f3f466a638552a3a7fed53"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7d457dbff9f3f466a638552a3a7fed53"></a>
+<tr class="memitem:af2dc774968527e68bfbe5734b93c139d"><td class="memTemplItemLeft" align="right" valign="top">ExGConv&lt; Expr, func, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator+</b> (const Expr &amp;expr, const GConv&lt; func, T &gt; &amp;cnv)</td></tr>
+<tr class="memitem:adf73a94ad24fabceae66549883e2a213"><td class="memTemplParams" colspan="2"><a class="anchor" id="adf73a94ad24fabceae66549883e2a213"></a>
 template&lt;class Expr , class func , typename T &gt; </td></tr>
-<tr class="memitem:a7d457dbff9f3f466a638552a3a7fed53"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; Expr::is_expr, <br class="typebreak"/>
-ExGConv&lt; Expr, func, T &gt;<br class="typebreak"/>
- &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-</b> (const Expr &amp;expr, const GConv&lt; func, T &gt; &amp;cnv)</td></tr>
-<tr class="memitem:a967522011ff2b50d1dafbab72f56ad80"><td class="memTemplParams" colspan="2"><a class="anchor" id="a967522011ff2b50d1dafbab72f56ad80"></a>
+<tr class="memitem:adf73a94ad24fabceae66549883e2a213"><td class="memTemplItemLeft" align="right" valign="top">ExGConv&lt; Expr, func, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-</b> (const Expr &amp;expr, const GConv&lt; func, T &gt; &amp;cnv)</td></tr>
+<tr class="memitem:ade5acdbe726baa73f9ae0339fe3a13b4"><td class="memTemplParams" colspan="2"><a class="anchor" id="ade5acdbe726baa73f9ae0339fe3a13b4"></a>
 template&lt;class Expr , class func , typename T , uint N&gt; </td></tr>
-<tr class="memitem:a967522011ff2b50d1dafbab72f56ad80"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
-&lt; Expr::is_multiex, <br class="typebreak"/>
-MultiExGConv&lt; Expr, func, T, N &gt;<br class="typebreak"/>
- &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator+</b> (const Expr &amp;expr, const MultiGConv&lt; func, T, N &gt; &amp;cnv)</td></tr>
-<tr class="memitem:a5e8d05058515035038ebe39c3602551c"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5e8d05058515035038ebe39c3602551c"></a>
+<tr class="memitem:ade5acdbe726baa73f9ae0339fe3a13b4"><td class="memTemplItemLeft" align="right" valign="top">MultiExGConv&lt; Expr, func, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator+</b> (const Expr &amp;expr, const MultiGConv&lt; func, T, N &gt; &amp;cnv)</td></tr>
+<tr class="memitem:a3b7b037489a1e724cb091435d07e0d1f"><td class="memTemplParams" colspan="2"><a class="anchor" id="a3b7b037489a1e724cb091435d07e0d1f"></a>
 template&lt;class Expr , class func , typename T , uint N&gt; </td></tr>
-<tr class="memitem:a5e8d05058515035038ebe39c3602551c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
-&lt; Expr::is_multiex, <br class="typebreak"/>
-MultiExGConv&lt; Expr, func, T, N &gt;<br class="typebreak"/>
- &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-</b> (const Expr &amp;expr, const MultiGConv&lt; func, T, N &gt; &amp;cnv)</td></tr>
+<tr class="memitem:a3b7b037489a1e724cb091435d07e0d1f"><td class="memTemplItemLeft" align="right" valign="top">MultiExGConv&lt; Expr, func, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-</b> (const Expr &amp;expr, const MultiGConv&lt; func, T, N &gt; &amp;cnv)</td></tr>
 <tr class="memitem:a56365bca0357a23c638d8d39a0224304"><td class="memTemplParams" colspan="2"><a class="anchor" id="a56365bca0357a23c638d8d39a0224304"></a>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:a56365bca0357a23c638d8d39a0224304"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a56365bca0357a23c638d8d39a0224304">type_name</a> ()</td></tr>
@@ -510,8 +481,10 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na
 <tr class="memitem:adde6e399118c4e9c8fdb111d23d65698"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adde6e399118c4e9c8fdb111d23d65698"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#adde6e399118c4e9c8fdb111d23d65698">alignup</a> (size_t n, size_t m=16U)</td></tr>
 <tr class="memdesc:adde6e399118c4e9c8fdb111d23d65698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Align n to the next multiple of m. <br/></td></tr>
-<tr class="memitem:a14786a0605f83c1df74e9e66685630b0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a14786a0605f83c1df74e9e66685630b0">partition_by_vector_perf</a> (size_t n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
-<tr class="memdesc:a14786a0605f83c1df74e9e66685630b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitions vector wrt to vector performance of devices.  <a href="#a14786a0605f83c1df74e9e66685630b0"></a><br/></td></tr>
+<tr class="memitem:a47b97ac4ec3d1d74e854ec44c0c800d2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a47b97ac4ec3d1d74e854ec44c0c800d2">device_vector_perf</a> (const cl::Context &amp;context, const cl::Device &amp;device)</td></tr>
+<tr class="memdesc:a47b97ac4ec3d1d74e854ec44c0c800d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weights device wrt to vector performance.  <a href="#a47b97ac4ec3d1d74e854ec44c0c800d2"></a><br/></td></tr>
+<tr class="memitem:a545958e083fcea052c69301a0de38903"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a545958e083fcea052c69301a0de38903">equal_weights</a> (const cl::Context &amp;context, const cl::Device &amp;device)</td></tr>
+<tr class="memdesc:a545958e083fcea052c69301a0de38903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns equal weight to each device.  <a href="#a545958e083fcea052c69301a0de38903"></a><br/></td></tr>
 <tr class="memitem:a7107660147252c74f159b733c678c86e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7107660147252c74f159b733c678c86e"></a>
 std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>partition</b> (size_t n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
 <tr class="memitem:a61989abf337d9845cad96ce9e805fd56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61989abf337d9845cad96ce9e805fd56"></a>
@@ -2183,6 +2156,124 @@ template&lt;class DevFilter  = Filter::AllFilter&gt; </div>
 </div><!-- fragment --> 
 </div>
 </div>
+<a class="anchor" id="a8ffb5d87908b8cbbc57d6ffb2a29aeec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double vex::device_spmv_perf </td>
+          <td>(</td>
+          <td class="paramtype">const cl::Context &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cl::Device &amp;&#160;</td>
+          <td class="paramname"><em>device</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns device weight after spmv test. </p>
+<p>Weights device wrt to spmv performance.</p>
+<p>Launches the following kernel on each device: </p>
+<div class="fragment"><div class="line"> y = A * x;</div>
+</div><!-- fragment --><p> where x and y are vectors, and A is matrix for 3D Poisson problem in square domain. Each device gets portion of the vector proportional to the performance of this operation. </p>
+
+<p>References <a class="el" href="classvex_1_1profiler.html#a489e82323e1d9c0fe021e591b0a983b9">vex::profiler::tic_cl()</a>, and <a class="el" href="classvex_1_1profiler.html#a05e8dc06939d4b775d5676eab885c464">vex::profiler::toc()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a47b97ac4ec3d1d74e854ec44c0c800d2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double vex::device_vector_perf </td>
+          <td>(</td>
+          <td class="paramtype">const cl::Context &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cl::Device &amp;&#160;</td>
+          <td class="paramname"><em>device</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Weights device wrt to vector performance. </p>
+<p>Launches the following kernel on each device: </p>
+<div class="fragment"><div class="line"> a = b + c;</div>
+</div><!-- fragment --><p> where a, b and c are device vectors. Each device gets portion of the vector proportional to the performance of this operation. </p>
+
+</div>
+</div>
+<a class="anchor" id="a545958e083fcea052c69301a0de38903"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double vex::equal_weights </td>
+          <td>(</td>
+          <td class="paramtype">const cl::Context &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cl::Device &amp;&#160;</td>
+          <td class="paramname"><em>device</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assigns equal weight to each device. </p>
+<p>This results in equal partitioning. </p>
+
+</div>
+</div>
 <a class="anchor" id="a2eca041bc53030635bcb0ad706960bed"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2209,95 +2300,6 @@ template&lt;typename real , typename column_t &gt; </div>
       </table>
 </div><div class="memdoc">
 <p>Multiply sparse matrix and a vector. </p>
-
-</div>
-</div>
-<a class="anchor" id="a107bd5e3e6dec3c4b85cc4888624a50c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; size_t &gt; vex::partition_by_spmv_perf </td>
-          <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; cl::CommandQueue &gt; &amp;&#160;</td>
-          <td class="paramname"><em>queue</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Partitions vector wrt to vector performance of devices. </p>
-<p>Partitions vector wrt to spmv performance of devices.</p>
-<p>Launches the following kernel on each device: </p>
-<div class="fragment"><div class="line"> a = b + c;</div>
-</div><!-- fragment --><p> where a, b and c are device vectors. Each device gets portion of the vector proportional to the performance of this operation.</p>
-<p>Launches the following kernel on each device: </p>
-<div class="fragment"><div class="line"> y = A * x;</div>
-</div><!-- fragment --><p> where x and y are vectors, and A is matrix for 3D Poisson problem in square domain. Each device gets portion of the vector proportional to the performance of this operation. </p>
-
-<p>References <a class="el" href="namespacevex.html#adde6e399118c4e9c8fdb111d23d65698">alignup()</a>, and <a class="el" href="namespacevex.html#a6bfb624117ba61e479e77e03a25caf51">device_spmv_perf()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a14786a0605f83c1df74e9e66685630b0"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; size_t &gt; vex::partition_by_vector_perf </td>
-          <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; cl::CommandQueue &gt; &amp;&#160;</td>
-          <td class="paramname"><em>queue</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Partitions vector wrt to vector performance of devices. </p>
-<p>Launches the following kernel on each device: </p>
-<div class="fragment"><div class="line"> a = b + c;</div>
-</div><!-- fragment --><p> where a, b and c are device vectors. Each device gets portion of the vector proportional to the performance of this operation.</p>
-<p>Partitions vector wrt to vector performance of devices. Launches the following kernel on each device: </p>
-<div class="fragment"><div class="line"> a = b + c;</div>
-</div><!-- fragment --><p> where a, b and c are device vectors. Each device gets portion of the vector proportional to the performance of this operation. </p>
-
-<p>References <a class="el" href="namespacevex.html#adde6e399118c4e9c8fdb111d23d65698">alignup()</a>.</p>
 
 </div>
 </div>
