@@ -89,6 +89,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stencil.  <a href="classvex_1_1stencil.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1gstencil.html">vex::gstencil&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generalized stencil.  <a href="classvex_1_1gstencil.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1StencilOperator.html">vex::StencilOperator&lt; T, width, center, body &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">User-defined stencil operator.  <a href="classvex_1_1StencilOperator.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -411,6 +413,22 @@ template&lt;class Expr , class func , typename T , uint N&gt; </td></tr>
 <tr class="memitem:a3b7b037489a1e724cb091435d07e0d1f"><td class="memTemplParams" colspan="2"><a class="anchor" id="a3b7b037489a1e724cb091435d07e0d1f"></a>
 template&lt;class Expr , class func , typename T , uint N&gt; </td></tr>
 <tr class="memitem:a3b7b037489a1e724cb091435d07e0d1f"><td class="memTemplItemLeft" align="right" valign="top">MultiExGConv&lt; Expr, func, T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::operator-</b> (const Expr &amp;expr, const MultiGConv&lt; func, T, N &gt; &amp;cnv)</td></tr>
+<tr class="memitem:ab6a692a84c1da723f9e51bd2a3de7b8c"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab6a692a84c1da723f9e51bd2a3de7b8c"></a>
+template&lt;class Expr , typename T , uint width, uint center, const char * body&gt; </td></tr>
+<tr class="memitem:ab6a692a84c1da723f9e51bd2a3de7b8c"><td class="memTemplItemLeft" align="right" valign="top">ExOperConv&lt; Expr, T, width, <br class="typebreak"/>
+center, body &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::operator+</b> (const Expr &amp;expr, const OperConv&lt; T, width, center, body &gt; &amp;cnv)</td></tr>
+<tr class="memitem:a0b54662a2e133dd181d766d2fdad4483"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0b54662a2e133dd181d766d2fdad4483"></a>
+template&lt;class Expr , typename T , uint width, uint center, const char * body&gt; </td></tr>
+<tr class="memitem:a0b54662a2e133dd181d766d2fdad4483"><td class="memTemplItemLeft" align="right" valign="top">ExOperConv&lt; Expr, T, width, <br class="typebreak"/>
+center, body &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::operator-</b> (const Expr &amp;expr, const OperConv&lt; T, width, center, body &gt; &amp;cnv)</td></tr>
+<tr class="memitem:aeb008f02f475b39feacb87eab1582fbe"><td class="memTemplParams" colspan="2"><a class="anchor" id="aeb008f02f475b39feacb87eab1582fbe"></a>
+template&lt;class Expr , typename T , uint N, uint width, uint center, const char * body&gt; </td></tr>
+<tr class="memitem:aeb008f02f475b39feacb87eab1582fbe"><td class="memTemplItemLeft" align="right" valign="top">MultiExOperConv&lt; Expr, T, N, <br class="typebreak"/>
+width, center, body &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::operator+</b> (const Expr &amp;expr, const MultiOperConv&lt; T, N, width, center, body &gt; &amp;cnv)</td></tr>
+<tr class="memitem:a087ace168b4d13ffd8cafbb05be9ed18"><td class="memTemplParams" colspan="2"><a class="anchor" id="a087ace168b4d13ffd8cafbb05be9ed18"></a>
+template&lt;class Expr , typename T , uint N, uint width, uint center, const char * body&gt; </td></tr>
+<tr class="memitem:a087ace168b4d13ffd8cafbb05be9ed18"><td class="memTemplItemLeft" align="right" valign="top">MultiExOperConv&lt; Expr, T, N, <br class="typebreak"/>
+width, center, body &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::operator-</b> (const Expr &amp;expr, const MultiOperConv&lt; T, N, width, center, body &gt; &amp;cnv)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Stencil convolution. </p>

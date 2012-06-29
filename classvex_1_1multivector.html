@@ -121,10 +121,10 @@ const std::vector<br class="typebreak"/>
 &lt; cl::CommandQueue &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1multivector.html#a5d49d9214864a651f59890346e7818fa">queue_list</a> () const </td></tr>
 <tr class="memdesc:a5d49d9214864a651f59890346e7818fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reference to multivector's queue list. <br/></td></tr>
 <tr class="memitem:a41caf0ea263fe86f230b9b13f100f7c2"><td class="memTemplParams" colspan="2"><a class="anchor" id="a41caf0ea263fe86f230b9b13f100f7c2"></a>
-template&lt;typename column_t &gt; </td></tr>
+template&lt;typename column_t&gt; </td></tr>
 <tr class="memitem:a41caf0ea263fe86f230b9b13f100f7c2"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a>&lt; real, N &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const MultiSpMV&lt; real, column_t, N &gt; &amp;spmv)</td></tr>
 <tr class="memitem:acc7f0c2945a66d5ede5f355d1e24ce6d"><td class="memTemplParams" colspan="2"><a class="anchor" id="acc7f0c2945a66d5ede5f355d1e24ce6d"></a>
-template&lt;class Expr , typename column_t &gt; </td></tr>
+template&lt;class Expr, typename column_t&gt; </td></tr>
 <tr class="memitem:acc7f0c2945a66d5ede5f355d1e24ce6d"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a>&lt; real, N &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const MultiExSpMV&lt; Expr, real, column_t, N &gt; &amp;xmv)</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Expression assignments.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>All operations are delegated to components of the multivector. </p>
@@ -182,6 +182,12 @@ template&lt;class func &gt; </td></tr>
 <tr class="memitem:a664f7a1f2e5a6b7232312839f5b671cc"><td class="memTemplParams" colspan="2"><a class="anchor" id="a664f7a1f2e5a6b7232312839f5b671cc"></a>
 template&lt;class Expr , class func &gt; </td></tr>
 <tr class="memitem:a664f7a1f2e5a6b7232312839f5b671cc"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const MultiExGConv&lt; Expr, func, T, N &gt; &amp;cnv)</td></tr>
+<tr class="memitem:aaecb347958cec8850ebc84cb240fa512"><td class="memTemplParams" colspan="2"><a class="anchor" id="aaecb347958cec8850ebc84cb240fa512"></a>
+template&lt;uint width, uint center, const char * body&gt; </td></tr>
+<tr class="memitem:aaecb347958cec8850ebc84cb240fa512"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const MultiOperConv&lt; T, N, width, center, body &gt; &amp;cnv)</td></tr>
+<tr class="memitem:a649665b865642a1c50208710cb1d732a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a649665b865642a1c50208710cb1d732a"></a>
+template&lt;class Expr , uint width, uint center, const char * body&gt; </td></tr>
+<tr class="memitem:a649665b865642a1c50208710cb1d732a"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1multivector.html">multivector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const MultiExOperConv&lt; Expr, T, N, width, center, body &gt; &amp;xc)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
