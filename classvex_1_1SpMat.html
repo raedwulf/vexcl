@@ -62,8 +62,8 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a50f1f3e9d1be35426021a2c0f7e424f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#a50f1f3e9d1be35426021a2c0f7e424f2">SpMat</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, size_t n, const size_t *row, const column_t *col, const real *val)</td></tr>
-<tr class="memdesc:a50f1f3e9d1be35426021a2c0f7e424f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a50f1f3e9d1be35426021a2c0f7e424f2"></a><br/></td></tr>
+<tr class="memitem:aba8d49bfab7337b682f6a8bac996cb6c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#aba8d49bfab7337b682f6a8bac996cb6c">SpMat</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, size_t n, size_t m, const size_t *row, const column_t *col, const real *val)</td></tr>
+<tr class="memdesc:aba8d49bfab7337b682f6a8bac996cb6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#aba8d49bfab7337b682f6a8bac996cb6c"></a><br/></td></tr>
 <tr class="memitem:acae77d141617a11e707b4813e5dca847"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#acae77d141617a11e707b4813e5dca847">mul</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x, <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;y, real alpha=1, bool append=false) const </td></tr>
 <tr class="memdesc:acae77d141617a11e707b4813e5dca847"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix-vector multiplication.  <a href="#acae77d141617a11e707b4813e5dca847"></a><br/></td></tr>
 </table>
@@ -73,7 +73,7 @@ class vex::SpMat&lt; real, column_t &gt;</h3>
 
 <p>Sparse matrix in hybrid ELL-CSR format. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a50f1f3e9d1be35426021a2c0f7e424f2"></a>
+<a class="anchor" id="aba8d49bfab7337b682f6a8bac996cb6c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -90,6 +90,12 @@ template&lt;typename real , typename column_t &gt; </div>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -123,6 +129,7 @@ template&lt;typename real , typename column_t &gt; </div>
   <table class="params">
     <tr><td class="paramname">queue</td><td>vector of queues. Each queue represents one compute device. </td></tr>
     <tr><td class="paramname">n</td><td>number of rows in the matrix. </td></tr>
+    <tr><td class="paramname">m</td><td>number of cols in the matrix. </td></tr>
     <tr><td class="paramname">row</td><td>row index into col and val vectors. </td></tr>
     <tr><td class="paramname">col</td><td>column numbers of nonzero elements of the matrix. </td></tr>
     <tr><td class="paramname">val</td><td>values of nonzero elements of the matrix. </td></tr>

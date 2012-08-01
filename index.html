@@ -53,7 +53,7 @@ Selection of compute devices</h1>
 </div><!-- fragment --><p> <a class="el" href="classvex_1_1Context.html" title="VexCL context holder.">vex::Context</a> object holds list of initialized OpenCL contexts and command queues for each filtered device. If you just need list of available devices without creating contexts and queues on them, then look for <a class="el" href="namespacevex.html#a0571bb5e0afbc53f844665652a204b0a" title="Select devices by given criteria.">device_list()</a> function in documenation.</p>
 <h1><a class="anchor" id="vector"></a>
 Memory allocation and vector arithmetic</h1>
-<p>Once you got queue list, you can allocate OpenCL buffers on the associated devices. <a class="el" href="classvex_1_1vector.html">vex::vector</a> constructor accepts std::vector of cl::CommandQueue. The contents of the created vector will be partitioned between each queue (presumably, each of the provided queues is linked with separate device). Size of each partition will be proportional to relative device bandwidth unless macro VEXCL_DUMB_PARTITIONING is defined, in which case equal partitioning scheme will be applied. Device bandwidth is measured first time it is requested by launch of small test kernel.</p>
+<p>Once you got queue list, you can allocate OpenCL buffers on the associated devices. <a class="el" href="classvex_1_1vector.html">vex::vector</a> constructor accepts std::vector of cl::CommandQueue. The contents of the created vector will be partitioned between each queue (presumably, each of the provided queues is linked with separate device). Size of each partition will be proportional to relative device bandwidth. Device bandwidth is measured first time it is requested by launch of small test kernel.</p>
 <p>Multi-platform computation is supported (that is, you can spread your vectors across devices by different vendors), but should be used with caution: all computations will be performed with the speed of the slowest device selected.</p>
 <p>In the example below host vector is allocated and initialized, then copied to all GPU devices found in the system. A couple of empty device vectors are allocated as well: </p>
 <div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> n = 1 &lt;&lt; 20;</div>
@@ -108,7 +108,7 @@ Sparse matrix-vector multiplication</h1>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Move data to compute devices.</span></div>
 <div class="line">    <span class="keywordtype">size_t</span> n = x.size();</div>
-<div class="line">    <a class="code" href="classvex_1_1SpMat.html" title="Sparse matrix in hybrid ELL-CSR format.">vex::SpMat&lt;real&gt;</a>  A(ctx.queue(), n, row.data(), col.data(), val.data());</div>
+<div class="line">    <a class="code" href="classvex_1_1SpMat.html" title="Sparse matrix in hybrid ELL-CSR format.">vex::SpMat&lt;real&gt;</a>  A(ctx.queue(), n, n, row.data(), col.data(), val.data());</div>
 <div class="line">    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> f(ctx.queue(), rhs);</div>
 <div class="line">    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> u(ctx.queue(), x);</div>
 <div class="line">    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> r(ctx.queue(), n);</div>
