@@ -1,4 +1,4 @@
-<map id="G" name="G">
+<map id="reduce.hpp" name="reduce.hpp">
 <area shape="rect" id="node13" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="412,80,537,107"/>
 <area shape="rect" id="node30" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="329,155,433,181"/>
 <area shape="rect" id="node43" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="791,155,920,181"/>

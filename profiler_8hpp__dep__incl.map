@@ -1,4 +1,4 @@
-<map id="G" name="G">
+<map id="profiler.hpp" name="profiler.hpp">
 <area shape="rect" id="node3" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="175,80,264,107"/>
 <area shape="rect" id="node7" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="179,229,260,256"/>
 <area shape="rect" id="node5" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="5,155,99,181"/>

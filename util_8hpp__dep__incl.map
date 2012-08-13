@@ -1,4 +1,4 @@
-<map id="G" name="G">
+<map id="util.hpp" name="util.hpp">
 <area shape="rect" id="node3" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="28,155,118,181"/>
 <area shape="rect" id="node5" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="146,229,228,256"/>
 <area shape="rect" id="node7" href="$stencil_8hpp.html" title="Stencil convolution." alt="" coords="142,155,233,181"/>
