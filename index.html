@@ -40,7 +40,7 @@
 <div class="title">VexCL </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>VexCL is vector expression template library for OpenCL. It has been created for ease of C++ based OpenCL development. Multi-device (and multi-platform) computations are supported. The source code is available at <a href="https://github.com/ddemidov/vexcl">https://github.com/ddemidov/vexcl</a>.</p>
+<div class="textblock"><p>VexCL is vector expression template library for OpenCL. It has been created for ease of OpenCL developement with C++. VexCL strives to reduce amount of boilerplate code needed to develop OpenCL applications. The library provides convenient and intuitive notation for vector arithmetic, reduction, and sparse matrix-vector multiplication. Multi-device and even multi-platform computations are supported. The source code is available at <a href="https://github.com/ddemidov/vexcl">https://github.com/ddemidov/vexcl</a>.</p>
 <h1><a class="anchor" id="devlist"></a>
 Selection of compute devices</h1>
 <p>You can select any number of available compute devices, which satisfy provided filters. Filter is a functor returning bool and acting on a cl::Device parameter. Several standard filters are provided, such as device type or name filter, double precision support etc. Filters can be combined with logical operators. In the example below all devices with names matching "Radeon" and supporting double precision are selected: </p>
