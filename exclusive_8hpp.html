@@ -46,9 +46,9 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">exclusive.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -60,6 +60,7 @@
 <code>#include &lt;string&gt;</code><br/>
 <code>#include &lt;fstream&gt;</code><br/>
 <code>#include &lt;memory&gt;</code><br/>
+<code>#include &lt;cstdlib&gt;</code><br/>
 <code>#include &lt;boost/interprocess/sync/file_lock.hpp&gt;</code><br/>
 <code>#include &lt;CL/cl.hpp&gt;</code><br/>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -72,12 +73,6 @@
 </map>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1Filter_1_1Exclusive.html">vex::Filter::Exclusive</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows exclusive access to given number of devices across several processes.  <a href="classvex_1_1Filter_1_1Exclusive.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacevex"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html">vex</a></td></tr>
@@ -86,6 +81,13 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacevex_1_1Filter"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html">vex::Filter</a></td></tr>
 <tr class="memdesc:namespacevex_1_1Filter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device filters. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a0664aab5022fab0f7764d0e72cb06fc8"><td class="memTemplParams" colspan="2">template&lt;class Filter &gt; </td></tr>
+<tr class="memitem:a0664aab5022fab0f7764d0e72cb06fc8"><td class="memTemplItemLeft" align="right" valign="top">ExclusiveFilter&lt; Filter &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#a0664aab5022fab0f7764d0e72cb06fc8">vex::Filter::Exclusive</a> (const Filter &amp;filter)</td></tr>
+<tr class="memdesc:a0664aab5022fab0f7764d0e72cb06fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows exclusive access to compute devices across several processes.  <a href="#a0664aab5022fab0f7764d0e72cb06fc8"></a><br/></td></tr>
+<tr class="separator:a0664aab5022fab0f7764d0e72cb06fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Device filter allowing exclusive access. </p>
