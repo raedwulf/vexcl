@@ -1,5 +1,5 @@
 <map id="stencil.hpp" name="stencil.hpp">
-<area shape="rect" id="node13" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="366,155,471,181"/>
-<area shape="rect" id="node29" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="523,80,648,107"/>
-<area shape="rect" id="node42" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="829,155,957,181"/>
+<area shape="rect" id="node13" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="345,155,449,181"/>
+<area shape="rect" id="node29" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="491,80,616,107"/>
+<area shape="rect" id="node43" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="758,155,887,181"/>
 </map>

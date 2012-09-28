@@ -1,5 +1,5 @@
 <map id="spmat.hpp" name="spmat.hpp">
-<area shape="rect" id="node23" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="325,155,429,181"/>
-<area shape="rect" id="node36" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="561,80,687,107"/>
-<area shape="rect" id="node50" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="941,155,1069,181"/>
+<area shape="rect" id="node23" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="374,155,479,181"/>
+<area shape="rect" id="node36" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="621,80,747,107"/>
+<area shape="rect" id="node51" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="889,155,1017,181"/>
 </map>
