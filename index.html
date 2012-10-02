@@ -253,7 +253,8 @@ Converting existing algorithms to kernels</h1>
 <div class="line"></div>
 <div class="line"><span class="comment">// Make 100 rk4 steps.</span></div>
 <div class="line"><span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 100; i++) kernel(x);</div>
-</div><!-- fragment --><h1><a class="anchor" id="custkern"></a>
+</div><!-- fragment --><p>The generated kernel is more effective because temporary values used in sys_func are now represented not as full-blown vex::vectors, but as fast register variables inside the kernel body. We have seen upto tenfold performance improvement with this technique.</p>
+<h1><a class="anchor" id="custkern"></a>
 Using custom kernels</h1>
 <p>Custom kernels are of course possible as well. vector::operator(uint) returns cl::Buffer object for a specified device: </p>
 <div class="fragment"><div class="line"><a class="code" href="classvex_1_1Context.html" title="VexCL context holder.">vex::Context</a> ctx(Filter::Type(CL_DEVICE_TYPE_GPU));</div>
