@@ -221,7 +221,7 @@ Converting existing algorithms to kernels</h1>
 <div class="line"><span class="keywordtype">void</span> sys_func(<span class="keyword">const</span> state_type &amp;x, state_type &amp;dx, <span class="keywordtype">double</span> dt) {</div>
 <div class="line">    dx = dt * sin(x);</div>
 <div class="line">}</div>
-</div><!-- fragment --><p> Now, to make a hundred of RK4 iterations for a single double on CPU, all that we need to is </p>
+</div><!-- fragment --><p> Now, to make a hundred of RK4 iterations for a double value on CPU, all that we need to do is </p>
 <div class="fragment"><div class="line"><span class="keywordtype">double</span> x  = 1;</div>
 <div class="line"><span class="keywordtype">double</span> dt = 0.01;</div>
 <div class="line"><span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 100; i++)</div>
@@ -236,6 +236,7 @@ Converting existing algorithms to kernels</h1>
 <div class="line">sym_state sym_x(sym_state::VectorParameter);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Record expression sequience.</span></div>
+<div class="line"><span class="keywordtype">double</span> dt = 0.01;</div>
 <div class="line">runge_kutta_4(sys_func&lt;sym_state&gt;, sym_x, dt);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Build kernel.</span></div>
