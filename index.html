@@ -195,6 +195,63 @@ Multi-component vectors</h1>
 </div><!-- fragment --><p> This expression would generate and launch single combined kernel, which would be more effective. Multi-expressions like these may also be used with ordinary vex::vectors with help of <a class="el" href="namespacevex.html#aef09080095cb1a3c73e7dea14de91bda" title="Ties several vex::vectors into a multivector.">vex::tie()</a> function: </p>
 <div class="fragment"><div class="line"><span class="comment">// vex::vector&lt;double&gt; dx, dy, x, y;</span></div>
 <div class="line"><a class="code" href="namespacevex.html#aef09080095cb1a3c73e7dea14de91bda" title="Ties several vex::vectors into a multivector.">vex::tie</a>(dx,dy) = std::make_tuple(x + y, x - y);</div>
+</div><!-- fragment --><h1><a class="anchor" id="kernel_generator"></a>
+Converting existing algorithms to kernels</h1>
+<p>VexCL kernel generator allows to transparently convert existing CPU algorithm to an OpenCL kernel. In order to do this you need to record sequence of arithmetic expressions made by an algorithm and convert the recorder sequence to a kernel. The recording part is done with help of vex::generator::symbolic&lt;T&gt; class. The class supports arithmetic expression templates and simply outputs to provided stream any expressions it is being subjected to.</p>
+<p>To illustrate this, imagine that you have generic algorithm for a 4th order Runge-Kutta ODE stepper:</p>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> state_type, <span class="keyword">class</span> SysFunction&gt;</div>
+<div class="line"><span class="keywordtype">void</span> runge_kutta_4(SysFunction sys, state_type &amp;x, <span class="keywordtype">double</span> dt) {</div>
+<div class="line">    state_type xtmp, k1, k2, k3, k4;</div>
+<div class="line"></div>
+<div class="line">    sys(x, k1, dt);</div>
+<div class="line"></div>
+<div class="line">    xtmp = x + 0.5 * k1;</div>
+<div class="line">    sys(xtmp, k2, dt);</div>
+<div class="line"></div>
+<div class="line">    xtmp = x + 0.5 * k2;</div>
+<div class="line">    sys(xtmp, k3, dt);</div>
+<div class="line"></div>
+<div class="line">    xtmp = x + k3;</div>
+<div class="line">    sys(xtmp, k4, dt);</div>
+<div class="line"></div>
+<div class="line">    x += (k1 + 2 * k2 + 2 * k3 + k4) / 6;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> To model equation <img class="formulaInl" alt="$\frac{dx}{dt} = sin(x)$" src="form_2.png"/> we also provide the following system function: </p>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> state_type&gt;</div>
+<div class="line"><span class="keywordtype">void</span> sys_func(<span class="keyword">const</span> state_type &amp;x, state_type &amp;dx, <span class="keywordtype">double</span> dt) {</div>
+<div class="line">    dx = dt * sin(x);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> Now, to make a hundred of RK4 iterations for a single double on CPU, all that we need to is </p>
+<div class="fragment"><div class="line"><span class="keywordtype">double</span> x  = 1;</div>
+<div class="line"><span class="keywordtype">double</span> dt = 0.01;</div>
+<div class="line"><span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 100; i++)</div>
+<div class="line">    runge_kutta_4(sys_func&lt;double&gt;, x, dt);</div>
+</div><!-- fragment --><p> Let us now generate the kernel for single RK4 step and apply the kernel to a vex::vector&lt;double&gt; (by doing this we essentially simpultaneously solve big number of same ODEs with different initial conditions). </p>
+<div class="fragment"><div class="line"><span class="comment">// Set recorder for expression sequence.</span></div>
+<div class="line">std::ostringstream body;</div>
+<div class="line"><a class="code" href="namespacevex_1_1generator.html#a7bb760db4db25175da29d869f9b347d1" title="Set output stream for kernel recorder.">vex::generator::set_recorder</a>(body);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Create symbolic variable.</span></div>
+<div class="line"><span class="keyword">typedef</span> <a class="code" href="classvex_1_1generator_1_1symbolic.html" title="Symbolic value.">vex::generator::symbolic&lt;double&gt;</a> sym_state;</div>
+<div class="line">sym_state sym_x(sym_state::VectorParameter);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Record expression sequience.</span></div>
+<div class="line">runge_kutta_4(sys_func&lt;sym_state&gt;, sym_x, dt);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Build kernel.</span></div>
+<div class="line"><span class="keyword">auto</span> kernel = <a class="code" href="namespacevex_1_1generator.html#ac611f14ba35d1e042cee5bceef078fc4" title="Builds kernel from recorded expression sequence and symbolic parameter list.">vex::generator::build_kernel</a>(ctx.queue(),</div>
+<div class="line">    <span class="stringliteral">&quot;rk4_stepper&quot;</span>, body.str(), sym_x);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Create and initialize vector of states.</span></div>
+<div class="line">std::vector&lt;double&gt; xinit(n);</div>
+<div class="line">std::generate(xinit.begin(), xinit.end(), [](){</div>
+<div class="line">    <span class="keywordflow">return</span> (<span class="keywordtype">double</span>)rand() / RAND_MAX;</div>
+<div class="line">    });</div>
+<div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> x(ctx.queue(), n);</div>
+<div class="line"><a class="code" href="namespacevex.html#a7896b8bc121f843d62d724a98ebe3b46" title="Copy device vector to host vector.">vex::copy</a>(xinit, x);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Make 100 rk4 steps.</span></div>
+<div class="line"><span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 100; i++) kernel(x);</div>
 </div><!-- fragment --><h1><a class="anchor" id="custkern"></a>
 Using custom kernels</h1>
 <p>Custom kernels are of course possible as well. vector::operator(uint) returns cl::Buffer object for a specified device: </p>
@@ -213,7 +270,7 @@ Using custom kernels</h1>
 <div class="line"></div>
 <div class="line"><span class="keywordflow">for</span>(uint d = 0; d &lt; ctx.size(); d++) {</div>
 <div class="line">    <span class="keyword">auto</span> dummy = cl::Kernel(program, <span class="stringliteral">&quot;dummy&quot;</span>).bind(ctx.queue()[d], alignup(n, 256), 256);</div>
-<div class="line">    dummy((cl_ulong)x.<a class="code" href="classvex_1_1vector.html#a3404c8ef9b7b06ed88679d0247016359" title="Return size of part on a given device.">part_size</a>(d), x(d));</div>
+<div class="line">    dummy((cl_ulong)x.part_size(d), x(d));</div>
 <div class="line">}</div>
 <div class="line"></div>
 <div class="line">Reductor&lt;float,SUM&gt; sum(ctx.queue());</div>
