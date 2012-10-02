@@ -197,7 +197,7 @@ Multi-component vectors</h1>
 <div class="line"><a class="code" href="namespacevex.html#aef09080095cb1a3c73e7dea14de91bda" title="Ties several vex::vectors into a multivector.">vex::tie</a>(dx,dy) = std::make_tuple(x + y, x - y);</div>
 </div><!-- fragment --><h1><a class="anchor" id="kernel_generator"></a>
 Converting existing algorithms to kernels</h1>
-<p>VexCL kernel generator allows to transparently convert existing CPU algorithm to an OpenCL kernel. In order to do this you need to record sequence of arithmetic expressions made by an algorithm and convert the recorder sequence to a kernel. The recording part is done with help of vex::generator::symbolic&lt;T&gt; class. The class supports arithmetic expression templates and simply outputs to provided stream any expressions it is being subjected to.</p>
+<p>VexCL kernel generator allows to transparently convert existing CPU algorithm to an OpenCL kernel. In order to do this you need to record sequence of arithmetic expressions made by an algorithm and convert the recorded sequence to a kernel. The recording part is done with help of vex::generator::symbolic&lt;T&gt; class. The class supports arithmetic expression templates and simply outputs to provided stream any expressions it is being subjected to.</p>
 <p>To illustrate this, imagine that you have generic algorithm for a 4th order Runge-Kutta ODE stepper:</p>
 <div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> state_type, <span class="keyword">class</span> SysFunction&gt;</div>
 <div class="line"><span class="keywordtype">void</span> runge_kutta_4(SysFunction sys, state_type &amp;x, <span class="keywordtype">double</span> dt) {</div>
