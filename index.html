@@ -253,7 +253,10 @@ Converting existing algorithms to kernels</h1>
 <div class="line"></div>
 <div class="line"><span class="comment">// Make 100 rk4 steps.</span></div>
 <div class="line"><span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 100; i++) kernel(x);</div>
-</div><!-- fragment --><p>The generated kernel is more effective because temporary values used in sys_func are now represented not as full-blown vex::vectors, but as fast register variables inside the kernel body. We have seen upto tenfold performance improvement with this technique.</p>
+</div><!-- fragment --><p>This is much more effective than (for this to work correctly we would need to slightly change sys_func): </p>
+<div class="fragment"><div class="line"><span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 100; i++)</div>
+<div class="line">    runge_kutta_4(sys_func&lt;<a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a>&gt;, x, dt);</div>
+</div><!-- fragment --><p> The generated kernel is more effective because temporary values used in sys_func are now represented not as full-blown vex::vectors, but as fast register variables inside the kernel body. We have seen upto tenfold performance improvement with this technique.</p>
 <h1><a class="anchor" id="custkern"></a>
 Using custom kernels</h1>
 <p>Custom kernels are of course possible as well. vector::operator(uint) returns cl::Buffer object for a specified device: </p>
