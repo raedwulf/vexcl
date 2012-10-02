@@ -99,6 +99,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector_1_1iterator__type.html">vex::vector&lt; T &gt;::iterator_type&lt; vector_type, element_type &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator class.  <a href="classvex_1_1vector_1_1iterator__type.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1BinaryExpression.html">vex::BinaryExpression&lt; LHS, OP, RHS &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expression template.  <a href="structvex_1_1BinaryExpression.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1multivector.html">vex::multivector&lt; T, N, own &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container for several vex::vectors.  <a href="classvex_1_1multivector.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,6 +168,28 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a6c514253c0f09c5a18dac3e687553465"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a6c514253c0f09c5a18dac3e687553465">vex::swap</a> (vector&lt; T &gt; &amp;x, vector&lt; T &gt; &amp;y)</td></tr>
 <tr class="memdesc:a6c514253c0f09c5a18dac3e687553465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap two vectors. <br/></td></tr>
 <tr class="separator:a6c514253c0f09c5a18dac3e687553465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc7fda3e52fcd22be5faa5a2289cf654"><td class="memTemplParams" colspan="2"><a class="anchor" id="abc7fda3e52fcd22be5faa5a2289cf654"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:abc7fda3e52fcd22be5faa5a2289cf654"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+&lt; Expr::is_multiex, const <br class="typebreak"/>
+typename Expr::subtype &amp; &gt;<br class="typebreak"/>
+::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::extract_component</b> (const Expr &amp;expr, uint i)</td></tr>
+<tr class="separator:abc7fda3e52fcd22be5faa5a2289cf654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a413347c6dbeeb89e79c7137df31ca4c8"><td class="memTemplParams" colspan="2"><a class="anchor" id="a413347c6dbeeb89e79c7137df31ca4c8"></a>
+template&lt;class real , size_t N&gt; </td></tr>
+<tr class="memitem:a413347c6dbeeb89e79c7137df31ca4c8"><td class="memTemplItemLeft" align="right" valign="top">const real &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::extract_component</b> (const std::array&lt; real, N &gt; &amp;expr, uint i)</td></tr>
+<tr class="separator:a413347c6dbeeb89e79c7137df31ca4c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa429647a2f253eea652523224ba4300"><td class="memTemplParams" colspan="2"><a class="anchor" id="afa429647a2f253eea652523224ba4300"></a>
+template&lt;class Expr &gt; </td></tr>
+<tr class="memitem:afa429647a2f253eea652523224ba4300"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+&lt; Expr::is_multiex, <br class="typebreak"/>
+KernelGenerator&lt; typename <br class="typebreak"/>
+Expr::subtype &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::get_generator</b> (const Expr &amp;expr, uint i)</td></tr>
+<tr class="separator:afa429647a2f253eea652523224ba4300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b633453bb867995f35e0a079895c362"><td class="memTemplParams" colspan="2"><a class="anchor" id="a9b633453bb867995f35e0a079895c362"></a>
+template&lt;class real , size_t N&gt; </td></tr>
+<tr class="memitem:a9b633453bb867995f35e0a079895c362"><td class="memTemplItemLeft" align="right" valign="top">KernelGenerator&lt; real &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vex::get_generator</b> (const std::array&lt; real, N &gt; &amp;expr, uint i)</td></tr>
+<tr class="separator:a9b633453bb867995f35e0a079895c362"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef09080095cb1a3c73e7dea14de91bda"><td class="memTemplParams" colspan="2">template&lt;typename T , class... Tail&gt; </td></tr>
 <tr class="memitem:aef09080095cb1a3c73e7dea14de91bda"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; All<br class="typebreak"/>
 &lt; std::is_same&lt; <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt;<br class="typebreak"/>

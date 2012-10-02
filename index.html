@@ -203,7 +203,7 @@ Using custom kernels</h1>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> n = 1 &lt;&lt; 20;</div>
 <div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;float&gt;</a> x(ctx.queue(), n);</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">auto</span> program = <a class="code" href="namespacevex.html#a61989abf337d9845cad96ce9e805fd56" title="Create and build a program from source string.">build_sources</a>(context, std::string(</div>
+<div class="line"><span class="keyword">auto</span> program = build_sources(context, std::string(</div>
 <div class="line">    <span class="stringliteral">&quot;kernel void dummy(ulong size, global float *x)\n&quot;</span></div>
 <div class="line">    <span class="stringliteral">&quot;{\n&quot;</span></div>
 <div class="line">    <span class="stringliteral">&quot;    size_t i = get_global_id(0);\n&quot;</span></div>
@@ -212,7 +212,7 @@ Using custom kernels</h1>
 <div class="line">    ));</div>
 <div class="line"></div>
 <div class="line"><span class="keywordflow">for</span>(uint d = 0; d &lt; ctx.size(); d++) {</div>
-<div class="line">    <span class="keyword">auto</span> dummy = cl::Kernel(program, <span class="stringliteral">&quot;dummy&quot;</span>).bind(ctx.queue()[d], <a class="code" href="namespacevex.html#adde6e399118c4e9c8fdb111d23d65698" title="Align n to the next multiple of m.">alignup</a>(n, 256), 256);</div>
+<div class="line">    <span class="keyword">auto</span> dummy = cl::Kernel(program, <span class="stringliteral">&quot;dummy&quot;</span>).bind(ctx.queue()[d], alignup(n, 256), 256);</div>
 <div class="line">    dummy((cl_ulong)x.<a class="code" href="classvex_1_1vector.html#a3404c8ef9b7b06ed88679d0247016359" title="Return size of part on a given device.">part_size</a>(d), x(d));</div>
 <div class="line">}</div>
 <div class="line"></div>
