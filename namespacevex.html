@@ -46,7 +46,8 @@
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">vex Namespace Reference</div>  </div>
 </div><!--header-->
@@ -89,6 +90,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1StencilOperator.html">StencilOperator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">User-defined stencil operator.  <a href="classvex_1_1StencilOperator.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1partitioning__scheme.html">partitioning_scheme</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitioning scheme for vectors and matrices.  <a href="structvex_1_1partitioning__scheme.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html">vector</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device vector.  <a href="classvex_1_1vector.html#details">More...</a><br/></td></tr>
@@ -159,9 +163,8 @@ template&lt;class Expr , typename real , typename column_t , typename idx_t , ui
 column_t, idx_t, N, own &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a37ae80a962751ff1895875ee211d0f87">operator-</a> (const Expr &amp;expr, const MultiSpMV&lt; real, column_t, idx_t, N, own &gt; &amp;spmv)</td></tr>
 <tr class="memdesc:a37ae80a962751ff1895875ee211d0f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract sparse matrix - multivector product from an expression. <br/></td></tr>
 <tr class="separator:a37ae80a962751ff1895875ee211d0f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ffb5d87908b8cbbc57d6ffb2a29aeec"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a8ffb5d87908b8cbbc57d6ffb2a29aeec">device_spmv_perf</a> (const cl::Context &amp;context, const cl::Device &amp;device)</td></tr>
-<tr class="memdesc:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns device weight after spmv test. <br/></td></tr>
+<tr class="memitem:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a8ffb5d87908b8cbbc57d6ffb2a29aeec">device_spmv_perf</a> (const cl::Context &amp;context, const cl::Device &amp;device)</td></tr>
+<tr class="memdesc:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns device weight after spmv test.  <a href="#a8ffb5d87908b8cbbc57d6ffb2a29aeec"></a><br/></td></tr>
 <tr class="separator:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d1bc5b4dab3e298f101c9d152bcfaf3"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4d1bc5b4dab3e298f101c9d152bcfaf3"></a>
 template&lt;typename T &gt; </td></tr>
@@ -598,6 +601,72 @@ template&lt;class Expr , typename T , uint N, bool own, uint width, uint center,
 <tr class="memitem:ae2268c2e8ecc9c19c1c50227e48acb5c"><td class="memTemplItemLeft" align="right" valign="top">MultiExOperConv&lt; Expr, T, N, <br class="typebreak"/>
 own, width, center, body &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-</b> (const Expr &amp;expr, const MultiOperConv&lt; T, N, own, width, center, body &gt; &amp;cnv)</td></tr>
 <tr class="separator:ae2268c2e8ecc9c19c1c50227e48acb5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56365bca0357a23c638d8d39a0224304"><td class="memTemplParams" colspan="2"><a class="anchor" id="a56365bca0357a23c638d8d39a0224304"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a56365bca0357a23c638d8d39a0224304"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a56365bca0357a23c638d8d39a0224304">type_name</a> ()</td></tr>
+<tr class="memdesc:a56365bca0357a23c638d8d39a0224304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert typename to string. <br/></td></tr>
+<tr class="separator:a56365bca0357a23c638d8d39a0224304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a667f172be215e3118f6f80ae22f8a974"><td class="memTemplParams" colspan="2"><a class="anchor" id="a667f172be215e3118f6f80ae22f8a974"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a667f172be215e3118f6f80ae22f8a974"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>type_name&lt; float &gt;</b> ()</td></tr>
+<tr class="separator:a667f172be215e3118f6f80ae22f8a974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a425f0a32f4d75827d460d122eb7c8f95"><td class="memTemplParams" colspan="2"><a class="anchor" id="a425f0a32f4d75827d460d122eb7c8f95"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a425f0a32f4d75827d460d122eb7c8f95"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>type_name&lt; double &gt;</b> ()</td></tr>
+<tr class="separator:a425f0a32f4d75827d460d122eb7c8f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeca1c49c5a2bf2c23a4798331fad4a3c"><td class="memTemplParams" colspan="2"><a class="anchor" id="aeca1c49c5a2bf2c23a4798331fad4a3c"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:aeca1c49c5a2bf2c23a4798331fad4a3c"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>type_name&lt; int &gt;</b> ()</td></tr>
+<tr class="separator:aeca1c49c5a2bf2c23a4798331fad4a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49aa0984c418224aafa75a065f53e4d5"><td class="memTemplParams" colspan="2"><a class="anchor" id="a49aa0984c418224aafa75a065f53e4d5"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a49aa0984c418224aafa75a065f53e4d5"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>type_name&lt; char &gt;</b> ()</td></tr>
+<tr class="separator:a49aa0984c418224aafa75a065f53e4d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a790312b95005275fad69da96b758dd55"><td class="memTemplParams" colspan="2"><a class="anchor" id="a790312b95005275fad69da96b758dd55"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a790312b95005275fad69da96b758dd55"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>type_name&lt; bool &gt;</b> ()</td></tr>
+<tr class="separator:a790312b95005275fad69da96b758dd55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45fc28c19e47b403e6cc9cd46326ebab"><td class="memTemplParams" colspan="2"><a class="anchor" id="a45fc28c19e47b403e6cc9cd46326ebab"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a45fc28c19e47b403e6cc9cd46326ebab"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>type_name&lt; uint &gt;</b> ()</td></tr>
+<tr class="separator:a45fc28c19e47b403e6cc9cd46326ebab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1849327bc469c143c9b7dc88dff17714"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1849327bc469c143c9b7dc88dff17714"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a1849327bc469c143c9b7dc88dff17714"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>type_name&lt; uchar &gt;</b> ()</td></tr>
+<tr class="separator:a1849327bc469c143c9b7dc88dff17714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08607ab86b8756c1bd30c651c6a7ab3b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08607ab86b8756c1bd30c651c6a7ab3b"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a08607ab86b8756c1bd30c651c6a7ab3b">nextpow2</a> (size_t x)</td></tr>
+<tr class="memdesc:a08607ab86b8756c1bd30c651c6a7ab3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return next power of 2. <br/></td></tr>
+<tr class="separator:a08607ab86b8756c1bd30c651c6a7ab3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adde6e399118c4e9c8fdb111d23d65698"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adde6e399118c4e9c8fdb111d23d65698"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#adde6e399118c4e9c8fdb111d23d65698">alignup</a> (size_t n, size_t m=16U)</td></tr>
+<tr class="memdesc:adde6e399118c4e9c8fdb111d23d65698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Align n to the next multiple of m. <br/></td></tr>
+<tr class="separator:adde6e399118c4e9c8fdb111d23d65698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47b97ac4ec3d1d74e854ec44c0c800d2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a47b97ac4ec3d1d74e854ec44c0c800d2">device_vector_perf</a> (const cl::Context &amp;context, const cl::Device &amp;device)</td></tr>
+<tr class="memdesc:a47b97ac4ec3d1d74e854ec44c0c800d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weights device wrt to vector performance.  <a href="#a47b97ac4ec3d1d74e854ec44c0c800d2"></a><br/></td></tr>
+<tr class="separator:a47b97ac4ec3d1d74e854ec44c0c800d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a545958e083fcea052c69301a0de38903"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a545958e083fcea052c69301a0de38903">equal_weights</a> (const cl::Context &amp;context, const cl::Device &amp;device)</td></tr>
+<tr class="memdesc:a545958e083fcea052c69301a0de38903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns equal weight to each device.  <a href="#a545958e083fcea052c69301a0de38903"></a><br/></td></tr>
+<tr class="separator:a545958e083fcea052c69301a0de38903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7107660147252c74f159b733c678c86e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7107660147252c74f159b733c678c86e"></a>
+std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>partition</b> (size_t n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
+<tr class="separator:a7107660147252c74f159b733c678c86e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61989abf337d9845cad96ce9e805fd56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61989abf337d9845cad96ce9e805fd56"></a>
+cl::Program&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a61989abf337d9845cad96ce9e805fd56">build_sources</a> (const cl::Context &amp;context, const std::string &amp;source)</td></tr>
+<tr class="memdesc:a61989abf337d9845cad96ce9e805fd56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and build a program from source string. <br/></td></tr>
+<tr class="separator:a61989abf337d9845cad96ce9e805fd56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90a8336dca27e8e2c3e31bb8a2b70e91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90a8336dca27e8e2c3e31bb8a2b70e91"></a>
+uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a90a8336dca27e8e2c3e31bb8a2b70e91">kernel_workgroup_size</a> (const cl::Kernel &amp;kernel, const cl::Device &amp;device)</td></tr>
+<tr class="memdesc:a90a8336dca27e8e2c3e31bb8a2b70e91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get maximum possible workgroup size for given kernel. <br/></td></tr>
+<tr class="separator:a90a8336dca27e8e2c3e31bb8a2b70e91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d3fe52e80bf245c052cedbf50a3d388"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d3fe52e80bf245c052cedbf50a3d388"></a>
+cl::Context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a4d3fe52e80bf245c052cedbf50a3d388">qctx</a> (const cl::CommandQueue &amp;q)</td></tr>
+<tr class="memdesc:a4d3fe52e80bf245c052cedbf50a3d388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut for q.getInfo&lt;CL_QUEUE_CONTEXT&gt;() <br/></td></tr>
+<tr class="separator:a4d3fe52e80bf245c052cedbf50a3d388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae299eb0d6e1f28d13e73820ac0c56a52"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae299eb0d6e1f28d13e73820ac0c56a52"></a>
+cl::Device&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#ae299eb0d6e1f28d13e73820ac0c56a52">qdev</a> (const cl::CommandQueue &amp;q)</td></tr>
+<tr class="memdesc:ae299eb0d6e1f28d13e73820ac0c56a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut for q.getInfo&lt;CL_QUEUE_DEVICE&gt;() <br/></td></tr>
+<tr class="separator:ae299eb0d6e1f28d13e73820ac0c56a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7896b8bc121f843d62d724a98ebe3b46"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7896b8bc121f843d62d724a98ebe3b46"></a>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:a7896b8bc121f843d62d724a98ebe3b46"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a7896b8bc121f843d62d724a98ebe3b46">copy</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;dv, std::vector&lt; T &gt; &amp;hv, cl_bool blocking=CL_TRUE)</td></tr>
@@ -2364,6 +2433,11 @@ typename multiex_traits<br class="typebreak"/>
 , multiex_dim&lt; MultiEx...&gt;<br class="typebreak"/>
 ::dim &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>trunc</b> (const MultiEx &amp;...multiexpr)</td></tr>
 <tr class="separator:gab7be379375b57a81c820c414bc717c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a4c383d02ac43c2a77e6b222788abf74c"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>standard_kernel_header</b></td></tr>
+<tr class="separator:a4c383d02ac43c2a77e6b222788abf74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Vector expression template library for OpenCL. </p>
@@ -2440,6 +2514,124 @@ template&lt;class DevFilter  = Filter::AllFilter&gt; </div>
 <div class="line">         Filter::Type(CL_DEVICE_TYPE_GPU) &amp;&amp; Filter::DoublePrecision</div>
 <div class="line">         );</div>
 </div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="a8ffb5d87908b8cbbc57d6ffb2a29aeec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double vex::device_spmv_perf </td>
+          <td>(</td>
+          <td class="paramtype">const cl::Context &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cl::Device &amp;&#160;</td>
+          <td class="paramname"><em>device</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns device weight after spmv test. </p>
+<p>Weights device wrt to spmv performance.</p>
+<p>Launches the following kernel on each device: </p>
+<div class="fragment"><div class="line">y = A * x;</div>
+</div><!-- fragment --><p> where x and y are vectors, and A is matrix for 3D Poisson problem in square domain. Each device gets portion of the vector proportional to the performance of this operation. </p>
+
+<p>References <a class="el" href="classvex_1_1profiler.html#a489e82323e1d9c0fe021e591b0a983b9">vex::profiler::tic_cl()</a>, and <a class="el" href="classvex_1_1profiler.html#a05e8dc06939d4b775d5676eab885c464">vex::profiler::toc()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a47b97ac4ec3d1d74e854ec44c0c800d2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double vex::device_vector_perf </td>
+          <td>(</td>
+          <td class="paramtype">const cl::Context &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cl::Device &amp;&#160;</td>
+          <td class="paramname"><em>device</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Weights device wrt to vector performance. </p>
+<p>Launches the following kernel on each device: </p>
+<div class="fragment"><div class="line">a = b + c;</div>
+</div><!-- fragment --><p> where a, b and c are device vectors. Each device gets portion of the vector proportional to the performance of this operation. </p>
+
+</div>
+</div>
+<a class="anchor" id="a545958e083fcea052c69301a0de38903"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double vex::equal_weights </td>
+          <td>(</td>
+          <td class="paramtype">const cl::Context &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cl::Device &amp;&#160;</td>
+          <td class="paramname"><em>device</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assigns equal weight to each device. </p>
+<p>This results in equal partitioning. </p>
+
 </div>
 </div>
 <a class="anchor" id="a7adacdbabcefdd8480ff64ae7b93541a"></a>
@@ -2526,6 +2718,26 @@ template&lt;typename T , class... Tail&gt; </div>
 
 <p>Referenced by <a class="el" href="classvex_1_1Context.html#a5dbfaec8e340379f57cf589617a267b8">vex::Context::Context()</a>.</p>
 
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="a4c383d02ac43c2a77e6b222788abf74c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string vex::standard_kernel_header</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= std::string(</div>
+<div class="line">        <span class="stringliteral">&quot;#if defined(cl_khr_fp64)\n&quot;</span></div>
+<div class="line">        <span class="stringliteral">&quot;#  pragma OPENCL EXTENSION cl_khr_fp64: enable\n&quot;</span></div>
+<div class="line">        <span class="stringliteral">&quot;#elif defined(cl_amd_fp64)\n&quot;</span></div>
+<div class="line">        <span class="stringliteral">&quot;#  pragma OPENCL EXTENSION cl_amd_fp64: enable\n&quot;</span></div>
+<div class="line">        <span class="stringliteral">&quot;#endif\n&quot;</span></div>
+<div class="line">        )</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
