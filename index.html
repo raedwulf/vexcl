@@ -302,7 +302,12 @@ Scalability</h1>
 <p>Another thing worth noting is overall degradation of performance after Intel CPU is added to VexCL context. The only primitive gaining speed from this addition is vector arithmetic. This is probably because performance of vector arithmetic was used as a basis for problem partitioning.</p>
 <h1><a class="anchor" id="compilers"></a>
 Supported compilers</h1>
-<p>VexCL makes heavy use of C++11 features, so your compiler has to be modern enough. GCC version 4.6 and above is fully supported. Microsoft Visual C++ 2010 manages to compile the project with some features disabled: since it does not support variadic templates, only one-argument builtin functions are enabled; user functions are not available at all. </p>
+<p>VexCL makes heavy use of C++11 features, so your compiler has to be modern enough. The compilers that have been tested and supported are:</p>
+<ul>
+<li>GCC v4.6 and above.</li>
+<li>Clang v3.1 (and probably some earlier versions).</li>
+<li>Microsoft Visual C++ 2010 manages to compile the project with some features disabled: since it does not support variadic templates, only one-argument builtin functions are enabled; user functions are not available at all. </li>
+</ul>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
