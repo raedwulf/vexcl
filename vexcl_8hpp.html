@@ -28,7 +28,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -57,12 +56,13 @@
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;CL/cl.hpp&gt;</code><br/>
 <code>#include &lt;iostream&gt;</code><br/>
-<code>#include &lt;<a class="el" href="util_8hpp.html">vexcl/util.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="devlist_8hpp.html">vexcl/devlist.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="vector_8hpp.html">vexcl/vector.hpp</a>&gt;</code><br/>
+<code>#include &lt;vexcl/multivector.hpp&gt;</code><br/>
 <code>#include &lt;<a class="el" href="reduce_8hpp.html">vexcl/reduce.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="spmat_8hpp.html">vexcl/spmat.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="stencil_8hpp.html">vexcl/stencil.hpp</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="generator_8hpp.html">vexcl/generator.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="profiler_8hpp.html">vexcl/profiler.hpp</a>&gt;</code><br/>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for vexcl.hpp:</div>
@@ -71,7 +71,7 @@
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="vexcl_8hpp__incl.png" border="0" usemap="#vexcl_8hpp" alt=""/></div>
 <map name="vexcl_8hpp" id="vexcl_8hpp">
-<area shape="rect" id="node7" href="util_8hpp.html" title="OpenCL general utilities." alt="" coords="1399,229,1503,256"/><area shape="rect" id="node27" href="devlist_8hpp.html" title="OpenCL device enumeration." alt="" coords="201,229,327,256"/><area shape="rect" id="node36" href="vector_8hpp.html" title="OpenCL device vector." alt="" coords="961,155,1086,181"/><area shape="rect" id="node51" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="708,229,837,256"/><area shape="rect" id="node67" href="reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="174,80,303,107"/><area shape="rect" id="node77" href="spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="1216,80,1342,107"/><area shape="rect" id="node94" href="stencil_8hpp.html" title="Stencil convolution." alt="" coords="809,80,935,107"/></map>
+<area shape="rect" id="node7" href="devlist_8hpp.html" title="OpenCL device enumeration." alt="" coords="605,155,731,181"/><area shape="rect" id="node41" href="vector_8hpp.html" title="OpenCL device multi&#45;vector." alt="" coords="1327,155,1452,181"/><area shape="rect" id="node53" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="151,237,280,264"/><area shape="rect" id="node78" href="reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="516,80,645,107"/><area shape="rect" id="node87" href="spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="970,80,1096,107"/><area shape="rect" id="node101" href="stencil_8hpp.html" title="Stencil convolution." alt="" coords="1226,80,1352,107"/><area shape="rect" id="node108" href="generator_8hpp.html" title="OpenCL kernel generator." alt="" coords="1991,155,2139,181"/><area shape="rect" id="node19" href="util_8hpp.html" title="OpenCL general utilities." alt="" coords="1263,237,1368,264"/><area shape="rect" id="node70" href="operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="2103,237,2256,264"/></map>
 </div>
 </div><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Vector expression template library for OpenCL. </p>

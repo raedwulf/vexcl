@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>VexCL: exclusive.hpp File Reference</title>
+<title>VexCL: operations.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,7 +28,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -47,31 +46,35 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">exclusive.hpp File Reference</div>  </div>
+<div class="title">operations.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Device filter allowing exclusive access.  
+<p>Set of operations to be used in vector expressions.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;vector&gt;</code><br/>
-<code>#include &lt;string&gt;</code><br/>
-<code>#include &lt;fstream&gt;</code><br/>
-<code>#include &lt;memory&gt;</code><br/>
-<code>#include &lt;cstdlib&gt;</code><br/>
-<code>#include &lt;boost/interprocess/sync/file_lock.hpp&gt;</code><br/>
-<code>#include &lt;CL/cl.hpp&gt;</code><br/>
+<div class="textblock"><code>#include &lt;array&gt;</code><br/>
+<code>#include &lt;tuple&gt;</code><br/>
+<code>#include &lt;boost/proto/proto.hpp&gt;</code><br/>
+<code>#include &lt;boost/mpl/max.hpp&gt;</code><br/>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for exclusive.hpp:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for operations.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="exclusive_8hpp__incl.png" border="0" usemap="#exclusive_8hpp" alt=""/></div>
-<map name="exclusive_8hpp" id="exclusive_8hpp">
+<div class="center"><img src="operations_8hpp__incl.png" border="0" usemap="#operations_8hpp" alt=""/></div>
+<map name="operations_8hpp" id="operations_8hpp">
 </map>
+</div>
+</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="operations_8hpp__dep__incl.png" border="0" usemap="#operations_8hppdep" alt=""/></div>
+<map name="operations_8hppdep" id="operations_8hppdep">
+<area shape="rect" id="node3" href="generator_8hpp.html" title="OpenCL kernel generator." alt="" coords="5,80,116,107"/><area shape="rect" id="node7" href="vector_8hpp.html" title="OpenCL device multi&#45;vector." alt="" coords="147,80,236,107"/><area shape="rect" id="node5" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="151,229,232,256"/><area shape="rect" id="node9" href="reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="145,155,239,181"/><area shape="rect" id="node12" href="spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="264,155,355,181"/><area shape="rect" id="node15" href="stencil_8hpp.html" title="Stencil convolution." alt="" coords="379,155,469,181"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -79,21 +82,10 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacevex"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html">vex</a></td></tr>
 <tr class="memdesc:namespacevex"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression template library for OpenCL. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacevex_1_1Filter"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html">vex::Filter</a></td></tr>
-<tr class="memdesc:namespacevex_1_1Filter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device filters. <br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a0664aab5022fab0f7764d0e72cb06fc8"><td class="memTemplParams" colspan="2">template&lt;class Filter &gt; </td></tr>
-<tr class="memitem:a0664aab5022fab0f7764d0e72cb06fc8"><td class="memTemplItemLeft" align="right" valign="top">ExclusiveFilter&lt; Filter &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex_1_1Filter.html#a0664aab5022fab0f7764d0e72cb06fc8">vex::Filter::Exclusive</a> (const Filter &amp;filter)</td></tr>
-<tr class="memdesc:a0664aab5022fab0f7764d0e72cb06fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows exclusive access to compute devices across several processes.  <a href="#a0664aab5022fab0f7764d0e72cb06fc8"></a><br/></td></tr>
-<tr class="separator:a0664aab5022fab0f7764d0e72cb06fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Device filter allowing exclusive access. </p>
+<div class="textblock"><p>Set of operations to be used in vector expressions. </p>
 <dl class="section author"><dt>Author</dt><dd>Denis Demidov <a href="#" onclick="location.href='mai'+'lto:'+'dde'+'mi'+'dov'+'@k'+'su.'+'ru'; return false;">ddemi<span style="display: none;">.nosp@m.</span>dov@<span style="display: none;">.nosp@m.</span>ksu.r<span style="display: none;">.nosp@m.</span>u</a> </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This file should be included manually since it depends on boost::interprocess library. </dd></dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -28,7 +28,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -59,14 +58,14 @@
 
 <p><code>#include &lt;spmat.hpp&gt;</code></p>
 
-<p>Inherits SpMatBase&lt; real, column_t, idx_t &gt;.</p>
+<p>Inherits matrix_terminal&lt; real &gt;.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af47e9d623ff21d60693c6783d5a1be5b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMatCCSR.html#af47e9d623ff21d60693c6783d5a1be5b">SpMatCCSR</a> (const cl::CommandQueue &amp;queue, size_t n, size_t m, const size_t *idx, const idx_t *row, const column_t *col, const real *val)</td></tr>
 <tr class="memdesc:af47e9d623ff21d60693c6783d5a1be5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for CCSR format.  <a href="#af47e9d623ff21d60693c6783d5a1be5b"></a><br/></td></tr>
 <tr class="separator:af47e9d623ff21d60693c6783d5a1be5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34b01d33973d4cc8c17133c1984e31d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMatCCSR.html#a34b01d33973d4cc8c17133c1984e31d5">mul</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x, <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;y, real alpha=1, bool append=false) const </td></tr>
+<tr class="memitem:a34b01d33973d4cc8c17133c1984e31d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMatCCSR.html#a34b01d33973d4cc8c17133c1984e31d5">mul</a> (const <a class="el" href="structvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x, <a class="el" href="structvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;y, real alpha=1, bool append=false) const </td></tr>
 <tr class="memdesc:a34b01d33973d4cc8c17133c1984e31d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix-vector multiplication.  <a href="#a34b01d33973d4cc8c17133c1984e31d5"></a><br/></td></tr>
 <tr class="separator:a34b01d33973d4cc8c17133c1984e31d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -167,13 +166,13 @@ template&lt;typename real , typename column_t , typename idx_t &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classvex_1_1SpMatCCSR.html">vex::SpMatCCSR</a>&lt; real, column_t, idx_t &gt;::mul </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="structvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;&#160;</td>
           <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>

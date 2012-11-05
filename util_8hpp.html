@@ -28,7 +28,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -47,7 +46,6 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
@@ -68,8 +66,9 @@
 <code>#include &lt;algorithm&gt;</code><br/>
 <code>#include &lt;type_traits&gt;</code><br/>
 <code>#include &lt;functional&gt;</code><br/>
-<code>#include &lt;CL/cl.hpp&gt;</code><br/>
 <code>#include &lt;climits&gt;</code><br/>
+<code>#include &lt;boost/config.hpp&gt;</code><br/>
+<code>#include &lt;CL/cl.hpp&gt;</code><br/>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for util.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -86,20 +85,23 @@
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="util_8hpp__dep__incl.png" border="0" usemap="#util_8hppdep" alt=""/></div>
 <map name="util_8hppdep" id="util_8hppdep">
-<area shape="rect" id="node3" href="generator_8hpp.html" title="OpenCL kernel generator." alt="" coords="5,80,116,107"/><area shape="rect" id="node5" href="spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="192,155,283,181"/><area shape="rect" id="node7" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="311,229,392,256"/><area shape="rect" id="node9" href="stencil_8hpp.html" title="Stencil convolution." alt="" coords="307,155,397,181"/><area shape="rect" id="node12" href="vector_8hpp.html" title="OpenCL device vector." alt="" coords="317,80,405,107"/><area shape="rect" id="node14" href="reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="422,155,516,181"/></map>
+<area shape="rect" id="node3" href="devlist_8hpp.html" title="OpenCL device enumeration." alt="" coords="5,80,96,107"/><area shape="rect" id="node7" href="generator_8hpp.html" title="OpenCL kernel generator." alt="" coords="120,80,231,107"/><area shape="rect" id="node10" href="vector_8hpp.html" title="OpenCL device multi&#45;vector." alt="" coords="257,80,345,107"/><area shape="rect" id="node5" href="vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="201,229,283,256"/><area shape="rect" id="node12" href="reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="238,155,332,181"/><area shape="rect" id="node15" href="spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="357,155,448,181"/><area shape="rect" id="node18" href="stencil_8hpp.html" title="Stencil convolution." alt="" coords="472,155,563,181"/></map>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1partitioning__scheme.html">vex::partitioning_scheme&lt; dummy &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitioning scheme for vectors and matrices.  <a href="structvex_1_1partitioning__scheme.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacevex"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html">vex</a></td></tr>
 <tr class="memdesc:namespacevex"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expression template library for OpenCL. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:af1b68fb4ba71d72d397f46a730f03f2f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1b68fb4ba71d72d397f46a730f03f2f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>__CL_ENABLE_EXCEPTIONS</b></td></tr>
+<tr class="separator:af1b68fb4ba71d72d397f46a730f03f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0643c88e0c66bdea0c37141f4ce54f5e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0643c88e0c66bdea0c37141f4ce54f5e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>STRINGIFY</b>(type)&#160;&#160;&#160;template &lt;&gt; inline std::string type_name&lt;type&gt;()  { return #type; }</td></tr>
+<tr class="separator:a0643c88e0c66bdea0c37141f4ce54f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -153,26 +155,12 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#adde6e399118c4e9c8fdb111d23d65698">vex::alignup</a> (size_t n, size_t m=16U)</td></tr>
 <tr class="memdesc:adde6e399118c4e9c8fdb111d23d65698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Align n to the next multiple of m. <br/></td></tr>
 <tr class="separator:adde6e399118c4e9c8fdb111d23d65698"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47b97ac4ec3d1d74e854ec44c0c800d2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a47b97ac4ec3d1d74e854ec44c0c800d2">vex::device_vector_perf</a> (const cl::Context &amp;context, const cl::Device &amp;device)</td></tr>
-<tr class="memdesc:a47b97ac4ec3d1d74e854ec44c0c800d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weights device wrt to vector performance.  <a href="#a47b97ac4ec3d1d74e854ec44c0c800d2"></a><br/></td></tr>
-<tr class="separator:a47b97ac4ec3d1d74e854ec44c0c800d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a8ffb5d87908b8cbbc57d6ffb2a29aeec">vex::device_spmv_perf</a> (const cl::Context &amp;context, const cl::Device &amp;device)</td></tr>
-<tr class="memdesc:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns device weight after spmv test.  <a href="#a8ffb5d87908b8cbbc57d6ffb2a29aeec"></a><br/></td></tr>
-<tr class="separator:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a545958e083fcea052c69301a0de38903"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a545958e083fcea052c69301a0de38903">vex::equal_weights</a> (const cl::Context &amp;context, const cl::Device &amp;device)</td></tr>
-<tr class="memdesc:a545958e083fcea052c69301a0de38903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns equal weight to each device.  <a href="#a545958e083fcea052c69301a0de38903"></a><br/></td></tr>
-<tr class="separator:a545958e083fcea052c69301a0de38903"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7107660147252c74f159b733c678c86e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7107660147252c74f159b733c678c86e"></a>
-std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>vex::partition</b> (size_t n, const std::vector&lt; cl::CommandQueue &gt; &amp;queue)</td></tr>
-<tr class="separator:a7107660147252c74f159b733c678c86e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61989abf337d9845cad96ce9e805fd56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61989abf337d9845cad96ce9e805fd56"></a>
-cl::Program&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a61989abf337d9845cad96ce9e805fd56">vex::build_sources</a> (const cl::Context &amp;context, const std::string &amp;source)</td></tr>
-<tr class="memdesc:a61989abf337d9845cad96ce9e805fd56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and build a program from source string. <br/></td></tr>
-<tr class="separator:a61989abf337d9845cad96ce9e805fd56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90a8336dca27e8e2c3e31bb8a2b70e91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90a8336dca27e8e2c3e31bb8a2b70e91"></a>
-uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a90a8336dca27e8e2c3e31bb8a2b70e91">vex::kernel_workgroup_size</a> (const cl::Kernel &amp;kernel, const cl::Device &amp;device)</td></tr>
-<tr class="memdesc:a90a8336dca27e8e2c3e31bb8a2b70e91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get maximum possible workgroup size for given kernel. <br/></td></tr>
-<tr class="separator:a90a8336dca27e8e2c3e31bb8a2b70e91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67fe181f75c92ed19e58f24c070a5c45"><td class="memTemplParams" colspan="2"><a class="anchor" id="a67fe181f75c92ed19e58f24c070a5c45"></a>
+template&lt;size_t I = 0, class Function , class... V&gt; </td></tr>
+<tr class="memitem:a67fe181f75c92ed19e58f24c070a5c45"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;(I==sizeof...(V)), <br class="typebreak"/>
+void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a67fe181f75c92ed19e58f24c070a5c45">vex::for_each</a> (const std::tuple&lt; V...&gt; &amp;v, Function &amp;f)</td></tr>
+<tr class="memdesc:a67fe181f75c92ed19e58f24c070a5c45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over tuple elements. <br/></td></tr>
+<tr class="separator:a67fe181f75c92ed19e58f24c070a5c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d3fe52e80bf245c052cedbf50a3d388"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d3fe52e80bf245c052cedbf50a3d388"></a>
 cl::Context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a4d3fe52e80bf245c052cedbf50a3d388">vex::qctx</a> (const cl::CommandQueue &amp;q)</td></tr>
 <tr class="memdesc:a4d3fe52e80bf245c052cedbf50a3d388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut for q.getInfo&lt;CL_QUEUE_CONTEXT&gt;() <br/></td></tr>
@@ -190,6 +178,33 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 Variables</h2></td></tr>
 <tr class="memitem:a4c383d02ac43c2a77e6b222788abf74c"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>vex::standard_kernel_header</b></td></tr>
 <tr class="separator:a4c383d02ac43c2a77e6b222788abf74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd2e037ede04b8ed7b76ae7047f3d111"><td class="memTemplParams" colspan="2"><a class="anchor" id="acd2e037ede04b8ed7b76ae7047f3d111"></a>
+template&lt;size_t I = 0, class Function , class... V&gt; </td></tr>
+<tr class="memitem:acd2e037ede04b8ed7b76ae7047f3d111"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;(I&lt; sizeof...(V)), <br class="typebreak"/>
+void &gt;::typefor_each(const <br class="typebreak"/>
+std::tuple&lt; V...&gt; &amp;v, Function <br class="typebreak"/>
+&amp;f){f(std::get&lt; I &gt;v));for_each<br class="typebreak"/>
+&lt; I+1 &gt;v, f);}inline <br class="typebreak"/>
+cl::Program build_sources(const <br class="typebreak"/>
+cl::Context &amp;context, const <br class="typebreak"/>
+std::string &amp;source){cl::Program <br class="typebreak"/>
+program(context, <br class="typebreak"/>
+cl::Program::Sources(1, <br class="typebreak"/>
+std::make_pair(source.c_str(), <br class="typebreak"/>
+source.size())));auto device=context.getInfo<br class="typebreak"/>
+&lt; CL_CONTEXT_DEVICES &gt;);try{program.build(device);}catch(const <br class="typebreak"/>
+cl::Error &amp;){std::cerr<br class="typebreak"/>
+&lt;&lt; source&lt;&lt; std::endl<br class="typebreak"/>
+&lt;&lt; program.getBuildInfo<br class="typebreak"/>
+&lt; CL_PROGRAM_BUILD_LOG &gt;device[0])<br class="typebreak"/>
+&lt;&lt; std::endl;throw;}return <br class="typebreak"/>
+program;}inline uint <br class="typebreak"/>
+kernel_workgroup_size(const <br class="typebreak"/>
+cl::Kernel &amp;kernel, const <br class="typebreak"/>
+cl::Device &amp;device){size_t <br class="typebreak"/>
+wgsz=1024U;uint dev_wgsz=kernel.getWorkGroupInfo&lt; CL_KERNEL_WORK_GROUP_SIZE &gt;device);while(wgsz &gt; dev_wgsz&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#acd2e037ede04b8ed7b76ae7047f3d111">vex::wgsz</a> = 2</td></tr>
+<tr class="memdesc:acd2e037ede04b8ed7b76ae7047f3d111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over tuple elements. <br/></td></tr>
+<tr class="separator:acd2e037ede04b8ed7b76ae7047f3d111"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>OpenCL general utilities. </p>

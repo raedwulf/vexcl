@@ -28,7 +28,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -49,7 +48,6 @@
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">spmat.hpp File Reference</div>  </div>
@@ -67,10 +65,7 @@
 <code>#include &lt;algorithm&gt;</code><br/>
 <code>#include &lt;iostream&gt;</code><br/>
 <code>#include &lt;type_traits&gt;</code><br/>
-<code>#include &lt;CL/cl.hpp&gt;</code><br/>
-<code>#include &lt;<a class="el" href="util_8hpp.html">vexcl/util.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="vector_8hpp.html">vexcl/vector.hpp</a>&gt;</code><br/>
-<code>#include &lt;cstdlib&gt;</code><br/>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for spmat.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -78,7 +73,7 @@
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="spmat_8hpp__incl.png" border="0" usemap="#spmat_8hpp" alt=""/></div>
 <map name="spmat_8hpp" id="spmat_8hpp">
-<area shape="rect" id="node23" href="util_8hpp.html" title="OpenCL general utilities." alt="" coords="418,155,523,181"/><area shape="rect" id="node38" href="vector_8hpp.html" title="OpenCL device vector." alt="" coords="549,80,675,107"/><area shape="rect" id="node53" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="882,155,1011,181"/></map>
+<area shape="rect" id="node21" href="vector_8hpp.html" title="OpenCL device multi&#45;vector." alt="" coords="1060,80,1185,107"/><area shape="rect" id="node34" href="util_8hpp.html" title="OpenCL general utilities." alt="" coords="1283,155,1388,181"/><area shape="rect" id="node50" href="profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="966,155,1095,181"/><area shape="rect" id="node66" href="operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="313,155,467,181"/></map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
@@ -107,43 +102,8 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a71a87592eb2929df489616cd9f882020"><td class="memTemplParams" colspan="2"><a class="anchor" id="a71a87592eb2929df489616cd9f882020"></a>
-template&lt;typename real , typename column_t , typename idx_t &gt; </td></tr>
-<tr class="memitem:a71a87592eb2929df489616cd9f882020"><td class="memTemplItemLeft" align="right" valign="top">SpMV&lt; real, column_t, idx_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a71a87592eb2929df489616cd9f882020">vex::operator*</a> (const SpMatBase&lt; real, column_t, idx_t &gt; &amp;A, const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x)</td></tr>
-<tr class="memdesc:a71a87592eb2929df489616cd9f882020"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply sparse matrix and a vector. <br/></td></tr>
-<tr class="separator:a71a87592eb2929df489616cd9f882020"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ddcc23f6165fe4e2ae336e3dc096d1b"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2ddcc23f6165fe4e2ae336e3dc096d1b"></a>
-template&lt;class Expr , typename real , typename column_t , typename idx_t &gt; </td></tr>
-<tr class="memitem:a2ddcc23f6165fe4e2ae336e3dc096d1b"><td class="memTemplItemLeft" align="right" valign="top">ExSpMV&lt; Expr, real, column_t, <br class="typebreak"/>
-idx_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a2ddcc23f6165fe4e2ae336e3dc096d1b">vex::operator+</a> (const Expr &amp;expr, const SpMV&lt; real, column_t, idx_t &gt; &amp;spmv)</td></tr>
-<tr class="memdesc:a2ddcc23f6165fe4e2ae336e3dc096d1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an expression and sparse matrix - vector product. <br/></td></tr>
-<tr class="separator:a2ddcc23f6165fe4e2ae336e3dc096d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad63dd73f26ab3e2ccf715723b4fd6da9"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad63dd73f26ab3e2ccf715723b4fd6da9"></a>
-template&lt;class Expr , typename real , typename column_t , typename idx_t &gt; </td></tr>
-<tr class="memitem:ad63dd73f26ab3e2ccf715723b4fd6da9"><td class="memTemplItemLeft" align="right" valign="top">ExSpMV&lt; Expr, real, column_t, <br class="typebreak"/>
-idx_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ad63dd73f26ab3e2ccf715723b4fd6da9">vex::operator-</a> (const Expr &amp;expr, const SpMV&lt; real, column_t, idx_t &gt; &amp;spmv)</td></tr>
-<tr class="memdesc:ad63dd73f26ab3e2ccf715723b4fd6da9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract sparse matrix - vector product from an expression. <br/></td></tr>
-<tr class="separator:ad63dd73f26ab3e2ccf715723b4fd6da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78b2fd83243013eb823981559f36ffcf"><td class="memTemplParams" colspan="2"><a class="anchor" id="a78b2fd83243013eb823981559f36ffcf"></a>
-template&lt;typename real , typename column_t , typename idx_t , uint N, bool own&gt; </td></tr>
-<tr class="memitem:a78b2fd83243013eb823981559f36ffcf"><td class="memTemplItemLeft" align="right" valign="top">MultiSpMV&lt; real, column_t, <br class="typebreak"/>
-idx_t, N, own &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a78b2fd83243013eb823981559f36ffcf">vex::operator*</a> (const SpMatBase&lt; real, column_t, idx_t &gt; &amp;A, const <a class="el" href="classvex_1_1multivector.html">vex::multivector</a>&lt; real, N, own &gt; &amp;x)</td></tr>
-<tr class="memdesc:a78b2fd83243013eb823981559f36ffcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply sparse matrix and a vector. <br/></td></tr>
-<tr class="separator:a78b2fd83243013eb823981559f36ffcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a2dd6e8e7aa747bcbe138dd226f17fd"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7a2dd6e8e7aa747bcbe138dd226f17fd"></a>
-template&lt;class Expr , typename real , typename column_t , typename idx_t , uint N, bool own&gt; </td></tr>
-<tr class="memitem:a7a2dd6e8e7aa747bcbe138dd226f17fd"><td class="memTemplItemLeft" align="right" valign="top">MultiExSpMV&lt; Expr, real, <br class="typebreak"/>
-column_t, idx_t, N, own &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a7a2dd6e8e7aa747bcbe138dd226f17fd">vex::operator+</a> (const Expr &amp;expr, const MultiSpMV&lt; real, column_t, idx_t, N, own &gt; &amp;spmv)</td></tr>
-<tr class="memdesc:a7a2dd6e8e7aa747bcbe138dd226f17fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an expression and sparse matrix - multivector product. <br/></td></tr>
-<tr class="separator:a7a2dd6e8e7aa747bcbe138dd226f17fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37ae80a962751ff1895875ee211d0f87"><td class="memTemplParams" colspan="2"><a class="anchor" id="a37ae80a962751ff1895875ee211d0f87"></a>
-template&lt;class Expr , typename real , typename column_t , typename idx_t , uint N, bool own&gt; </td></tr>
-<tr class="memitem:a37ae80a962751ff1895875ee211d0f87"><td class="memTemplItemLeft" align="right" valign="top">MultiExSpMV&lt; Expr, real, <br class="typebreak"/>
-column_t, idx_t, N, own &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a37ae80a962751ff1895875ee211d0f87">vex::operator-</a> (const Expr &amp;expr, const MultiSpMV&lt; real, column_t, idx_t, N, own &gt; &amp;spmv)</td></tr>
-<tr class="memdesc:a37ae80a962751ff1895875ee211d0f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract sparse matrix - multivector product from an expression. <br/></td></tr>
-<tr class="separator:a37ae80a962751ff1895875ee211d0f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a8ffb5d87908b8cbbc57d6ffb2a29aeec">vex::device_spmv_perf</a> (const cl::Context &amp;context, const cl::Device &amp;device)</td></tr>
-<tr class="memdesc:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns device weight after spmv test.  <a href="#a8ffb5d87908b8cbbc57d6ffb2a29aeec"></a><br/></td></tr>
+<tr class="memdesc:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weights device wrt to spmv performance.  <a href="#a8ffb5d87908b8cbbc57d6ffb2a29aeec"></a><br/></td></tr>
 <tr class="separator:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>

@@ -28,7 +28,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -59,14 +58,14 @@
 
 <p><code>#include &lt;spmat.hpp&gt;</code></p>
 
-<p>Inherits SpMatBase&lt; real, column_t, idx_t &gt;.</p>
+<p>Inherits matrix_terminal&lt; real &gt;.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2b88b7a1f731f62ab9e6fcd8de763613"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#a2b88b7a1f731f62ab9e6fcd8de763613">SpMat</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, size_t n, size_t m, const idx_t *row, const column_t *col, const real *val)</td></tr>
 <tr class="memdesc:a2b88b7a1f731f62ab9e6fcd8de763613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a2b88b7a1f731f62ab9e6fcd8de763613"></a><br/></td></tr>
 <tr class="separator:a2b88b7a1f731f62ab9e6fcd8de763613"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb8051a2504a0c874f655f2aa55f90ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#aeb8051a2504a0c874f655f2aa55f90ac">mul</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x, <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;y, real alpha=1, bool append=false) const </td></tr>
+<tr class="memitem:aeb8051a2504a0c874f655f2aa55f90ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#aeb8051a2504a0c874f655f2aa55f90ac">mul</a> (const <a class="el" href="structvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x, <a class="el" href="structvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;y, real alpha=1, bool append=false) const </td></tr>
 <tr class="memdesc:aeb8051a2504a0c874f655f2aa55f90ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix-vector multiplication.  <a href="#aeb8051a2504a0c874f655f2aa55f90ac"></a><br/></td></tr>
 <tr class="separator:aeb8051a2504a0c874f655f2aa55f90ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -140,7 +139,7 @@ template&lt;typename real , typename column_t , typename idx_t &gt; </div>
   </dd>
 </dl>
 
-<p>References <a class="el" href="namespacevex.html#a61989abf337d9845cad96ce9e805fd56">vex::build_sources()</a>, <a class="el" href="namespacevex.html#a90a8336dca27e8e2c3e31bb8a2b70e91">vex::kernel_workgroup_size()</a>, <a class="el" href="namespacevex.html#a4d3fe52e80bf245c052cedbf50a3d388">vex::qctx()</a>, and <a class="el" href="namespacevex.html#ae299eb0d6e1f28d13e73820ac0c56a52">vex::qdev()</a>.</p>
+<p>References <a class="el" href="namespacevex.html#a4d3fe52e80bf245c052cedbf50a3d388">vex::qctx()</a>, and <a class="el" href="namespacevex.html#ae299eb0d6e1f28d13e73820ac0c56a52">vex::qdev()</a>.</p>
 
 </div>
 </div>
@@ -154,13 +153,13 @@ template&lt;typename real , typename column_t , typename idx_t &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classvex_1_1SpMat.html">vex::SpMat</a>&lt; real, column_t, idx_t &gt;::mul </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="structvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;&#160;</td>
           <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>
@@ -196,6 +195,8 @@ template&lt;typename real , typename column_t , typename idx_t &gt; </div>
 </dl>
 
 <p>References <a class="el" href="namespacevex.html#adde6e399118c4e9c8fdb111d23d65698">vex::alignup()</a>, and <a class="el" href="namespacevex.html#a4d3fe52e80bf245c052cedbf50a3d388">vex::qctx()</a>.</p>
+
+<p>Referenced by <a class="el" href="namespacevex.html#a8ffb5d87908b8cbbc57d6ffb2a29aeec">vex::device_spmv_perf()</a>.</p>
 
 </div>
 </div>

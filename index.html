@@ -28,7 +28,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -55,18 +54,18 @@ Selection of compute devices</h1>
 <div class="fragment"><div class="line"><a class="code" href="classvex_1_1Context.html" title="VexCL context holder.">vex::Context</a> ctx( <a class="code" href="namespacevex_1_1Filter.html#a0664aab5022fab0f7764d0e72cb06fc8" title="Allows exclusive access to compute devices across several processes.">Filter::Exclusive</a>( Filter::Platform(<span class="stringliteral">&quot;NVIDIA&quot;</span>) &amp;&amp; Filter::DoublePrecision ) );</div>
 </div><!-- fragment --><h1><a class="anchor" id="vector"></a>
 Memory allocation and vector arithmetic</h1>
-<p>Once you got queue list, you can allocate OpenCL buffers on the associated devices. <a class="el" href="classvex_1_1vector.html" title="Device vector.">vex::vector</a> constructor accepts std::vector of cl::CommandQueue. The contents of the created vector will be partitioned between each queue (presumably, each of the provided queues is linked with separate device). Size of each partition will be proportional to relative device bandwidth. Device bandwidth is measured first time it is requested by launch of small test kernel.</p>
+<p>Once you got queue list, you can allocate OpenCL buffers on the associated devices. <a class="el" href="structvex_1_1vector.html" title="Device vector.">vex::vector</a> constructor accepts std::vector of cl::CommandQueue. The contents of the created vector will be partitioned between each queue (presumably, each of the provided queues is linked with separate device). Size of each partition will be proportional to relative device bandwidth. Device bandwidth is measured first time it is requested by launch of small test kernel.</p>
 <p>Multi-platform computation is supported (that is, you can spread your vectors across devices by different vendors), but should be used with caution: all computations will be performed with the speed of the slowest device selected.</p>
 <p>In the example below host vector is allocated and initialized, then copied to all GPU devices found in the system. A couple of empty device vectors are allocated as well: </p>
 <div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> n = 1 &lt;&lt; 20;</div>
 <div class="line">std::vector&lt;double&gt; x(n);</div>
-<div class="line">std::generate(x.<a class="code" href="classvex_1_1vector.html#ad15856f00b1c4b80726e6f908260ef57" title="Const iterator to beginning.">begin</a>(), x.<a class="code" href="classvex_1_1vector.html#a5169d2645c884403fa690d45c77552fa" title="Const iterator to end.">end</a>(), [](){ <span class="keywordflow">return</span> (<span class="keywordtype">double</span>)rand() / RAND_MAX; });</div>
+<div class="line">std::generate(x.begin(), x.end(), [](){ <span class="keywordflow">return</span> (<span class="keywordtype">double</span>)rand() / RAND_MAX; });</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="classvex_1_1Context.html" title="VexCL context holder.">vex::Context</a> ctx(Filter::Type(CL_DEVICE_TYPE_GPU));</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> X(ctx.queue(), x);</div>
-<div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> Y(ctx.queue(), n);</div>
-<div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> Z(ctx.queue(), n);</div>
+<div class="line"><a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> X(ctx.queue(), x);</div>
+<div class="line"><a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> Y(ctx.queue(), n);</div>
+<div class="line"><a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> Z(ctx.queue(), n);</div>
 </div><!-- fragment --><p>You can now use simple vector arithmetic with device vector. For every expression you use, appropriate kernel is compiled (first time it is encountered in your program) and called automagically. If you want to see sources of the generated kernels on the standard output, define VEXCL_SHOW_KERNELS macro before including VexCL headers.</p>
 <p>Vectors are processed in parallel across all devices they were allocated on: </p>
 <div class="fragment"><div class="line">Y = 42;</div>
@@ -86,8 +85,8 @@ Stencil convolution</h1>
 <div class="line">std::vector&lt;double&gt; sdata(5, 0.2);</div>
 <div class="line">stencil(ctx.queue(), sdata, sdata.size() / 2);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> x(ctx.queue(), 1024 * 1024);</div>
-<div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> y(ctx.queue(), 1024 * 1024);</div>
+<div class="line"><a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> x(ctx.queue(), 1024 * 1024);</div>
+<div class="line"><a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> y(ctx.queue(), 1024 * 1024);</div>
 <div class="line"></div>
 <div class="line">x = 1;</div>
 <div class="line">y = x * s; <span class="comment">// convolve x with s</span></div>
@@ -111,11 +110,11 @@ Sparse matrix-vector multiplication</h1>
 <div class="line">    <span class="comment">// Move data to compute devices.</span></div>
 <div class="line">    <span class="keywordtype">size_t</span> n = x.size();</div>
 <div class="line">    <a class="code" href="classvex_1_1SpMat.html" title="Sparse matrix in hybrid ELL-CSR format.">vex::SpMat&lt;real&gt;</a>  A(ctx.queue(), n, n, row.data(), col.data(), val.data());</div>
-<div class="line">    <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;real&gt;</a> f(ctx.queue(), rhs);</div>
-<div class="line">    <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;real&gt;</a> u(ctx.queue(), x);</div>
-<div class="line">    <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;real&gt;</a> r(ctx.queue(), n);</div>
-<div class="line">    <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;real&gt;</a> p(ctx.queue(), n);</div>
-<div class="line">    <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;real&gt;</a> q(ctx.queue(), n);</div>
+<div class="line">    <a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;real&gt;</a> f(ctx.queue(), rhs);</div>
+<div class="line">    <a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;real&gt;</a> u(ctx.queue(), x);</div>
+<div class="line">    <a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;real&gt;</a> r(ctx.queue(), n);</div>
+<div class="line">    <a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;real&gt;</a> p(ctx.queue(), n);</div>
+<div class="line">    <a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;real&gt;</a> q(ctx.queue(), n);</div>
 <div class="line"></div>
 <div class="line">    Reductor&lt;real,MAX&gt; max(ctx.queue());</div>
 <div class="line">    Reductor&lt;real,SUM&gt; sum(ctx.queue());</div>
@@ -157,8 +156,8 @@ User-defined functions</h1>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">size_t</span> count_if_greater(</div>
 <div class="line">    <span class="keyword">const</span> Reductor&lt;size_t, SUM&gt; &amp;sum,</div>
-<div class="line">    <span class="keyword">const</span> <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;float&gt;</a> &amp;x,</div>
-<div class="line">    <span class="keyword">const</span> <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;float&gt;</a> &amp;y</div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;float&gt;</a> &amp;x,</div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;float&gt;</a> &amp;y</div>
 <div class="line">    )</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">return</span> sum(greater(x, y));</div>
@@ -171,8 +170,8 @@ Multi-component vectors</h1>
 <div class="line">std::vector&lt;double&gt; host(n * 3);</div>
 <div class="line">std::generate(host.begin(), host.end(), rand);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="classvex_1_1multivector.html" title="Container for several vex::vectors.">vex::multivector&lt;double,3&gt;</a> x(ctx.queue(), host);</div>
-<div class="line"><a class="code" href="classvex_1_1multivector.html" title="Container for several vex::vectors.">vex::multivector&lt;double,3&gt;</a> y(ctx.queue(), n);</div>
+<div class="line">vex::multivector&lt;double,3&gt; x(ctx.queue(), host);</div>
+<div class="line">vex::multivector&lt;double,3&gt; y(ctx.queue(), n);</div>
 <div class="line"></div>
 <div class="line">std::array&lt;int, 3&gt; c = {4, 5, 6};</div>
 <div class="line"></div>
@@ -181,20 +180,20 @@ Multi-component vectors</h1>
 <div class="line">std::array&lt;double,3&gt; v = y[42];</div>
 <div class="line">assert(fabs(v[1] - (2 * cos(host[n + 42]) - c[1])) &lt; 1e-8);</div>
 </div><!-- fragment --><p>Components of a multivector may be accessed with operator(): </p>
-<div class="fragment"><div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> z = y(1);</div>
+<div class="fragment"><div class="line"><a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> z = y(1);</div>
 </div><!-- fragment --><p>Sometimes operations with multicomponent vector cannot be expressed with simple arithmetic expressions. Imagine that you need to solve the following system of ordinary differential equations: </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{dx}{dt} = x + y, \quad \frac{dy}{dt} = x - y. \]" src="form_1.png"/>
+<img class="formulaDsp" alt="\[ \frac{dx}{dt} = x + y, \quad \frac{dy}{dt} = x - y. \]" src="form_0.png"/>
 </p>
 <p>If the system state is represented as vex::multivector&lt;double,2&gt;, then the system function for this ODE could be implemented as </p>
 <div class="fragment"><div class="line"><span class="comment">// vex::multivector&lt;double,2&gt; dxdt, x;</span></div>
 <div class="line">dxdt(0) = x(0) + x(1);</div>
 <div class="line">dxdt(1) = x(0) - x(1);</div>
 </div><!-- fragment --><p>This results in two kernel launches. Instead, you can use the following form: </p>
-<div class="fragment"><div class="line">dxdt = std::make_tuple(x(0) + x(1), x(0) - x(1));</div>
-</div><!-- fragment --><p> This expression would generate and launch single combined kernel, which would be more effective. Multi-expressions like these may also be used with ordinary vex::vectors with help of <a class="el" href="namespacevex.html#aef09080095cb1a3c73e7dea14de91bda" title="Ties several vex::vectors into a multivector.">vex::tie()</a> function: </p>
+<div class="fragment"><div class="line">dxdt = std::tie(x(0) + x(1), x(0) - x(1));</div>
+</div><!-- fragment --><p> This expression would generate and launch single combined kernel, which would be more effective. Multi-expressions like these may also be used with ordinary vex::vectors with help of <a class="el" href="namespacevex.html#a1f12df83605db6011463d6bca2b584ca" title="Ties several vex::vectors into a multivector.">vex::tie()</a> function: </p>
 <div class="fragment"><div class="line"><span class="comment">// vex::vector&lt;double&gt; dx, dy, x, y;</span></div>
-<div class="line"><a class="code" href="namespacevex.html#aef09080095cb1a3c73e7dea14de91bda" title="Ties several vex::vectors into a multivector.">vex::tie</a>(dx,dy) = std::make_tuple(x + y, x - y);</div>
+<div class="line"><a class="code" href="namespacevex.html#a1f12df83605db6011463d6bca2b584ca" title="Ties several vex::vectors into a multivector.">vex::tie</a>(dx,dy) = std::tie(x + y, x - y);</div>
 </div><!-- fragment --><h1><a class="anchor" id="kernel_generator"></a>
 Converting existing algorithms to kernels</h1>
 <p>VexCL kernel generator allows to transparently convert existing CPU algorithm to an OpenCL kernel. In order to do this you need to record sequence of arithmetic expressions made by an algorithm and convert the recorded sequence to a kernel. The recording part is done with help of vex::generator::symbolic&lt;T&gt; class. The class supports arithmetic expression templates and simply outputs to provided stream any expressions it is being subjected to.</p>
@@ -216,7 +215,7 @@ Converting existing algorithms to kernels</h1>
 <div class="line"></div>
 <div class="line">    x += (k1 + 2 * k2 + 2 * k3 + k4) / 6;</div>
 <div class="line">}</div>
-</div><!-- fragment --><p> To model equation <img class="formulaInl" alt="$\frac{dx}{dt} = sin(x)$" src="form_2.png"/> we also provide the following system function: </p>
+</div><!-- fragment --><p> To model equation <img class="formulaInl" alt="$\frac{dx}{dt} = sin(x)$" src="form_1.png"/> we also provide the following system function: </p>
 <div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> state_type&gt;</div>
 <div class="line"><span class="keywordtype">void</span> sys_func(<span class="keyword">const</span> state_type &amp;x, state_type &amp;dx, <span class="keywordtype">double</span> dt) {</div>
 <div class="line">    dx = dt * sin(x);</div>
@@ -229,10 +228,10 @@ Converting existing algorithms to kernels</h1>
 </div><!-- fragment --><p> Let us now generate the kernel for single RK4 step and apply the kernel to a vex::vector&lt;double&gt; (by doing this we essentially simpultaneously solve big number of same ODEs with different initial conditions). </p>
 <div class="fragment"><div class="line"><span class="comment">// Set recorder for expression sequence.</span></div>
 <div class="line">std::ostringstream body;</div>
-<div class="line"><a class="code" href="namespacevex_1_1generator.html#a7bb760db4db25175da29d869f9b347d1" title="Set output stream for kernel recorder.">vex::generator::set_recorder</a>(body);</div>
+<div class="line">vex::generator::set_recorder(body);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Create symbolic variable.</span></div>
-<div class="line"><span class="keyword">typedef</span> <a class="code" href="classvex_1_1generator_1_1symbolic.html" title="Symbolic value.">vex::generator::symbolic&lt;double&gt;</a> sym_state;</div>
+<div class="line"><span class="keyword">typedef</span> vex::generator::symbolic&lt;double&gt; sym_state;</div>
 <div class="line">sym_state sym_x(sym_state::VectorParameter);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Record expression sequience.</span></div>
@@ -240,7 +239,7 @@ Converting existing algorithms to kernels</h1>
 <div class="line">runge_kutta_4(sys_func&lt;sym_state&gt;, sym_x, dt);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Build kernel.</span></div>
-<div class="line"><span class="keyword">auto</span> kernel = <a class="code" href="namespacevex_1_1generator.html#ac611f14ba35d1e042cee5bceef078fc4" title="Builds kernel from recorded expression sequence and symbolic parameter list.">vex::generator::build_kernel</a>(ctx.queue(),</div>
+<div class="line"><span class="keyword">auto</span> kernel = <a class="code" href="namespacevex_1_1generator.html#adcbcddc333c7b7ce307ec4515cb83def" title="Builds kernel from recorded expression sequence and symbolic parameter list.">vex::generator::build_kernel</a>(ctx.queue(),</div>
 <div class="line">    <span class="stringliteral">&quot;rk4_stepper&quot;</span>, body.str(), sym_x);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Create and initialize vector of states.</span></div>
@@ -248,14 +247,14 @@ Converting existing algorithms to kernels</h1>
 <div class="line">std::generate(xinit.begin(), xinit.end(), [](){</div>
 <div class="line">    <span class="keywordflow">return</span> (<span class="keywordtype">double</span>)rand() / RAND_MAX;</div>
 <div class="line">    });</div>
-<div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> x(ctx.queue(), n);</div>
-<div class="line"><a class="code" href="namespacevex.html#a7896b8bc121f843d62d724a98ebe3b46" title="Copy device vector to host vector.">vex::copy</a>(xinit, x);</div>
+<div class="line"><a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> x(ctx.queue(), n);</div>
+<div class="line"><a class="code" href="namespacevex.html#a4d23fe6f2794c7738f6948358afc5068" title="Copy multivector to host vector.">vex::copy</a>(xinit, x);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Make 100 rk4 steps.</span></div>
 <div class="line"><span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 100; i++) kernel(x);</div>
 </div><!-- fragment --><p>This is much more effective than (for this to work correctly we would need to slightly change sys_func): </p>
 <div class="fragment"><div class="line"><span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 100; i++)</div>
-<div class="line">    runge_kutta_4(sys_func&lt;<a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a>&gt;, x, dt);</div>
+<div class="line">    runge_kutta_4(sys_func&lt;<a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a>&gt;, x, dt);</div>
 </div><!-- fragment --><p> The generated kernel is more effective because temporary values used in sys_func are now represented not as full-blown vex::vectors, but as fast register variables inside the kernel body. We have seen upto tenfold performance improvement with this technique.</p>
 <h1><a class="anchor" id="custkern"></a>
 Using custom kernels</h1>
@@ -263,9 +262,9 @@ Using custom kernels</h1>
 <div class="fragment"><div class="line"><a class="code" href="classvex_1_1Context.html" title="VexCL context holder.">vex::Context</a> ctx(Filter::Type(CL_DEVICE_TYPE_GPU));</div>
 <div class="line"></div>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> n = 1 &lt;&lt; 20;</div>
-<div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;float&gt;</a> x(ctx.queue(), n);</div>
+<div class="line"><a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;float&gt;</a> x(ctx.queue(), n);</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">auto</span> program = <a class="code" href="namespacevex.html#a61989abf337d9845cad96ce9e805fd56" title="Create and build a program from source string.">build_sources</a>(context, std::string(</div>
+<div class="line"><span class="keyword">auto</span> program = build_sources(context, std::string(</div>
 <div class="line">    <span class="stringliteral">&quot;kernel void dummy(ulong size, global float *x)\n&quot;</span></div>
 <div class="line">    <span class="stringliteral">&quot;{\n&quot;</span></div>
 <div class="line">    <span class="stringliteral">&quot;    size_t i = get_global_id(0);\n&quot;</span></div>
@@ -305,9 +304,10 @@ Supported compilers</h1>
 <p>VexCL makes heavy use of C++11 features, so your compiler has to be modern enough. The compilers that have been tested and supported are:</p>
 <ul>
 <li>GCC v4.6 and above.</li>
-<li>Clang v3.1 (and probably some earlier versions).</li>
-<li>Microsoft Visual C++ 2010 manages to compile the project with some features disabled: since it does not support variadic templates, only one-argument builtin functions are enabled; user functions are not available at all. </li>
+<li>Clang v3.1.</li>
+<li>Microsoft Visual C++ 2010 manages to compile the project with some features disabled (due to lack of support for variadic templates).</li>
 </ul>
+<p>VexCL uses standard OpenCL bindings for C++ from Khronos group. The cl.hpp file should be included with the OpenCL implementation on your system. If it is not there, you can download it from <a href="http://www.khronos.org/registry/cl">Kronos site</a>. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

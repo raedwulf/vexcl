@@ -1,3 +1,2 @@
-\form#0:$y_i = \sum_k sin(\sum_j S_{kj} * x_{i+j-c})$
-\form#1:\[ \frac{dx}{dt} = x + y, \quad \frac{dy}{dt} = x - y. \]
-\form#2:$\frac{dx}{dt} = sin(x)$
+\form#0:\[ \frac{dx}{dt} = x + y, \quad \frac{dy}{dt} = x - y. \]
+\form#1:$\frac{dx}{dt} = sin(x)$
