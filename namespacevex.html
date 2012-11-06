@@ -565,13 +565,15 @@ template&lt;typename T , class... Tail&gt; </div>
 <div class="fragment"><div class="line"><a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> x(ctx.queue(), 1024);</div>
 <div class="line"><a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> y(ctx.queue(), 1024);</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="namespacevex.html#a1f12df83605db6011463d6bca2b584ca" title="Ties several vex::vectors into a multivector.">vex::tie</a>(x,y) = std::tie( x + y, y - x );</div>
+<div class="line"><a class="code" href="namespacevex.html#a1f12df83605db6011463d6bca2b584ca" title="Ties several vex::vectors into a multivector.">vex::tie</a>(x,y) = <a class="code" href="namespacevex.html#a1f12df83605db6011463d6bca2b584ca" title="Ties several vex::vectors into a multivector.">std::tie</a>( x + y, y - x );</div>
 </div><!-- fragment --><p> This is functionally equivalent to </p>
 <div class="fragment"><div class="line">tmp_x = x + y;</div>
 <div class="line">tmp_y = y - x;</div>
 <div class="line">x = tmp_x;</div>
 <div class="line">y = tmp_y;</div>
 </div><!-- fragment --><p> but does not use temporaries and is more efficient. </p>
+
+<p>Referenced by <a class="el" href="namespacevex_1_1generator.html#adcbcddc333c7b7ce307ec4515cb83def">vex::generator::build_kernel()</a>, <a class="el" href="classvex_1_1Context.html#a5dbfaec8e340379f57cf589617a267b8">vex::Context::Context()</a>, and <a class="el" href="classvex_1_1generator_1_1Kernel.html#aff818a250c0ad905cc9cd9c98cfa427e">vex::generator::Kernel&lt; NP &gt;::operator()()</a>.</p>
 
 </div>
 </div>

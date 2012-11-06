@@ -71,7 +71,7 @@ Memory allocation and vector arithmetic</h1>
 <div class="fragment"><div class="line">Y = 42;</div>
 <div class="line">Z = sqrt(2 * X) + cos(Y);</div>
 </div><!-- fragment --><p>You can copy the result back to host or you can use vector::operator[] to read (or write) vector elements directly. Though latter technique is very ineffective and should be used for debugging purposes only. </p>
-<div class="fragment"><div class="line"><a class="code" href="namespacevex.html#a7896b8bc121f843d62d724a98ebe3b46" title="Copy device vector to host vector.">copy</a>(Z, x);</div>
+<div class="fragment"><div class="line"><a class="code" href="namespacevex.html#a4d23fe6f2794c7738f6948358afc5068" title="Copy multivector to host vector.">copy</a>(Z, x);</div>
 <div class="line">assert(x[42] == Z[42]);</div>
 </div><!-- fragment --><p>Another frequently performed operation is reduction of a vector expression to single value, such as summation. This can be done with <a class="el" href="classvex_1_1Reductor.html" title="Parallel reduction of arbitrary expression.">vex::Reductor</a> class: </p>
 <div class="fragment"><div class="line">Reductor&lt;double&gt; sum(ctx.queue());</div>
@@ -144,7 +144,7 @@ Sparse matrix-vector multiplication</h1>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Get result to host.</span></div>
-<div class="line">    <a class="code" href="namespacevex.html#a7896b8bc121f843d62d724a98ebe3b46" title="Copy device vector to host vector.">copy</a>(u, x);</div>
+<div class="line">    <a class="code" href="namespacevex.html#a4d23fe6f2794c7738f6948358afc5068" title="Copy multivector to host vector.">copy</a>(u, x);</div>
 <div class="line">}</div>
 </div><!-- fragment --><h1><a class="anchor" id="userfun"></a>
 User-defined functions</h1>
@@ -190,10 +190,10 @@ Multi-component vectors</h1>
 <div class="line">dxdt(0) = x(0) + x(1);</div>
 <div class="line">dxdt(1) = x(0) - x(1);</div>
 </div><!-- fragment --><p>This results in two kernel launches. Instead, you can use the following form: </p>
-<div class="fragment"><div class="line">dxdt = std::tie(x(0) + x(1), x(0) - x(1));</div>
+<div class="fragment"><div class="line">dxdt = <a class="code" href="namespacevex.html#a1f12df83605db6011463d6bca2b584ca" title="Ties several vex::vectors into a multivector.">std::tie</a>(x(0) + x(1), x(0) - x(1));</div>
 </div><!-- fragment --><p> This expression would generate and launch single combined kernel, which would be more effective. Multi-expressions like these may also be used with ordinary vex::vectors with help of <a class="el" href="namespacevex.html#a1f12df83605db6011463d6bca2b584ca" title="Ties several vex::vectors into a multivector.">vex::tie()</a> function: </p>
 <div class="fragment"><div class="line"><span class="comment">// vex::vector&lt;double&gt; dx, dy, x, y;</span></div>
-<div class="line"><a class="code" href="namespacevex.html#a1f12df83605db6011463d6bca2b584ca" title="Ties several vex::vectors into a multivector.">vex::tie</a>(dx,dy) = std::tie(x + y, x - y);</div>
+<div class="line"><a class="code" href="namespacevex.html#a1f12df83605db6011463d6bca2b584ca" title="Ties several vex::vectors into a multivector.">vex::tie</a>(dx,dy) = <a class="code" href="namespacevex.html#a1f12df83605db6011463d6bca2b584ca" title="Ties several vex::vectors into a multivector.">std::tie</a>(x + y, x - y);</div>
 </div><!-- fragment --><h1><a class="anchor" id="kernel_generator"></a>
 Converting existing algorithms to kernels</h1>
 <p>VexCL kernel generator allows to transparently convert existing CPU algorithm to an OpenCL kernel. In order to do this you need to record sequence of arithmetic expressions made by an algorithm and convert the recorded sequence to a kernel. The recording part is done with help of vex::generator::symbolic&lt;T&gt; class. The class supports arithmetic expression templates and simply outputs to provided stream any expressions it is being subjected to.</p>
