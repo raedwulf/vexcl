@@ -155,12 +155,13 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#adde6e399118c4e9c8fdb111d23d65698">vex::alignup</a> (size_t n, size_t m=16U)</td></tr>
 <tr class="memdesc:adde6e399118c4e9c8fdb111d23d65698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Align n to the next multiple of m. <br/></td></tr>
 <tr class="separator:adde6e399118c4e9c8fdb111d23d65698"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67fe181f75c92ed19e58f24c070a5c45"><td class="memTemplParams" colspan="2"><a class="anchor" id="a67fe181f75c92ed19e58f24c070a5c45"></a>
-template&lt;size_t I = 0, class Function , class... V&gt; </td></tr>
-<tr class="memitem:a67fe181f75c92ed19e58f24c070a5c45"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;(I==sizeof...(V)), <br class="typebreak"/>
-void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a67fe181f75c92ed19e58f24c070a5c45">vex::for_each</a> (const std::tuple&lt; V...&gt; &amp;v, Function &amp;f)</td></tr>
-<tr class="memdesc:a67fe181f75c92ed19e58f24c070a5c45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over tuple elements. <br/></td></tr>
-<tr class="separator:a67fe181f75c92ed19e58f24c070a5c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5529e223821178f01df222a057d62d4"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad5529e223821178f01df222a057d62d4"></a>
+template&lt;size_t I, class Function , class Tuple &gt; </td></tr>
+<tr class="memitem:ad5529e223821178f01df222a057d62d4"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;(I==std::tuple_size<br class="typebreak"/>
+&lt; Tuple &gt;::value), void &gt;<br class="typebreak"/>
+::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ad5529e223821178f01df222a057d62d4">vex::for_each</a> (const Tuple &amp;v, Function &amp;f)</td></tr>
+<tr class="memdesc:ad5529e223821178f01df222a057d62d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over tuple elements. <br/></td></tr>
+<tr class="separator:ad5529e223821178f01df222a057d62d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d3fe52e80bf245c052cedbf50a3d388"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d3fe52e80bf245c052cedbf50a3d388"></a>
 cl::Context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a4d3fe52e80bf245c052cedbf50a3d388">vex::qctx</a> (const cl::CommandQueue &amp;q)</td></tr>
 <tr class="memdesc:a4d3fe52e80bf245c052cedbf50a3d388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut for q.getInfo&lt;CL_QUEUE_CONTEXT&gt;() <br/></td></tr>
@@ -179,12 +180,12 @@ Variables</h2></td></tr>
 <tr class="memitem:a4c383d02ac43c2a77e6b222788abf74c"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>vex::standard_kernel_header</b></td></tr>
 <tr class="separator:a4c383d02ac43c2a77e6b222788abf74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd2e037ede04b8ed7b76ae7047f3d111"><td class="memTemplParams" colspan="2"><a class="anchor" id="acd2e037ede04b8ed7b76ae7047f3d111"></a>
-template&lt;size_t I = 0, class Function , class... V&gt; </td></tr>
-<tr class="memitem:acd2e037ede04b8ed7b76ae7047f3d111"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;(I&lt; sizeof...(V)), <br class="typebreak"/>
-void &gt;::typefor_each(const <br class="typebreak"/>
-std::tuple&lt; V...&gt; &amp;v, Function <br class="typebreak"/>
-&amp;f){f(std::get&lt; I &gt;v));for_each<br class="typebreak"/>
-&lt; I+1 &gt;v, f);}inline <br class="typebreak"/>
+template&lt;size_t I, class Function , class Tuple &gt; </td></tr>
+<tr class="memitem:acd2e037ede04b8ed7b76ae7047f3d111"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;(I<br class="typebreak"/>
+&lt; std::tuple_size&lt; Tuple &gt;<br class="typebreak"/>
+::value), void &gt;::typefor_each(const <br class="typebreak"/>
+Tuple &amp;v, Function &amp;f){f(std::get<br class="typebreak"/>
+&lt; I &gt;v));for_each&lt; I+1 &gt;v, f);}inline <br class="typebreak"/>
 cl::Program build_sources(const <br class="typebreak"/>
 cl::Context &amp;context, const <br class="typebreak"/>
 std::string &amp;source){cl::Program <br class="typebreak"/>

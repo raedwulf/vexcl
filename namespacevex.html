@@ -68,8 +68,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1Context.html">Context</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">VexCL context holder.  <a href="classvex_1_1Context.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1multivector.html">multivector</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container for several vex::vectors.  <a href="structvex_1_1multivector.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1multivector.html">multivector</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container for several vex::vectors.  <a href="classvex_1_1multivector.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1profiler.html">profiler</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for gathering and printing OpenCL and Host profiling info.  <a href="classvex_1_1profiler.html#details">More...</a><br/></td></tr>
@@ -98,8 +98,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1StencilOperator.html">StencilOperator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">User-defined stencil operator.  <a href="classvex_1_1StencilOperator.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvex_1_1vector.html">vector</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device vector.  <a href="structvex_1_1vector.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html">vector</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device vector.  <a href="classvex_1_1vector.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -116,20 +116,20 @@ Functions</h2></td></tr>
 <tr class="separator:a7adacdbabcefdd8480ff64ae7b93541a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d23fe6f2794c7738f6948358afc5068"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4d23fe6f2794c7738f6948358afc5068"></a>
 template&lt;class T , size_t N, bool own&gt; </td></tr>
-<tr class="memitem:a4d23fe6f2794c7738f6948358afc5068"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a4d23fe6f2794c7738f6948358afc5068">copy</a> (const <a class="el" href="structvex_1_1multivector.html">multivector</a>&lt; T, N, own &gt; &amp;mv, std::vector&lt; T &gt; &amp;hv)</td></tr>
+<tr class="memitem:a4d23fe6f2794c7738f6948358afc5068"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a4d23fe6f2794c7738f6948358afc5068">copy</a> (const <a class="el" href="classvex_1_1multivector.html">multivector</a>&lt; T, N, own &gt; &amp;mv, std::vector&lt; T &gt; &amp;hv)</td></tr>
 <tr class="memdesc:a4d23fe6f2794c7738f6948358afc5068"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy multivector to host vector. <br/></td></tr>
 <tr class="separator:a4d23fe6f2794c7738f6948358afc5068"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe84132727a25faa1bd6750c19c81b0a"><td class="memTemplParams" colspan="2"><a class="anchor" id="abe84132727a25faa1bd6750c19c81b0a"></a>
 template&lt;class T , size_t N, bool own&gt; </td></tr>
-<tr class="memitem:abe84132727a25faa1bd6750c19c81b0a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#abe84132727a25faa1bd6750c19c81b0a">copy</a> (const std::vector&lt; T &gt; &amp;hv, <a class="el" href="structvex_1_1multivector.html">multivector</a>&lt; T, N, own &gt; &amp;mv)</td></tr>
+<tr class="memitem:abe84132727a25faa1bd6750c19c81b0a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#abe84132727a25faa1bd6750c19c81b0a">copy</a> (const std::vector&lt; T &gt; &amp;hv, <a class="el" href="classvex_1_1multivector.html">multivector</a>&lt; T, N, own &gt; &amp;mv)</td></tr>
 <tr class="memdesc:abe84132727a25faa1bd6750c19c81b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy host vector to multivector. <br/></td></tr>
 <tr class="separator:abe84132727a25faa1bd6750c19c81b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f12df83605db6011463d6bca2b584ca"><td class="memTemplParams" colspan="2">template&lt;typename T , class... Tail&gt; </td></tr>
 <tr class="memitem:a1f12df83605db6011463d6bca2b584ca"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; And<br class="typebreak"/>
 &lt; std::is_same&lt; T, Tail &gt;<br class="typebreak"/>
-...&gt;::value, <a class="el" href="structvex_1_1multivector.html">multivector</a>&lt; T, <br class="typebreak"/>
+...&gt;::value, <a class="el" href="classvex_1_1multivector.html">multivector</a>&lt; T, <br class="typebreak"/>
 sizeof...(Tail)+1, false &gt;<br class="typebreak"/>
- &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a1f12df83605db6011463d6bca2b584ca">tie</a> (<a class="el" href="structvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;head, <a class="el" href="structvex_1_1vector.html">vex::vector</a>&lt; Tail &gt; &amp;...tail)</td></tr>
+ &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a1f12df83605db6011463d6bca2b584ca">tie</a> (<a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;head, <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; Tail &gt; &amp;...tail)</td></tr>
 <tr class="memdesc:a1f12df83605db6011463d6bca2b584ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ties several vex::vectors into a multivector.  <a href="#a1f12df83605db6011463d6bca2b584ca"></a><br/></td></tr>
 <tr class="separator:a1f12df83605db6011463d6bca2b584ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a8ffb5d87908b8cbbc57d6ffb2a29aeec">device_spmv_perf</a> (const cl::Context &amp;context, const cl::Device &amp;device)</td></tr>
@@ -137,11 +137,11 @@ sizeof...(Tail)+1, false &gt;<br class="typebreak"/>
 <tr class="separator:a8ffb5d87908b8cbbc57d6ffb2a29aeec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6ed30e74c6b0ab0685466979e869e47"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac6ed30e74c6b0ab0685466979e869e47"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ac6ed30e74c6b0ab0685466979e869e47"><td class="memTemplItemLeft" align="right" valign="top">conv&lt; <a class="el" href="classvex_1_1stencil.html">stencil</a>&lt; T &gt;, <a class="el" href="structvex_1_1vector.html">vector</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classvex_1_1stencil.html">stencil</a>&lt; T &gt; &amp;s, const <a class="el" href="structvex_1_1vector.html">vector</a>&lt; T &gt; &amp;x)</td></tr>
+<tr class="memitem:ac6ed30e74c6b0ab0685466979e869e47"><td class="memTemplItemLeft" align="right" valign="top">conv&lt; <a class="el" href="classvex_1_1stencil.html">stencil</a>&lt; T &gt;, <a class="el" href="classvex_1_1vector.html">vector</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classvex_1_1stencil.html">stencil</a>&lt; T &gt; &amp;s, const <a class="el" href="classvex_1_1vector.html">vector</a>&lt; T &gt; &amp;x)</td></tr>
 <tr class="separator:ac6ed30e74c6b0ab0685466979e869e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0257dfd2e174677cdcb62691741a5f8c"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0257dfd2e174677cdcb62691741a5f8c"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a0257dfd2e174677cdcb62691741a5f8c"><td class="memTemplItemLeft" align="right" valign="top">conv&lt; <a class="el" href="classvex_1_1stencil.html">stencil</a>&lt; T &gt;, <a class="el" href="structvex_1_1vector.html">vector</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="structvex_1_1vector.html">vector</a>&lt; T &gt; &amp;x, const <a class="el" href="classvex_1_1stencil.html">stencil</a>&lt; T &gt; &amp;s)</td></tr>
+<tr class="memitem:a0257dfd2e174677cdcb62691741a5f8c"><td class="memTemplItemLeft" align="right" valign="top">conv&lt; <a class="el" href="classvex_1_1stencil.html">stencil</a>&lt; T &gt;, <a class="el" href="classvex_1_1vector.html">vector</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classvex_1_1vector.html">vector</a>&lt; T &gt; &amp;x, const <a class="el" href="classvex_1_1stencil.html">stencil</a>&lt; T &gt; &amp;s)</td></tr>
 <tr class="separator:a0257dfd2e174677cdcb62691741a5f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56365bca0357a23c638d8d39a0224304"><td class="memTemplParams" colspan="2"><a class="anchor" id="a56365bca0357a23c638d8d39a0224304"></a>
 template&lt;class T &gt; </td></tr>
@@ -184,12 +184,13 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#adde6e399118c4e9c8fdb111d23d65698">alignup</a> (size_t n, size_t m=16U)</td></tr>
 <tr class="memdesc:adde6e399118c4e9c8fdb111d23d65698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Align n to the next multiple of m. <br/></td></tr>
 <tr class="separator:adde6e399118c4e9c8fdb111d23d65698"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67fe181f75c92ed19e58f24c070a5c45"><td class="memTemplParams" colspan="2"><a class="anchor" id="a67fe181f75c92ed19e58f24c070a5c45"></a>
-template&lt;size_t I = 0, class Function , class... V&gt; </td></tr>
-<tr class="memitem:a67fe181f75c92ed19e58f24c070a5c45"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;(I==sizeof...(V)), <br class="typebreak"/>
-void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a67fe181f75c92ed19e58f24c070a5c45">for_each</a> (const std::tuple&lt; V...&gt; &amp;v, Function &amp;f)</td></tr>
-<tr class="memdesc:a67fe181f75c92ed19e58f24c070a5c45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over tuple elements. <br/></td></tr>
-<tr class="separator:a67fe181f75c92ed19e58f24c070a5c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5529e223821178f01df222a057d62d4"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad5529e223821178f01df222a057d62d4"></a>
+template&lt;size_t I, class Function , class Tuple &gt; </td></tr>
+<tr class="memitem:ad5529e223821178f01df222a057d62d4"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;(I==std::tuple_size<br class="typebreak"/>
+&lt; Tuple &gt;::value), void &gt;<br class="typebreak"/>
+::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#ad5529e223821178f01df222a057d62d4">for_each</a> (const Tuple &amp;v, Function &amp;f)</td></tr>
+<tr class="memdesc:ad5529e223821178f01df222a057d62d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over tuple elements. <br/></td></tr>
+<tr class="separator:ad5529e223821178f01df222a057d62d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d3fe52e80bf245c052cedbf50a3d388"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d3fe52e80bf245c052cedbf50a3d388"></a>
 cl::Context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevex.html#a4d3fe52e80bf245c052cedbf50a3d388">qctx</a> (const cl::CommandQueue &amp;q)</td></tr>
 <tr class="memdesc:a4d3fe52e80bf245c052cedbf50a3d388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut for q.getInfo&lt;CL_QUEUE_CONTEXT&gt;() <br/></td></tr>
@@ -212,12 +213,12 @@ std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><
 <tr class="separator:a7107660147252c74f159b733c678c86e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7896b8bc121f843d62d724a98ebe3b46"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7896b8bc121f843d62d724a98ebe3b46"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:a7896b8bc121f843d62d724a98ebe3b46"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a7896b8bc121f843d62d724a98ebe3b46">copy</a> (const <a class="el" href="structvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;dv, std::vector&lt; T &gt; &amp;hv, cl_bool blocking=CL_TRUE)</td></tr>
+<tr class="memitem:a7896b8bc121f843d62d724a98ebe3b46"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a7896b8bc121f843d62d724a98ebe3b46">copy</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;dv, std::vector&lt; T &gt; &amp;hv, cl_bool blocking=CL_TRUE)</td></tr>
 <tr class="memdesc:a7896b8bc121f843d62d724a98ebe3b46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy device vector to host vector. <br/></td></tr>
 <tr class="separator:a7896b8bc121f843d62d724a98ebe3b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a581f96fb69b60b9fd62edd5843687634"><td class="memTemplParams" colspan="2"><a class="anchor" id="a581f96fb69b60b9fd62edd5843687634"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:a581f96fb69b60b9fd62edd5843687634"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a581f96fb69b60b9fd62edd5843687634">copy</a> (const std::vector&lt; T &gt; &amp;hv, <a class="el" href="structvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;dv, cl_bool blocking=CL_TRUE)</td></tr>
+<tr class="memitem:a581f96fb69b60b9fd62edd5843687634"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a581f96fb69b60b9fd62edd5843687634">copy</a> (const std::vector&lt; T &gt; &amp;hv, <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;dv, cl_bool blocking=CL_TRUE)</td></tr>
 <tr class="memdesc:a581f96fb69b60b9fd62edd5843687634"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy host vector to device vector. <br/></td></tr>
 <tr class="separator:a581f96fb69b60b9fd62edd5843687634"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4ea02c21224302cffaa166e7bcaa2ed"><td class="memTemplParams" colspan="2">template&lt;class InputIterator , class OutputIterator &gt; </td></tr>
@@ -236,7 +237,7 @@ OutputIterator &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom
 <tr class="separator:ab4ea02c21224302cffaa166e7bcaa2ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c514253c0f09c5a18dac3e687553465"><td class="memTemplParams" colspan="2"><a class="anchor" id="a6c514253c0f09c5a18dac3e687553465"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a6c514253c0f09c5a18dac3e687553465"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a6c514253c0f09c5a18dac3e687553465">swap</a> (<a class="el" href="structvex_1_1vector.html">vector</a>&lt; T &gt; &amp;x, <a class="el" href="structvex_1_1vector.html">vector</a>&lt; T &gt; &amp;y)</td></tr>
+<tr class="memitem:a6c514253c0f09c5a18dac3e687553465"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevex.html#a6c514253c0f09c5a18dac3e687553465">swap</a> (<a class="el" href="classvex_1_1vector.html">vector</a>&lt; T &gt; &amp;x, <a class="el" href="classvex_1_1vector.html">vector</a>&lt; T &gt; &amp;y)</td></tr>
 <tr class="memdesc:a6c514253c0f09c5a18dac3e687553465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap two vectors. <br/></td></tr>
 <tr class="separator:a6c514253c0f09c5a18dac3e687553465"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -245,12 +246,12 @@ Variables</h2></td></tr>
 <tr class="memitem:a4c383d02ac43c2a77e6b222788abf74c"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>standard_kernel_header</b></td></tr>
 <tr class="separator:a4c383d02ac43c2a77e6b222788abf74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd2e037ede04b8ed7b76ae7047f3d111"><td class="memTemplParams" colspan="2"><a class="anchor" id="acd2e037ede04b8ed7b76ae7047f3d111"></a>
-template&lt;size_t I = 0, class Function , class... V&gt; </td></tr>
-<tr class="memitem:acd2e037ede04b8ed7b76ae7047f3d111"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;(I&lt; sizeof...(V)), <br class="typebreak"/>
-void &gt;::typefor_each(const <br class="typebreak"/>
-std::tuple&lt; V...&gt; &amp;v, Function <br class="typebreak"/>
-&amp;f){f(std::get&lt; I &gt;v));<a class="el" href="namespacevex.html#a67fe181f75c92ed19e58f24c070a5c45">for_each</a><br class="typebreak"/>
-&lt; I+1 &gt;v, f);}inline <br class="typebreak"/>
+template&lt;size_t I, class Function , class Tuple &gt; </td></tr>
+<tr class="memitem:acd2e037ede04b8ed7b76ae7047f3d111"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;(I<br class="typebreak"/>
+&lt; std::tuple_size&lt; Tuple &gt;<br class="typebreak"/>
+::value), void &gt;::typefor_each(const <br class="typebreak"/>
+Tuple &amp;v, Function &amp;f){f(std::get<br class="typebreak"/>
+&lt; I &gt;v));<a class="el" href="namespacevex.html#ad5529e223821178f01df222a057d62d4">for_each</a>&lt; I+1 &gt;v, f);}inline <br class="typebreak"/>
 cl::Program build_sources(const <br class="typebreak"/>
 cl::Context &amp;context, const <br class="typebreak"/>
 std::string &amp;source){cl::Program <br class="typebreak"/>
@@ -544,15 +545,15 @@ template&lt;class DevFilter  = Filter::AllFilter&gt; </div>
 template&lt;typename T , class... Tail&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; And&lt;std::is_same&lt;T,Tail&gt;...&gt;::value, <a class="el" href="structvex_1_1multivector.html">multivector</a>&lt;T, sizeof...(Tail) + 1, false&gt; &gt;::type vex::tie </td>
+          <td class="memname">std::enable_if&lt; And&lt;std::is_same&lt;T,Tail&gt;...&gt;::value, <a class="el" href="classvex_1_1multivector.html">multivector</a>&lt;T, sizeof...(Tail) + 1, false&gt; &gt;::type vex::tie </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>head</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structvex_1_1vector.html">vex::vector</a>&lt; Tail &gt; &amp;...&#160;</td>
+          <td class="paramtype"><a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; Tail &gt; &amp;...&#160;</td>
           <td class="paramname"><em>tail</em>&#160;</td>
         </tr>
         <tr>
@@ -565,8 +566,8 @@ template&lt;typename T , class... Tail&gt; </div>
 
 <p>Ties several vex::vectors into a multivector. </p>
 <p>The following example results in a single kernel: </p>
-<div class="fragment"><div class="line"><a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> x(ctx.queue(), 1024);</div>
-<div class="line"><a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> y(ctx.queue(), 1024);</div>
+<div class="fragment"><div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> x(ctx.queue(), 1024);</div>
+<div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> y(ctx.queue(), 1024);</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="namespacevex.html#a1f12df83605db6011463d6bca2b584ca" title="Ties several vex::vectors into a multivector.">vex::tie</a>(x,y) = <a class="code" href="namespacevex.html#a1f12df83605db6011463d6bca2b584ca" title="Ties several vex::vectors into a multivector.">std::tie</a>( x + y, y - x );</div>
 </div><!-- fragment --><p> This is functionally equivalent to </p>

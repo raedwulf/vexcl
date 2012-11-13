@@ -72,7 +72,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a439b0719fcb4d220bce1278e5e285042"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1stencil.html#a439b0719fcb4d220bce1278e5e285042">stencil</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, std::initializer_list&lt; T &gt; list, uint center)</td></tr>
 <tr class="memdesc:a439b0719fcb4d220bce1278e5e285042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Costructor.  <a href="#a439b0719fcb4d220bce1278e5e285042"></a><br/></td></tr>
 <tr class="separator:a439b0719fcb4d220bce1278e5e285042"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c78fa83e093c8adbab71534f7a25756"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1stencil.html#a0c78fa83e093c8adbab71534f7a25756">convolve</a> (const <a class="el" href="structvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x, <a class="el" href="structvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;y, T alpha=0, T beta=1) const </td></tr>
+<tr class="memitem:a0c78fa83e093c8adbab71534f7a25756"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1stencil.html#a0c78fa83e093c8adbab71534f7a25756">convolve</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;x, <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;y, T alpha=0, T beta=1) const </td></tr>
 <tr class="memdesc:a0c78fa83e093c8adbab71534f7a25756"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolve stencil with a vector.  <a href="#a0c78fa83e093c8adbab71534f7a25756"></a><br/></td></tr>
 <tr class="separator:a0c78fa83e093c8adbab71534f7a25756"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -84,8 +84,8 @@ class vex::stencil&lt; T &gt;</h3>
 <p>Should be used for stencil convolutions with vex::vectors as in </p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="classvex_1_1stencil.html#a0c78fa83e093c8adbab71534f7a25756" title="Convolve stencil with a vector.">convolve</a>(</div>
 <div class="line">         <span class="keyword">const</span> <a class="code" href="classvex_1_1stencil.html" title="Stencil.">vex::stencil&lt;double&gt;</a> &amp;s,</div>
-<div class="line">         <span class="keyword">const</span> <a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a>  &amp;x,</div>
-<div class="line">         <a class="code" href="structvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> &amp;y)</div>
+<div class="line">         <span class="keyword">const</span> <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a>  &amp;x,</div>
+<div class="line">         <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> &amp;y)</div>
 <div class="line">{</div>
 <div class="line">    y = x * s;</div>
 <div class="line">}</div>
@@ -266,13 +266,13 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classvex_1_1stencil.html">vex::stencil</a>&lt; T &gt;::convolve </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>
@@ -305,7 +305,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p>References <a class="el" href="namespacevex.html#adde6e399118c4e9c8fdb111d23d65698">vex::alignup()</a>, and <a class="el" href="structvex_1_1vector.html#a3404c8ef9b7b06ed88679d0247016359">vex::vector&lt; T &gt;::part_size()</a>.</p>
+<p>References <a class="el" href="namespacevex.html#adde6e399118c4e9c8fdb111d23d65698">vex::alignup()</a>, and <a class="el" href="classvex_1_1vector.html#a3404c8ef9b7b06ed88679d0247016359">vex::vector&lt; T &gt;::part_size()</a>.</p>
 
 </div>
 </div>
