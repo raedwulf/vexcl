@@ -146,7 +146,8 @@ Sparse matrix-vector multiplication</h1>
 <div class="line">    <span class="comment">// Get result to host.</span></div>
 <div class="line">    <a class="code" href="namespacevex.html#a4d23fe6f2794c7738f6948358afc5068" title="Copy multivector to host vector.">copy</a>(u, x);</div>
 <div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="userfun"></a>
+</div><!-- fragment --><p>VexCL also provides support for <a href="http://viennacl.sourceforge.net">ViennaCL</a> iterative solvers. See examples/viennacl/solvers.cpp.</p>
+<h1><a class="anchor" id="userfun"></a>
 User-defined functions</h1>
 <p>Simple arithmetic expressions are sometimes not enough. Imagine that you need to count how many elements in vector x are greater that their counterparts in vector y. This may be achieved by introduction of custom function. In order to build such a function, you need to supply its body, its return type and types of its arguments. After that, you can apply the function to any valid vector expressions: </p>
 <div class="fragment"><div class="line"><span class="comment">// Function body has to be defined at global scope, and it has to be of `extern</span></div>

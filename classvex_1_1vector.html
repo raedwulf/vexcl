@@ -76,6 +76,9 @@ Public Types</h2></td></tr>
 <tr class="memitem:a7f9cc1f075e32ea863d647fc315437c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f9cc1f075e32ea863d647fc315437c6"></a>
 typedef T&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
 <tr class="separator:a7f9cc1f075e32ea863d647fc315437c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78d80e56fc31f0fe19ab15ec1489859f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78d80e56fc31f0fe19ab15ec1489859f"></a>
+typedef size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size_type</b></td></tr>
+<tr class="separator:a78d80e56fc31f0fe19ab15ec1489859f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1de9946fa464d4bb6b7a7b930339e29a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1de9946fa464d4bb6b7a7b930339e29a"></a>
 typedef <a class="el" href="classvex_1_1vector_1_1iterator__type.html">iterator_type</a>&lt; <a class="el" href="classvex_1_1vector.html">vector</a>, <br class="typebreak"/>
 <a class="el" href="classvex_1_1vector_1_1element.html">element</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>iterator</b></td></tr>
@@ -91,6 +94,10 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a145842a554253e273ce5ee5f3e1d602b">vector</a> ()</td></tr>
 <tr class="memdesc:a145842a554253e273ce5ee5f3e1d602b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty constructor. <br/></td></tr>
 <tr class="separator:a145842a554253e273ce5ee5f3e1d602b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43807a92f955acbf9f125c79bb254357"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43807a92f955acbf9f125c79bb254357"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a43807a92f955acbf9f125c79bb254357">vector</a> (size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>)</td></tr>
+<tr class="memdesc:a43807a92f955acbf9f125c79bb254357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct by size and use static context. <br/></td></tr>
+<tr class="separator:a43807a92f955acbf9f125c79bb254357"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add76a9d6bb57a8a25821ba8f6349c026"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add76a9d6bb57a8a25821ba8f6349c026"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#add76a9d6bb57a8a25821ba8f6349c026">vector</a> (const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;v)</td></tr>
 <tr class="memdesc:add76a9d6bb57a8a25821ba8f6349c026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor. <br/></td></tr>
@@ -127,6 +134,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a89ce2d148fb858750de01226b26888a8">resize</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, const std::vector&lt; T &gt; &amp;host, cl_mem_flags flags=CL_MEM_READ_WRITE)</td></tr>
 <tr class="memdesc:a89ce2d148fb858750de01226b26888a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize vector. <br/></td></tr>
 <tr class="separator:a89ce2d148fb858750de01226b26888a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63d1913b6fbc162b589da7f94d6994f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63d1913b6fbc162b589da7f94d6994f2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a63d1913b6fbc162b589da7f94d6994f2">resize</a> (size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>)</td></tr>
+<tr class="memdesc:a63d1913b6fbc162b589da7f94d6994f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize vector with static context. <br/></td></tr>
+<tr class="separator:a63d1913b6fbc162b589da7f94d6994f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26aee534bad16ac246d8d1b704f3251e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26aee534bad16ac246d8d1b704f3251e"></a>
 cl::Buffer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a26aee534bad16ac246d8d1b704f3251e">operator()</a> (uint d=0) const </td></tr>
 <tr class="memdesc:a26aee534bad16ac246d8d1b704f3251e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return cl::Buffer object located on a given device. <br/></td></tr>
