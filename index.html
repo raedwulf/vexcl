@@ -71,6 +71,8 @@ Memory allocation and vector arithmetic</h1>
 <p>Vectors are processed in parallel across all devices they were allocated on: </p>
 <div class="fragment"><div class="line">Y = 42;</div>
 <div class="line">Z = sqrt(2 * X) + cos(Y);</div>
+</div><!-- fragment --><p>If values of vector elements should depend on their positions in the vector, then you can use <a class="el" href="namespacevex.html#ad1ffc8adc46bd709080cf30363531785" title="When used in vector expression, returns current element index plus offset.">element_index()</a> function in vector expresion. For example, to assign one period of sine function to a vector, you could </p>
+<div class="fragment"><div class="line">X = sin(2 * M_PI / X.size() * <a class="code" href="namespacevex.html#ad1ffc8adc46bd709080cf30363531785" title="When used in vector expression, returns current element index plus offset.">element_index</a>());</div>
 </div><!-- fragment --><p>You can copy the result back to host or you can use vector::operator[] to read (or write) vector elements directly. Though latter technique is very ineffective and should be used for debugging purposes only. </p>
 <div class="fragment"><div class="line"><a class="code" href="namespacevex.html#a4d23fe6f2794c7738f6948358afc5068" title="Copy multivector to host vector.">copy</a>(Z, x);</div>
 <div class="line">assert(x[42] == Z[42]);</div>
