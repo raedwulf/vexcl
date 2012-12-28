@@ -39,7 +39,8 @@
 <div class="title">VexCL </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>VexCL is vector expression template library for OpenCL. It has been created for ease of OpenCL developement with C++. VexCL strives to reduce amount of boilerplate code needed to develop OpenCL applications. The library provides convenient and intuitive notation for vector arithmetic, reduction, and sparse matrix-vector multiplication. Multi-device and even multi-platform computations are supported. The source code is available at <a href="https://github.com/ddemidov/vexcl">https://github.com/ddemidov/vexcl</a>.</p>
+<div class="textblock"><p>VexCL is vector expression template library for OpenCL. It has been created for ease of OpenCL developement with C++. VexCL strives to reduce amount of boilerplate code needed to develop OpenCL applications. The library provides convenient and intuitive notation for vector arithmetic, reduction, and sparse matrix-vector multiplication. Multi-device and even multi-platform computations are supported. VexCL also provides MPI wrapper <a class="el" href="namespacevex_1_1mpi.html">classes</a> for its types.</p>
+<p>The source code is available at <a href="https://github.com/ddemidov/vexcl">https://github.com/ddemidov/vexcl</a>.</p>
 <h1><a class="anchor" id="devlist"></a>
 Selection of compute devices</h1>
 <p>You can select any number of available compute devices, which satisfy provided filters. Filter is a functor returning bool and acting on a cl::Device parameter. Several standard filters are provided, such as device type or name filter, double precision support etc. Filters can be combined with logical operators. In the example below all devices with names matching "Radeon" and supporting double precision are selected: </p>
@@ -301,6 +302,9 @@ Scalability</h1>
 </div>
 <p> As you can see, performance and bandwidth for stencil convolution operation are much higher than for other primitives. This is due to the fact that much faster local (shared) memory is used in this algorithm, and formulas for effective performance and bandwidth do not take this into account.</p>
 <p>Another thing worth noting is overall degradation of performance after Intel CPU is added to VexCL context. The only primitive gaining speed from this addition is vector arithmetic. This is probably because performance of vector arithmetic was used as a basis for problem partitioning.</p>
+<h1><a class="anchor" id="mpi"></a>
+MPI wrappers</h1>
+<p>VexCL provides thin layer of MPI wrappers for its types. Please see examples in examples/mpi folder for use cases. Provided types are <a class="el" href="classvex_1_1mpi_1_1vector.html" title="MPI wrapper for vex::vector class template.">vex::mpi::vector</a>, <a class="el" href="classvex_1_1mpi_1_1multivector.html" title="MPI wrapper for vex::multivector class template.">vex::mpi::multivector</a>, <a class="el" href="classvex_1_1mpi_1_1SpMat.html" title="MPI wrapper for vex::SpMat class template.">vex::mpi::SpMat</a>, <a class="el" href="classvex_1_1mpi_1_1Reductor.html" title="MPI wrapper for vex::Reductor class template.">vex::mpi::Reductor</a>. Any operations with these types are dispatched to the underlying vexcl types. Ghost points are exchanged between neighbor MPI processes as needed.</p>
 <h1><a class="anchor" id="compilers"></a>
 Supported compilers</h1>
 <p>VexCL makes heavy use of C++11 features, so your compiler has to be modern enough. The compilers that have been tested and supported are:</p>
