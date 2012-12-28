@@ -1,4 +1,4 @@
 \form#0:$y = \alpha Ax$
-\form#1:$y += alpha Ax$
+\form#1:$y += \alpha Ax$
 \form#2:\[ \frac{dx}{dt} = x + y, \quad \frac{dy}{dt} = x - y. \]
 \form#3:$\frac{dx}{dt} = sin(x)$
