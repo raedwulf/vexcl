@@ -1,9 +1,15 @@
 <map id="operations.hpp" name="operations.hpp">
-<area shape="rect" id="node3" href="$generator_8hpp.html" title="OpenCL kernel generator." alt="" coords="5,80,116,107"/>
-<area shape="rect" id="node7" href="$multivector_8hpp.html" title="OpenCL device multi&#45;vector." alt="" coords="97,155,217,181"/>
-<area shape="rect" id="node10" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="254,80,343,107"/>
-<area shape="rect" id="node5" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="257,229,339,256"/>
-<area shape="rect" id="node13" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="294,155,388,181"/>
-<area shape="rect" id="node16" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="413,155,504,181"/>
-<area shape="rect" id="node19" href="$stencil_8hpp.html" title="Stencil convolution." alt="" coords="528,155,619,181"/>
+<area shape="rect" id="node3" href="$generator_8hpp.html" title="OpenCL kernel generator." alt="" coords="49,80,160,107"/>
+<area shape="rect" id="node7" href="$mpi_2operations_8hpp.html" title="Set of operations to be used in mpi::vector expressions." alt="" coords="619,155,737,181"/>
+<area shape="rect" id="node19" href="$multivector_8hpp.html" title="OpenCL device multi&#45;vector." alt="" coords="474,155,595,181"/>
+<area shape="rect" id="node23" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="306,80,395,107"/>
+<area shape="rect" id="node5" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="109,229,191,256"/>
+<area shape="rect" id="node9" href="$mpi_2multivector_8hpp.html" title="MPI wrapper for vex::multivector." alt="" coords="563,229,684,256"/>
+<area shape="rect" id="node13" href="$mpi_2reduce_8hpp.html" title="MPI wrapper for vex::Reductor." alt="" coords="331,229,425,256"/>
+<area shape="rect" id="node16" href="$mpi_2vector_8hpp.html" title="MPI wrapper for vex::vector." alt="" coords="450,229,539,256"/>
+<area shape="rect" id="node11" href="$mpi_8hpp.html" title="MPI wrappers for VexCL types." alt="" coords="399,304,472,331"/>
+<area shape="rect" id="node27" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="303,155,397,181"/>
+<area shape="rect" id="node31" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="188,155,279,181"/>
+<area shape="rect" id="node37" href="$stencil_8hpp.html" title="Stencil convolution." alt="" coords="23,155,113,181"/>
+<area shape="rect" id="node33" href="$mpi_2spmat_8hpp.html" title="MPI wrapper for vex::SpMat." alt="" coords="216,229,307,256"/>
 </map>

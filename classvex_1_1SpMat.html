@@ -46,6 +46,7 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classvex_1_1SpMat-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -58,16 +59,38 @@
 
 <p><code>#include &lt;spmat.hpp&gt;</code></p>
 
-<p>Inherits matrix_terminal&lt; real &gt;.</p>
+<p>Inherits matrix_terminal.</p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:aa3c276691c7a3c0b23251f209d938a19"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3c276691c7a3c0b23251f209d938a19"></a>
+typedef real&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
+<tr class="separator:aa3c276691c7a3c0b23251f209d938a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a0780abe97efd88ea930c7101c6e1d176"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0780abe97efd88ea930c7101c6e1d176"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#a0780abe97efd88ea930c7101c6e1d176">SpMat</a> ()</td></tr>
+<tr class="memdesc:a0780abe97efd88ea930c7101c6e1d176"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty constructor. <br/></td></tr>
+<tr class="separator:a0780abe97efd88ea930c7101c6e1d176"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b88b7a1f731f62ab9e6fcd8de763613"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#a2b88b7a1f731f62ab9e6fcd8de763613">SpMat</a> (const std::vector&lt; cl::CommandQueue &gt; &amp;queue, size_t n, size_t m, const idx_t *row, const column_t *col, const real *val)</td></tr>
 <tr class="memdesc:a2b88b7a1f731f62ab9e6fcd8de763613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a2b88b7a1f731f62ab9e6fcd8de763613"></a><br/></td></tr>
 <tr class="separator:a2b88b7a1f731f62ab9e6fcd8de763613"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb8051a2504a0c874f655f2aa55f90ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#aeb8051a2504a0c874f655f2aa55f90ac">mul</a> (const <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;x, <a class="el" href="classvex_1_1vector.html">vex::vector</a>&lt; real &gt; &amp;y, real alpha=1, bool append=false) const </td></tr>
 <tr class="memdesc:aeb8051a2504a0c874f655f2aa55f90ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix-vector multiplication.  <a href="#aeb8051a2504a0c874f655f2aa55f90ac"></a><br/></td></tr>
 <tr class="separator:aeb8051a2504a0c874f655f2aa55f90ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c8ce7c70b9d121cac2fd72fac787c65"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c8ce7c70b9d121cac2fd72fac787c65"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#a2c8ce7c70b9d121cac2fd72fac787c65">rows</a> () const </td></tr>
+<tr class="memdesc:a2c8ce7c70b9d121cac2fd72fac787c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of rows. <br/></td></tr>
+<tr class="separator:a2c8ce7c70b9d121cac2fd72fac787c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5abdb6aedc3c4993116200f70563939"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5abdb6aedc3c4993116200f70563939"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#aa5abdb6aedc3c4993116200f70563939">cols</a> () const </td></tr>
+<tr class="memdesc:aa5abdb6aedc3c4993116200f70563939"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of columns. <br/></td></tr>
+<tr class="separator:aa5abdb6aedc3c4993116200f70563939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fa5928134324aefc186e46dcfd06952"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6fa5928134324aefc186e46dcfd06952"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1SpMat.html#a6fa5928134324aefc186e46dcfd06952">nonzeros</a> () const </td></tr>
+<tr class="memdesc:a6fa5928134324aefc186e46dcfd06952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of non-zero entries. <br/></td></tr>
+<tr class="separator:a6fa5928134324aefc186e46dcfd06952"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename real, typename column_t = size_t, typename idx_t = size_t&gt;<br/>
@@ -183,7 +206,7 @@ template&lt;typename real , typename column_t , typename idx_t &gt; </div>
 </div><div class="memdoc">
 
 <p>Matrix-vector multiplication. </p>
-<p>Matrix vector multiplication (y = alpha Ax or y += alpha Ax) is performed in parallel on all registered compute devices. Ghost values of x are transfered across GPU boundaries as needed. </p>
+<p>Matrix vector multiplication ( <img class="formulaInl" alt="$y = \alpha Ax$" src="form_0.png"/> or <img class="formulaInl" alt="$y += alpha Ax$" src="form_1.png"/>) is performed in parallel on all registered compute devices. Ghost values of x are transfered across GPU boundaries as needed. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>input vector. </td></tr>

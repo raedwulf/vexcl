@@ -1,3 +1,5 @@
 <map id="multivector.hpp" name="multivector.hpp">
-<area shape="rect" id="node3" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="24,80,105,107"/>
+<area shape="rect" id="node3" href="$mpi_2multivector_8hpp.html" title="MPI wrapper for vex::multivector." alt="" coords="5,80,125,107"/>
+<area shape="rect" id="node7" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="151,80,232,107"/>
+<area shape="rect" id="node5" href="$mpi_8hpp.html" title="MPI wrappers for VexCL types." alt="" coords="28,155,101,181"/>
 </map>

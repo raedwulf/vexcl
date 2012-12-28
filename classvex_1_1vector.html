@@ -60,7 +60,7 @@
 
 <p><code>#include &lt;vector.hpp&gt;</code></p>
 
-<p>Inherits vector_expression&lt; boost::proto::terminal&lt; vector_terminal &gt;::type &gt;.</p>
+<p>Inherits vector_terminal_expression.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -138,6 +138,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a63d1913b6fbc162b589da7f94d6994f2">resize</a> (size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>)</td></tr>
 <tr class="memdesc:a63d1913b6fbc162b589da7f94d6994f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize vector with static context. <br/></td></tr>
 <tr class="separator:a63d1913b6fbc162b589da7f94d6994f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe88998b123d1bee00fb8cff7c604606"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe88998b123d1bee00fb8cff7c604606"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#afe88998b123d1bee00fb8cff7c604606">clear</a> ()</td></tr>
+<tr class="memdesc:afe88998b123d1bee00fb8cff7c604606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills vector with zeros. <br/></td></tr>
+<tr class="separator:afe88998b123d1bee00fb8cff7c604606"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26aee534bad16ac246d8d1b704f3251e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26aee534bad16ac246d8d1b704f3251e"></a>
 cl::Buffer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#a26aee534bad16ac246d8d1b704f3251e">operator()</a> (uint d=0) const </td></tr>
 <tr class="memdesc:a26aee534bad16ac246d8d1b704f3251e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return cl::Buffer object located on a given device. <br/></td></tr>
@@ -195,11 +199,17 @@ const std::vector&lt; size_t &gt; &amp;&#160;</td><td class="memItemRight" valig
 const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#adedf824ab0681d4bc7e230c716a77c40">operator=</a> (const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;x)</td></tr>
 <tr class="memdesc:adedf824ab0681d4bc7e230c716a77c40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies data from device vector. <br/></td></tr>
 <tr class="separator:adedf824ab0681d4bc7e230c716a77c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
-Expression assignments.</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp1441d32910602b937ad615ebb4c8fd00"></a>The appropriate kernel is compiled first time the assignment is made. Vectors participating in expression should have same number of parts; corresponding parts of the vectors should reside on the same compute devices. </p>
-</td></tr>
+<tr class="memitem:afa66099d924613ef81fb750060d48ab3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa66099d924613ef81fb750060d48ab3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#afa66099d924613ef81fb750060d48ab3">write_data</a> (size_t offset, size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>, const T *hostptr, cl_bool blocking, std::vector&lt; cl::Event &gt; *uevent=0)</td></tr>
+<tr class="memdesc:afa66099d924613ef81fb750060d48ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy data from host buffer to device(s). <br/></td></tr>
+<tr class="separator:afa66099d924613ef81fb750060d48ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab464b27742b614f203e590e82f1d745b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab464b27742b614f203e590e82f1d745b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#ab464b27742b614f203e590e82f1d745b">read_data</a> (size_t offset, size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>, T *hostptr, cl_bool blocking, std::vector&lt; cl::Event &gt; *uevent=0) const </td></tr>
+<tr class="memdesc:ab464b27742b614f203e590e82f1d745b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy data from device(s) to host buffer . <br/></td></tr>
+<tr class="separator:ab464b27742b614f203e590e82f1d745b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Expression assignments.</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>The appropriate kernel is compiled first time the assignment is made. Vectors participating in expression should have same number of parts; corresponding parts of the vectors should reside on the same compute devices. </p>
+</div></td></tr>
 <tr class="memitem:abaf15ba028b275308e74dca8096cc191"><td class="memTemplParams" colspan="2"><a class="anchor" id="abaf15ba028b275308e74dca8096cc191"></a>
 template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:abaf15ba028b275308e74dca8096cc191"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
@@ -277,14 +287,6 @@ template&lt;class Expr &gt; </td></tr>
 template&lt;class Expr &gt; </td></tr>
 <tr class="memitem:a84b61181a23a107422f658e295008d25"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classvex_1_1vector.html">vector</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&gt;&gt;=</b> (const Expr &amp;expr)</td></tr>
 <tr class="separator:a84b61181a23a107422f658e295008d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa66099d924613ef81fb750060d48ab3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa66099d924613ef81fb750060d48ab3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#afa66099d924613ef81fb750060d48ab3">write_data</a> (size_t offset, size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>, const T *hostptr, cl_bool blocking, std::vector&lt; cl::Event &gt; *uevent=0)</td></tr>
-<tr class="memdesc:afa66099d924613ef81fb750060d48ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy data from host buffer to device(s). <br/></td></tr>
-<tr class="separator:afa66099d924613ef81fb750060d48ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab464b27742b614f203e590e82f1d745b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab464b27742b614f203e590e82f1d745b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvex_1_1vector.html#ab464b27742b614f203e590e82f1d745b">read_data</a> (size_t offset, size_t <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">size</a>, T *hostptr, cl_bool blocking, std::vector&lt; cl::Event &gt; *uevent=0) const </td></tr>
-<tr class="memdesc:ab464b27742b614f203e590e82f1d745b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy data from device(s) to host buffer . <br/></td></tr>
-<tr class="separator:ab464b27742b614f203e590e82f1d745b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br/>

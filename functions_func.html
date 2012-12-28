@@ -49,7 +49,11 @@
     <ul class="tablist">
       <li><a href="#index_b"><span>b</span></a></li>
       <li><a href="#index_c"><span>c</span></a></li>
+      <li><a href="#index_d"><span>d</span></a></li>
       <li><a href="#index_e"><span>e</span></a></li>
+      <li><a href="#index_f"><span>f</span></a></li>
+      <li><a href="#index_g"><span>g</span></a></li>
+      <li><a href="#index_l"><span>l</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
       <li><a href="#index_n"><span>n</span></a></li>
       <li><a href="#index_o"><span>o</span></a></li>
@@ -76,11 +80,33 @@
 
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>clear()
+: <a class="el" href="classvex_1_1multivector.html#ae7a7d42372440e31e835c34c64fe2eea">vex::multivector&lt; T, N, own &gt;</a>
+, <a class="el" href="classvex_1_1vector.html#afe88998b123d1bee00fb8cff7c604606">vex::vector&lt; T &gt;</a>
+</li>
+<li>cols()
+: <a class="el" href="classvex_1_1SpMat.html#aa5abdb6aedc3c4993116200f70563939">vex::SpMat&lt; real, column_t, idx_t &gt;</a>
+</li>
+<li>comm()
+: <a class="el" href="classvex_1_1mpi_1_1vector.html#af6766300a385742f41fda3c78e253cb0">vex::mpi::vector&lt; T, own &gt;</a>
+</li>
+<li>comm_data()
+: <a class="el" href="structvex_1_1mpi_1_1comm__data.html#a6290655a555e5dd570426fa46bf056df">vex::mpi::comm_data</a>
+</li>
 <li>Context()
-: <a class="el" href="classvex_1_1Context.html#a5dbfaec8e340379f57cf589617a267b8">vex::Context</a>
+: <a class="el" href="classvex_1_1Context.html#a382fd76daca5828ca9da624f2d6a4600">vex::Context</a>
 </li>
 <li>convolve()
 : <a class="el" href="classvex_1_1stencil.html#a0c78fa83e093c8adbab71534f7a25756">vex::stencil&lt; T &gt;</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
+<li>data()
+: <a class="el" href="classvex_1_1mpi_1_1multivector.html#adb2073d0315acbe77b9829d6c028be1f">vex::mpi::multivector&lt; T, N, own &gt;</a>
+, <a class="el" href="classvex_1_1mpi_1_1vector.html#a11b4a9fc2c46e97ace1d834d2268625e">vex::mpi::vector&lt; T, own &gt;</a>
+, <a class="el" href="classvex_1_1mpi_1_1multivector.html#a6a79690abb4199b1d5a154652ae37e2b">vex::mpi::multivector&lt; T, N, own &gt;</a>
 </li>
 </ul>
 
@@ -89,23 +115,54 @@
 <li>end()
 : <a class="el" href="classvex_1_1multivector.html#aff208d494ab66383766d7b1740079b0f">vex::multivector&lt; T, N, own &gt;</a>
 , <a class="el" href="classvex_1_1vector.html#a60c895b0b0f6540d3d7a4a9c05aeb7cb">vex::vector&lt; T &gt;</a>
-, <a class="el" href="classvex_1_1multivector.html#a36d3ffe9aa8d508ab0aa231726ed8789">vex::multivector&lt; T, N, own &gt;</a>
+</li>
+<li>exchange()
+: <a class="el" href="classvex_1_1mpi_1_1exchange.html#a251fbb6bba2741fbbd9c052070ff5ba0">vex::mpi::exchange&lt; value_t &gt;</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
+<li>finish()
+: <a class="el" href="classvex_1_1mpi_1_1exchange.html#aeddfa93d0dadcc94c2278be12f18c2d3">vex::mpi::exchange&lt; value_t &gt;</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>global_size()
+: <a class="el" href="classvex_1_1mpi_1_1multivector.html#ad849f112b30340f71f5deb174d38be77">vex::mpi::multivector&lt; T, N, own &gt;</a>
+, <a class="el" href="classvex_1_1mpi_1_1vector.html#aab79bf1e7c0a7ee1aaabcb7d956be3b4">vex::mpi::vector&lt; T, own &gt;</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
+<li>local_size()
+: <a class="el" href="classvex_1_1mpi_1_1multivector.html#abc2cda900e1e6187cf4bc0bff7f242cb">vex::mpi::multivector&lt; T, N, own &gt;</a>
+, <a class="el" href="classvex_1_1mpi_1_1vector.html#aeb54d11b28448375396073b961a3dc4f">vex::mpi::vector&lt; T, own &gt;</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
 <li>mul()
-: <a class="el" href="classvex_1_1SpMat.html#aeb8051a2504a0c874f655f2aa55f90ac">vex::SpMat&lt; real, column_t, idx_t &gt;</a>
+: <a class="el" href="classvex_1_1mpi_1_1SpMat.html#ada72350b9c2e0bfd5840e920bf1cb6ee">vex::mpi::SpMat&lt; real, column_t, idx_t &gt;</a>
+, <a class="el" href="classvex_1_1SpMat.html#aeb8051a2504a0c874f655f2aa55f90ac">vex::SpMat&lt; real, column_t, idx_t &gt;</a>
 , <a class="el" href="classvex_1_1SpMatCCSR.html#a34b01d33973d4cc8c17133c1984e31d5">vex::SpMatCCSR&lt; real, column_t, idx_t &gt;</a>
 </li>
 <li>multivector()
-: <a class="el" href="classvex_1_1multivector.html#a8c01729df4c4bfdc215009d4b923d230">vex::multivector&lt; T, N, own &gt;</a>
+: <a class="el" href="classvex_1_1multivector.html#ab8f728731e592ff0cd0c3c417a63ee3a">vex::multivector&lt; T, N, own &gt;</a>
+, <a class="el" href="classvex_1_1mpi_1_1multivector.html#ab02a4737667d0f4e1545b8cc7ee198ab">vex::mpi::multivector&lt; T, N, own &gt;</a>
+, <a class="el" href="classvex_1_1multivector.html#a8c01729df4c4bfdc215009d4b923d230">vex::multivector&lt; T, N, own &gt;</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>nonzeros()
+: <a class="el" href="classvex_1_1SpMat.html#a6fa5928134324aefc186e46dcfd06952">vex::SpMat&lt; real, column_t, idx_t &gt;</a>
+</li>
 <li>nparts()
 : <a class="el" href="classvex_1_1vector.html#a76d1d5e65c2beda12dfb0c4a2ea40c49">vex::vector&lt; T &gt;</a>
 </li>
@@ -118,23 +175,28 @@
 </li>
 <li>operator()()
 : <a class="el" href="classvex_1_1generator_1_1Kernel.html#aff818a250c0ad905cc9cd9c98cfa427e">vex::generator::Kernel&lt; NP &gt;</a>
-, <a class="el" href="classvex_1_1multivector.html#afed84093747d59922fce3e81e199ab1e">vex::multivector&lt; T, N, own &gt;</a>
+, <a class="el" href="classvex_1_1mpi_1_1multivector.html#a6f198fc1959fa77b0269ab2368dbe643">vex::mpi::multivector&lt; T, N, own &gt;</a>
 , <a class="el" href="classvex_1_1Reductor.html#a1c1c04deb599a40ad06ff1c93563463f">vex::Reductor&lt; real, RDC &gt;</a>
-, <a class="el" href="classvex_1_1multivector.html#a0e13833b8d738319dde130ae18db09a7">vex::multivector&lt; T, N, own &gt;</a>
 , <a class="el" href="classvex_1_1vector.html#a26aee534bad16ac246d8d1b704f3251e">vex::vector&lt; T &gt;</a>
+, <a class="el" href="classvex_1_1mpi_1_1Reductor.html#ae08a82b6da9ce7f067aa3b39b19dc5ba">vex::mpi::Reductor&lt; T, RDC &gt;</a>
+, <a class="el" href="classvex_1_1mpi_1_1multivector.html#af1883b53baa1c08c2086915b2da3049d">vex::mpi::multivector&lt; T, N, own &gt;</a>
+, <a class="el" href="classvex_1_1multivector.html#a0e13833b8d738319dde130ae18db09a7">vex::multivector&lt; T, N, own &gt;</a>
 </li>
 <li>operator=()
-: <a class="el" href="classvex_1_1multivector.html#a2633c9780804ec04c1f2fd719b83fc24">vex::multivector&lt; T, N, own &gt;</a>
-, <a class="el" href="classvex_1_1vector_1_1element.html#ab1068a775262e8e5a3a996913032e9b7">vex::vector&lt; T &gt;::element</a>
-, <a class="el" href="classvex_1_1vector.html#ae757eeb5f492253973c42621ce82c503">vex::vector&lt; T &gt;</a>
+: <a class="el" href="classvex_1_1vector_1_1element.html#ab1068a775262e8e5a3a996913032e9b7">vex::vector&lt; T &gt;::element</a>
+, <a class="el" href="classvex_1_1mpi_1_1vector.html#a89ab9eccf70942cc1c7bd87eb747e7d6">vex::mpi::vector&lt; T, own &gt;</a>
 , <a class="el" href="classvex_1_1multivector.html#a3169c36e5e1a28aeee81f786c19d00eb">vex::multivector&lt; T, N, own &gt;</a>
+, <a class="el" href="classvex_1_1vector.html#ae757eeb5f492253973c42621ce82c503">vex::vector&lt; T &gt;</a>
+, <a class="el" href="classvex_1_1multivector.html#a2633c9780804ec04c1f2fd719b83fc24">vex::multivector&lt; T, N, own &gt;</a>
 , <a class="el" href="classvex_1_1vector.html#adedf824ab0681d4bc7e230c716a77c40">vex::vector&lt; T &gt;</a>
 </li>
 <li>operator[]()
-: <a class="el" href="classvex_1_1multivector.html#a070561cf2349323b8ad3db4b599e875f">vex::multivector&lt; T, N, own &gt;</a>
-, <a class="el" href="classvex_1_1vector.html#a88c42ebe2e8c3001e1210dfb66f0da6a">vex::vector&lt; T &gt;</a>
+: <a class="el" href="classvex_1_1vector.html#a88c42ebe2e8c3001e1210dfb66f0da6a">vex::vector&lt; T &gt;</a>
 , <a class="el" href="classvex_1_1multivector.html#a79a7d6c70d37db162fd82aa1a39b2548">vex::multivector&lt; T, N, own &gt;</a>
+, <a class="el" href="classvex_1_1mpi_1_1vector.html#a641ae56fef0c03c8e8849218f1b4066a">vex::mpi::vector&lt; T, own &gt;</a>
+, <a class="el" href="classvex_1_1multivector.html#a070561cf2349323b8ad3db4b599e875f">vex::multivector&lt; T, N, own &gt;</a>
 , <a class="el" href="classvex_1_1vector.html#a0f128e48db61d7d94748a2a29f6eb709">vex::vector&lt; T &gt;</a>
+, <a class="el" href="classvex_1_1mpi_1_1vector.html#af28eaedcde3c4c93be17184bcb3cb739">vex::mpi::vector&lt; T, own &gt;</a>
 </li>
 </ul>
 
@@ -148,6 +210,9 @@
 </li>
 <li>partition()
 : <a class="el" href="classvex_1_1vector.html#aa38fc396876f2239495488441c11720e">vex::vector&lt; T &gt;</a>
+</li>
+<li>precondition()
+: <a class="el" href="structvex_1_1mpi_1_1comm__data.html#adfd98536f71f4b896fb70803363bd32f">vex::mpi::comm_data</a>
 </li>
 <li>print()
 : <a class="el" href="classvex_1_1profiler.html#a9f18440653a0297cd837eba51fd63d93">vex::profiler</a>
@@ -171,12 +236,24 @@
 : <a class="el" href="classvex_1_1vector.html#ab464b27742b614f203e590e82f1d745b">vex::vector&lt; T &gt;</a>
 </li>
 <li>Reductor()
-: <a class="el" href="classvex_1_1Reductor.html#a0411894748576091f2abb5ec50b9db17">vex::Reductor&lt; real, RDC &gt;</a>
+: <a class="el" href="classvex_1_1mpi_1_1Reductor.html#ad9a685b68746f9dd754a5b518415f0a8">vex::mpi::Reductor&lt; T, RDC &gt;</a>
+, <a class="el" href="classvex_1_1Reductor.html#a0411894748576091f2abb5ec50b9db17">vex::Reductor&lt; real, RDC &gt;</a>
+</li>
+<li>remote_size()
+: <a class="el" href="classvex_1_1mpi_1_1exchange.html#a2fda5b2afc130a6f91382dddc496fb09">vex::mpi::exchange&lt; value_t &gt;</a>
 </li>
 <li>resize()
 : <a class="el" href="classvex_1_1vector.html#a89ce2d148fb858750de01226b26888a8">vex::vector&lt; T &gt;</a>
 , <a class="el" href="classvex_1_1multivector.html#ad2f297bdebb2d348869145141a267567">vex::multivector&lt; T, N, own &gt;</a>
-, <a class="el" href="classvex_1_1vector.html#a63d1913b6fbc162b589da7f94d6994f2">vex::vector&lt; T &gt;</a>
+, <a class="el" href="classvex_1_1mpi_1_1vector.html#afb34e0d05b3ff6225665d4d71f93dbf0">vex::mpi::vector&lt; T, own &gt;</a>
+, <a class="el" href="classvex_1_1vector.html#ab86b51939875b8e84698ddf6558a23d1">vex::vector&lt; T &gt;</a>
+, <a class="el" href="classvex_1_1mpi_1_1multivector.html#a8707a4bd285cc149fe3c1a8c1140a8ee">vex::mpi::multivector&lt; T, N, own &gt;</a>
+</li>
+<li>restore_partitioning()
+: <a class="el" href="structvex_1_1mpi_1_1comm__data.html#adbe274de8187de9eb090d5110f574224">vex::mpi::comm_data</a>
+</li>
+<li>rows()
+: <a class="el" href="classvex_1_1SpMat.html#a2c8ce7c70b9d121cac2fd72fac787c65">vex::SpMat&lt; real, column_t, idx_t &gt;</a>
 </li>
 </ul>
 
@@ -187,13 +264,19 @@
 , <a class="el" href="classvex_1_1vector.html#acba96d67dcc97afdc6ff552d913ca7d7">vex::vector&lt; T &gt;</a>
 </li>
 <li>SpMat()
-: <a class="el" href="classvex_1_1SpMat.html#a2b88b7a1f731f62ab9e6fcd8de763613">vex::SpMat&lt; real, column_t, idx_t &gt;</a>
+: <a class="el" href="classvex_1_1mpi_1_1SpMat.html#a4e7288cf26b160fe3f21b0f2caf5c993">vex::mpi::SpMat&lt; real, column_t, idx_t &gt;</a>
+, <a class="el" href="classvex_1_1SpMat.html#a0780abe97efd88ea930c7101c6e1d176">vex::SpMat&lt; real, column_t, idx_t &gt;</a>
+, <a class="el" href="classvex_1_1mpi_1_1SpMat.html#a9efb02a29038b6f0af6d028861186c01">vex::mpi::SpMat&lt; real, column_t, idx_t &gt;</a>
+, <a class="el" href="classvex_1_1SpMat.html#a2b88b7a1f731f62ab9e6fcd8de763613">vex::SpMat&lt; real, column_t, idx_t &gt;</a>
 </li>
 <li>SpMatCCSR()
 : <a class="el" href="classvex_1_1SpMatCCSR.html#af47e9d623ff21d60693c6783d5a1be5b">vex::SpMatCCSR&lt; real, column_t, idx_t &gt;</a>
 </li>
+<li>start()
+: <a class="el" href="classvex_1_1mpi_1_1exchange.html#a028a84d57460210e8defa0af34aa7a65">vex::mpi::exchange&lt; value_t &gt;</a>
+</li>
 <li>stencil()
-: <a class="el" href="classvex_1_1stencil.html#a3a539432895c1b90889cb7e4ba8eeb90">vex::stencil&lt; T &gt;</a>
+: <a class="el" href="classvex_1_1stencil.html#a439b0719fcb4d220bce1278e5e285042">vex::stencil&lt; T &gt;</a>
 </li>
 <li>swap()
 : <a class="el" href="classvex_1_1vector.html#afe792e9bcb2d6efa1af5e9bd60ca0526">vex::vector&lt; T &gt;</a>
@@ -216,7 +299,9 @@
 
 <h3><a class="anchor" id="index_v"></a>- v -</h3><ul>
 <li>vector()
-: <a class="el" href="classvex_1_1vector.html#a145842a554253e273ce5ee5f3e1d602b">vex::vector&lt; T &gt;</a>
+: <a class="el" href="classvex_1_1mpi_1_1vector.html#ab7f2da449956d7e812abf531f8785340">vex::mpi::vector&lt; T, own &gt;</a>
+, <a class="el" href="classvex_1_1vector.html#afc6a5b15bb581e5971efa2e9a3518f2f">vex::vector&lt; T &gt;</a>
+, <a class="el" href="classvex_1_1mpi_1_1vector.html#a36503a77737e70fc4e743c7e5e1c4bd3">vex::mpi::vector&lt; T, own &gt;</a>
 </li>
 </ul>
 

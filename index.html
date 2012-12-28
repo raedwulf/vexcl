@@ -110,11 +110,11 @@ Sparse matrix-vector multiplication</h1>
 <div class="line">    <span class="comment">// Move data to compute devices.</span></div>
 <div class="line">    <span class="keywordtype">size_t</span> n = x.size();</div>
 <div class="line">    <a class="code" href="classvex_1_1SpMat.html" title="Sparse matrix in hybrid ELL-CSR format.">vex::SpMat&lt;real&gt;</a>  A(ctx.queue(), n, n, row.data(), col.data(), val.data());</div>
-<div class="line">    <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;real&gt;</a> f(ctx.queue(), rhs);</div>
-<div class="line">    <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;real&gt;</a> u(ctx.queue(), x);</div>
-<div class="line">    <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;real&gt;</a> r(ctx.queue(), n);</div>
-<div class="line">    <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;real&gt;</a> p(ctx.queue(), n);</div>
-<div class="line">    <a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;real&gt;</a> q(ctx.queue(), n);</div>
+<div class="line">    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> f(ctx.queue(), rhs);</div>
+<div class="line">    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> u(ctx.queue(), x);</div>
+<div class="line">    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> r(ctx.queue(), n);</div>
+<div class="line">    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> p(ctx.queue(), n);</div>
+<div class="line">    <a class="code" href="classvex_1_1vector.html">vex::vector&lt;real&gt;</a> q(ctx.queue(), n);</div>
 <div class="line"></div>
 <div class="line">    Reductor&lt;real,MAX&gt; max(ctx.queue());</div>
 <div class="line">    Reductor&lt;real,SUM&gt; sum(ctx.queue());</div>
@@ -184,7 +184,7 @@ Multi-component vectors</h1>
 <div class="fragment"><div class="line"><a class="code" href="classvex_1_1vector.html" title="Device vector.">vex::vector&lt;double&gt;</a> z = y(1);</div>
 </div><!-- fragment --><p>Sometimes operations with multicomponent vector cannot be expressed with simple arithmetic expressions. Imagine that you need to solve the following system of ordinary differential equations: </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{dx}{dt} = x + y, \quad \frac{dy}{dt} = x - y. \]" src="form_0.png"/>
+<img class="formulaDsp" alt="\[ \frac{dx}{dt} = x + y, \quad \frac{dy}{dt} = x - y. \]" src="form_2.png"/>
 </p>
 <p>If the system state is represented as vex::multivector&lt;double,2&gt;, then the system function for this ODE could be implemented as </p>
 <div class="fragment"><div class="line"><span class="comment">// vex::multivector&lt;double,2&gt; dxdt, x;</span></div>
@@ -216,7 +216,7 @@ Converting existing algorithms to kernels</h1>
 <div class="line"></div>
 <div class="line">    x += (k1 + 2 * k2 + 2 * k3 + k4) / 6;</div>
 <div class="line">}</div>
-</div><!-- fragment --><p> To model equation <img class="formulaInl" alt="$\frac{dx}{dt} = sin(x)$" src="form_1.png"/> we also provide the following system function: </p>
+</div><!-- fragment --><p> To model equation <img class="formulaInl" alt="$\frac{dx}{dt} = sin(x)$" src="form_3.png"/> we also provide the following system function: </p>
 <div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> state_type&gt;</div>
 <div class="line"><span class="keywordtype">void</span> sys_func(<span class="keyword">const</span> state_type &amp;x, state_type &amp;dx, <span class="keywordtype">double</span> dt) {</div>
 <div class="line">    dx = dt * sin(x);</div>

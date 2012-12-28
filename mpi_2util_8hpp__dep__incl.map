@@ -1,0 +1,6 @@
+<map id="util.hpp" name="util.hpp">
+<area shape="rect" id="node3" href="$mpi_2reduce_8hpp.html" title="MPI wrapper for vex::Reductor." alt="" coords="5,80,99,107"/>
+<area shape="rect" id="node7" href="$mpi_2spmat_8hpp.html" title="MPI wrapper for vex::SpMat." alt="" coords="124,80,215,107"/>
+<area shape="rect" id="node10" href="$mpi_2vector_8hpp.html" title="MPI wrapper for vex::vector." alt="" coords="239,80,328,107"/>
+<area shape="rect" id="node5" href="$mpi_8hpp.html" title="MPI wrappers for VexCL types." alt="" coords="132,155,205,181"/>
+</map>

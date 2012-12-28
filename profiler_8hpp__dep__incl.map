@@ -1,8 +1,13 @@
 <map id="profiler.hpp" name="profiler.hpp">
-<area shape="rect" id="node3" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="263,80,352,107"/>
-<area shape="rect" id="node7" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="267,229,348,256"/>
-<area shape="rect" id="node5" href="$multivector_8hpp.html" title="OpenCL device multi&#45;vector." alt="" coords="5,155,125,181"/>
-<area shape="rect" id="node9" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="202,155,296,181"/>
-<area shape="rect" id="node12" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="321,155,412,181"/>
-<area shape="rect" id="node15" href="$stencil_8hpp.html" title="Stencil convolution." alt="" coords="436,155,527,181"/>
+<area shape="rect" id="node3" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="231,80,320,107"/>
+<area shape="rect" id="node14" href="$vexcl_8hpp.html" title="Vector expression template library for OpenCL." alt="" coords="187,229,268,256"/>
+<area shape="rect" id="node5" href="$mpi_2vector_8hpp.html" title="MPI wrapper for vex::vector." alt="" coords="566,229,655,256"/>
+<area shape="rect" id="node9" href="$multivector_8hpp.html" title="OpenCL device multi&#45;vector." alt="" coords="429,155,549,181"/>
+<area shape="rect" id="node16" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="29,155,123,181"/>
+<area shape="rect" id="node22" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="313,155,404,181"/>
+<area shape="rect" id="node28" href="$stencil_8hpp.html" title="Stencil convolution." alt="" coords="148,155,239,181"/>
+<area shape="rect" id="node7" href="$mpi_8hpp.html" title="MPI wrappers for VexCL types." alt="" coords="379,304,452,331"/>
+<area shape="rect" id="node11" href="$mpi_2multivector_8hpp.html" title="MPI wrapper for vex::multivector." alt="" coords="421,229,541,256"/>
+<area shape="rect" id="node18" href="$mpi_2reduce_8hpp.html" title="MPI wrapper for vex::Reductor." alt="" coords="53,229,147,256"/>
+<area shape="rect" id="node24" href="$mpi_2spmat_8hpp.html" title="MPI wrapper for vex::SpMat." alt="" coords="305,229,396,256"/>
 </map>

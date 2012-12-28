@@ -1,0 +1,9 @@
+<map id="spmat.hpp" name="spmat.hpp">
+<area shape="rect" id="node11" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="574,80,700,107"/>
+<area shape="rect" id="node82" href="$gather_8hpp.html" title="Gather scattered points from OpenCL device vector." alt="" coords="411,80,537,107"/>
+<area shape="rect" id="node85" href="$mpi_2util_8hpp.html" title="MPI related utilities." alt="" coords="101,80,234,107"/>
+<area shape="rect" id="node28" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="961,155,1086,181"/>
+<area shape="rect" id="node41" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="679,229,784,256"/>
+<area shape="rect" id="node57" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="1104,229,1233,256"/>
+<area shape="rect" id="node73" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="1801,229,1954,256"/>
+</map>

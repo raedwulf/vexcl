@@ -1,12 +1,13 @@
 <map id="vexcl.hpp" name="vexcl.hpp">
-<area shape="rect" id="node7" href="$devlist_8hpp.html" title="OpenCL device enumeration." alt="" coords="224,155,350,181"/>
-<area shape="rect" id="node41" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="1807,155,1932,181"/>
-<area shape="rect" id="node53" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="2010,237,2139,264"/>
-<area shape="rect" id="node78" href="$multivector_8hpp.html" title="OpenCL device multi&#45;vector." alt="" coords="1471,80,1628,107"/>
-<area shape="rect" id="node93" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="2450,80,2579,107"/>
-<area shape="rect" id="node102" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="2108,80,2234,107"/>
-<area shape="rect" id="node116" href="$stencil_8hpp.html" title="Stencil convolution." alt="" coords="2833,80,2959,107"/>
-<area shape="rect" id="node123" href="$generator_8hpp.html" title="OpenCL kernel generator." alt="" coords="957,155,1104,181"/>
-<area shape="rect" id="node19" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="1474,237,1579,264"/>
-<area shape="rect" id="node70" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="426,237,579,264"/>
+<area shape="rect" id="node7" href="$devlist_8hpp.html" title="OpenCL device enumeration." alt="" coords="415,155,541,181"/>
+<area shape="rect" id="node47" href="$vector_8hpp.html" title="OpenCL device vector." alt="" coords="1793,155,1919,181"/>
+<area shape="rect" id="node59" href="$profiler_8hpp.html" title="Simple OpenCL/Host profiler." alt="" coords="726,237,855,264"/>
+<area shape="rect" id="node83" href="$multivector_8hpp.html" title="OpenCL device multi&#45;vector." alt="" coords="1828,80,1985,107"/>
+<area shape="rect" id="node98" href="$reduce_8hpp.html" title="OpenCL vector reduction." alt="" coords="2791,80,2920,107"/>
+<area shape="rect" id="node107" href="$spmat_8hpp.html" title="OpenCL sparse matrix." alt="" coords="1170,80,1296,107"/>
+<area shape="rect" id="node121" href="$stencil_8hpp.html" title="Stencil convolution." alt="" coords="1321,80,1447,107"/>
+<area shape="rect" id="node128" href="$gather_8hpp.html" title="Gather scattered points from OpenCL device vector." alt="" coords="625,80,751,107"/>
+<area shape="rect" id="node131" href="$generator_8hpp.html" title="OpenCL kernel generator." alt="" coords="2431,155,2579,181"/>
+<area shape="rect" id="node19" href="$util_8hpp.html" title="OpenCL general utilities." alt="" coords="1894,237,1999,264"/>
+<area shape="rect" id="node75" href="$operations_8hpp.html" title="Set of operations to be used in vector expressions." alt="" coords="2429,237,2583,264"/>
 </map>
