@@ -2,6 +2,7 @@ set(EXAMPLES
     benchmark
     devlist
     exclusive
+    lbvh
     )
 
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
