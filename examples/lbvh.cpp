@@ -58,19 +58,19 @@ VEX_FUNCTION(morton_code60, cl_ulong(cl_uint4),
              "return ((ulong)out_hi << 30) | (ulong)out_lo;");
 
 VEX_FUNCTION(quantize, cl_uint4(cl_float4, cl_int),
-             "int4 a = (int4)(prm1*(float)prm2);\n"
+             "int4 a = as_int4(prm1*(float)prm2);\n"
              "int4 b = prm2-1;\n"
-             //"int4 mi4 = min(a,b);\n"
-             //"uint4 ma4 = max(mi4,0);\n"
-             "int4 mi4;\n"
-             "uint4 ma4;\n"
-             "mi4.x = min(a.x, b.x);\n"
-             "mi4.y = min(a.y, b.y);\n"
-             "mi4.z = min(a.z, b.z);\n"
-             "ma4.x = max(mi4.x, 0);\n"
-             "ma4.y = max(mi4.y, 0);\n"
-             "ma4.z = max(mi4.z, 0);\n"
-             "return ma4;\n");
+	     "int4 mi4 = min(a,b);\n"
+	     "uint4 ma4 = as_uint4(max(mi4,0));\n"
+             //"int4 mi4;\n"
+             //"uint4 ma4;\n"
+             //"mi4.x = min(a.x, b.x);\n"
+             //"mi4.y = min(a.y, b.y);\n"
+             //"mi4.z = min(a.z, b.z);\n"
+             //"ma4.x = max(mi4.x, 0);\n"
+             //"ma4.y = max(mi4.y, 0);\n"
+             //"ma4.z = max(mi4.z, 0);\n"
+	     "return ma4;\n");
 
 template <typename morton_type>
 struct morton_code { };
