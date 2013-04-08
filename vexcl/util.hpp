@@ -48,8 +48,11 @@ THE SOFTWARE.
 #include <climits>
 #include <stdexcept>
 #include <limits>
+#include <cctype>
+#include <tuple>
 #include <boost/config.hpp>
 #include <boost/type_traits/is_same.hpp>
+#include <boost/lexical_cast.hpp>
 
 #ifndef __CL_ENABLE_EXCEPTIONS
 #  define __CL_ENABLE_EXCEPTIONS
@@ -207,6 +210,69 @@ for_each(const Tuple &v, Function &f)
     for_each<I + 1>(v, f);
 }
 
+/// Create defines in string pairs
+static void generate_platform_defines_list(
+    cl::Device& device,
+    std::vector<std::tuple<std::string, std::string>>& list) {
+
+    // Platform define
+    using std::transform;
+    std::string key = "__";
+    key += cl::Platform(
+        device.getInfo<CL_DEVICE_PLATFORM>()).getInfo<CL_PLATFORM_NAME>() + "__ ";
+    transform(key.begin(), key.end(), key.begin(),
+              [](char c) { return c == ' ' ? '_' : toupper(c); });
+    std::string value = "1";
+    list.push_back(std::make_tuple(key, value));
+
+    // Device specific information
+    list.push_back(std::make_tuple(std::string("__VEXCL_DEVICE_NAME__"),
+        std::string("\"") + device.getInfo<CL_DEVICE_NAME>() + "\""));
+    list.push_back(std::make_tuple(std::string("__VEXCL_MAX_COMPUTE_UNITS__"),
+        boost::lexical_cast<std::string>(
+            device.getInfo<CL_DEVICE_MAX_COMPUTE_UNITS>())));
+    list.push_back(std::make_tuple(std::string("__VEXCL_HOST_UNIFIED_MEMORY__"),
+        boost::lexical_cast<std::string>(
+            device.getInfo<CL_DEVICE_HOST_UNIFIED_MEMORY>())));
+    list.push_back(std::make_tuple(std::string("__VEXCL_GLOBAL_MEM_SIZE__"),
+        boost::lexical_cast<std::string>(
+            device.getInfo<CL_DEVICE_GLOBAL_MEM_SIZE>())));
+    list.push_back(std::make_tuple(std::string("__VEXCL_LOCAL_MEM_SIZE__"),
+        boost::lexical_cast<std::string>(
+            device.getInfo<CL_DEVICE_LOCAL_MEM_SIZE>())));
+    list.push_back(std::make_tuple(std::string("__VEXCL_MAX_MEM_ALLOC_SIZE__"),
+        boost::lexical_cast<std::string>(
+            device.getInfo<CL_DEVICE_MAX_MEM_ALLOC_SIZE>())));
+    list.push_back(std::make_tuple(std::string("__VEXCL_MAX_CLOCK_FREQUENCY__"),
+        boost::lexical_cast<std::string>(
+            device.getInfo<CL_DEVICE_MAX_CLOCK_FREQUENCY>())));
+}
+
+/// Create defines for the options passed to the compiler
+inline std::string generate_platform_options(cl::Device& device) {
+    std::vector<std::tuple<std::string, std::string>> list;
+    generate_platform_defines_list(device, list);
+    std::string options;
+    for (auto kv : list) {
+        std::string key, value;
+        std::tie(key, value) = kv;
+        options += std::string(" -D ") + key + "=" + value;
+    }
+    return options;
+}
+
+/// Create defines to prepend to the source file
+inline std::string generate_platform_defines(cl::Device& device) {
+    std::vector<std::tuple<std::string, std::string>> list;
+    generate_platform_defines_list(device, list);
+    std::string options;
+    for (auto kv : list) {
+        std::string key, value;
+        std::tie(key, value) = kv;
+        options += std::string("#define") + key + " " + value + "\n";
+    }
+    return options;
+}
 
 /// Create and build a program from source string.
 inline cl::Program build_sources(
