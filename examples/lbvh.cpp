@@ -8,6 +8,8 @@
 #include <limits>
 #include <tuple>
 
+//#define VEXCL_SHOW_KERNELS
+
 #include <vexcl/vexcl.hpp>
 
 #define TESTS_ON
@@ -33,8 +35,6 @@ bool run_test(const std::string &name, std::function<std::tuple<bool,double,doub
     return rc;
 }
 
-#define QUANTIZE "#define QUANTIZE(x,n) " \
-                 "(uint)(max(min((int)(x*(float)(n)),(int)(n-1)),(int)(0)))\n"
 #define MORTON30 "#define MORTON30(x,y,z,out) " \
                  "x = (x | (x << 16)) & 0x030000FF;" \
                  "x = (x | (x <<  8)) & 0x0300F00F;" \
@@ -50,45 +50,43 @@ bool run_test(const std::string &name, std::function<std::tuple<bool,double,doub
                  "z = (z | (z <<  2)) & 0x09249249;" \
                  "out = x | (y << 1) | (z << 2);\n"
 
-VEX_FUNCTION(morton_code30, uint(cl_float3),
-             QUANTIZE MORTON30
+VEX_FUNCTION(morton_code30, uint(cl_uint4),
+             MORTON30
              "uint out;"
-             "uint x = QUANTIZE(prm1.x, 1024u);"
-             "uint y = QUANTIZE(prm1.y, 1024u);"
-             "uint z = QUANTIZE(prm1.z, 1024u);"
-             "MORTON30(x, y, z, out);"
+             "MORTON30(prm1.x, prm1.y, prm1.z, out);"
              "return out;");
 
-VEX_FUNCTION(morton_code60, cl_ulong(cl_float3),
-             QUANTIZE MORTON30
-             "uint x = QUANTIZE(prm1.x, 1u << 20);"
-             "uint y = QUANTIZE(prm1.y, 1u << 20);"
-             "uint z = QUANTIZE(prm1.z, 1u << 20);"
-             "uint lo_x = x & 1023u;"
-             "uint lo_y = y & 1023u;"
-             "uint lo_z = z & 1023u;"
-             "uint hi_x = x >> 10u;"
-             "uint hi_y = y >> 10u;"
-             "uint hi_z = z >> 10u;"
+VEX_FUNCTION(morton_code60, cl_ulong(cl_uint4),
+             MORTON30
+             "uint lo_x = prm1.x & 1023u;"
+             "uint lo_y = prm1.y & 1023u;"
+             "uint lo_z = prm1.z & 1023u;"
+             "uint hi_x = prm1.x >> 10u;"
+             "uint hi_y = prm1.y >> 10u;"
+             "uint hi_z = prm1.z >> 10u;"
              "uint lo, hi;"
              "MORTON30(lo_x, lo_y, lo_z, lo);"
              "MORTON30(hi_x, hi_y, hi_z, hi);"
              "return ((ulong)hi << 30) | (ulong)lo;");
+
+VEX_FUNCTION(quantize, cl_uint4(cl_float4, cl_int4),
+             "float4 nf = (float4)prm2;\n"
+             "return (uint4)(max(min((int4)(prm1*nf),prm2-1),0));\n");
 
 template <typename morton_type>
 struct morton_code { };
 template <>
 struct morton_code<cl_uint> {
     template <typename T>
-    static decltype(morton_code30(T())) calculate(T p) {
-        return morton_code30(p);
+    static decltype(morton_code30(quantize(T(),cl_int4()))) calculate(T p) {
+        return morton_code30(quantize(p, cl_int4({1024, 1024, 1024, 1024})));
     }
 };
 template <>
 struct morton_code<cl_ulong> {
     template <typename T>
-    static decltype(morton_code60(T())) calculate(T p) {
-        return morton_code60(p);
+    static decltype(morton_code60(quantize(T(),cl_int4()))) calculate(T p) {
+        return morton_code60(quantize(p, cl_int4({1 << 20, 1 << 20, 1 << 20, 1 << 20})));
     }
 };
 
