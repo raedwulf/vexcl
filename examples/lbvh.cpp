@@ -35,58 +35,57 @@ bool run_test(const std::string &name, std::function<std::tuple<bool,double,doub
     return rc;
 }
 
-#define MORTON30 "#define MORTON30(x,y,z,out) " \
-                 "x = (x | (x << 16)) & 0x030000FF;" \
-                 "x = (x | (x <<  8)) & 0x0300F00F;" \
-                 "x = (x | (x <<  4)) & 0x030C30C3;" \
-                 "x = (x | (x <<  2)) & 0x09249249;" \
-                 "y = (y | (y << 16)) & 0x030000FF;" \
-                 "y = (y | (y <<  8)) & 0x0300F00F;" \
-                 "y = (y | (y <<  4)) & 0x030C30C3;" \
-                 "y = (y | (y <<  2)) & 0x09249249;" \
-                 "z = (z | (z << 16)) & 0x030000FF;" \
-                 "z = (z | (z <<  8)) & 0x0300F00F;" \
-                 "z = (z | (z <<  4)) & 0x030C30C3;" \
-                 "z = (z | (z <<  2)) & 0x09249249;" \
-                 "out = x | (y << 1) | (z << 2);\n"
+#define MORTON30 "#define MORTON30(v,out) " \
+                 "v = (v | (v << 16)) & 0x030000FF;" \
+                 "v = (v | (v <<  8)) & 0x0300F00F;" \
+                 "v = (v | (v <<  4)) & 0x030C30C3;" \
+                 "v = (v | (v <<  2)) & 0x09249249;" \
+                 "out = v.x | (v.y << 1) | (v.z << 2);\n"
 
 VEX_FUNCTION(morton_code30, uint(cl_uint4),
              MORTON30
-             "uint out;"
-             "MORTON30(prm1.x, prm1.y, prm1.z, out);"
-             "return out;");
+             "uint out = 0;\n"
+             "MORTON30(prm1, out);\n"
+             "return out;\n");
 
 VEX_FUNCTION(morton_code60, cl_ulong(cl_uint4),
              MORTON30
-             "uint lo_x = prm1.x & 1023u;"
-             "uint lo_y = prm1.y & 1023u;"
-             "uint lo_z = prm1.z & 1023u;"
-             "uint hi_x = prm1.x >> 10u;"
-             "uint hi_y = prm1.y >> 10u;"
-             "uint hi_z = prm1.z >> 10u;"
-             "uint lo, hi;"
-             "MORTON30(lo_x, lo_y, lo_z, lo);"
-             "MORTON30(hi_x, hi_y, hi_z, hi);"
-             "return ((ulong)hi << 30) | (ulong)lo;");
+             "uint4 lo = prm1 & 1023u;"
+             "uint4 hi = prm1 >> 10u;"
+             "uint out_lo, out_hi;"
+             "MORTON30(lo, out_lo);"
+             "MORTON30(hi, out_hi);"
+             "return ((ulong)out_hi << 30) | (ulong)out_lo;");
 
-VEX_FUNCTION(quantize, cl_uint4(cl_float4, cl_int4),
-             "float4 nf = (float4)prm2;\n"
-             "return (uint4)(max(min((int4)(prm1*nf),prm2-1),0));\n");
+VEX_FUNCTION(quantize, cl_uint4(cl_float4, cl_int),
+             "int4 a = (int4)(prm1*(float)prm2);\n"
+             "int4 b = prm2-1;\n"
+             //"int4 mi4 = min(a,b);\n"
+             //"uint4 ma4 = max(mi4,0);\n"
+             "int4 mi4;\n"
+             "uint4 ma4;\n"
+             "mi4.x = min(a.x, b.x);\n"
+             "mi4.y = min(a.y, b.y);\n"
+             "mi4.z = min(a.z, b.z);\n"
+             "ma4.x = max(mi4.x, 0);\n"
+             "ma4.y = max(mi4.y, 0);\n"
+             "ma4.z = max(mi4.z, 0);\n"
+             "return ma4;\n");
 
 template <typename morton_type>
 struct morton_code { };
 template <>
 struct morton_code<cl_uint> {
     template <typename T>
-    static decltype(morton_code30(quantize(T(),cl_int4()))) calculate(T p) {
-        return morton_code30(quantize(p, cl_int4({1024, 1024, 1024, 1024})));
+    static inline decltype(morton_code30(quantize(T(),cl_int()))) calculate(const T& p) {
+        return morton_code30(quantize(p, 1024));
     }
 };
 template <>
 struct morton_code<cl_ulong> {
     template <typename T>
-    static decltype(morton_code60(quantize(T(),cl_int4()))) calculate(T p) {
-        return morton_code60(quantize(p, cl_int4({1 << 20, 1 << 20, 1 << 20, 1 << 20})));
+    static inline decltype(morton_code60(quantize(T(),cl_int()))) calculate(const T& p) {
+        return morton_code60(quantize(p, 1 << 20));
     }
 };
 
@@ -127,7 +126,8 @@ struct lbvh_builder
 
 int main(int argc, char *argv[]) {
     try {
-        vex::Context ctx(Filter::DoublePrecision && Filter::Env);
+        vex::Context ctx(Filter::Env);
+        //vex::Context ctx(Filter::DoublePrecision && Filter::Env);
         std::cout << ctx << std::endl;
 
         if (ctx.empty()) {
@@ -141,13 +141,13 @@ int main(int argc, char *argv[]) {
         std::cout << "seed: " << seed << std::endl << std::endl;
         srand(seed);
 
-        run_test("Generate 30-bit morton code",
+        run_test("Quantize",
             [&]() -> std::tuple<bool, double, double, double> {
-                const size_t N = 1 << 28;
+                const size_t N = 1 << 10;
                 int rc = true;
-                vex::vector<cl_float3> x(ctx, N);
-                vex::vector<uint> y(ctx, N);
-                Random<cl_float3> rand0;
+                vex::vector<cl_float4> x(ctx, N);
+                vex::vector<cl_uint4> y(ctx, N);
+                Random<cl_float4> rand0;
                 x = rand0(element_index(), rand());
                 profiler prof;
                 double time = 0.0;
@@ -155,7 +155,31 @@ int main(int argc, char *argv[]) {
                 double max_time = -min_time;
                 for (auto i = 0; i < RUNS; ++i) {
                     prof.tic_cl("Run");
-                    y = morton_code<cl_uint>::calculate(x);
+                    y = quantize(x, 1024);
+                    auto t = prof.toc("Run");
+                    time += t;
+                    if (min_time > t) min_time = t;
+                    if (max_time < t) max_time = t;
+                }
+                return std::make_tuple(rc,time/double(RUNS),min_time,max_time);
+            });
+
+        run_test("Generate 30-bit morton code",
+            [&]() -> std::tuple<bool, double, double, double> {
+                const size_t N = 1 << 10;
+                int rc = true;
+                vex::vector<cl_float4> x(ctx, N);
+                vex::vector<uint> y(ctx, N);
+                Random<cl_float4> rand0;
+                x = rand0(element_index(), rand());
+                profiler prof;
+                double time = 0.0;
+                double min_time = std::numeric_limits<double>::infinity();
+                double max_time = -min_time;
+                for (auto i = 0; i < RUNS; ++i) {
+                    prof.tic_cl("Run");
+                    //y = morton_code<cl_uint>::calculate(x);
+                    y = morton_code30(quantize(x, 1024));
                     auto t = prof.toc("Run");
                     time += t;
                     if (min_time > t) min_time = t;
@@ -166,11 +190,11 @@ int main(int argc, char *argv[]) {
 
         run_test("Generate 60-bit morton code",
             [&]() -> std::tuple<bool, double, double, double> {
-                const size_t N = 1 << 28;
+                const size_t N = 1 << 10;
                 int rc = true;
-                vex::vector<cl_float3> x(ctx, N);
+                vex::vector<cl_float4> x(ctx, N);
                 vex::vector<cl_ulong> y(ctx, N);
-                Random<cl_float3> rand0;
+                Random<cl_float4> rand0;
                 x = rand0(element_index(), rand());
                 profiler prof;
                 double time = 0.0;
@@ -178,7 +202,8 @@ int main(int argc, char *argv[]) {
                 double max_time = -min_time;
                 for (auto i = 0; i < RUNS; ++i) {
                     prof.tic_cl("Run");
-                    y = morton_code<cl_ulong>::calculate(x);
+                    //y = morton_code<cl_ulong>::calculate(x);
+                    y = morton_code60(quantize(x, 1 << 20));
                     auto t = prof.toc("Run");
                     time += t;
                     if (min_time > t) min_time = t;
