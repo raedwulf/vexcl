@@ -75,16 +75,16 @@ template <typename morton_type>
 struct morton_code { };
 template <>
 struct morton_code<cl_uint> {
-    template <typename T>
-    static inline decltype(morton_code30(quantize(T(),cl_int()))) calculate(const T& p) {
-        return morton_code30(quantize(p, 1024));
+    template <typename T1, typename T2>
+    static inline void calculate(const T1& in, T2& out) {
+        out = morton_code30(quantize(in, 1024));
     }
 };
 template <>
 struct morton_code<cl_ulong> {
-    template <typename T>
-    static inline decltype(morton_code60(quantize(T(),cl_int()))) calculate(const T& p) {
-        return morton_code60(quantize(p, 1 << 20));
+    template <typename T1, typename T2>
+    static inline void calculate(const T1& in, T2& out) {
+        out = morton_code60(quantize(in, 1 << 20));
     }
 };
 
@@ -177,8 +177,7 @@ int main(int argc, char *argv[]) {
                 double max_time = -min_time;
                 for (auto i = 0; i < RUNS; ++i) {
                     prof.tic_cl("Run");
-                    //y = morton_code<cl_uint>::calculate(x);
-                    y = morton_code30(quantize(x, 1024));
+                    morton_code<cl_uint>::calculate(x, y);
                     auto t = prof.toc("Run");
                     time += t;
                     if (min_time > t) min_time = t;
@@ -201,8 +200,7 @@ int main(int argc, char *argv[]) {
                 double max_time = -min_time;
                 for (auto i = 0; i < RUNS; ++i) {
                     prof.tic_cl("Run");
-                    //y = morton_code<cl_ulong>::calculate(x);
-                    y = morton_code60(quantize(x, 1 << 20));
+                    morton_code<cl_ulong>::calculate(x, y);
                     auto t = prof.toc("Run");
                     time += t;
                     if (min_time > t) min_time = t;
