@@ -1,3 +1,6 @@
+// Reference implementation from Slash Sandbox
+// http://code.google.com/p/slash-sandbox
+
 #include <iostream>
 #include <random>
 #include <iterator>
