@@ -5,25 +5,31 @@
 #include <random>
 #include <iterator>
 #include <cassert>
-#include <chrono>
+#include <limits>
+#include <tuple>
 
 #include <vexcl/vexcl.hpp>
 
 #define TESTS_ON
+#define RUNS 1000
 
 using namespace vex;
 
 static bool all_passed = true;
 
-bool run_test(const std::string &name, std::function<int()> test) {
+bool run_test(const std::string &name, std::function<std::tuple<bool,double,double,double>()> test) {
     char fc = std::cout.fill('.');
     std::cout << name << ": " << std::setw(62 - name.size()) << "." << std::flush;
     std::cout.fill(fc);
 
-    int rc = test();
-    all_passed = all_passed && (rc >= 0);
-    std::cout << (rc >= 0 ? " success." : " failed.") <<
-        " [" << (rc&0x7fffffff) << "us]" << std::endl;
+    bool rc;
+    double avg_time, min_time, max_time;
+    std::tie(rc, avg_time, min_time, max_time) = test();
+    all_passed = all_passed && rc;
+    std::cout << (rc ? " success." : " failed.") << " [" <<
+        "avg:" << int(avg_time * 1000000) << "us," <<
+        "min:" << int(min_time * 1000000) << "us," <<
+        "max:" << int(max_time * 1000000) << "us]" << std::endl;
     return rc;
 }
 
@@ -137,34 +143,50 @@ int main(int argc, char *argv[]) {
         std::cout << "seed: " << seed << std::endl << std::endl;
         srand(seed);
 
-        using namespace std::chrono;
-
-        run_test("Generate 30-bit morton code", [&]() -> int {
+        run_test("Generate 30-bit morton code",
+            [&]() -> std::tuple<bool, double, double, double> {
                 const size_t N = 1 << 28;
-                int rc = 0;
+                int rc = true;
                 vex::vector<cl_float3> x(ctx, N);
                 vex::vector<uint> y(ctx, N);
                 Random<cl_float3> rand0;
                 x = rand0(element_index(), rand());
-                auto start = high_resolution_clock::now();
-                y = morton_code<cl_uint>::calculate(x);
-                auto end = high_resolution_clock::now();
-                rc = duration_cast<microseconds>(end - start).count();
-                return rc;
+                profiler prof;
+                double time = 0.0;
+                double min_time = std::numeric_limits<double>::infinity();
+                double max_time = -min_time;
+                for (auto i = 0; i < RUNS; ++i) {
+                    prof.tic_cl("Run");
+                    y = morton_code<cl_uint>::calculate(x);
+                    auto t = prof.toc("Run");
+                    time += t;
+                    if (min_time > t) min_time = t;
+                    if (max_time < t) max_time = t;
+                }
+                return std::make_tuple(rc,time/double(RUNS),min_time,max_time);
             });
 
-        run_test("Generate 60-bit morton code", [&]() -> int {
+        run_test("Generate 60-bit morton code",
+            [&]() -> std::tuple<bool, double, double, double> {
                 const size_t N = 1 << 28;
-                int rc = 0;
+                int rc = true;
                 vex::vector<cl_float3> x(ctx, N);
                 vex::vector<cl_ulong> y(ctx, N);
                 Random<cl_float3> rand0;
                 x = rand0(element_index(), rand());
-                auto start = high_resolution_clock::now();
-                y = morton_code<cl_ulong>::calculate(x);
-                auto end = high_resolution_clock::now();
-                rc = duration_cast<microseconds>(end - start).count();
-                return rc;
+                profiler prof;
+                double time = 0.0;
+                double min_time = std::numeric_limits<double>::infinity();
+                double max_time = -min_time;
+                for (auto i = 0; i < RUNS; ++i) {
+                    prof.tic_cl("Run");
+                    y = morton_code<cl_ulong>::calculate(x);
+                    auto t = prof.toc("Run");
+                    time += t;
+                    if (min_time > t) min_time = t;
+                    if (max_time < t) max_time = t;
+                }
+                return std::make_tuple(rc,time/double(RUNS),min_time,max_time);
             });
 
     } catch (const cl::Error &err) {
