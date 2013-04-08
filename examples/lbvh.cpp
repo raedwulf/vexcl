@@ -69,7 +69,7 @@ VEX_FUNCTION(quantize, cl_uint4(cl_float4, cl_int),
              "ma4.x = max(mi4.x, 0);\n"
              "ma4.y = max(mi4.y, 0);\n"
              "ma4.z = max(mi4.z, 0);\n"
-	         "return asuint4(ma4);\n");
+	         "return as_uint4(ma4);\n");
 
 template <typename morton_type>
 struct morton_code { };
