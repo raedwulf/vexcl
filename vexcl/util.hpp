@@ -53,6 +53,7 @@ THE SOFTWARE.
 #include <boost/config.hpp>
 #include <boost/type_traits/is_same.hpp>
 #include <boost/lexical_cast.hpp>
+#include <boost/algorithm/string.hpp>
 
 #ifndef __CL_ENABLE_EXCEPTIONS
 #  define __CL_ENABLE_EXCEPTIONS
@@ -215,19 +216,53 @@ static void generate_platform_defines_list(
     cl::Device& device,
     std::vector<std::tuple<std::string, std::string>>& list) {
 
-    // Platform define
     using std::transform;
-    std::string key = "__";
+
+    // Platform define
+    std::string key = "__VEXCL_DEVICE_PLATFORM_";
     key += cl::Platform(
-        device.getInfo<CL_DEVICE_PLATFORM>()).getInfo<CL_PLATFORM_NAME>() + "__ ";
+        device.getInfo<CL_DEVICE_PLATFORM>()).getInfo<CL_PLATFORM_NAME>() + "__";
     transform(key.begin(), key.end(), key.begin(),
               [](char c) { return c == ' ' ? '_' : toupper(c); });
-    std::string value = "1";
-    list.push_back(std::make_tuple(key, value));
+    list.push_back(std::make_tuple(key, std::string("1")));
+
+    // Device type
+    auto type = device.getInfo<CL_DEVICE_TYPE>();
+    std::string device_type = "UNKNOWN";
+    switch (type) {
+        case CL_DEVICE_TYPE_CPU: device_type = "CPU"; break;
+        case CL_DEVICE_TYPE_GPU: device_type = "GPU"; break;
+        case CL_DEVICE_TYPE_ACCELERATOR: device_type = "ACCELERATOR"; break;
+        case CL_DEVICE_TYPE_DEFAULT: device_type = "DEFAULT"; break;
+    }
+
+    // Device vendor
+    key = "__VEXCL_DEVICE_VENDOR_";
+    key += device.getInfo<CL_DEVICE_VENDOR>() + "__";
+    transform(key.begin(), key.end(), key.begin(),
+              [](char c) { return c == ' ' ? '_' : toupper(c); });
+    list.push_back(std::make_tuple(key, std::string("1")));
+
+    // Device driver version
+    std::string driver_version = device.getInfo<CL_DRIVER_VERSION>();
+    list.push_back(std::make_tuple(std::string("__VEXCL_DRIVER_VERSION__"),
+        std::string("\"") + driver_version + "\""));
+
+    std::vector<std::string> version_parts;
+    boost::split(version_parts, driver_version, boost::is_any_of(",. "));
+    const char *version_type[] = {"MAJOR", "MINOR", "REVISION"};
+    for (int i = 0; i < 3; i++) {
+        if (version_parts.size() > i)
+            list.push_back(std::make_tuple(
+                std::string("__VEXCL_DRIVER_VERSION_")
+                + version_type[i] + "__", version_parts[i]));
+    }
 
     // Device specific information
     list.push_back(std::make_tuple(std::string("__VEXCL_DEVICE_NAME__"),
         std::string("\"") + device.getInfo<CL_DEVICE_NAME>() + "\""));
+    list.push_back(std::make_tuple(std::string("__VEXCL_DEVICE_TYPE_")
+        + device_type + "__", std::string("1")));
     list.push_back(std::make_tuple(std::string("__VEXCL_MAX_COMPUTE_UNITS__"),
         boost::lexical_cast<std::string>(
             device.getInfo<CL_DEVICE_MAX_COMPUTE_UNITS>())));
