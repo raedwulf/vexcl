@@ -269,7 +269,7 @@ inline std::string generate_platform_defines(cl::Device& device) {
     for (auto kv : list) {
         std::string key, value;
         std::tie(key, value) = kv;
-        options += std::string("#define") + key + " " + value + "\n";
+        options += std::string("#define ") + key + " " + value + "\n";
     }
     return options;
 }
