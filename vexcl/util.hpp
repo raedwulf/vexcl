@@ -251,7 +251,7 @@ static void generate_platform_defines_list(
     std::vector<std::string> version_parts;
     boost::split(version_parts, driver_version, boost::is_any_of(",. "));
     const char *version_type[] = {"MAJOR", "MINOR", "REVISION"};
-    for (int i = 0; i < 3; i++) {
+    for (size_t i = 0; i < 3; i++) {
         if (version_parts.size() > i)
             list.push_back(std::make_tuple(
                 std::string("__VEXCL_DRIVER_VERSION_")
