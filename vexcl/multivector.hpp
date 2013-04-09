@@ -353,7 +353,8 @@ class multivector : public multivector_terminal_expression {
                         boost::proto::eval(boost::proto::as_child(expr), name_ctx);
 
                         std::ostringstream kernel;
-                        kernel << standard_kernel_header;
+                        kernel << standard_kernel_header
+                               << generate_platform_defines(device);
 
                         extract_user_functions()(
                                 boost::proto::as_child(expr),
