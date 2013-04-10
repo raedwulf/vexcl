@@ -142,7 +142,7 @@ int main(int argc, char *argv[]) {
                     if (max_time < t) max_time = t;
                 }
                 // Check if sort worked
-                std::vector hostx;
+                std::vector<uint> hostx;
                 vex::copy(x, hostx);
                 for (size_t i = 1; i < N; ++i)
                     if (hostx[i-1] > hostx[i]) {
