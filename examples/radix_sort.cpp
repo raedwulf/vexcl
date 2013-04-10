@@ -4,6 +4,7 @@
 #include <cassert>
 #include <limits>
 #include <tuple>
+//#include <algorithm>
 
 //#define VEXCL_SHOW_KERNELS
 #include <vexcl/vexcl.hpp>
@@ -54,28 +55,26 @@ struct RadixSort {
         scan_kernel = cl::Kernel(program, "PrefixScanKernel");
     }
 
-    void execute(vector<K> &input, vector<K> &swap_buffer, vector<K> &output) {
-        assert(output.size() == input.size() && input.size() == swap_buffer.size());
-        assert(input.size() % (workgroup_size * num_per_workitem) == 0);
+    void execute(vector<K> &inout, vector<K> &swap) {
+        assert(inout.size() == swap.size());
+        assert(inout.size() % (workgroup_size * num_per_workitem) == 0);
 
-        int n = input.size();
+        int n = inout.size();
         int n_blocks = n / (num_per_workitem * workgroup_size);
         int n_work_groups_to_execute = std::min(max_workgroups, n_blocks);
         int n_blocks_per_group =
             (n_blocks + n_work_groups_to_execute-1) / n_work_groups_to_execute;
 
-        vector<K> *tmp, *src = &input, *dst = &swap_buffer;
+        vector<K> *tmp, *src = &inout, *dst = &swap;
 
         for (int j = 0, i = 0; j < sort_bits; j += 4, i++) {
             cl_int4 const_buffer = {i, n_blocks, n_work_groups_to_execute, n_blocks_per_group};
             count_kernel.setArg(0, (*src)(0));
             count_kernel.setArg(1, work_buffer(0));
             count_kernel.setArg(2, const_buffer);
-            std::cout << workgroup_size * n_work_groups_to_execute << " " << workgroup_size << std::endl;
             queue[0].enqueueNDRangeKernel(count_kernel, cl::NullRange,
                                        workgroup_size * n_work_groups_to_execute,
                                        workgroup_size);
-            std::cout << "WORKED!" << std::endl;
             scan_kernel.setArg(0, work_buffer(0));
             scan_kernel.setArg(1, const_buffer);
             queue[0].enqueueNDRangeKernel(scan_kernel, cl::NullRange,
@@ -87,7 +86,7 @@ struct RadixSort {
             queue[0].enqueueNDRangeKernel(scatter_kernel, cl::NullRange,
                                        workgroup_size * n_work_groups_to_execute,
                                        workgroup_size);
-            tmp = dst; dst = src; src = dst;
+            tmp = dst; dst = src; src = tmp;
         }
     }
 
@@ -103,7 +102,7 @@ struct RadixSort {
 
 int main(int argc, char *argv[]) {
     try {
-        vex::Context ctx(Filter::Env);
+        vex::Context ctx(Filter::Type(CL_DEVICE_TYPE_CPU) && Filter::Env);
         std::cout << ctx << std::endl;
 
         if (ctx.empty()) {
@@ -120,12 +119,10 @@ int main(int argc, char *argv[]) {
         run_test("Sorting random numbers",
             [&]() -> std::tuple<bool, double, double, double> {
                 const size_t N = 1 << 10;
-                int rc = true;
+                bool rc = true;
                 vex::vector<cl_uint> x(ctx, N);
                 vex::vector<cl_uint> y(ctx, N);
-                vex::vector<cl_uint> z(ctx, N);
                 Random<cl_uint> rand0;
-                x = rand0(element_index(), rand());
                 profiler prof;
                 double time = 0.0;
                 double min_time = std::numeric_limits<double>::infinity();
@@ -133,13 +130,25 @@ int main(int argc, char *argv[]) {
 
                 RadixSort<cl_uint,cl_uint> radix_sort(single_queue);
                 for (auto i = 0; i < RUNS; ++i) {
+                    // Generate random numbers
+                    x = rand0(element_index(), rand());
+                    // Run the sort and profile it
                     prof.tic_cl("Run");
-                    radix_sort.execute(x, y, z);
+                    radix_sort.execute(x, y);
                     auto t = prof.toc("Run");
+                    // Timing information
                     time += t;
                     if (min_time > t) min_time = t;
                     if (max_time < t) max_time = t;
                 }
+                // Check if sort worked
+                std::vector hostx;
+                vex::copy(x, hostx);
+                for (size_t i = 1; i < N; ++i)
+                    if (hostx[i-1] > hostx[i]) {
+                        rc = false;
+                        break;
+                    }
                 return std::make_tuple(rc,time/double(RUNS),min_time,max_time);
             });
 

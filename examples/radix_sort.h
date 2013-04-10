@@ -202,7 +202,6 @@ void StreamCountKernel( __global u32* gSrc, __global u32* histogramOut, int4 cb 
 	const int n = cb.x;
 	const int nWGs = cb.y;
 	const int nBlocksPerWG = cb.w;
-    printf("wgSize = %d\n", wgSize);
 
 	for(int i=0; i<NUM_BUCKET; i++)
 	{
